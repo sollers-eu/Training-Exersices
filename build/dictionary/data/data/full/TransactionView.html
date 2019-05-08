@@ -1,0 +1,1334 @@
+<html>
+<head>
+<title>TransactionView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">TransactionView <span class="entityname">(Virtual) (delegates to <A HREF="KeyableBean.html" TARGET="tableFrame">KeyableBean</A>)</span></div>
+<div class="desc">
+<span id="reflink_2819" class="reftext" onclick='showAndHideRefBox("refbox_2819", "reflink_2819")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2819" class="refbox_inner" style="display:none;">
+Abstract base view entity that aggregates the information needed to display a Transaction on the Financials Transactions page.
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">TransactionView</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+PaymentView</td>
+<td><A HREF="#PaymentView" TARGET="tableFrame">PaymentView</A></td>
+</tr>
+<tr>
+<td>
+RecoveryReserveView</td>
+<td><A HREF="#RecoveryReserveView" TARGET="tableFrame">RecoveryReserveView</A></td>
+</tr>
+<tr>
+<td>
+RecoveryView</td>
+<td><A HREF="#RecoveryView" TARGET="tableFrame">RecoveryView</A></td>
+</tr>
+<tr>
+<td>
+ReserveView</td>
+<td><A HREF="#ReserveView" TARGET="tableFrame">ReserveView</A></td>
+</tr>
+<tr>
+<td>
+TransactionDefaultView</td>
+<td><A HREF="#TransactionDefaultView" TARGET="tableFrame">TransactionDefaultView</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="transactionview_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="transactionview_amount"></a>
+<p class="column">
+<span class="coltitle">Amount</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_amount_prop"></a>
+<p class="column">
+<span class="coltitle">AMOUNT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_claimamount"></a>
+<p class="column">
+<span class="coltitle">ClaimAmount</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_claimamount_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMAMOUNT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_claimcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimCurrency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_claimcurrency_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_costcategory"></a>
+<p class="column">
+<span class="coltitle">CostCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CostCategory_tl.html" TARGET="tableFrame">CostCategory</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:69</td>
+<td>LV.Financials.Transactions.CostCategory</td>
+<td>TransactionView.CostCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:68</td>
+<td>LV.Financials.Payments.CostCategory</td>
+<td>TransactionView.CostCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:62</td>
+<td>LV.Financials.Recoveries.CostCategory</td>
+<td>TransactionView.CostCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:62</td>
+<td>LV.Financials.RecoveryReserves.CostCategory</td>
+<td>TransactionView.CostCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:62</td>
+<td>LV.Financials.Reserves.CostCategory</td>
+<td>TransactionView.CostCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_costcategory_prop"></a>
+<p class="column">
+<span class="coltitle">COSTCATEGORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_costtype"></a>
+<p class="column">
+<span class="coltitle">CostType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CostType_tl.html" TARGET="tableFrame">CostType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:64</td>
+<td>LV.Financials.Transactions.CostType</td>
+<td>TransactionView.CostType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:63</td>
+<td>LV.Financials.Payments.CostType</td>
+<td>TransactionView.CostType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:57</td>
+<td>LV.Financials.Recoveries.CostType</td>
+<td>TransactionView.CostType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:57</td>
+<td>LV.Financials.RecoveryReserves.CostType</td>
+<td>TransactionView.CostType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:57</td>
+<td>LV.Financials.Reserves.CostType</td>
+<td>TransactionView.CostType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_costtype_prop"></a>
+<p class="column">
+<span class="coltitle">COSTTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_coveragetype"></a>
+<p class="column">
+<span class="coltitle">CoverageType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CoverageType_tl.html" TARGET="tableFrame">CoverageType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:59</td>
+<td>LV.Financials.Transactions.CoverageType</td>
+<td>TransactionView.CoverageType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:58</td>
+<td>LV.Financials.Payments.CoverageType</td>
+<td>TransactionView.CoverageType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:52</td>
+<td>LV.Financials.Recoveries.CoverageType</td>
+<td>TransactionView.CoverageType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:52</td>
+<td>LV.Financials.RecoveryReserves.CoverageType</td>
+<td>TransactionView.CoverageType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:52</td>
+<td>LV.Financials.Reserves.CoverageType</td>
+<td>TransactionView.CoverageType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_coveragetype_prop"></a>
+<p class="column">
+<span class="coltitle">COVERAGETYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:37</td>
+<td>LV.Financials.Transactions.Date</td>
+<td>TransactionView.CreateTime</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:30</td>
+<td>LV.Financials.Recoveries.CreateDate</td>
+<td>TransactionView.CreateTime</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:30</td>
+<td>LV.Financials.RecoveryReserves.CreateDate</td>
+<td>TransactionView.CreateTime</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:30</td>
+<td>LV.Financials.Reserves.CreateDate</td>
+<td>TransactionView.CreateTime</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_currency"></a>
+<p class="column">
+<span class="coltitle">Currency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_currency_prop"></a>
+<p class="column">
+<span class="coltitle">CURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_currencyamount"></a>
+<p class="column">
+<span class="coltitle">CurrencyAmount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmountPair</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_exposure"></a>
+<p class="column">
+<span class="coltitle">Exposure</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Exposure.html" TARGET="tableFrame">Exposure</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_exposure_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_exposurename"></a>
+<p class="column">
+<span class="coltitle">ExposureName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:54</td>
+<td>LV.Financials.Transactions.Exposure</td>
+<td>TransactionView.ExposureName</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:53</td>
+<td>LV.Financials.Payments.Exposure</td>
+<td>TransactionView.ExposureName</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:47</td>
+<td>LV.Financials.Recoveries.Exposure</td>
+<td>TransactionView.ExposureName</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:47</td>
+<td>LV.Financials.RecoveryReserves.Exposure</td>
+<td>TransactionView.ExposureName</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:47</td>
+<td>LV.Financials.Reserves.Exposure</td>
+<td>TransactionView.ExposureName</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_exposurename_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURENAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_id_dynprop"></a>
+<p class="column">
+<span class="coltitle">ID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="transactionview_publicid_dynprop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_reservingamount"></a>
+<p class="column">
+<span class="coltitle">ReservingAmount</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_reservingamount_prop"></a>
+<p class="column">
+<span class="coltitle">RESERVINGAMOUNT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_reservingcurrency"></a>
+<p class="column">
+<span class="coltitle">ReservingCurrency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:75</td>
+<td>LV.Financials.Transactions.ReservingCurrency</td>
+<td>TransactionView.ReservingCurrency</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:74</td>
+<td>LV.Financials.Payments.ReservingCurrency</td>
+<td>TransactionView.ReservingCurrency</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:73</td>
+<td>LV.Financials.Recoveries.ReservingCurrency</td>
+<td>TransactionView.ReservingCurrency</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:73</td>
+<td>LV.Financials.RecoveryReserves.ReservingCurrency</td>
+<td>TransactionView.ReservingCurrency</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:68</td>
+<td>LV.Financials.Reserves.ReservingCurrency</td>
+<td>TransactionView.ReservingCurrency</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_reservingcurrency_prop"></a>
+<p class="column">
+<span class="coltitle">RESERVINGCURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_status"></a>
+<p class="column">
+<span class="coltitle">Status</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/TransactionStatus_tl.html" TARGET="tableFrame">TransactionStatus</A> using filter <A HREF="../typelist/TransactionStatus_tl.html#transaction" TARGET="tableFrame">transaction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:80</td>
+<td>LV.Financials.Transactions.Status</td>
+<td>TransactionView.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:79</td>
+<td>LV.Financials.Payments.Status</td>
+<td>TransactionView.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:78</td>
+<td>LV.Financials.Recoveries.Status</td>
+<td>TransactionView.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:78</td>
+<td>LV.Financials.RecoveryReserves.Status</td>
+<td>TransactionView.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:73</td>
+<td>LV.Financials.Reserves.Status</td>
+<td>TransactionView.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_status_prop"></a>
+<p class="column">
+<span class="coltitle">STATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">TransactionView</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="transactionview_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_transaction"></a>
+<p class="column">
+<span class="coltitle">Transaction</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Transaction.html" TARGET="tableFrame">Transaction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_transaction_prop"></a>
+<p class="column">
+<span class="coltitle">TRANSACTION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TransactionView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactionview_user"></a>
+<p class="column">
+<span class="coltitle">User</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:84</td>
+<td>LV.Financials.Transactions.User</td>
+<td>TransactionView.User</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:82</td>
+<td>LV.Financials.Recoveries.User</td>
+<td>TransactionView.User</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:82</td>
+<td>LV.Financials.RecoveryReserves.User</td>
+<td>TransactionView.User</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+<tr>
+<td>TransactionsLV.reserve.pcf:77</td>
+<td>LV.Financials.Reserves.User</td>
+<td>TransactionView.User</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactionview_user_prop"></a>
+<p class="column">
+<span class="coltitle">USER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=PaymentView></a>
+<div class="titlebox">
+<div class="filtertitle">PaymentView <span class='supername'>(subtype of <A HREF="TransactionView.html" TARGET="tableFrame">TransactionView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2820" class="reftext" onclick='showAndHideRefBox("refbox_2820", "reflink_2820")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2820" class="refbox_inner" style="display:none;">
+Aggregates the information needed to display a Payment using the Payment filter of the Financials Transactions page. Subtype of TransactionView.
+</div>
+</span>
+</div>
+</div>
+<a name="paymentview_check_checknumber"></a>
+<p class="column">
+<span class="coltitle">Check_CheckNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:88</td>
+<td>LV.Financials.Payments.Check.CheckNumber</td>
+<td>TransactionView.Check_CheckNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="paymentview_check_checknumber_prop"></a>
+<p class="column">
+<span class="coltitle">CHECK_CHECKNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="paymentview_check_issuedate"></a>
+<p class="column">
+<span class="coltitle">Check_IssueDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:36</td>
+<td>LV.Financials.Payments.Check.IssueDate</td>
+<td>TransactionView.Check_IssueDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="paymentview_check_issuedate_prop"></a>
+<p class="column">
+<span class="coltitle">CHECK_ISSUEDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="paymentview_check_payto"></a>
+<p class="column">
+<span class="coltitle">Check_PayTo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:92</td>
+<td>LV.Financials.Payments.Check.PayTo</td>
+<td>TransactionView.Check_PayTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="paymentview_check_payto_prop"></a>
+<p class="column">
+<span class="coltitle">CHECK_PAYTO_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="paymentview_check_scheduledsenddate"></a>
+<p class="column">
+<span class="coltitle">Check_ScheduledSendDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "dateonly")'>dateonly</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:32</td>
+<td>LV.Financials.Payments.Check.ScheduledSendDate</td>
+<td>TransactionView.Check_ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="paymentview_check_scheduledsenddate_prop"></a>
+<p class="column">
+<span class="coltitle">CHECK_SCHEDULEDSENDDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="paymentview_paymenttype"></a>
+<p class="column">
+<span class="coltitle">PaymentType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PaymentType_tl.html" TARGET="tableFrame">PaymentType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.payment.pcf:84</td>
+<td>LV.Financials.Payments.PaymentType</td>
+<td>TransactionView.PaymentType</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="paymentview_paymenttype_prop"></a>
+<p class="column">
+<span class="coltitle">PAYMENTTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="paymentview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.PaymentView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=RecoveryReserveView></a>
+<div class="titlebox">
+<div class="filtertitle">RecoveryReserveView <span class='supername'>(subtype of <A HREF="TransactionView.html" TARGET="tableFrame">TransactionView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2821" class="reftext" onclick='showAndHideRefBox("refbox_2821", "reflink_2821")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2821" class="refbox_inner" style="display:none;">
+Aggregates the information needed to display a RecoveryReserve using the RecoveryReserve filter of the Financials Transactions page. Subtype of TransactionView.
+</div>
+</span>
+</div>
+</div>
+<a name="recoveryreserveview_recoverycategory"></a>
+<p class="column">
+<span class="coltitle">RecoveryCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/RecoveryCategory_tl.html" TARGET="tableFrame">RecoveryCategory</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.recoveryreserve.pcf:67</td>
+<td>LV.Financials.RecoveryReserves.RecoveryCategory</td>
+<td>TransactionView.RecoveryCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="recoveryreserveview_recoverycategory_prop"></a>
+<p class="column">
+<span class="coltitle">RECOVERYCATEGORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="recoveryreserveview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.RecoveryReserveView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=RecoveryView></a>
+<div class="titlebox">
+<div class="filtertitle">RecoveryView <span class='supername'>(subtype of <A HREF="TransactionView.html" TARGET="tableFrame">TransactionView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2822" class="reftext" onclick='showAndHideRefBox("refbox_2822", "reflink_2822")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2822" class="refbox_inner" style="display:none;">
+Aggregates the information needed to display a Recovery using the Recovery filter of the Financials Transactions page. Subtype of TransactionView.
+</div>
+</span>
+</div>
+</div>
+<a name="recoveryview_recoverycategory"></a>
+<p class="column">
+<span class="coltitle">RecoveryCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/RecoveryCategory_tl.html" TARGET="tableFrame">RecoveryCategory</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.recovery.pcf:67</td>
+<td>LV.Financials.Recoveries.RecoveryCategory</td>
+<td>TransactionView.RecoveryCategory</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="recoveryview_recoverycategory_prop"></a>
+<p class="column">
+<span class="coltitle">RECOVERYCATEGORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="recoveryview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.RecoveryView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ReserveView></a>
+<div class="titlebox">
+<div class="filtertitle">ReserveView <span class='supername'>(subtype of <A HREF="TransactionView.html" TARGET="tableFrame">TransactionView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2823" class="reftext" onclick='showAndHideRefBox("refbox_2823", "reflink_2823")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2823" class="refbox_inner" style="display:none;">
+Aggregates the information needed to display a Reserve using the Reserve filter of the Financials Transactions page. Subtype of TransactionView.
+</div>
+</span>
+</div>
+</div>
+<a name="reserveview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ReserveView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=TransactionDefaultView></a>
+<div class="titlebox">
+<div class="filtertitle">TransactionDefaultView <span class='supername'>(subtype of <A HREF="TransactionView.html" TARGET="tableFrame">TransactionView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2824" class="reftext" onclick='showAndHideRefBox("refbox_2824", "reflink_2824")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2824" class="refbox_inner" style="display:none;">
+Aggregates the information needed to display a Transaction using the All or Custom filters of the Financials Transactions page. Subtype of TransactionView.
+</div>
+</span>
+</div>
+</div>
+<a name="transactiondefaultview_transactionsubtype"></a>
+<p class="column">
+<span class="coltitle">TransactionSubtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Transaction_tl.html" TARGET="tableFrame">Transaction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TransactionsLV.default.pcf:32</td>
+<td>LV.Financials.Transactions.TType</td>
+<td>TransactionView.TransactionSubtype</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactions
+<br>
+ClaimFinancialsTransactionsPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="transactiondefaultview_transactionsubtype_prop"></a>
+<p class="column">
+<span class="coltitle">TRANSACTIONSUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactiondefaultview_transactiontypename"></a>
+<p class="column">
+<span class="coltitle">TransactionTypeName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactiondefaultview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TransactionDefaultView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

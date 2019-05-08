@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Claim viewrecoveryreserves</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Claim viewrecoveryreserves <span class="entityname">(object-based)</span></div>
+<div class="desc">
+<span id="reflink_403" class="reftext" onclick='showAndHideRefBox("refbox_403", "reflink_403")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_403" class="refbox_inner" style="display:none;">
+Permission to view recovery reserves (and derived information) on a claim
+</div>
+</span>
+</div>
+</div>
+<a name="Related Permissions"></a><div class="arraysbox">Related Permissions</div>
+<a name="claimviewrecres"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewrecres.html'>claimviewrecres</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recovery reserves (and derived information) on a claim</span>
+<a name="Page References"></a><div class="arraysbox">Page References</div>
+<a name="newrecoveryreserveset"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewRecoveryReserveSet.html'>NewRecoveryReserveSet</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Element References"></a><div class="arraysbox">Element References</div>
+<a name="all recovery reserves, excluding details (printoption)"></a>
+<p class="column">
+<span class="coltitle">All recovery reserves, excluding details (PrintOption)</span>  <span class="titleDesc">printable attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="all recovery reserves, including details (printoption)"></a>
+<p class="column">
+<span class="coltitle">All recovery reserves, including details (PrintOption)</span>  <span class="titleDesc">printable attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="open recovery reserves (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Open Recovery Reserves (CurrencyInput)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/RecoveryDetailDV.html'>RecoveryDetailDV</a> (RecoveryDetailDV.pcf)</span>
+<a name="open recovery reserves (textcell)"></a>
+<p class="column">
+<span class="coltitle">Open Recovery Reserves (TextCell)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryLV.html'>FinancialsSummaryLV</a> (FinancialsSummaryLV.pcf)</span>
+<a name="open recovery reserves (textcell)"></a>
+<p class="column">
+<span class="coltitle">Open Recovery Reserves (TextCell)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryRecoveriesLV.html'>FinancialsSummaryRecoveriesLV</a> (FinancialsSummaryRecoveriesLV.pcf)</span>
+<a name="total recovery reserves (textcell)"></a>
+<p class="column">
+<span class="coltitle">Total Recovery Reserves (TextCell)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryRecoveriesLV.html'>FinancialsSummaryRecoveriesLV</a> (FinancialsSummaryRecoveriesLV.pcf)</span>
+</body>
+</html>

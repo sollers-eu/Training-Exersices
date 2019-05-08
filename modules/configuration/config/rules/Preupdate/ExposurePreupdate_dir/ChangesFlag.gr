@@ -1,0 +1,19 @@
+package rules.Preupdate.ExposurePreupdate_dir
+
+@gw.rules.RuleName("ChangesFlag")
+internal class ChangesFlag {
+  static function doCondition(exposure : entity.Exposure) : boolean {
+/*start00rule*/
+return (exposure.isChanged())
+/*end00rule*/
+}
+
+  static function doAction(exposure : entity.Exposure, actions : gw.rules.Action) {
+/*start00rule*/
+    exposure.isChanged=true
+    exposure.Claim.isChanged=true
+    print("exposure Changed")
+
+/*end00rule*/
+  }
+}

@@ -1,0 +1,852 @@
+<html>
+<head>
+<title>UpgradeExecutionTimeType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">UpgradeExecutionTimeType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_upgradeexecutiontimetype)</span>
+</div>
+<div class="desc">Types of upgrade execution times</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#bootstrap>bootstrap</a></td>
+<td>Bootstrap</td>
+<td>Bootstrap</td>
+<td align=center>1</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checkdbstate>checkdbstate</a></td>
+<td>Check database state</td>
+<td>Check database state for disabled constraints, etc.</td>
+<td align=center>3</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cleanup>cleanup</a></td>
+<td>Clean up</td>
+<td>Clean up</td>
+<td align=center>18</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#copytoshadowtables>copytoshadowtables</a></td>
+<td>Copy contents to shadow tables</td>
+<td>Copy contents of source tables to shadow tables</td>
+<td align=center>19</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#custompostupgrade>custompostupgrade</a></td>
+<td>Customer Post-Upgrade version triggers</td>
+<td>Execute customer post-upgrade steps defined in IDatamodelUpgrade plugin</td>
+<td align=center>16</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#custompreupgrade>custompreupgrade</a></td>
+<td>Customer Pre-Upgrade version triggers</td>
+<td>Execute customer pre-upgrade steps defined in IDatamodelUpgrade plugin</td>
+<td align=center>8</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#customversionchecks>customversionchecks</a></td>
+<td>Customer Version Checks</td>
+<td>Execute customer checks to determine whether to proceed with upgrade</td>
+<td align=center>7</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#dbparameters>dbparameters</a></td>
+<td>Persist database parameters</td>
+<td>Persist database parameters</td>
+<td align=center>5</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#dbspaceafter>dbspaceafter</a></td>
+<td>Capture database space after</td>
+<td>Capture database space info after upgrade</td>
+<td align=center>21</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#dbspacebefore>dbspacebefore</a></td>
+<td>Capture database space before</td>
+<td>Capture database space info before upgrade</td>
+<td align=center>6</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#encryptdecrypt>encryptdecrypt</a></td>
+<td>Encrypt or decrypt existing data</td>
+<td>Encrypt or decrypt existing data</td>
+<td align=center>12</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#executesteps>executesteps</a></td>
+<td>Execute steps</td>
+<td>Execute steps</td>
+<td align=center>14</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#gensteps>gensteps</a></td>
+<td>Generate steps</td>
+<td>Generate steps</td>
+<td align=center>13</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#orphanedtypecodes>orphanedtypecodes</a></td>
+<td>Verify no references to orphaned type codes</td>
+<td>Verify no references to orphaned type codes</td>
+<td align=center>11</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#postrowcounts>postrowcounts</a></td>
+<td>Capture row counts after upgrade</td>
+<td>Capture row counts after upgrade</td>
+<td align=center>20</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prerowcounts>prerowcounts</a></td>
+<td>Capture row counts before upgrade</td>
+<td>Capture row counts before upgrade</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#snapshotdatamodel>snapshotdatamodel</a></td>
+<td>Capture snapshot of datamodel for archiving</td>
+<td>Capture snapshot of datamodel for archiving</td>
+<td align=center>17</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#syncindexes>syncindexes</a></td>
+<td>Sync indexes</td>
+<td>Sync indexes</td>
+<td align=center>2</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#verifyschema>verifyschema</a></td>
+<td>Verify schema</td>
+<td>Verify schema</td>
+<td align=center>22</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#versionchecks>versionchecks</a></td>
+<td>Version Checks</td>
+<td>Execute checks to determine whether to proceed with upgrade</td>
+<td align=center>9</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#vtafterschemadiff>vtafterschemadiff</a></td>
+<td>VersionTriggers after schema diff</td>
+<td>VersionTriggers after schema diff</td>
+<td align=center>15</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#vtbeforeschemadiff>vtbeforeschemadiff</a></td>
+<td>Execute VersionTriggers before schema diff</td>
+<td>Execute VersionTriggers before schema diff</td>
+<td align=center>10</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=bootstrap></a>
+<div class="titlebox">
+<div class="filtertitle">bootstrap <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9103" class="reftext" onclick='showAndHideRefBox("refbox_9103", "reflink_9103")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9103" class="refbox_inner" style="display:none;">
+Bootstrap
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bootstrap</td>
+<td>Bootstrap</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checkdbstate></a>
+<div class="titlebox">
+<div class="filtertitle">checkdbstate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9104" class="reftext" onclick='showAndHideRefBox("refbox_9104", "reflink_9104")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9104" class="refbox_inner" style="display:none;">
+Check database state for disabled constraints, etc.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check database state</td>
+<td>Check database state for disabled constraints, etc.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cleanup></a>
+<div class="titlebox">
+<div class="filtertitle">cleanup <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9105" class="reftext" onclick='showAndHideRefBox("refbox_9105", "reflink_9105")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9105" class="refbox_inner" style="display:none;">
+Clean up
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Clean up</td>
+<td>Clean up</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=copytoshadowtables></a>
+<div class="titlebox">
+<div class="filtertitle">copytoshadowtables <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9106" class="reftext" onclick='showAndHideRefBox("refbox_9106", "reflink_9106")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9106" class="refbox_inner" style="display:none;">
+Copy contents of source tables to shadow tables
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Copy contents to shadow tables</td>
+<td>Copy contents of source tables to shadow tables</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=custompostupgrade></a>
+<div class="titlebox">
+<div class="filtertitle">custompostupgrade <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9107" class="reftext" onclick='showAndHideRefBox("refbox_9107", "reflink_9107")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9107" class="refbox_inner" style="display:none;">
+Execute customer post-upgrade steps defined in IDatamodelUpgrade plugin
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Customer Post-Upgrade version triggers</td>
+<td>Execute customer post-upgrade steps defined in IDatamodelUpgrade plugin</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=custompreupgrade></a>
+<div class="titlebox">
+<div class="filtertitle">custompreupgrade <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9108" class="reftext" onclick='showAndHideRefBox("refbox_9108", "reflink_9108")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9108" class="refbox_inner" style="display:none;">
+Execute customer pre-upgrade steps defined in IDatamodelUpgrade plugin
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Customer Pre-Upgrade version triggers</td>
+<td>Execute customer pre-upgrade steps defined in IDatamodelUpgrade plugin</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=customversionchecks></a>
+<div class="titlebox">
+<div class="filtertitle">customversionchecks <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9109" class="reftext" onclick='showAndHideRefBox("refbox_9109", "reflink_9109")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9109" class="refbox_inner" style="display:none;">
+Execute customer checks to determine whether to proceed with upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Customer Version Checks</td>
+<td>Execute customer checks to determine whether to proceed with upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=dbparameters></a>
+<div class="titlebox">
+<div class="filtertitle">dbparameters <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9110" class="reftext" onclick='showAndHideRefBox("refbox_9110", "reflink_9110")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9110" class="refbox_inner" style="display:none;">
+Persist database parameters
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Persist database parameters</td>
+<td>Persist database parameters</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=dbspaceafter></a>
+<div class="titlebox">
+<div class="filtertitle">dbspaceafter <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9111" class="reftext" onclick='showAndHideRefBox("refbox_9111", "reflink_9111")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9111" class="refbox_inner" style="display:none;">
+Capture database space info after upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Capture database space after</td>
+<td>Capture database space info after upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=dbspacebefore></a>
+<div class="titlebox">
+<div class="filtertitle">dbspacebefore <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9112" class="reftext" onclick='showAndHideRefBox("refbox_9112", "reflink_9112")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9112" class="refbox_inner" style="display:none;">
+Capture database space info before upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Capture database space before</td>
+<td>Capture database space info before upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=encryptdecrypt></a>
+<div class="titlebox">
+<div class="filtertitle">encryptdecrypt <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9113" class="reftext" onclick='showAndHideRefBox("refbox_9113", "reflink_9113")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9113" class="refbox_inner" style="display:none;">
+Encrypt or decrypt existing data
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Encrypt or decrypt existing data</td>
+<td>Encrypt or decrypt existing data</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=executesteps></a>
+<div class="titlebox">
+<div class="filtertitle">executesteps <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9114" class="reftext" onclick='showAndHideRefBox("refbox_9114", "reflink_9114")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9114" class="refbox_inner" style="display:none;">
+Execute steps
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Execute steps</td>
+<td>Execute steps</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=gensteps></a>
+<div class="titlebox">
+<div class="filtertitle">gensteps <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9115" class="reftext" onclick='showAndHideRefBox("refbox_9115", "reflink_9115")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9115" class="refbox_inner" style="display:none;">
+Generate steps
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Generate steps</td>
+<td>Generate steps</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=orphanedtypecodes></a>
+<div class="titlebox">
+<div class="filtertitle">orphanedtypecodes <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9116" class="reftext" onclick='showAndHideRefBox("refbox_9116", "reflink_9116")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9116" class="refbox_inner" style="display:none;">
+Verify no references to orphaned type codes
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Verify no references to orphaned type codes</td>
+<td>Verify no references to orphaned type codes</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=postrowcounts></a>
+<div class="titlebox">
+<div class="filtertitle">postrowcounts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9117" class="reftext" onclick='showAndHideRefBox("refbox_9117", "reflink_9117")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9117" class="refbox_inner" style="display:none;">
+Capture row counts after upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Capture row counts after upgrade</td>
+<td>Capture row counts after upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prerowcounts></a>
+<div class="titlebox">
+<div class="filtertitle">prerowcounts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9118" class="reftext" onclick='showAndHideRefBox("refbox_9118", "reflink_9118")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9118" class="refbox_inner" style="display:none;">
+Capture row counts before upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Capture row counts before upgrade</td>
+<td>Capture row counts before upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=snapshotdatamodel></a>
+<div class="titlebox">
+<div class="filtertitle">snapshotdatamodel <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9119" class="reftext" onclick='showAndHideRefBox("refbox_9119", "reflink_9119")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9119" class="refbox_inner" style="display:none;">
+Capture snapshot of datamodel for archiving
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Capture snapshot of datamodel for archiving</td>
+<td>Capture snapshot of datamodel for archiving</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=syncindexes></a>
+<div class="titlebox">
+<div class="filtertitle">syncindexes <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9120" class="reftext" onclick='showAndHideRefBox("refbox_9120", "reflink_9120")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9120" class="refbox_inner" style="display:none;">
+Sync indexes
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Sync indexes</td>
+<td>Sync indexes</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=verifyschema></a>
+<div class="titlebox">
+<div class="filtertitle">verifyschema <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9121" class="reftext" onclick='showAndHideRefBox("refbox_9121", "reflink_9121")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9121" class="refbox_inner" style="display:none;">
+Verify schema
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Verify schema</td>
+<td>Verify schema</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=versionchecks></a>
+<div class="titlebox">
+<div class="filtertitle">versionchecks <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9122" class="reftext" onclick='showAndHideRefBox("refbox_9122", "reflink_9122")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9122" class="refbox_inner" style="display:none;">
+Execute checks to determine whether to proceed with upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Version Checks</td>
+<td>Execute checks to determine whether to proceed with upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=vtafterschemadiff></a>
+<div class="titlebox">
+<div class="filtertitle">vtafterschemadiff <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9123" class="reftext" onclick='showAndHideRefBox("refbox_9123", "reflink_9123")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9123" class="refbox_inner" style="display:none;">
+VersionTriggers after schema diff
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>VersionTriggers after schema diff</td>
+<td>VersionTriggers after schema diff</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=vtbeforeschemadiff></a>
+<div class="titlebox">
+<div class="filtertitle">vtbeforeschemadiff <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9124" class="reftext" onclick='showAndHideRefBox("refbox_9124", "reflink_9124")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9124" class="refbox_inner" style="display:none;">
+Execute VersionTriggers before schema diff
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Execute VersionTriggers before schema diff</td>
+<td>Execute VersionTriggers before schema diff</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

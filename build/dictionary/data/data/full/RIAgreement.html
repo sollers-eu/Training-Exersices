@@ -1,0 +1,2281 @@
+<html>
+<head>
+<title>RIAgreement</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">RIAgreement <span class="entityname">(cc_riagreement) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>, <A HREF="Validatable.html" TARGET="tableFrame">Validatable</A>)</span></div>
+<div class="desc">
+<span id="reflink_1984" class="reftext" onclick='showAndHideRefBox("refbox_1984", "reflink_1984")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1984" class="refbox_inner" style="display:none;">
+
+        Represents the contractual obligation of a reinsurer who has taken on some of the policy risk in exchange for some of the premium.
+        The RIAgreement centralizes information related to that contract, detailing how the risk has been divided and ceded.
+        Additionally, there is information to indicate when alerts should be directed to counterparties and users.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">RIAgreement</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup>, Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1985" class="reftext" onclick='showAndHideRefBox("refbox_1985", "reflink_1985")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1985" class="refbox_inner" style="display:none;">
+<A HREF="../full/RICoding.html" TARGET="tableFrame">RICoding.RIAgreement</A><br><A HREF="../full/RITransaction.html" TARGET="tableFrame">RITransaction.RIAgreement</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1986" class="reftext" onclick='showAndHideRefBox("refbox_1986", "reflink_1986")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_1986" class="refbox_inner" style="display:none;">
+<A HREF="../full/RIAgreementGroup.html" TARGET="tableFrame">RIAgreementGroup.Agreements</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+NonProportionalRIAgreement</td>
+<td><A HREF="#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+AnnualAggregateRITreaty</td>
+<td><A HREF="#AnnualAggregateRITreaty" TARGET="tableFrame">AnnualAggregateRITreaty</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ExcessOfLossRITreaty</td>
+<td><A HREF="#ExcessOfLossRITreaty" TARGET="tableFrame">ExcessOfLossRITreaty</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FacExcessOfLossRIAgreement</td>
+<td><A HREF="#FacExcessOfLossRIAgreement" TARGET="tableFrame">FacExcessOfLossRIAgreement</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FacNetExcessOfLossRIAgreement</td>
+<td><A HREF="#FacNetExcessOfLossRIAgreement" TARGET="tableFrame">FacNetExcessOfLossRIAgreement</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+NetExcessOfLossRITreaty</td>
+<td><A HREF="#NetExcessOfLossRITreaty" TARGET="tableFrame">NetExcessOfLossRITreaty</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+PerEventRITreaty</td>
+<td><A HREF="#PerEventRITreaty" TARGET="tableFrame">PerEventRITreaty</A></td>
+</tr>
+<tr>
+<td>
+ProportionalRIAgreement</td>
+<td><A HREF="#ProportionalRIAgreement" TARGET="tableFrame">ProportionalRIAgreement</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FacProportionalRIAgreement</td>
+<td><A HREF="#FacProportionalRIAgreement" TARGET="tableFrame">FacProportionalRIAgreement</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+QuotaShareRITreaty</td>
+<td><A HREF="#QuotaShareRITreaty" TARGET="tableFrame">QuotaShareRITreaty</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+SurplusRITreaty</td>
+<td><A HREF="#SurplusRITreaty" TARGET="tableFrame">SurplusRITreaty</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="riagreement_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="riagreement_agreementname"></a>
+<p class="column">
+<span class="coltitle">AgreementName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (256)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Agreement name.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:24</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:23</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>agreement.AgreementName</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>NewRIAgreementScreen.pcf:56</td>
+<td>Web.Claim.Reinsurance.AgreementName</td>
+<td>relatedAgreement.AgreementName</td>
+<td>false</td>
+<td>
+NewRIAgreement
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_agreementname_prop"></a>
+<p class="column">
+<span class="coltitle">AGREEMENTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_agreementnumber"></a>
+<p class="column">
+<span class="coltitle">AgreementNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (256)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Agreement number.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:18</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:17</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>agreement.AgreementNumber</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>NewRIAgreementScreen.pcf:52</td>
+<td>Web.Claim.Reinsurance.AgreementNumber</td>
+<td>relatedAgreement.AgreementNumber</td>
+<td>false</td>
+<td>
+NewRIAgreement
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_agreementnumber_prop"></a>
+<p class="column">
+<span class="coltitle">AGREEMENTNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="riagreement_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_arrangementtype"></a>
+<p class="column">
+<span class="coltitle">ArrangementType</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.RIArrangementType</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">The RIArrangementType of this Reinsurance Agreement: Treaty or Facultative,
+which is fully implied by the agreement's subtype.</span>
+<a name="riagreement_attachmentpoint"></a>
+<p class="column">
+<span class="coltitle">AttachmentPoint</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The lower limit of when coverage starts.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:46</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:55</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:45</td>
+<td>Web.Claim.Reinsurance.AttachmentPoint</td>
+<td>agreement.AttachmentPoint</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_attachmentpoint_prop"></a>
+<p class="column">
+<span class="coltitle">ATTACHMENTPOINT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_cededshare"></a>
+<p class="column">
+<span class="coltitle">CededShare</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "ripercentagedec")'>ripercentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Percentage of liability ceded to reinsurer.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:69</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:71</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:68</td>
+<td>Web.Claim.Reinsurance.CededShare</td>
+<td>agreement.CededShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_cededshare_prop"></a>
+<p class="column">
+<span class="coltitle">CEDEDSHARE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Associated Claim</span>
+<a name="riagreement_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_claimcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimCurrency</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.Currency</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="riagreement_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="riagreement_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_currency"></a>
+<p class="column">
+<span class="coltitle">Currency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The currency of the Agreement.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:37</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:36</td>
+<td>Web.Claim.Reinsurance.Currency</td>
+<td>agreement.Currency</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_currency_prop"></a>
+<p class="column">
+<span class="coltitle">CURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_exceedsnotificationthreshold"></a>
+<p class="column">
+<span class="coltitle">ExceedsNotificationThreshold</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Boolean field to mark an agreement as exceeding the notification threshold.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:72</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:82</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:80</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:79</td>
+<td>Web.Claim.Reinsurance.ReinsuranceAgreementDetails.ExceedsNotificationThreshold</td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>ReinsuranceSummaryLV.pcf:123</td>
+<td></td>
+<td>agreement.ExceedsNotificationThreshold</td>
+<td>false</td>
+<td>
+ReinsuranceSummary
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_exceedsnotificationthreshold_prop"></a>
+<p class="column">
+<span class="coltitle">EXCEEDSNOTIFICATIONTHRESHOLD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_hasnotificationthreshold"></a>
+<p class="column">
+<span class="coltitle">HasNotificationThreshold</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_isuserdeletable"></a>
+<p class="column">
+<span class="coltitle">isUserDeletable</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_isusereditable"></a>
+<p class="column">
+<span class="coltitle">isUserEditable</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_managedinexternalsystem"></a>
+<p class="column">
+<span class="coltitle">ManagedInExternalSystem</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Boolean field to indicate if this agreement should be edited in CC or another system.</span>
+<a name="riagreement_managedinexternalsystem_prop"></a>
+<p class="column">
+<span class="coltitle">MANAGEDINEXTERNALSYSTEM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_notificationthreshold"></a>
+<p class="column">
+<span class="coltitle">NotificationThreshold</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">At what amount of total incurred loss would the reinsurers like to be notified of individual large losses.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:68</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:78</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:76</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:75</td>
+<td>Web.Claim.Reinsurance.NotificationThreshold</td>
+<td>agreement.NotificationThreshold</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_notificationthreshold_prop"></a>
+<p class="column">
+<span class="coltitle">NOTIFICATIONTHRESHOLD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_proportionalshare"></a>
+<p class="column">
+<span class="coltitle">ProportionalShare</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="riagreement_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_recoverylimit"></a>
+<p class="column">
+<span class="coltitle">RecoveryLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The maximum amount that can be recovered from this agreement. Usually equal to TopOfLayer minus AttachmentPoint.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:61</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:60</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:62</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:69</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:59</td>
+<td>Web.Claim.Reinsurance.RecoveryLimit</td>
+<td>agreement.RecoveryLimit</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_recoverylimit_prop"></a>
+<p class="column">
+<span class="coltitle">RECOVERYLIMIT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_reinsurancecategory"></a>
+<p class="column">
+<span class="coltitle">ReinsuranceCategory</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="riagreement_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_riagreementgroup"></a>
+<p class="column">
+<span class="coltitle">RIAgreementGroup</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RIAgreementGroup.html" TARGET="tableFrame">RIAgreementGroup</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: RIAgreementGroupID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Associated reinsurance agreement group.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>RISubtypeAndGroupInputSet.pcf:25</td>
+<td>Web.Claim.Reinsurance.AgreementGroup</td>
+<td>agreement.RIAgreementGroup</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_riagreementgroup_prop"></a>
+<p class="column">
+<span class="coltitle">RIAGREEMENTGROUP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_ricodings_prop"></a>
+<p class="column">
+<span class="coltitle">RICODINGS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">RIAgreement</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="riagreement_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_topoflayer"></a>
+<p class="column">
+<span class="coltitle">TopOfLayer</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The upper limit of coverage. Counterpart to AttachmentPoint. Labeled as Coverage Limit in the UI to match PolicyCenter.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.AnnualAggregateRITreaty.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.ExcessOfLossRITreaty.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacExcessOfLossRIAgreement.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacNetExcessOfLossRIAgreement.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:54</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.NetExcessOfLossRITreaty.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.PerEventRITreaty.pcf:53</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:55</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:62</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.default.pcf:52</td>
+<td>Web.Claim.Reinsurance.TopOfLayer</td>
+<td>agreement.TopOfLayer</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riagreement_topoflayer_prop"></a>
+<p class="column">
+<span class="coltitle">TOPOFLAYER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.RIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="riagreement_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="riagreement_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_validation_results_dynprop"></a>
+<p class="column">
+<span class="coltitle">VALIDATION_RESULTS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="riagreement_validationresult"></a>
+<p class="column">
+<span class="coltitle">ValidationResult</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.validation.ValidationResult</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="riagreement_ricodings"></a>
+<p class="column">
+<span class="coltitle">RICodings</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="RICoding.html" TARGET="tableFrame">RICoding</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">RICodings on this agreement.</span>
+<a name="Unique Keys for RIAgreement"></a><div class="arraysbox">Unique Keys for RIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=AnnualAggregateRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">AnnualAggregateRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1987" class="reftext" onclick='showAndHideRefBox("refbox_1987", "reflink_1987")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1987" class="refbox_inner" style="display:none;">
+Annual aggregate reinsurance treaty agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="annualaggregateritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AnnualAggregateRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for AnnualAggregateRITreaty"></a><div class="arraysbox">Unique Keys for AnnualAggregateRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ExcessOfLossRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">ExcessOfLossRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1988" class="reftext" onclick='showAndHideRefBox("refbox_1988", "reflink_1988")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1988" class="refbox_inner" style="display:none;">
+Excess of loss non-proportional reinsurance treaty agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="excessoflossritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ExcessOfLossRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ExcessOfLossRITreaty"></a><div class="arraysbox">Unique Keys for ExcessOfLossRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FacExcessOfLossRIAgreement></a>
+<div class="titlebox">
+<div class="filtertitle">FacExcessOfLossRIAgreement <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1989" class="reftext" onclick='showAndHideRefBox("refbox_1989", "reflink_1989")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1989" class="refbox_inner" style="display:none;">
+Facultative Gross Excess of Loss reinsurance agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="facexcessoflossriagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FacExcessOfLossRIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FacExcessOfLossRIAgreement"></a><div class="arraysbox">Unique Keys for FacExcessOfLossRIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FacNetExcessOfLossRIAgreement></a>
+<div class="titlebox">
+<div class="filtertitle">FacNetExcessOfLossRIAgreement <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1990" class="reftext" onclick='showAndHideRefBox("refbox_1990", "reflink_1990")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1990" class="refbox_inner" style="display:none;">
+Facultative Net Excess of Loss reinsurance agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="facnetexcessoflossriagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FacNetExcessOfLossRIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FacNetExcessOfLossRIAgreement"></a><div class="arraysbox">Unique Keys for FacNetExcessOfLossRIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FacProportionalRIAgreement></a>
+<div class="titlebox">
+<div class="filtertitle">FacProportionalRIAgreement <span class='supername'>(subtype of <A HREF="RIAgreement.html#ProportionalRIAgreement" TARGET="tableFrame">ProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1991" class="reftext" onclick='showAndHideRefBox("refbox_1991", "reflink_1991")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1991" class="refbox_inner" style="display:none;">
+Quota share proportional reinsurance agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="facproportionalriagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FacProportionalRIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FacProportionalRIAgreement"></a><div class="arraysbox">Unique Keys for FacProportionalRIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=NetExcessOfLossRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">NetExcessOfLossRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1992" class="reftext" onclick='showAndHideRefBox("refbox_1992", "reflink_1992")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1992" class="refbox_inner" style="display:none;">
+Net excess of loss non-proportional reinsurance treaty agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="netexcessoflossritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.NetExcessOfLossRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for NetExcessOfLossRITreaty"></a><div class="arraysbox">Unique Keys for NetExcessOfLossRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=NonProportionalRIAgreement></a>
+<div class="titlebox">
+<div class="filtertitle">NonProportionalRIAgreement <span class='supername'>(subtype of <A HREF="RIAgreement.html" TARGET="tableFrame">RIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1993" class="reftext" onclick='showAndHideRefBox("refbox_1993", "reflink_1993")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1993" class="refbox_inner" style="display:none;">
+Non-proportional reinsurance agreement.
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<a name="nonproportionalriagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.NonProportionalRIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for NonProportionalRIAgreement"></a><div class="arraysbox">Unique Keys for NonProportionalRIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=PerEventRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">PerEventRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#NonProportionalRIAgreement" TARGET="tableFrame">NonProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1994" class="reftext" onclick='showAndHideRefBox("refbox_1994", "reflink_1994")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1994" class="refbox_inner" style="display:none;">
+Per event reinsurance treaty agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="pereventritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.PerEventRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for PerEventRITreaty"></a><div class="arraysbox">Unique Keys for PerEventRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ProportionalRIAgreement></a>
+<div class="titlebox">
+<div class="filtertitle">ProportionalRIAgreement <span class='supername'>(subtype of <A HREF="RIAgreement.html" TARGET="tableFrame">RIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1995" class="reftext" onclick='showAndHideRefBox("refbox_1995", "reflink_1995")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1995" class="refbox_inner" style="display:none;">
+Proportional reinsurance agreement.
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<a name="proportionalriagreement_proportionalshare"></a>
+<p class="column">
+<span class="coltitle">ProportionalShare</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "ripercentagedec")'>ripercentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Proportional Share</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AgreementDetailsDV.FacProportionalRIAgreement.pcf:48</td>
+<td>Web.Claim.Reinsurance.Proportional.Share</td>
+<td>(agreement as FacProportionalRIAgreement).ProportionalShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.QuotaShareRITreaty.pcf:48</td>
+<td>Web.Claim.Reinsurance.Proportional.Share</td>
+<td>(agreement as QuotaShareRITreaty).ProportionalShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+<tr>
+<td>AgreementDetailsDV.SurplusRITreaty.pcf:48</td>
+<td>Web.Claim.Reinsurance.Proportional.Share</td>
+<td>(agreement as SurplusRITreaty).ProportionalShare</td>
+<td>true</td>
+<td>
+NewRIAgreement
+<br>
+ReinsuranceAgreementDetails
+<br>
+AdjustRIRecoverablesPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="proportionalriagreement_proportionalshare_prop"></a>
+<p class="column">
+<span class="coltitle">PROPORTIONALSHARE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="proportionalriagreement_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ProportionalRIAgreement></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ProportionalRIAgreement"></a><div class="arraysbox">Unique Keys for ProportionalRIAgreement</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=QuotaShareRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">QuotaShareRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#ProportionalRIAgreement" TARGET="tableFrame">ProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1996" class="reftext" onclick='showAndHideRefBox("refbox_1996", "reflink_1996")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1996" class="refbox_inner" style="display:none;">
+Quota share proportional reinsurance treaty agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="quotashareritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.QuotaShareRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for QuotaShareRITreaty"></a><div class="arraysbox">Unique Keys for QuotaShareRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=SurplusRITreaty></a>
+<div class="titlebox">
+<div class="filtertitle">SurplusRITreaty <span class='supername'>(subtype of <A HREF="RIAgreement.html#ProportionalRIAgreement" TARGET="tableFrame">ProportionalRIAgreement</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1997" class="reftext" onclick='showAndHideRefBox("refbox_1997", "reflink_1997")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1997" class="refbox_inner" style="display:none;">
+Surplus proportional reinsurance agreement.
+</div>
+</span>
+</div>
+</div>
+<a name="surplusritreaty_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.SurplusRITreaty></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for SurplusRITreaty"></a><div class="arraysbox">Unique Keys for SurplusRITreaty</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riagreement1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1534 @@
+<html>
+<head>
+<title>Benefits</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Benefits <span class="entityname">(cc_benefits) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_376" class="reftext" onclick='showAndHideRefBox("refbox_376", "reflink_376")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_376" class="refbox_inner" style="display:none;">
+
+      Detail information about specific benefits related to an exposure. Exposures
+      have multiple fields linking to different Benefits entities.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Benefits</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_377" class="reftext" onclick='showAndHideRefBox("refbox_377", "reflink_377")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_377" class="refbox_inner" style="display:none;">
+<A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.CompBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.DeathBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.DisBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.LifePensionBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.PIPDeathBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.PIPVocBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.PPDBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.PTDBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.RSBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.SSDIBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.TPDBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.TTDBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.VocBenefits</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.WCBenefits</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="benefits_benefitsbegindate"></a>
+<p class="column">
+<span class="coltitle">BenefitsBeginDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when benefits start.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPVocBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.NewClaimPIPVocBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimReplacementServicesDV.pcf:18</td>
+<td>NVV.Exposure.NewClaimReplacementServices.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.RSBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimWageBenefitsDV.pcf:17</td>
+<td>NVV.Exposure.NewClaimWageBenefits.PIPDamages.CompBenefits.BenefitsBeginDate</td>
+<td>Exposure.CompBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPVocBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.NewPIPVocBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewReplacementServicesDV.pcf:17</td>
+<td>NVV.Exposure.NewReplacementServices.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.RSBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewWageBenefitsDV.pcf:21</td>
+<td>NVV.Exposure.NewWageBenefits.PIPDamages.CompBenefits.BenefitsBeginDate</td>
+<td>Exposure.CompBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPSSBenefitsInputSet.pcf:24</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.SSDIBenefits.BeginDate</td>
+<td>Exposure.SSDIBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPVocBenefitsDV.pcf:18</td>
+<td>NVV.Exposure.PIPVocBenefits.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPWorkersCompensationInputSet.pcf:60</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.WCBenefits.BenefitsBeginDate</td>
+<td>Exposure.WCBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>ReplacementServicesDV.pcf:17</td>
+<td>NVV.Exposure.ReplacementServices.LostWagesBenefits.BenefitsBeginDate</td>
+<td>Exposure.RSBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WageBenefitsDV.pcf:21</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.CompBenefits.BenefitsBeginDate</td>
+<td>Exposure.CompBenefits.BenefitsBeginDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_benefitsenddate"></a>
+<p class="column">
+<span class="coltitle">BenefitsEndDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when benefits end.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPVocBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.NewClaimPIPVocBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimReplacementServicesDV.pcf:24</td>
+<td>NVV.Exposure.NewClaimReplacementServices.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.RSBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimWageBenefitsDV.pcf:23</td>
+<td>NVV.Exposure.NewClaimWageBenefits.PIPDamages.CompBenefits.BenefitsEndDate</td>
+<td>Exposure.CompBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPVocBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.NewPIPVocBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewReplacementServicesDV.pcf:23</td>
+<td>NVV.Exposure.NewReplacementServices.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.RSBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewWageBenefitsDV.pcf:27</td>
+<td>NVV.Exposure.NewWageBenefits.PIPDamages.CompBenefits.BenefitsEndDate</td>
+<td>Exposure.CompBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPDeathBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPVocBenefitsDV.pcf:24</td>
+<td>NVV.Exposure.PIPVocBenefits.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.PIPVocBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>ReplacementServicesDV.pcf:23</td>
+<td>NVV.Exposure.ReplacementServices.LostWagesBenefits.BenefitsEndDate</td>
+<td>Exposure.RSBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WageBenefitsDV.pcf:27</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.CompBenefits.BenefitsEndDate</td>
+<td>Exposure.CompBenefits.BenefitsEndDate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_benefittype"></a>
+<p class="column">
+<span class="coltitle">BenefitType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LostWagesBenefitType_tl.html" TARGET="tableFrame">LostWagesBenefitType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of lost wages benefit.</span>
+<a name="benefits_description"></a>
+<p class="column">
+<span class="coltitle">Description</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Additional information about benefits.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:47</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPDeathBenefits.Description</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPSummaryDV.pcf:146</td>
+<td>NVV.Exposure.NewClaimPIPSummary.LostWagesBenefits.Description</td>
+<td>Exposure.DisBenefits.Description</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPVocBenefitsDV.pcf:69</td>
+<td>NVV.Exposure.NewClaimPIPVocBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPVocBenefits.Description</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:47</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPDeathBenefits.Description</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPSummaryDV.pcf:179</td>
+<td>NVV.Exposure.NewPIPSummary.LostWagesBenefits.Description</td>
+<td>Exposure.DisBenefits.Description</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPVocBenefitsDV.pcf:69</td>
+<td>NVV.Exposure.NewPIPVocBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPVocBenefits.Description</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:47</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPDeathBenefits.Description</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPSummaryDV.pcf:207</td>
+<td>NVV.Exposure.PIPSummary.LostWagesBenefits.Description</td>
+<td>Exposure.DisBenefits.Description</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPVocBenefitsDV.pcf:69</td>
+<td>NVV.Exposure.PIPVocBenefits.LostWagesBenefits.Description</td>
+<td>Exposure.PIPVocBenefits.Description</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_firstpaymentdate"></a>
+<p class="column">
+<span class="coltitle">FirstPaymentDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date 1st payment made</span>
+<a name="benefits_maxburialrate"></a>
+<p class="column">
+<span class="coltitle">MaxBurialRate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Maximum burial rate.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>LostWagesBenefitsDV.pcf:85</td>
+<td>NVV.Exposure.LostWagesBenefits.Death.MaxBurialRate</td>
+<td>Exposure.DeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:145</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.Death.MaxBurialRate</td>
+<td>Exposure.DeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:42</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.MaxBurialRate</td>
+<td>Exposure.PIPDeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:145</td>
+<td>NVV.Exposure.NewLostWagesBenefits.Death.MaxBurialRate</td>
+<td>Exposure.DeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:42</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.MaxBurialRate</td>
+<td>Exposure.PIPDeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:42</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.MaxBurialRate</td>
+<td>Exposure.PIPDeathBenefits.MaxBurialRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_maxcomprate"></a>
+<p class="column">
+<span class="coltitle">MaxCompRate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">State maximum benefit amount.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:124</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PPD.MaxStateCompRate</td>
+<td>Exposure.PPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:37</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.MaxStateCompRate</td>
+<td>Exposure.TTDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:75</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TPD.MaxStateCompRate</td>
+<td>Exposure.TPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:96</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PTD.MaxStateCompRate</td>
+<td>Exposure.PPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimReplacementServicesDV.pcf:29</td>
+<td>NVV.Exposure.NewClaimReplacementServices.LostWagesBenefits.MaxCompRate</td>
+<td>Exposure.RSBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:124</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PPD.MaxStateCompRate</td>
+<td>Exposure.PPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:37</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.MaxStateCompRate</td>
+<td>Exposure.TTDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:75</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TPD.MaxStateCompRate</td>
+<td>Exposure.TPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:96</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PTD.MaxStateCompRate</td>
+<td>Exposure.PPDBenefits.MaxCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_mincomprate"></a>
+<p class="column">
+<span class="coltitle">MinCompRate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">State minimum benefit amount.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:118</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PPD.MinStateCompRate</td>
+<td>Exposure.PPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:31</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.MinStateCompRate</td>
+<td>Exposure.TTDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:69</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TPD.MinStateCompRate</td>
+<td>Exposure.TPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:90</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PTD.MinStateCompRate</td>
+<td>Exposure.PPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:118</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PPD.MinStateCompRate</td>
+<td>Exposure.PPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:31</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.MinStateCompRate</td>
+<td>Exposure.TTDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:69</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TPD.MinStateCompRate</td>
+<td>Exposure.TPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:90</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PTD.MinStateCompRate</td>
+<td>Exposure.PPDBenefits.MinCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_mmidate"></a>
+<p class="column">
+<span class="coltitle">MMIDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when maximum medical improvement was reached (when PPD benefits can start).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:102</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PTD.MMIDate</td>
+<td>Exposure.PPDBenefits.MMIDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:130</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PPD.MMIDate</td>
+<td>Exposure.PPDBenefits.MMIDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:102</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PTD.MMIDate</td>
+<td>Exposure.PPDBenefits.MMIDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:130</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PPD.MMIDate</td>
+<td>Exposure.PPDBenefits.MMIDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_monthlycomprate"></a>
+<p class="column">
+<span class="coltitle">MonthlyCompRate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Monthly compensation rate. This calculation depends on the type of benefit.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PIPSSBenefitsInputSet.pcf:30</td>
+<td>NVV.Exposure.WageBenefits.LostWagesBenefits.MonthlyCompRate</td>
+<td>Exposure.SSDIBenefits.MonthlyCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_numpaymentweeks"></a>
+<p class="column">
+<span class="coltitle">NumPaymentWeeks</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of weeks benefits will be paid. This differs by state.</span>
+<a name="benefits_paidontime"></a>
+<p class="column">
+<span class="coltitle">PaidOnTime</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PaidOnTime_tl.html" TARGET="tableFrame">PaidOnTime</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">1st payment - whether made on time or reason why not</span>
+<a name="benefits_paymentfrequency"></a>
+<p class="column">
+<span class="coltitle">PaymentFrequency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PaymentFrequencyType_tl.html" TARGET="tableFrame">PaymentFrequencyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Payment frequency for benefits. This differs by state.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:108</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PTD.PaymentFrequency</td>
+<td>Exposure.PPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:136</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.PPD.PaymentFrequency</td>
+<td>Exposure.PPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:60</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.PaymentFrequency</td>
+<td>Exposure.TTDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:81</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TPD.PaymentFrequency</td>
+<td>Exposure.TPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:36</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.PaymentFrequency</td>
+<td>Exposure.PIPDeathBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimWageBenefitsDV.pcf:34</td>
+<td>NVV.Exposure.NewClaimWageBenefits.PIPDamages.CompBenefits.PaymentFrequency</td>
+<td>Exposure.CompBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:108</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PTD.PaymentFrequency</td>
+<td>Exposure.PPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:136</td>
+<td>NVV.Exposure.NewLostWagesBenefits.PPD.PaymentFrequency</td>
+<td>Exposure.PPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:60</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.PaymentFrequency</td>
+<td>Exposure.TTDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:81</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TPD.PaymentFrequency</td>
+<td>Exposure.TPDBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:36</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.PaymentFrequency</td>
+<td>Exposure.PIPDeathBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewWageBenefitsDV.pcf:38</td>
+<td>NVV.Exposure.NewWageBenefits.PIPDamages.CompBenefits.PaymentFrequency</td>
+<td>Exposure.CompBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:36</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.PaymentFrequency</td>
+<td>Exposure.PIPDeathBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WageBenefitsDV.pcf:38</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.CompBenefits.PaymentFrequency</td>
+<td>Exposure.CompBenefits.PaymentFrequency</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_paymentlimit"></a>
+<p class="column">
+<span class="coltitle">PaymentLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Payment limit</span>
+<a name="benefits_percentagecomp"></a>
+<p class="column">
+<span class="coltitle">PercentageComp</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "percentage")'>percentage</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Percentage compensability.</span>
+<a name="benefits_postinjrywklywgs"></a>
+<p class="column">
+<span class="coltitle">PostInjryWklyWgs</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Weekly wages post-injury.</span>
+<a name="benefits_providertype"></a>
+<p class="column">
+<span class="coltitle">ProviderType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ProviderType_tl.html" TARGET="tableFrame">ProviderType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of services provider.</span>
+<a name="benefits_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="benefits_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="benefits_retroperiod"></a>
+<p class="column">
+<span class="coltitle">RetroPeriod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/RetroPeriodType_tl.html" TARGET="tableFrame">RetroPeriodType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Retroactive period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:54</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.RetroactivePeriod</td>
+<td>Exposure.TTDBenefits.RetroPeriod</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:54</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.RetroactivePeriod</td>
+<td>Exposure.TTDBenefits.RetroPeriod</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_services"></a>
+<p class="column">
+<span class="coltitle">Services</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Services required.</span>
+<a name="benefits_settledate"></a>
+<p class="column">
+<span class="coltitle">SettleDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date of settlement.</span>
+<a name="benefits_settlemethod"></a>
+<p class="column">
+<span class="coltitle">SettleMethod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/SettleMethod_tl.html" TARGET="tableFrame">SettleMethod</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Method of settlement.</span>
+<a name="benefits_waitingperiod"></a>
+<p class="column">
+<span class="coltitle">WaitingPeriod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/WaitingPeriodType_tl.html" TARGET="tableFrame">WaitingPeriodType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Waiting period before benefits begin. This differs by state.</span>
+<a name="benefits_waitingperiodpaid"></a>
+<p class="column">
+<span class="coltitle">WaitingPeriodPaid</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the Employer has paid the waiting period</span>
+<a name="benefits_waitprdbegindate"></a>
+<p class="column">
+<span class="coltitle">WaitPrdBeginDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when the waiting period begins.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:42</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.WaitingPeriodBegin</td>
+<td>Exposure.TTDBenefits.WaitPrdBeginDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:42</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.WaitingPeriodBegin</td>
+<td>Exposure.TTDBenefits.WaitPrdBeginDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_waitprdenddate"></a>
+<p class="column">
+<span class="coltitle">WaitPrdEndDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when the waiting period ends.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimLostWagesBenefitsDV.pcf:48</td>
+<td>NVV.Exposure.NewClaimLostWagesBenefits.TTD.WaitingPeriodEnd</td>
+<td>Exposure.TTDBenefits.WaitPrdEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewLostWagesBenefitsDV.pcf:48</td>
+<td>NVV.Exposure.NewLostWagesBenefits.TTD.WaitingPeriodEnd</td>
+<td>Exposure.TTDBenefits.WaitPrdEndDate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_weeklycomprate"></a>
+<p class="column">
+<span class="coltitle">WeeklyCompRate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "positivecurrencyamount")'>positivecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Weekly compensation rate. This calculation depends on type of benefit.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPIPDeathBenefitsDV.pcf:30</td>
+<td>NVV.Exposure.NewClaimPIPDeathBenefits.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.PIPDeathBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPIPSummaryDV.pcf:141</td>
+<td>NVV.Exposure.NewClaimPIPSummary.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.DisBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewClaimWageBenefitsDV.pcf:28</td>
+<td>NVV.Exposure.NewClaimWageBenefits.PIPDamages.CompBenefits.WeeklyCompRate</td>
+<td>Exposure.CompBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewClaimWizard_NewExposurePopup
+</td>
+</tr>
+<tr>
+<td>NewPIPDeathBenefitsDV.pcf:30</td>
+<td>NVV.Exposure.NewPIPDeathBenefits.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.PIPDeathBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewPIPSummaryDV.pcf:174</td>
+<td>NVV.Exposure.NewPIPSummary.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.DisBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>NewWageBenefitsDV.pcf:32</td>
+<td>NVV.Exposure.NewWageBenefits.PIPDamages.CompBenefits.WeeklyCompRate</td>
+<td>Exposure.CompBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+NewExposure
+</td>
+</tr>
+<tr>
+<td>PIPDeathBenefitsDV.pcf:30</td>
+<td>NVV.Exposure.PIPDeathBenefits.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.PIPDeathBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>PIPSummaryDV.pcf:202</td>
+<td>NVV.Exposure.PIPSummary.LostWagesBenefits.WeeklyCompRate</td>
+<td>Exposure.DisBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WCBenefitPPDInputSet.pcf:72</td>
+<td>NVV.Exposure.LostWagesBenefits.PPD.WeeklyCompRateManual</td>
+<td>exposure.PPDBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WCBenefitPTDInputSet.pcf:72</td>
+<td>NVV.Exposure.LostWagesBenefits.PTD.WeeklyCompRateManual</td>
+<td>exposure.PTDBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WCBenefitTPDInputSet.pcf:72</td>
+<td>NVV.Exposure.LostWagesBenefits.TPD.WeeklyCompRateManual</td>
+<td>exposure.TPDBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WCBenefitTTDInputSet.pcf:72</td>
+<td>NVV.Exposure.LostWagesBenefits.TTD.WeeklyCompRateManual</td>
+<td>exposure.TTDBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>WageBenefitsDV.pcf:32</td>
+<td>NVV.Exposure.WageBenefits.PIPDamages.CompBenefits.WeeklyCompRate</td>
+<td>Exposure.CompBenefits.WeeklyCompRate</td>
+<td>true</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="benefits_weeklycomprateinfo"></a>
+<p class="column">
+<span class="coltitle">WeeklyCompRateInfo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Rating Information</span>
+<a name="Unique Keys for Benefits"></a><div class="arraysbox">Unique Keys for Benefits</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>benefits1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

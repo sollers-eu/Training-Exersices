@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!-- ### ===========================================================================
+###  tl_claim.xml
+### ===========================================================================
+### tl_claim.xml contains typelists that are used exclusively in elements
+### referenced in md_claim.xml.  General-purpose typelists are stored in
+### tl_general.xml
+  
+    Claim/general exposure-related typelists
+   the core loss categories -->
+<typelistextension
+  xmlns="http://guidewire.com/typelists"
+  desc="All available types of claims"
+  name="LossType">
+  <typecode
+    code="AUTO"
+    desc="Auto"
+    name="Auto">
+    <category
+      code="PersonalAutoLine"
+      typelist="LOBCode"/>
+    <category
+      code="BusinessAutoLine"
+      typelist="LOBCode"/>
+  </typecode>
+  <typecode
+    code="PR"
+    desc="Property"
+    name="Property">
+    <category
+      code="CPLine"
+      typelist="LOBCode"/>
+    <category
+      code="IMLine"
+      typelist="LOBCode"/>
+    <category
+      code="HomeownersLine_HOE"
+      typelist="LOBCode"/>
+  </typecode>
+  <typecode
+    code="GL"
+    desc="Liability"
+    name="Liability">
+    <category
+      code="GLLine"
+      typelist="LOBCode"/>
+    <category
+      code="BOPLine"
+      typelist="LOBCode"/>
+    <category
+      code="PersonalUmbrellaLine_PUE"
+      typelist="LOBCode"/>
+    <category
+      code="other_liab"
+      typelist="LOBCode"/>
+  </typecode>
+  <typecode
+    code="WC"
+    desc="Workers' Comp"
+    name="Workers' Comp">
+    <category
+      code="WorkersCompLine"
+      typelist="LOBCode"/>
+  </typecode>
+  <typecode
+    code="TRAV"
+    desc="General loss during travel"
+    name="Travel">
+    <category
+      code="travel"
+      typelist="LOBCode"/>
+  </typecode>
+</typelistextension>

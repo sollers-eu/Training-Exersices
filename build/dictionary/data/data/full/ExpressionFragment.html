@@ -1,0 +1,964 @@
+<html>
+<head>
+<title>ExpressionFragment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ExpressionFragment <span class="entityname">(cc_bizexprfragment) (delegates to <A HREF="RuleVersionDependent.html" TARGET="tableFrame">RuleVersionDependent</A>, <A HREF="Versionable.html" TARGET="tableFrame">Versionable</A>)</span></div>
+<div class="desc">
+<span id="reflink_1301" class="reftext" onclick='showAndHideRefBox("refbox_1301", "reflink_1301")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1301" class="refbox_inner" style="display:none;">
+Fragment of an expression in a Business Rule
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ExpressionFragment</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1302" class="reftext" onclick='showAndHideRefBox("refbox_1302", "reflink_1302")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1302" class="refbox_inner" style="display:none;">
+<A HREF="../full/FilteredIterableExpressionFragmentJoin.html" TARGET="tableFrame">FilteredIterableExpressionFragmentJoin.IterableExpression</A><br><A HREF="../full/ListExpressionFragmentJoin.html" TARGET="tableFrame">ListExpressionFragmentJoin.ExpressionFragment</A><br><A HREF="../full/RuleCommandParameter.html" TARGET="tableFrame">RuleCommandParameter.Expression</A><br><A HREF="../full/RuleConditionLine.html" TARGET="tableFrame">RuleConditionLine.LeftOperand</A><br><A HREF="../full/RuleConditionLine.html" TARGET="tableFrame">RuleConditionLine.RightOperand</A><br><A HREF="../full/SumExpressionFragmentJoin.html" TARGET="tableFrame">SumExpressionFragmentJoin.NumericTransformExpression</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+CodeExpressionFragment</td>
+<td><A HREF="#CodeExpressionFragment" TARGET="tableFrame">CodeExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+ConditionExpressionFragment</td>
+<td><A HREF="#ConditionExpressionFragment" TARGET="tableFrame">ConditionExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ContainsExpressionFragment</td>
+<td><A HREF="#ContainsExpressionFragment" TARGET="tableFrame">ContainsExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FilteredIterableExpressionFragment</td>
+<td><A HREF="#FilteredIterableExpressionFragment" TARGET="tableFrame">FilteredIterableExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+CountExpressionFragment</td>
+<td><A HREF="#CountExpressionFragment" TARGET="tableFrame">CountExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+SumExpressionFragment</td>
+<td><A HREF="#SumExpressionFragment" TARGET="tableFrame">SumExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+DateExpressionFragment</td>
+<td><A HREF="#DateExpressionFragment" TARGET="tableFrame">DateExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+GosuTemplateExpressionFragment</td>
+<td><A HREF="#GosuTemplateExpressionFragment" TARGET="tableFrame">GosuTemplateExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+ListExpressionFragment</td>
+<td><A HREF="#ListExpressionFragment" TARGET="tableFrame">ListExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+PropertyReferenceExpressionFragment</td>
+<td><A HREF="#PropertyReferenceExpressionFragment" TARGET="tableFrame">PropertyReferenceExpressionFragment</A></td>
+</tr>
+<tr>
+<td>
+TypeKeyExpressionFragment</td>
+<td><A HREF="#TypeKeyExpressionFragment" TARGET="tableFrame">TypeKeyExpressionFragment</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="expressionfragment_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="expressionfragment_beanversion_dynprop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_booleanvalue"></a>
+<p class="column">
+<span class="coltitle">BooleanValue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_displaytext"></a>
+<p class="column">
+<span class="coltitle">DisplayText</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_incommandparameter"></a>
+<p class="column">
+<span class="coltitle">InCommandParameter</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RuleCommandParameter.html" TARGET="tableFrame">RuleCommandParameter</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_incommandparameter_prop"></a>
+<p class="column">
+<span class="coltitle">INCOMMANDPARAMETER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_incommandparameterarray_prop"></a>
+<p class="column">
+<span class="coltitle">INCOMMANDPARAMETERARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_infilterediterableexpressionfragment"></a>
+<p class="column">
+<span class="coltitle">InFilteredIterableExpressionFragment</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="FilteredIterableExpressionFragmentJoin.html" TARGET="tableFrame">FilteredIterableExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_infilterediterableexpressionfragment_prop"></a>
+<p class="column">
+<span class="coltitle">INFILTEREDITERABLEEXPRESSIONFRAGMENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_infilterediterableexpressionfragmentarray_prop"></a>
+<p class="column">
+<span class="coltitle">INFILTEREDITERABLEEXPRESSIONFRAGMENTARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inleftcondition"></a>
+<p class="column">
+<span class="coltitle">InLeftCondition</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RuleConditionLine.html" TARGET="tableFrame">RuleConditionLine</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inleftcondition_prop"></a>
+<p class="column">
+<span class="coltitle">INLEFTCONDITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inleftconditionarray_prop"></a>
+<p class="column">
+<span class="coltitle">INLEFTCONDITIONARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inlistexpressionfragmentjoin"></a>
+<p class="column">
+<span class="coltitle">InListExpressionFragmentJoin</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ListExpressionFragmentJoin.html" TARGET="tableFrame">ListExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inlistexpressionfragmentjoin_prop"></a>
+<p class="column">
+<span class="coltitle">INLISTEXPRESSIONFRAGMENTJOIN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inlistexpressionfragmentjoinarray_prop"></a>
+<p class="column">
+<span class="coltitle">INLISTEXPRESSIONFRAGMENTJOINARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inrightcondition"></a>
+<p class="column">
+<span class="coltitle">InRightCondition</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RuleConditionLine.html" TARGET="tableFrame">RuleConditionLine</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inrightcondition_prop"></a>
+<p class="column">
+<span class="coltitle">INRIGHTCONDITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_inrightconditionarray_prop"></a>
+<p class="column">
+<span class="coltitle">INRIGHTCONDITIONARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_insumexpressionfragment"></a>
+<p class="column">
+<span class="coltitle">InSumExpressionFragment</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="SumExpressionFragmentJoin.html" TARGET="tableFrame">SumExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_insumexpressionfragment_prop"></a>
+<p class="column">
+<span class="coltitle">INSUMEXPRESSIONFRAGMENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_insumexpressionfragmentarray_prop"></a>
+<p class="column">
+<span class="coltitle">INSUMEXPRESSIONFRAGMENTARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_integervalue"></a>
+<p class="column">
+<span class="coltitle">IntegerValue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Integer</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="expressionfragment_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">ExpressionFragment</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="expressionfragment_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ExpressionFragment"></a><div class="arraysbox">Unique Keys for ExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=CodeExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">CodeExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1303" class="reftext" onclick='showAndHideRefBox("refbox_1303", "reflink_1303")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1303" class="refbox_inner" style="display:none;">
+ExpressionFragment for arbitrary code expression
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="codeexpressionfragment_codetext"></a>
+<p class="column">
+<span class="coltitle">CodeText</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="codeexpressionfragment_codetext_prop"></a>
+<p class="column">
+<span class="coltitle">CODETEXT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="codeexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CodeExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for CodeExpressionFragment"></a><div class="arraysbox">Unique Keys for CodeExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ConditionExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">ConditionExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1304" class="reftext" onclick='showAndHideRefBox("refbox_1304", "reflink_1304")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1304" class="refbox_inner" style="display:none;">
+ExpressionFragment for the case when the expression is a RuleCondition, e.g. the expression for a RuleCommandParameter
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1305" class="reftext" onclick='showAndHideRefBox("refbox_1305", "reflink_1305")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_1305" class="refbox_inner" style="display:none;">
+<A HREF="../full/RuleCondition.html" TARGET="tableFrame">RuleCondition.ConditionExpressionFragments</A>
+</div>
+</span>
+</div>
+<a name="conditionexpressionfragment_additionalsymbolname"></a>
+<p class="column">
+<span class="coltitle">AdditionalSymbolName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="conditionexpressionfragment_additionalsymbolname_prop"></a>
+<p class="column">
+<span class="coltitle">ADDITIONALSYMBOLNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="conditionexpressionfragment_additionalsymboltype"></a>
+<p class="column">
+<span class="coltitle">AdditionalSymbolType</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.lang.reflect.IType</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="conditionexpressionfragment_rulecondition"></a>
+<p class="column">
+<span class="coltitle">RuleCondition</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RuleCondition.html" TARGET="tableFrame">RuleCondition</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="conditionexpressionfragment_rulecondition_prop"></a>
+<p class="column">
+<span class="coltitle">RULECONDITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="conditionexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ConditionExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ConditionExpressionFragment"></a><div class="arraysbox">Unique Keys for ConditionExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ContainsExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">ContainsExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html#ConditionExpressionFragment" TARGET="tableFrame">ConditionExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1306" class="reftext" onclick='showAndHideRefBox("refbox_1306", "reflink_1306")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1306" class="refbox_inner" style="display:none;">
+ExpressionFragment to express a CONTAINS operation, which detects whether or not a list contains a element matching a nested condition
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="containsexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ContainsExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ContainsExpressionFragment"></a><div class="arraysbox">Unique Keys for ContainsExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=CountExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">CountExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html#FilteredIterableExpressionFragment" TARGET="tableFrame">FilteredIterableExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1307" class="reftext" onclick='showAndHideRefBox("refbox_1307", "reflink_1307")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1307" class="refbox_inner" style="display:none;">
+Expression fragment representing a COUNT expression, which evaluates to the number of elements in a list which match a given condition
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="countexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CountExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for CountExpressionFragment"></a><div class="arraysbox">Unique Keys for CountExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=DateExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">DateExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1308" class="reftext" onclick='showAndHideRefBox("refbox_1308", "reflink_1308")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1308" class="refbox_inner" style="display:none;">
+ExpressionFragment for arbitrary date expression
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="dateexpressionfragment_datevalue"></a>
+<p class="column">
+<span class="coltitle">DateValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dateexpressionfragment_datevalue_prop"></a>
+<p class="column">
+<span class="coltitle">DATEVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dateexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.DateExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for DateExpressionFragment"></a><div class="arraysbox">Unique Keys for DateExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FilteredIterableExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">FilteredIterableExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html#ConditionExpressionFragment" TARGET="tableFrame">ConditionExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1309" class="reftext" onclick='showAndHideRefBox("refbox_1309", "reflink_1309")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1309" class="refbox_inner" style="display:none;">
+Abstract expression fragment representing an expression with an iterable that has its elements filtered down by a condition
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1310" class="reftext" onclick='showAndHideRefBox("refbox_1310", "reflink_1310")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1310" class="refbox_inner" style="display:none;">
+<A HREF="../full/FilteredIterableExpressionFragmentJoin.html" TARGET="tableFrame">FilteredIterableExpressionFragmentJoin.FilteredIterableExpressionFragment</A>
+</div>
+</span>
+</div>
+<a name="filterediterableexpressionfragment_iterableexpression"></a>
+<p class="column">
+<span class="coltitle">IterableExpression</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ExpressionFragment</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="filterediterableexpressionfragment_iterableexpressionjoin"></a>
+<p class="column">
+<span class="coltitle">IterableExpressionJoin</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="FilteredIterableExpressionFragmentJoin.html" TARGET="tableFrame">FilteredIterableExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="filterediterableexpressionfragment_iterableexpressionjoin_prop"></a>
+<p class="column">
+<span class="coltitle">ITERABLEEXPRESSIONJOIN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="filterediterableexpressionfragment_iterableexpressionjoinarray_prop"></a>
+<p class="column">
+<span class="coltitle">ITERABLEEXPRESSIONJOINARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="filterediterableexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FilteredIterableExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FilteredIterableExpressionFragment"></a><div class="arraysbox">Unique Keys for FilteredIterableExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=GosuTemplateExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">GosuTemplateExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1311" class="reftext" onclick='showAndHideRefBox("refbox_1311", "reflink_1311")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1311" class="refbox_inner" style="display:none;">
+ExpressionFragment for Gosu String template
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="gosutemplateexpressionfragment_templatetext"></a>
+<p class="column">
+<span class="coltitle">TemplateText</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CodeText)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="gosutemplateexpressionfragment_templatetext_prop"></a>
+<p class="column">
+<span class="coltitle">TEMPLATETEXT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="gosutemplateexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.GosuTemplateExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for GosuTemplateExpressionFragment"></a><div class="arraysbox">Unique Keys for GosuTemplateExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ListExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">ListExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1312" class="reftext" onclick='showAndHideRefBox("refbox_1312", "reflink_1312")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1312" class="refbox_inner" style="display:none;">
+ExpressionFragment for arbitrary list expression
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1313" class="reftext" onclick='showAndHideRefBox("refbox_1313", "reflink_1313")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1313" class="refbox_inner" style="display:none;">
+<A HREF="../full/ListExpressionFragmentJoin.html" TARGET="tableFrame">ListExpressionFragmentJoin.ListExpressionFragment</A>
+</div>
+</span>
+</div>
+<a name="listexpressionfragment_elements"></a>
+<p class="column">
+<span class="coltitle">Elements</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ListExpressionFragmentJoin.html" TARGET="tableFrame">ListExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="listexpressionfragment_elements_prop"></a>
+<p class="column">
+<span class="coltitle">ELEMENTS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="listexpressionfragment_generatearray"></a>
+<p class="column">
+<span class="coltitle">GenerateArray</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether or not this represents an array instead of a list</span>
+<a name="listexpressionfragment_generatearray_prop"></a>
+<p class="column">
+<span class="coltitle">GENERATEARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="listexpressionfragment_orderedelements"></a>
+<p class="column">
+<span class="coltitle">OrderedElements</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<entity.ExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="listexpressionfragment_orderedjoinelements"></a>
+<p class="column">
+<span class="coltitle">OrderedJoinElements</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<entity.ListExpressionFragmentJoin></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="listexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ListExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ListExpressionFragment"></a><div class="arraysbox">Unique Keys for ListExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=PropertyReferenceExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">PropertyReferenceExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1314" class="reftext" onclick='showAndHideRefBox("refbox_1314", "reflink_1314")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1314" class="refbox_inner" style="display:none;">
+ExpressionFragment for the case when the expression is a RuleCondition, e.g. the expression for a RuleCommandParameter
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="propertyreferenceexpressionfragment_fullproperty"></a>
+<p class="column">
+<span class="coltitle">FullProperty</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_fullpropertydenorm"></a>
+<p class="column">
+<span class="coltitle">FullPropertyDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_fullpropertydenorm_prop"></a>
+<p class="column">
+<span class="coltitle">FULLPROPERTYDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_generateoriginalvalue"></a>
+<p class="column">
+<span class="coltitle">GenerateOriginalValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether or not this should generate code that produces the original value of this property</span>
+<a name="propertyreferenceexpressionfragment_generateoriginalvalue_prop"></a>
+<p class="column">
+<span class="coltitle">GENERATEORIGINALVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_propertyinfo"></a>
+<p class="column">
+<span class="coltitle">PropertyInfo</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.lang.reflect.IPropertyInfo</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_propertyname"></a>
+<p class="column">
+<span class="coltitle">PropertyName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_propertyname_prop"></a>
+<p class="column">
+<span class="coltitle">PROPERTYNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_rootobjectexpression"></a>
+<p class="column">
+<span class="coltitle">RootObjectExpression</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_rootobjectexpression_prop"></a>
+<p class="column">
+<span class="coltitle">ROOTOBJECTEXPRESSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="propertyreferenceexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.PropertyReferenceExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for PropertyReferenceExpressionFragment"></a><div class="arraysbox">Unique Keys for PropertyReferenceExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=SumExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">SumExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html#FilteredIterableExpressionFragment" TARGET="tableFrame">FilteredIterableExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1315" class="reftext" onclick='showAndHideRefBox("refbox_1315", "reflink_1315")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1315" class="refbox_inner" style="display:none;">
+Expression fragment representing a SUM expression, which evaluates to the sum of elements in a list which match a given condition and are then converted to a numerical value
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1316" class="reftext" onclick='showAndHideRefBox("refbox_1316", "reflink_1316")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1316" class="refbox_inner" style="display:none;">
+<A HREF="../full/SumExpressionFragmentJoin.html" TARGET="tableFrame">SumExpressionFragmentJoin.SumExpressionFragment</A>
+</div>
+</span>
+</div>
+<a name="sumexpressionfragment_numerictransformexpression"></a>
+<p class="column">
+<span class="coltitle">NumericTransformExpression</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ExpressionFragment</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="sumexpressionfragment_numerictransformexpressionjoin"></a>
+<p class="column">
+<span class="coltitle">NumericTransformExpressionJoin</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="SumExpressionFragmentJoin.html" TARGET="tableFrame">SumExpressionFragmentJoin</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="sumexpressionfragment_numerictransformexpressionjoin_prop"></a>
+<p class="column">
+<span class="coltitle">NUMERICTRANSFORMEXPRESSIONJOIN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="sumexpressionfragment_numerictransformexpressionjoinarray_prop"></a>
+<p class="column">
+<span class="coltitle">NUMERICTRANSFORMEXPRESSIONJOINARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="sumexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.SumExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for SumExpressionFragment"></a><div class="arraysbox">Unique Keys for SumExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=TypeKeyExpressionFragment></a>
+<div class="titlebox">
+<div class="filtertitle">TypeKeyExpressionFragment <span class='supername'>(subtype of <A HREF="ExpressionFragment.html" TARGET="tableFrame">ExpressionFragment</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1317" class="reftext" onclick='showAndHideRefBox("refbox_1317", "reflink_1317")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1317" class="refbox_inner" style="display:none;">
+ExpressionFragment for arbitrary typekey expression
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="typekeyexpressionfragment_code"></a>
+<p class="column">
+<span class="coltitle">Code</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_code_prop"></a>
+<p class="column">
+<span class="coltitle">CODE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_listname"></a>
+<p class="column">
+<span class="coltitle">ListName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_listname_prop"></a>
+<p class="column">
+<span class="coltitle">LISTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TypeKeyExpressionFragment></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_typekeyvalue"></a>
+<p class="column">
+<span class="coltitle">TypeKeyValue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.entity.TypeKey</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="typekeyexpressionfragment_typelist"></a>
+<p class="column">
+<span class="coltitle">TypeList</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.entity.ITypeList<gw.entity.TypeKey></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for TypeKeyExpressionFragment"></a><div class="arraysbox">Unique Keys for TypeKeyExpressionFragment</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>bizexprfragment1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

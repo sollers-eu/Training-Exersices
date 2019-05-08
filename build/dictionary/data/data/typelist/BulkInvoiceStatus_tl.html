@@ -1,0 +1,600 @@
+<html>
+<head>
+<title>BulkInvoiceStatus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">BulkInvoiceStatus</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_bulkinvoicestatus)</span>
+</div>
+<div class="desc">Possible statuses for BulkInvoice entities</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3475" class="reftext" onclick='showAndHideRefBox("refbox_3475", "reflink_3475")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3475" class="refbox_inner" style="display:none;">
+<A HREF="../full/BulkInvoice.html" TARGET="tableFrame">BulkInvoice.Status</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#awaitingsubmission>awaitingsubmission</a></td>
+<td>Awaiting submission</td>
+<td>Awaiting submission to the downstream system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cleared>cleared</a></td>
+<td>Cleared</td>
+<td>Bulk invoice's associated bulk check has been cleared</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#draft>draft</a></td>
+<td>Draft</td>
+<td>Bulk invoice is possibly committed to DB, but not yet ready for validation</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#inreview>inreview</a></td>
+<td>In review</td>
+<td>Bulk invoice is under review</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#invaliditems>invaliditems</a></td>
+<td>Invalid bulk invoice items</td>
+<td>One or more approved items on the bulk invoice failed validation or had some problem with the associated check</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#issued>issued</a></td>
+<td>Issued</td>
+<td>Bulk invoice's associated bulk check has been issued</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#onhold>onhold</a></td>
+<td>On hold</td>
+<td>Bulk invoice was put on hold by downstream system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingitemvalidation>pendingitemvalidation</a></td>
+<td>Pending bulk invoice item validation</td>
+<td>Individual bulk invoice items are being validated</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingstop>pendingstop</a></td>
+<td>Pending stop</td>
+<td>Bulk invoice was stopped, and confirmation of stop is pending</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingvoid>pendingvoid</a></td>
+<td>Pending void</td>
+<td>Bulk invoice was voided, and confirmation of void is pending</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#rejected>rejected</a></td>
+<td>Rejected</td>
+<td>Bulk invoice rejected by assigned approver</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#requested>requested</a></td>
+<td>Requested</td>
+<td>Sent to downstream system and acknowledged</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#requesting>requesting</a></td>
+<td>Requesting</td>
+<td>Queued for submission to the downstream system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stopped>stopped</a></td>
+<td>Stopped</td>
+<td>Bulk invoice was stopped</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#voided>voided</a></td>
+<td>Voided</td>
+<td>Bulk invoice was voided</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=awaitingsubmission></a>
+<div class="titlebox">
+<div class="filtertitle">awaitingsubmission <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3476" class="reftext" onclick='showAndHideRefBox("refbox_3476", "reflink_3476")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3476" class="refbox_inner" style="display:none;">
+Awaiting submission to the downstream system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Awaiting submission</td>
+<td>Awaiting submission to the downstream system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cleared></a>
+<div class="titlebox">
+<div class="filtertitle">cleared <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3477" class="reftext" onclick='showAndHideRefBox("refbox_3477", "reflink_3477")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3477" class="refbox_inner" style="display:none;">
+Bulk invoice's associated bulk check has been cleared
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Cleared</td>
+<td>Bulk invoice's associated bulk check has been cleared</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=draft></a>
+<div class="titlebox">
+<div class="filtertitle">draft <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3478" class="reftext" onclick='showAndHideRefBox("refbox_3478", "reflink_3478")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3478" class="refbox_inner" style="display:none;">
+Bulk invoice is possibly committed to DB, but not yet ready for validation
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Draft</td>
+<td>Bulk invoice is possibly committed to DB, but not yet ready for validation</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=inreview></a>
+<div class="titlebox">
+<div class="filtertitle">inreview <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3479" class="reftext" onclick='showAndHideRefBox("refbox_3479", "reflink_3479")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3479" class="refbox_inner" style="display:none;">
+Bulk invoice is under review
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>In review</td>
+<td>Bulk invoice is under review</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=invaliditems></a>
+<div class="titlebox">
+<div class="filtertitle">invaliditems <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3480" class="reftext" onclick='showAndHideRefBox("refbox_3480", "reflink_3480")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3480" class="refbox_inner" style="display:none;">
+One or more approved items on the bulk invoice failed validation or had some problem with the associated check
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Invalid bulk invoice items</td>
+<td>One or more approved items on the bulk invoice failed validation or had some problem with the associated check</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=issued></a>
+<div class="titlebox">
+<div class="filtertitle">issued <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3481" class="reftext" onclick='showAndHideRefBox("refbox_3481", "reflink_3481")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3481" class="refbox_inner" style="display:none;">
+Bulk invoice's associated bulk check has been issued
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Issued</td>
+<td>Bulk invoice's associated bulk check has been issued</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=onhold></a>
+<div class="titlebox">
+<div class="filtertitle">onhold <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3482" class="reftext" onclick='showAndHideRefBox("refbox_3482", "reflink_3482")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3482" class="refbox_inner" style="display:none;">
+Bulk invoice was put on hold by downstream system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>On hold</td>
+<td>Bulk invoice was put on hold by downstream system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingitemvalidation></a>
+<div class="titlebox">
+<div class="filtertitle">pendingitemvalidation <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3483" class="reftext" onclick='showAndHideRefBox("refbox_3483", "reflink_3483")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3483" class="refbox_inner" style="display:none;">
+Individual bulk invoice items are being validated
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending bulk invoice item validation</td>
+<td>Individual bulk invoice items are being validated</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingstop></a>
+<div class="titlebox">
+<div class="filtertitle">pendingstop <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3484" class="reftext" onclick='showAndHideRefBox("refbox_3484", "reflink_3484")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3484" class="refbox_inner" style="display:none;">
+Bulk invoice was stopped, and confirmation of stop is pending
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending stop</td>
+<td>Bulk invoice was stopped, and confirmation of stop is pending</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingvoid></a>
+<div class="titlebox">
+<div class="filtertitle">pendingvoid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3485" class="reftext" onclick='showAndHideRefBox("refbox_3485", "reflink_3485")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3485" class="refbox_inner" style="display:none;">
+Bulk invoice was voided, and confirmation of void is pending
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending void</td>
+<td>Bulk invoice was voided, and confirmation of void is pending</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=rejected></a>
+<div class="titlebox">
+<div class="filtertitle">rejected <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3486" class="reftext" onclick='showAndHideRefBox("refbox_3486", "reflink_3486")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3486" class="refbox_inner" style="display:none;">
+Bulk invoice rejected by assigned approver
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Rejected</td>
+<td>Bulk invoice rejected by assigned approver</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=requested></a>
+<div class="titlebox">
+<div class="filtertitle">requested <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3487" class="reftext" onclick='showAndHideRefBox("refbox_3487", "reflink_3487")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3487" class="refbox_inner" style="display:none;">
+Sent to downstream system and acknowledged
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Requested</td>
+<td>Sent to downstream system and acknowledged</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=requesting></a>
+<div class="titlebox">
+<div class="filtertitle">requesting <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3488" class="reftext" onclick='showAndHideRefBox("refbox_3488", "reflink_3488")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3488" class="refbox_inner" style="display:none;">
+Queued for submission to the downstream system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Requesting</td>
+<td>Queued for submission to the downstream system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stopped></a>
+<div class="titlebox">
+<div class="filtertitle">stopped <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3489" class="reftext" onclick='showAndHideRefBox("refbox_3489", "reflink_3489")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3489" class="refbox_inner" style="display:none;">
+Bulk invoice was stopped
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Stopped</td>
+<td>Bulk invoice was stopped</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=voided></a>
+<div class="titlebox">
+<div class="filtertitle">voided <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3490" class="reftext" onclick='showAndHideRefBox("refbox_3490", "reflink_3490")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3490" class="refbox_inner" style="display:none;">
+Bulk invoice was voided
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Voided</td>
+<td>Bulk invoice was voided</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

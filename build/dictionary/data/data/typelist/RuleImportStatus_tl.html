@@ -1,0 +1,575 @@
+<html>
+<head>
+<title>RuleImportStatus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">RuleImportStatus</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_ruleimportstatus)</span>
+</div>
+<div class="desc">Rule Import Status</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_7977" class="reftext" onclick='showAndHideRefBox("refbox_7977", "reflink_7977")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_7977" class="refbox_inner" style="display:none;">
+<A HREF="../full/RuleImportTaskEntry.html" TARGET="tableFrame">RuleImportTaskEntry.Status</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#Conflict>Conflict</a></td>
+<td>Versions Conflict</td>
+<td>The rule was modified on both systems</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Deployed>Deployed</a></td>
+<td>Rule Deployment</td>
+<td>The rule was deployed on a different system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Discarded>Discarded</a></td>
+<td>Discarded</td>
+<td>The import was discarded</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#EditedResolvedConflict>EditedResolvedConflict</a></td>
+<td>Edited Version</td>
+<td>The rule was modified on both systems, and a new edited version was created</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ExistingConflict>ExistingConflict</a></td>
+<td>Kept Existing Version</td>
+<td>The rule was modified on both systems, the conflict was resolved and the rule was kept the same</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Imported>Imported</a></td>
+<td>Replaced with New Version</td>
+<td>The new rule version was imported</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ImportedConflict>ImportedConflict</a></td>
+<td>Replaced with Importing Version</td>
+<td>The rule was modified on both systems, the conflict was resolved and the rule was imported</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ImportedDeployed>ImportedDeployed</a></td>
+<td>Existing Version Deployed</td>
+<td>The rule was deployed on a different system and imported to this system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ImportedEditedConflict>ImportedEditedConflict</a></td>
+<td>Applied Edited Version</td>
+<td>The rule was modified on both systems, the conflict was resolved and a new draft was imported for resolution</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ImportedNew>ImportedNew</a></td>
+<td>Imported New Rule</td>
+<td>The new rule was imported</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#New>New</a></td>
+<td>New Rule</td>
+<td>The rule is new</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#NoAction>NoAction</a></td>
+<td>No Change</td>
+<td>No action is required because the imported rule version already exists</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#NoConflict>NoConflict</a></td>
+<td>New Version</td>
+<td>The rule was modified only on remote system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ResolvedConflict>ResolvedConflict</a></td>
+<td>Versions Conflict</td>
+<td>The rule was modified on both systems and the conflict has been resolved</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=Conflict></a>
+<div class="titlebox">
+<div class="filtertitle">Conflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7978" class="reftext" onclick='showAndHideRefBox("refbox_7978", "reflink_7978")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7978" class="refbox_inner" style="display:none;">
+The rule was modified on both systems
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Conflict</td>
+<td>The rule was modified on both systems</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Deployed></a>
+<div class="titlebox">
+<div class="filtertitle">Deployed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7979" class="reftext" onclick='showAndHideRefBox("refbox_7979", "reflink_7979")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7979" class="refbox_inner" style="display:none;">
+The rule was deployed on a different system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Deployed</td>
+<td>The rule was deployed on a different system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Discarded></a>
+<div class="titlebox">
+<div class="filtertitle">Discarded <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7980" class="reftext" onclick='showAndHideRefBox("refbox_7980", "reflink_7980")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7980" class="refbox_inner" style="display:none;">
+The import was discarded
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Discarded</td>
+<td>The import was discarded</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=EditedResolvedConflict></a>
+<div class="titlebox">
+<div class="filtertitle">EditedResolvedConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7981" class="reftext" onclick='showAndHideRefBox("refbox_7981", "reflink_7981")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7981" class="refbox_inner" style="display:none;">
+The rule was modified on both systems, and a new edited version was created
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+</div>
+<div class='subtypebox'>
+<a name=ExistingConflict></a>
+<div class="titlebox">
+<div class="filtertitle">ExistingConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7982" class="reftext" onclick='showAndHideRefBox("refbox_7982", "reflink_7982")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7982" class="refbox_inner" style="display:none;">
+The rule was modified on both systems, the conflict was resolved and the rule was kept the same
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+</div>
+<div class='subtypebox'>
+<a name=Imported></a>
+<div class="titlebox">
+<div class="filtertitle">Imported <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7983" class="reftext" onclick='showAndHideRefBox("refbox_7983", "reflink_7983")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7983" class="refbox_inner" style="display:none;">
+The new rule version was imported
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Imported</td>
+<td>The new rule version was imported</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ImportedConflict></a>
+<div class="titlebox">
+<div class="filtertitle">ImportedConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7984" class="reftext" onclick='showAndHideRefBox("refbox_7984", "reflink_7984")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7984" class="refbox_inner" style="display:none;">
+The rule was modified on both systems, the conflict was resolved and the rule was imported
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Imported (Conflict)</td>
+<td>The rule was modified on both systems, the conflict was resolved and the rule was imported</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ImportedDeployed></a>
+<div class="titlebox">
+<div class="filtertitle">ImportedDeployed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7985" class="reftext" onclick='showAndHideRefBox("refbox_7985", "reflink_7985")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7985" class="refbox_inner" style="display:none;">
+The rule was deployed on a different system and imported to this system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Imported (Deployed)</td>
+<td>The rule was deployed on a different system and imported to this system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ImportedEditedConflict></a>
+<div class="titlebox">
+<div class="filtertitle">ImportedEditedConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7986" class="reftext" onclick='showAndHideRefBox("refbox_7986", "reflink_7986")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7986" class="refbox_inner" style="display:none;">
+The rule was modified on both systems, the conflict was resolved and a new draft was imported for resolution
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+</div>
+<div class='subtypebox'>
+<a name=ImportedNew></a>
+<div class="titlebox">
+<div class="filtertitle">ImportedNew <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7987" class="reftext" onclick='showAndHideRefBox("refbox_7987", "reflink_7987")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7987" class="refbox_inner" style="display:none;">
+The new rule was imported
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Imported (New)</td>
+<td>The new rule was imported</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=New></a>
+<div class="titlebox">
+<div class="filtertitle">New <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7988" class="reftext" onclick='showAndHideRefBox("refbox_7988", "reflink_7988")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7988" class="refbox_inner" style="display:none;">
+The rule is new
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>New</td>
+<td>The rule is new</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=NoAction></a>
+<div class="titlebox">
+<div class="filtertitle">NoAction <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7989" class="reftext" onclick='showAndHideRefBox("refbox_7989", "reflink_7989")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7989" class="refbox_inner" style="display:none;">
+No action is required because the imported rule version already exists
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>No Action</td>
+<td>No action is required because the imported rule version already exists</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=NoConflict></a>
+<div class="titlebox">
+<div class="filtertitle">NoConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7990" class="reftext" onclick='showAndHideRefBox("refbox_7990", "reflink_7990")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7990" class="refbox_inner" style="display:none;">
+The rule was modified only on remote system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>No Conflict</td>
+<td>The rule was modified only on remote system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ResolvedConflict></a>
+<div class="titlebox">
+<div class="filtertitle">ResolvedConflict <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7991" class="reftext" onclick='showAndHideRefBox("refbox_7991", "reflink_7991")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7991" class="refbox_inner" style="display:none;">
+The rule was modified on both systems and the conflict has been resolved
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Conflict (Resolved)</td>
+<td>The rule was modified on both systems and the conflict has been resolved</td>
+</tr>
+</table>
+</div>
+<a name="Typefilters"></a><div class="arraysbox">Typefilters</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">FinalStatus <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7992" class="reftext" onclick='showAndHideRefBox("refbox_7992", "reflink_7992")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7992" class="refbox_inner" style="display:none;">
+The status is final and cannot be modified
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#NoAction" TARGET="tableFrame">NoAction</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#ImportedNew" TARGET="tableFrame">ImportedNew</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#Imported" TARGET="tableFrame">Imported</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#ImportedConflict" TARGET="tableFrame">ImportedConflict</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#ImportedDeployed" TARGET="tableFrame">ImportedDeployed</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#Discarded" TARGET="tableFrame">Discarded</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#ExistingConflict" TARGET="tableFrame">ExistingConflict</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#ImportedEditedConflict" TARGET="tableFrame">ImportedEditedConflict</A></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

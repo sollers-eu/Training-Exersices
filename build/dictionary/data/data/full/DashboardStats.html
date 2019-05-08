@@ -1,0 +1,1538 @@
+<html>
+<head>
+<title>DashboardStats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">DashboardStats <span class="entityname">(cc_dashboardstats) (delegates to <A HREF="KeyableBean.html" TARGET="tableFrame">KeyableBean</A>)</span></div>
+<div class="desc">
+<span id="reflink_1066" class="reftext" onclick='showAndHideRefBox("refbox_1066", "reflink_1066")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1066" class="refbox_inner" style="display:none;">
+
+        Maintains statistics for claim activity and financial data within ClaimCenter.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">DashboardStats</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="dashboardstats_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="dashboardstats_avgclosetime"></a>
+<p class="column">
+<span class="coltitle">AvgCloseTime</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Double</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_avgincurred"></a>
+<p class="column">
+<span class="coltitle">AvgIncurred</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_avgpaidonclosed"></a>
+<p class="column">
+<span class="coltitle">AvgPaidOnClosed</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_avgpending"></a>
+<p class="column">
+<span class="coltitle">AvgPending</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Double</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_claimcostsinperiod"></a>
+<p class="column">
+<span class="coltitle">ClaimCostsInPeriod</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claim costs paid in this period.</span>
+<a name="dashboardstats_claimcostsinperiod_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCOSTSINPERIOD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_claimcostsonclosed"></a>
+<p class="column">
+<span class="coltitle">ClaimCostsOnClosed</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claim costs paid on claims closed in this period.</span>
+<a name="dashboardstats_claimcostsonclosed_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCOSTSONCLOSED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_claimcostspaid"></a>
+<p class="column">
+<span class="coltitle">ClaimCostsPaid</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claim costs paid on open claims.</span>
+<a name="dashboardstats_claimcostspaid_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCOSTSPAID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_closedclaims"></a>
+<p class="column">
+<span class="coltitle">ClosedClaims</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of claims closed in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:51</td>
+<td>LV.Dashboard.ClaimActivity.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:51</td>
+<td>LV.Dashboard.ClaimActivity.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:45</td>
+<td>LV.Dashboard.ClaimActivity.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByLOBLV.pcf:60</td>
+<td>LV.Dashboard.PeriodFinancials.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByLossTypeLV.pcf:60</td>
+<td>LV.Dashboard.PeriodFinancials.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByOrgLevelLV.pcf:56</td>
+<td>LV.Dashboard.PeriodFinancials.ClosedClaims</td>
+<td>DashboardStats.ClosedClaims</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_closedclaims_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSEDCLAIMS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_closedexposures"></a>
+<p class="column">
+<span class="coltitle">ClosedExposures</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of exposures closed in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByCoverageTypeLV.pcf:37</td>
+<td>LV.Dashboard.ClaimActivity.ClosedExposures</td>
+<td>DashboardStats.ClosedExposures</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByCoverageTypeLV.pcf:60</td>
+<td>LV.Dashboard.PeriodFinancials.ClosedExposures</td>
+<td>DashboardStats.ClosedExposures</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_closedexposures_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSEDEXPOSURES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_closetime"></a>
+<p class="column">
+<span class="coltitle">CloseTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Total of days from CreateDate to CloseDate for all claims closed in period.</span>
+<a name="dashboardstats_closetime_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_coveragetype"></a>
+<p class="column">
+<span class="coltitle">CoverageType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CoverageType_tl.html" TARGET="tableFrame">CoverageType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">CoverageType this statistic is for.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByCoverageTypeLV.pcf:23</td>
+<td>LV.Dashboard.ByCoverageType</td>
+<td>DashboardStats.CoverageType</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByCoverageTypeLV.pcf:57</td>
+<td>LV.Dashboard.ByCoverageType</td>
+<td>DashboardStats.CoverageType</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByCoverageTypeLV.pcf:52</td>
+<td>LV.Dashboard.ByCoverageType</td>
+<td>DashboardStats.CoverageType</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_coveragetype_prop"></a>
+<p class="column">
+<span class="coltitle">COVERAGETYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_expensesinperiod"></a>
+<p class="column">
+<span class="coltitle">ExpensesInPeriod</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Expenses paid in this period.</span>
+<a name="dashboardstats_expensesinperiod_prop"></a>
+<p class="column">
+<span class="coltitle">EXPENSESINPERIOD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_expensesonclosed"></a>
+<p class="column">
+<span class="coltitle">ExpensesOnClosed</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Expenses paid on claims closed in this period.</span>
+<a name="dashboardstats_expensesonclosed_prop"></a>
+<p class="column">
+<span class="coltitle">EXPENSESONCLOSED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_expensespaid"></a>
+<p class="column">
+<span class="coltitle">ExpensesPaid</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Expenses paid on open claims.</span>
+<a name="dashboardstats_expensespaid_prop"></a>
+<p class="column">
+<span class="coltitle">EXPENSESPAID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_flagged"></a>
+<p class="column">
+<span class="coltitle">Flagged</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of claims with Flagged = isFlagged.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:51</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:52</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:52</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:52</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:58</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:61</td>
+<td>LV.Dashboard.ClaimCount.Flagged</td>
+<td>DashboardStats.Flagged</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_flagged_prop"></a>
+<p class="column">
+<span class="coltitle">FLAGGED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_group"></a>
+<p class="column">
+<span class="coltitle">Group</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Group.html" TARGET="tableFrame">Group</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: GroupID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Group this statistic is for.</span>
+<a name="dashboardstats_group_prop"></a>
+<p class="column">
+<span class="coltitle">GROUP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_handlers"></a>
+<p class="column">
+<span class="coltitle">Handlers</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of users in each group as the primary owner of at least one claim.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:40</td>
+<td>LV.Dashboard.ClaimCount.Handlers</td>
+<td>DashboardStats.Handlers</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:43</td>
+<td>LV.Dashboard.ClaimCount.Handlers</td>
+<td>DashboardStats.Handlers</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_handlers_prop"></a>
+<p class="column">
+<span class="coltitle">HANDLERS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_id_dynprop"></a>
+<p class="column">
+<span class="coltitle">ID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_litigated"></a>
+<p class="column">
+<span class="coltitle">Litigated</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of litigated claims.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:58</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:59</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:59</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:59</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:64</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:67</td>
+<td>LV.Dashboard.ClaimCount.Litigated</td>
+<td>DashboardStats.Litigated</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_litigated_prop"></a>
+<p class="column">
+<span class="coltitle">LITIGATED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_lobcode"></a>
+<p class="column">
+<span class="coltitle">LOBCode</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LOBCode_tl.html" TARGET="tableFrame">LOBCode</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">LOB this statistic is for.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:23</td>
+<td>LV.Dashboard.ByLineOfBusiness</td>
+<td>DashboardStats.LOBCode</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:23</td>
+<td>LV.Dashboard.ByLineOfBusiness</td>
+<td>DashboardStats.LOBCode</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:24</td>
+<td>LV.Dashboard.ByLineOfBusiness</td>
+<td>DashboardStats.LOBCode</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLOBLV.pcf:62</td>
+<td>LV.Dashboard.ByLineOfBusiness</td>
+<td>DashboardStats.LOBCode</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByLOBLV.pcf:52</td>
+<td>LV.Dashboard.ByLineOfBusiness</td>
+<td>DashboardStats.LOBCode</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_lobcode_prop"></a>
+<p class="column">
+<span class="coltitle">LOBCODE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_losstype"></a>
+<p class="column">
+<span class="coltitle">LossType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LossType_tl.html" TARGET="tableFrame">LossType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">LossType this statistic is for.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:23</td>
+<td>LV.Dashboard.ByLossType</td>
+<td>DashboardStats.LossType</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:24</td>
+<td>LV.Dashboard.ByLossType</td>
+<td>DashboardStats.LossType</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:24</td>
+<td>LV.Dashboard.ByLossType</td>
+<td>DashboardStats.LossType</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLossTypeLV.pcf:62</td>
+<td>LV.Dashboard.ByLossType</td>
+<td>DashboardStats.LossType</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>PeriodFinancialsByLossTypeLV.pcf:52</td>
+<td>LV.Dashboard.ByLossType</td>
+<td>DashboardStats.LossType</td>
+<td>false</td>
+<td>
+DashboardPeriodFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_losstype_prop"></a>
+<p class="column">
+<span class="coltitle">LOSSTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_newclaims"></a>
+<p class="column">
+<span class="coltitle">NewClaims</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of new claims opened in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:37</td>
+<td>LV.Dashboard.ClaimActivity.NewClaims</td>
+<td>DashboardStats.NewClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:37</td>
+<td>LV.Dashboard.ClaimActivity.NewClaims</td>
+<td>DashboardStats.NewClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:33</td>
+<td>LV.Dashboard.ClaimActivity.NewClaims</td>
+<td>DashboardStats.NewClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_newclaims_prop"></a>
+<p class="column">
+<span class="coltitle">NEWCLAIMS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_newexposures"></a>
+<p class="column">
+<span class="coltitle">NewExposures</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of new exposures opened in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByCoverageTypeLV.pcf:30</td>
+<td>LV.Dashboard.ClaimActivity.NewExposures</td>
+<td>DashboardStats.NewExposures</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:30</td>
+<td>LV.Dashboard.ClaimActivity.NewExposures</td>
+<td>DashboardStats.NewExposures</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:30</td>
+<td>LV.Dashboard.ClaimActivity.NewExposures</td>
+<td>DashboardStats.NewExposures</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:27</td>
+<td>LV.Dashboard.ClaimActivity.NewExposures</td>
+<td>DashboardStats.NewExposures</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_newexposures_prop"></a>
+<p class="column">
+<span class="coltitle">NEWEXPOSURES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_newlitigation"></a>
+<p class="column">
+<span class="coltitle">NewLitigation</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of litigated claims in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:71</td>
+<td>LV.Dashboard.ClaimActivity.NewLitigation</td>
+<td>DashboardStats.NewLitigation</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:71</td>
+<td>LV.Dashboard.ClaimActivity.NewLitigation</td>
+<td>DashboardStats.NewLitigation</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:63</td>
+<td>LV.Dashboard.ClaimActivity.NewLitigation</td>
+<td>DashboardStats.NewLitigation</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_newlitigation_prop"></a>
+<p class="column">
+<span class="coltitle">NEWLITIGATION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_newnoticeonly"></a>
+<p class="column">
+<span class="coltitle">NewNoticeOnly</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of new claims opened in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:44</td>
+<td>LV.Dashboard.ClaimActivity.NewNoticeOnly</td>
+<td>DashboardStats.NewNoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:44</td>
+<td>LV.Dashboard.ClaimActivity.NewNoticeOnly</td>
+<td>DashboardStats.NewNoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:39</td>
+<td>LV.Dashboard.ClaimActivity.NewNoticeOnly</td>
+<td>DashboardStats.NewNoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_newnoticeonly_prop"></a>
+<p class="column">
+<span class="coltitle">NEWNOTICEONLY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_noticeonly"></a>
+<p class="column">
+<span class="coltitle">NoticeOnly</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of claims with IncidentReport = true.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:44</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:45</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:45</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:45</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:52</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:55</td>
+<td>LV.Dashboard.ClaimCount.NoticeOnly</td>
+<td>DashboardStats.NoticeOnly</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_noticeonly_prop"></a>
+<p class="column">
+<span class="coltitle">NOTICEONLY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_openclaims"></a>
+<p class="column">
+<span class="coltitle">OpenClaims</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of open claims.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:37</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:38</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:38</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:38</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:34</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:37</td>
+<td>LV.Dashboard.ClaimCount.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLOBLV.pcf:76</td>
+<td>LV.Dashboard.CurrentFinancials.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLossTypeLV.pcf:76</td>
+<td>LV.Dashboard.CurrentFinancials.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByOrgLevelLV.pcf:71</td>
+<td>LV.Dashboard.CurrentFinancials.OpenClaims</td>
+<td>DashboardStats.OpenClaims</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_openclaims_prop"></a>
+<p class="column">
+<span class="coltitle">OPENCLAIMS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_openexposures"></a>
+<p class="column">
+<span class="coltitle">OpenExposures</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of open exposures.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.NoFinancials.pcf:30</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:31</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.NoFinancials.pcf:31</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:31</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.NoFinancials.pcf:28</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:31</td>
+<td>LV.Dashboard.ClaimCount.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByCoverageTypeLV.pcf:64</td>
+<td>LV.Dashboard.CurrentFinancials.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLOBLV.pcf:69</td>
+<td>LV.Dashboard.CurrentFinancials.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByLossTypeLV.pcf:69</td>
+<td>LV.Dashboard.CurrentFinancials.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+<tr>
+<td>CurrentFinancialsByOrgLevelLV.pcf:65</td>
+<td>LV.Dashboard.CurrentFinancials.OpenExposures</td>
+<td>DashboardStats.OpenExposures</td>
+<td>false</td>
+<td>
+DashboardCurrentFinancials
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_openexposures_prop"></a>
+<p class="column">
+<span class="coltitle">OPENEXPOSURES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_openreserves"></a>
+<p class="column">
+<span class="coltitle">OpenReserves</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Open reserve amount for open claims.</span>
+<a name="dashboardstats_openreserves_prop"></a>
+<p class="column">
+<span class="coltitle">OPENRESERVES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_overincurredlimit"></a>
+<p class="column">
+<span class="coltitle">OverIncurredLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of claims that have incurred over a certain amount of money.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimCountByLOBLV.default.pcf:66</td>
+<td>LV.Dashboard.ClaimCount.OverIncurredLimit</td>
+<td>DashboardStats.OverIncurredLimit</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByLossTypeLV.default.pcf:66</td>
+<td>LV.Dashboard.ClaimCount.OverIncurredLimit</td>
+<td>DashboardStats.OverIncurredLimit</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+<tr>
+<td>ClaimCountByOrgLevelLV.default.pcf:73</td>
+<td>LV.Dashboard.ClaimCount.OverIncurredLimit</td>
+<td>DashboardStats.OverIncurredLimit</td>
+<td>false</td>
+<td>
+DashboardClaimCount
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_overincurredlimit_prop"></a>
+<p class="column">
+<span class="coltitle">OVERINCURREDLIMIT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_paidinperiod"></a>
+<p class="column">
+<span class="coltitle">PaidInPeriod</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_paidonclosed"></a>
+<p class="column">
+<span class="coltitle">PaidOnClosed</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="dashboardstats_publicid_dynprop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_recoveredinperiod"></a>
+<p class="column">
+<span class="coltitle">RecoveredInPeriod</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Recoveries made in this period.</span>
+<a name="dashboardstats_recoveredinperiod_prop"></a>
+<p class="column">
+<span class="coltitle">RECOVEREDINPERIOD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_reopenedclaims"></a>
+<p class="column">
+<span class="coltitle">ReopenedClaims</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of claims reopened in period.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimActivityByLOBLV.pcf:64</td>
+<td>LV.Dashboard.ClaimActivity.ReopenedClaims</td>
+<td>DashboardStats.ReopenedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByLossTypeLV.pcf:64</td>
+<td>LV.Dashboard.ClaimActivity.ReopenedClaims</td>
+<td>DashboardStats.ReopenedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+<tr>
+<td>ClaimActivityByOrgLevelLV.pcf:57</td>
+<td>LV.Dashboard.ClaimActivity.ReopenedClaims</td>
+<td>DashboardStats.ReopenedClaims</td>
+<td>false</td>
+<td>
+DashboardClaimActivity
+</td>
+</tr>
+</table>
+</div></div>
+<a name="dashboardstats_reopenedclaims_prop"></a>
+<p class="column">
+<span class="coltitle">REOPENEDCLAIMS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_stattype"></a>
+<p class="column">
+<span class="coltitle">StatType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/DashboardStatType_tl.html" TARGET="tableFrame">DashboardStatType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether this stat is for a group, LOB, losstype, or coveragetype.</span>
+<a name="dashboardstats_stattype_prop"></a>
+<p class="column">
+<span class="coltitle">STATTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_totalincurrednet"></a>
+<p class="column">
+<span class="coltitle">TotalIncurredNet</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Net total incurred for open claims.</span>
+<a name="dashboardstats_totalincurrednet_prop"></a>
+<p class="column">
+<span class="coltitle">TOTALINCURREDNET_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_totalpaid"></a>
+<p class="column">
+<span class="coltitle">TotalPaid</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_ttlincnetminusopenrecreserves"></a>
+<p class="column">
+<span class="coltitle">TtlIncNetMinusOpenRecReserves</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Net total incurred minus open recovery reserves for open claims.</span>
+<a name="dashboardstats_ttlincnetminusopenrecreserves_prop"></a>
+<p class="column">
+<span class="coltitle">TTLINCNETMINUSOPENRECRESERVES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="dashboardstats_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.DashboardStats></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for DashboardStats"></a><div class="arraysbox">Unique Keys for DashboardStats</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>dashboardstats1a</td>
+<td>PublicID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

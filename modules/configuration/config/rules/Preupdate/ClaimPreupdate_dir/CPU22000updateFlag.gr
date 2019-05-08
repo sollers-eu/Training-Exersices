@@ -1,0 +1,23 @@
+package rules.Preupdate.ClaimPreupdate_dir
+
+@gw.rules.RuleName("CPU22000 - updateFlag")
+internal class CPU22000updateFlag {
+  static function doCondition(claim : entity.Claim) : boolean {
+/*start00rule*/
+
+    return (claim.isChanged())
+
+/*end00rule*/
+}
+
+  private static function exposureChanged(exposures: Exposure[]): void {
+  }
+
+  static function doAction(claim : entity.Claim, actions : gw.rules.Action) {
+/*start00rule*/
+claim.isChanged= true;
+    print("Claim Changed")
+
+/*end00rule*/
+  }
+}

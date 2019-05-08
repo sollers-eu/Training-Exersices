@@ -1,0 +1,830 @@
+<html>
+<head>
+<title>SeverityType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">SeverityType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_severitytype)</span>
+</div>
+<div class="desc">The severity of the exposure</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_8209" class="reftext" onclick='showAndHideRefBox("refbox_8209", "reflink_8209")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_8209" class="refbox_inner" style="display:none;">
+<A HREF="../full/ConditionFilter.html#IncidentSeverityConditionFilter" TARGET="tableFrame">IncidentSeverityConditionFilter.IncidentSeverity</A><br><A HREF="../full/Incident.html" TARGET="tableFrame">Incident.Severity</A><br><A HREF="../full/TmpExpToIncidentCopy.html" TARGET="tableFrame">TmpExpToIncidentCopy.SeverityTmp</A><br><A HREF="../full/TmpSeverityToIncCopy.html" TARGET="tableFrame">TmpSeverityToIncCopy.SeverityTmp</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#contract-medical>contract-medical</a></td>
+<td>Contract medical</td>
+<td>Contract medical</td>
+<td align=center>18</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#fatal>fatal</a></td>
+<td>Death</td>
+<td>Fatal</td>
+<td align=center>17</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#major-auto>major-auto</a></td>
+<td>Major (not drivable)</td>
+<td>Major (not drivable)</td>
+<td align=center>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#major-gen>major-gen</a></td>
+<td>Major</td>
+<td>Major</td>
+<td align=center>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#major-injury>major-injury</a></td>
+<td>Major (hospitalization)</td>
+<td>Major (hospitalization)</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#major-prop>major-prop</a></td>
+<td>Major (not usable)</td>
+<td>Major (not usable)</td>
+<td align=center>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#medical_only>medical_only</a></td>
+<td>Became medical only</td>
+<td>Became medical only</td>
+<td align=center>14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#minor>minor</a></td>
+<td>Minor</td>
+<td>Minor</td>
+<td align=center>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#moderate-auto>moderate-auto</a></td>
+<td>Moderate (drivable)</td>
+<td>Moderate (drivable)</td>
+<td align=center>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#moderate-gen>moderate-gen</a></td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td align=center>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#moderate-prop>moderate-prop</a></td>
+<td>Moderate (usable)</td>
+<td>Moderate (usable)</td>
+<td align=center>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pd>pd</a></td>
+<td>Permanent disability</td>
+<td>Permanent disability</td>
+<td align=center>13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#perm-total>perm-total</a></td>
+<td>Permanent total</td>
+<td>Permanent total</td>
+<td align=center>16</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#severe-auto>severe-auto</a></td>
+<td>Possible total loss</td>
+<td>Possible total loss</td>
+<td align=center>10</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#severe-gen>severe-gen</a></td>
+<td>Severe</td>
+<td>Severe</td>
+<td align=center>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#severe-injury>severe-injury</a></td>
+<td>Life-threatening</td>
+<td>Life-threatening</td>
+<td align=center>11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#td>td</a></td>
+<td>Temporary disability</td>
+<td>Temporary disability</td>
+<td align=center>12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#temporary>temporary</a></td>
+<td>Temporary</td>
+<td>Temporary</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc-ell>wc-ell</a></td>
+<td>Employer liability</td>
+<td>Employer liability</td>
+<td align=center>19</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=contract-medical></a>
+<div class="titlebox">
+<div class="filtertitle">contract-medical <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8210" class="reftext" onclick='showAndHideRefBox("refbox_8210", "reflink_8210")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8210" class="refbox_inner" style="display:none;">
+Contract medical
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contract medical</td>
+<td>Contract medical</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=fatal></a>
+<div class="titlebox">
+<div class="filtertitle">fatal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8211" class="reftext" onclick='showAndHideRefBox("refbox_8211", "reflink_8211")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8211" class="refbox_inner" style="display:none;">
+Fatal
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#InjuryIncident" TARGET="tableFrame">Incident.InjuryIncident</A></li>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Death</td>
+<td>Fatal</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=major-auto></a>
+<div class="titlebox">
+<div class="filtertitle">major-auto <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8212" class="reftext" onclick='showAndHideRefBox("refbox_8212", "reflink_8212")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8212" class="refbox_inner" style="display:none;">
+Major (not drivable)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#VehicleIncident" TARGET="tableFrame">Incident.VehicleIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Major (not drivable)</td>
+<td>Major (not drivable)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=major-gen></a>
+<div class="titlebox">
+<div class="filtertitle">major-gen <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8213" class="reftext" onclick='showAndHideRefBox("refbox_8213", "reflink_8213")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8213" class="refbox_inner" style="display:none;">
+Major
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#BaggageIncident" TARGET="tableFrame">Incident.BaggageIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#Incident" TARGET="tableFrame">Incident.Incident</A></li>
+<li>
+<A HREF="Incident_tl.html#MobilePropertyIncident" TARGET="tableFrame">Incident.MobilePropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#PropertyIncident" TARGET="tableFrame">Incident.PropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#TripIncident" TARGET="tableFrame">Incident.TripIncident</A></li>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Major</td>
+<td>Major</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=major-injury></a>
+<div class="titlebox">
+<div class="filtertitle">major-injury <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8214" class="reftext" onclick='showAndHideRefBox("refbox_8214", "reflink_8214")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8214" class="refbox_inner" style="display:none;">
+Major (hospitalization)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#InjuryIncident" TARGET="tableFrame">Incident.InjuryIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Major (hospitalization)</td>
+<td>Major (hospitalization)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=major-prop></a>
+<div class="titlebox">
+<div class="filtertitle">major-prop <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8215" class="reftext" onclick='showAndHideRefBox("refbox_8215", "reflink_8215")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8215" class="refbox_inner" style="display:none;">
+Major (not usable)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#FixedPropertyIncident" TARGET="tableFrame">Incident.FixedPropertyIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Major (not usable)</td>
+<td>Major (not usable)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=medical_only></a>
+<div class="titlebox">
+<div class="filtertitle">medical_only <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8216" class="reftext" onclick='showAndHideRefBox("refbox_8216", "reflink_8216")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8216" class="refbox_inner" style="display:none;">
+Became medical only
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Became medical only</td>
+<td>Became medical only</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=minor></a>
+<div class="titlebox">
+<div class="filtertitle">minor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8217" class="reftext" onclick='showAndHideRefBox("refbox_8217", "reflink_8217")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8217" class="refbox_inner" style="display:none;">
+Minor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#BaggageIncident" TARGET="tableFrame">Incident.BaggageIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#FixedPropertyIncident" TARGET="tableFrame">Incident.FixedPropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#Incident" TARGET="tableFrame">Incident.Incident</A></li>
+<li>
+<A HREF="Incident_tl.html#InjuryIncident" TARGET="tableFrame">Incident.InjuryIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#MobilePropertyIncident" TARGET="tableFrame">Incident.MobilePropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#PropertyIncident" TARGET="tableFrame">Incident.PropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#TripIncident" TARGET="tableFrame">Incident.TripIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#VehicleIncident" TARGET="tableFrame">Incident.VehicleIncident</A></li>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Minor</td>
+<td>Minor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=moderate-auto></a>
+<div class="titlebox">
+<div class="filtertitle">moderate-auto <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8218" class="reftext" onclick='showAndHideRefBox("refbox_8218", "reflink_8218")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8218" class="refbox_inner" style="display:none;">
+Moderate (drivable)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#VehicleIncident" TARGET="tableFrame">Incident.VehicleIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Moderate (drivable)</td>
+<td>Moderate (drivable)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=moderate-gen></a>
+<div class="titlebox">
+<div class="filtertitle">moderate-gen <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8219" class="reftext" onclick='showAndHideRefBox("refbox_8219", "reflink_8219")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8219" class="refbox_inner" style="display:none;">
+Moderate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#BaggageIncident" TARGET="tableFrame">Incident.BaggageIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#Incident" TARGET="tableFrame">Incident.Incident</A></li>
+<li>
+<A HREF="Incident_tl.html#InjuryIncident" TARGET="tableFrame">Incident.InjuryIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#MobilePropertyIncident" TARGET="tableFrame">Incident.MobilePropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#PropertyIncident" TARGET="tableFrame">Incident.PropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#TripIncident" TARGET="tableFrame">Incident.TripIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=moderate-prop></a>
+<div class="titlebox">
+<div class="filtertitle">moderate-prop <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8220" class="reftext" onclick='showAndHideRefBox("refbox_8220", "reflink_8220")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8220" class="refbox_inner" style="display:none;">
+Moderate (usable)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#FixedPropertyIncident" TARGET="tableFrame">Incident.FixedPropertyIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Moderate (usable)</td>
+<td>Moderate (usable)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pd></a>
+<div class="titlebox">
+<div class="filtertitle">pd <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8221" class="reftext" onclick='showAndHideRefBox("refbox_8221", "reflink_8221")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8221" class="refbox_inner" style="display:none;">
+Permanent disability
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Permanent disability</td>
+<td>Permanent disability</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=perm-total></a>
+<div class="titlebox">
+<div class="filtertitle">perm-total <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8222" class="reftext" onclick='showAndHideRefBox("refbox_8222", "reflink_8222")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8222" class="refbox_inner" style="display:none;">
+Permanent total
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Permanent total</td>
+<td>Permanent total</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=severe-auto></a>
+<div class="titlebox">
+<div class="filtertitle">severe-auto <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8223" class="reftext" onclick='showAndHideRefBox("refbox_8223", "reflink_8223")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8223" class="refbox_inner" style="display:none;">
+Possible total loss
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#VehicleIncident" TARGET="tableFrame">Incident.VehicleIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Possible total loss</td>
+<td>Possible total loss</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=severe-gen></a>
+<div class="titlebox">
+<div class="filtertitle">severe-gen <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8224" class="reftext" onclick='showAndHideRefBox("refbox_8224", "reflink_8224")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8224" class="refbox_inner" style="display:none;">
+Severe
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#BaggageIncident" TARGET="tableFrame">Incident.BaggageIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#FixedPropertyIncident" TARGET="tableFrame">Incident.FixedPropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#Incident" TARGET="tableFrame">Incident.Incident</A></li>
+<li>
+<A HREF="Incident_tl.html#MobilePropertyIncident" TARGET="tableFrame">Incident.MobilePropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#PropertyIncident" TARGET="tableFrame">Incident.PropertyIncident</A></li>
+<li>
+<A HREF="Incident_tl.html#TripIncident" TARGET="tableFrame">Incident.TripIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Severe</td>
+<td>Severe</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=severe-injury></a>
+<div class="titlebox">
+<div class="filtertitle">severe-injury <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8225" class="reftext" onclick='showAndHideRefBox("refbox_8225", "reflink_8225")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8225" class="refbox_inner" style="display:none;">
+Life-threatening
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="Incident_tl.html#InjuryIncident" TARGET="tableFrame">Incident.InjuryIncident</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Life-threatening</td>
+<td>Life-threatening</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=td></a>
+<div class="titlebox">
+<div class="filtertitle">td <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8226" class="reftext" onclick='showAndHideRefBox("refbox_8226", "reflink_8226")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8226" class="refbox_inner" style="display:none;">
+Temporary disability
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Temporary disability</td>
+<td>Temporary disability</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=temporary></a>
+<div class="titlebox">
+<div class="filtertitle">temporary <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8227" class="reftext" onclick='showAndHideRefBox("refbox_8227", "reflink_8227")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8227" class="refbox_inner" style="display:none;">
+Temporary
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Temporary</td>
+<td>Temporary</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc-ell></a>
+<div class="titlebox">
+<div class="filtertitle">wc-ell <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8228" class="reftext" onclick='showAndHideRefBox("refbox_8228", "reflink_8228")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8228" class="refbox_inner" style="display:none;">
+Employer liability
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Employer liability</td>
+<td>Employer liability</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

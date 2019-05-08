@@ -1,0 +1,1747 @@
+<html>
+<head>
+<title>ClaimAbstractView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ClaimAbstractView <span class="entityname">(Virtual) (delegates to <A HREF="KeyableBean.html" TARGET="tableFrame">KeyableBean</A>)</span></div>
+<div class="desc">
+<span id="reflink_560" class="reftext" onclick='showAndHideRefBox("refbox_560", "reflink_560")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_560" class="refbox_inner" style="display:none;">
+
+        Supports the efficient creation of claim lists in ClaimCenter's views. The system uses this entity to list
+        claims in the desktop, search, and team view in an optimum manner. This is a virtual entity and is not stored
+        in the database. 
+      
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ClaimAbstractView</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+ClaimAssignmentView</td>
+<td><A HREF="#ClaimAssignmentView" TARGET="tableFrame">ClaimAssignmentView</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ClaimSearchView</td>
+<td><A HREF="#ClaimSearchView" TARGET="tableFrame">ClaimSearchView</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ClaimTeamView</td>
+<td><A HREF="#ClaimTeamView" TARGET="tableFrame">ClaimTeamView</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ClaimVacationView</td>
+<td><A HREF="#ClaimVacationView" TARGET="tableFrame">ClaimVacationView</A></td>
+</tr>
+<tr>
+<td>
+ClaimDesktopView</td>
+<td><A HREF="#ClaimDesktopView" TARGET="tableFrame">ClaimDesktopView</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="claimabstractview_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="claimabstractview_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_claimantdenorm"></a>
+<p class="column">
+<span class="coltitle">ClaimantDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:72</td>
+<td>LV.Claim.ClaimSearchResults.Claims.InjuredWorker</td>
+<td>ClaimSearchView.ClaimantDenorm</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:102</td>
+<td>LV.Claim.Claims.InjuredWorker</td>
+<td>ClaimDesktopView.ClaimantDenorm</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:61</td>
+<td>LV.Claim.ClaimSearchResults.Claims.InjuredWorker</td>
+<td>SimpleClaimSearchView.ClaimantDenorm</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_claimantdenorm_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMANTDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_claimcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimCurrency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_claimcurrency_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_claimnumber"></a>
+<p class="column">
+<span class="coltitle">ClaimNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "claimnumber")'>claimnumber</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:54</td>
+<td>LV.Claim.Claims.ID</td>
+<td>ClaimDesktopView.ClaimNumber</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:56</td>
+<td>LV.Claim.ClaimSearchResults.Claims.ID</td>
+<td>ClaimSearchView.ClaimNumber</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:83</td>
+<td>LV.Claim.Claims.ID</td>
+<td>ClaimDesktopView.ClaimNumber</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:45</td>
+<td>LV.Claim.ClaimSearchResults.Claims.ID</td>
+<td>SimpleClaimSearchView.ClaimNumber</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:75</td>
+<td>LV.Claim.TeamClaims.Claims.ID</td>
+<td>ClaimTeamView.ClaimNumber</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:75</td>
+<td>LV.Claim.Claims.ID</td>
+<td>ClaimVacationView.ClaimNumber</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_claimnumber_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_currentlyflagged"></a>
+<p class="column">
+<span class="coltitle">CurrentlyFlagged</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_flagged"></a>
+<p class="column">
+<span class="coltitle">Flagged</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/FlaggedType_tl.html" TARGET="tableFrame">FlaggedType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: neverflagged)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_flagged_prop"></a>
+<p class="column">
+<span class="coltitle">FLAGGED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_id_dynprop"></a>
+<p class="column">
+<span class="coltitle">ID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_insured"></a>
+<p class="column">
+<span class="coltitle">Insured</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_insured_prop"></a>
+<p class="column">
+<span class="coltitle">INSURED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_insureddenorm"></a>
+<p class="column">
+<span class="coltitle">InsuredDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:64</td>
+<td>LV.Claim.Claims.Insured</td>
+<td>ClaimDesktopView.InsuredDenorm</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:61</td>
+<td>LV.Claim.ClaimSearchResults.Claims.Insured</td>
+<td>ClaimSearchView.InsuredDenorm</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:95</td>
+<td>LV.Claim.Claims.Insured</td>
+<td>ClaimDesktopView.InsuredDenorm</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:50</td>
+<td>LV.Claim.ClaimSearchResults.Claims.Insured</td>
+<td>SimpleClaimSearchView.InsuredDenorm</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:95</td>
+<td>LV.Claim.TeamClaims.Claims.Insured</td>
+<td>ClaimTeamView.InsuredDenorm</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:86</td>
+<td>LV.Claim.Claims.Insured</td>
+<td>ClaimVacationView.InsuredDenorm</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_insureddenorm_prop"></a>
+<p class="column">
+<span class="coltitle">INSUREDDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_jurisdictionstate"></a>
+<p class="column">
+<span class="coltitle">JurisdictionState</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Jurisdiction_tl.html" TARGET="tableFrame">Jurisdiction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:112</td>
+<td>LV.Claim.Claims.JurisdictionState</td>
+<td>ClaimDesktopView.JurisdictionState</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:151</td>
+<td>LV.Claim.ClaimSearchResults.Claims.StateOfJurisdiction</td>
+<td>ClaimSearchView.JurisdictionState</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:157</td>
+<td>LV.Claim.Claims.JurisdictionState</td>
+<td>ClaimDesktopView.JurisdictionState</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:140</td>
+<td>LV.Claim.ClaimSearchResults.Claims.StateOfJurisdiction</td>
+<td>SimpleClaimSearchView.JurisdictionState</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:133</td>
+<td>LV.Claim.Claims.JurisdictionState</td>
+<td>ClaimVacationView.JurisdictionState</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_jurisdictionstate_prop"></a>
+<p class="column">
+<span class="coltitle">JURISDICTIONSTATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_lobcode"></a>
+<p class="column">
+<span class="coltitle">LOBCode</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LOBCode_tl.html" TARGET="tableFrame">LOBCode</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:106</td>
+<td>LV.Claim.Claims.LOBCode</td>
+<td>ClaimDesktopView.LOBCode</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:145</td>
+<td>LV.Claim.ClaimSearchResults.Claims.LOBCode</td>
+<td>ClaimSearchView.LOBCode</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:151</td>
+<td>LV.Claim.Claims.LOBCode</td>
+<td>ClaimDesktopView.LOBCode</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:134</td>
+<td>LV.Claim.ClaimSearchResults.Claims.LOBCode</td>
+<td>SimpleClaimSearchView.LOBCode</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:127</td>
+<td>LV.Claim.Claims.LOBCode</td>
+<td>ClaimVacationView.LOBCode</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_lobcode_prop"></a>
+<p class="column">
+<span class="coltitle">LOBCODE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_lossdate"></a>
+<p class="column">
+<span class="coltitle">LossDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:87</td>
+<td>LV.Claim.Claims.LossDate</td>
+<td>ClaimDesktopView.LossDate</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:96</td>
+<td>LV.Claim.ClaimSearchResults.Claims.LossDate</td>
+<td>ClaimSearchView.LossDate</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:126</td>
+<td>LV.Claim.Claims.LossDate</td>
+<td>ClaimDesktopView.LossDate</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:85</td>
+<td>LV.Claim.ClaimSearchResults.Claims.LossDate</td>
+<td>SimpleClaimSearchView.LossDate</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:121</td>
+<td>LV.Claim.TeamClaims.Claims.LossDate</td>
+<td>ClaimTeamView.LossDate</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:109</td>
+<td>LV.Claim.Claims.LossDate</td>
+<td>ClaimVacationView.LossDate</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_lossdate_prop"></a>
+<p class="column">
+<span class="coltitle">LOSSDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_policynumber"></a>
+<p class="column">
+<span class="coltitle">PolicyNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "policynumber")'>policynumber</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:59</td>
+<td>LV.Claim.Claims.PolicyID</td>
+<td>ClaimDesktopView.PolicyNumber</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:66</td>
+<td>LV.Claim.ClaimSearchResults.Claims.PolicyID</td>
+<td>ClaimSearchView.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:88</td>
+<td>LV.Claim.Claims.PolicyID</td>
+<td>ClaimDesktopView.PolicyNumber</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:55</td>
+<td>LV.Claim.ClaimSearchResults.Claims.PolicyID</td>
+<td>SimpleClaimSearchView.PolicyNumber</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:90</td>
+<td>LV.Claim.TeamClaims.Claims.PolicyID</td>
+<td>ClaimTeamView.PolicyNumber</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:80</td>
+<td>LV.Claim.Claims.PolicyID</td>
+<td>ClaimVacationView.PolicyNumber</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_policynumber_prop"></a>
+<p class="column">
+<span class="coltitle">POLICYNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="claimabstractview_publicid_dynprop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_state"></a>
+<p class="column">
+<span class="coltitle">State</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ClaimState_tl.html" TARGET="tableFrame">ClaimState</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: draft)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:93</td>
+<td>LV.Claim.Claims.Status</td>
+<td>ClaimDesktopView.State</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:108</td>
+<td>LV.Claim.ClaimSearchResults.Claims.Status</td>
+<td>ClaimSearchView.State</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:132</td>
+<td>LV.Claim.Claims.Status</td>
+<td>ClaimDesktopView.State</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:97</td>
+<td>LV.Claim.ClaimSearchResults.Claims.Status</td>
+<td>SimpleClaimSearchView.State</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:115</td>
+<td>LV.Claim.Claims.Status</td>
+<td>ClaimVacationView.State</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_state_prop"></a>
+<p class="column">
+<span class="coltitle">STATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">ClaimAbstractView</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="claimabstractview_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimAbstractView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimabstractview_workloadweight"></a>
+<p class="column">
+<span class="coltitle">WorkloadWeight</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativeinteger")'>nonnegativeinteger</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:139</td>
+<td>LV.Claim.Claims.WorkloadWeight</td>
+<td>ClaimDesktopView.WorkloadWeight</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:86</td>
+<td>LV.Claim.TeamClaims.Claims.WorkloadWeight</td>
+<td>ClaimTeamView.WorkloadWeight</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimabstractview_workloadweight_prop"></a>
+<p class="column">
+<span class="coltitle">WORKLOADWEIGHT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="claimabstractview_claimantnames"></a>
+<p class="column">
+<span class="coltitle">ClaimantNames</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=ClaimAssignmentView></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimAssignmentView <span class='supername'>(subtype of <A HREF="ClaimAbstractView.html" TARGET="tableFrame">ClaimAbstractView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_561" class="reftext" onclick='showAndHideRefBox("refbox_561", "reflink_561")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_561" class="refbox_inner" style="display:none;">
+
+        Supports the efficient creation of claim lists in ClaimCenter's views when the assignment related fields are
+        displayed. The system uses this entity to list claims in the vacation, search, and team view in an optimum
+        manner. This is a virtual entity and is not stored in the database.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<a name="claimassignmentview_assignedqueue"></a>
+<p class="column">
+<span class="coltitle">AssignedQueue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assignedqueue_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assigneduser"></a>
+<p class="column">
+<span class="coltitle">AssignedUser</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assigneduser_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assigneedisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assignmentstatus"></a>
+<p class="column">
+<span class="coltitle">AssignmentStatus</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/AssignmentStatus_tl.html" TARGET="tableFrame">AssignmentStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: unassigned)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_assignmentstatus_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTSTATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimassignmentview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimAssignmentView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimDesktopView></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimDesktopView <span class='supername'>(subtype of <A HREF="ClaimAbstractView.html" TARGET="tableFrame">ClaimAbstractView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_562" class="reftext" onclick='showAndHideRefBox("refbox_562", "reflink_562")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_562" class="refbox_inner" style="display:none;">
+
+        Supports the efficient creation of claim lists appearing on ClaimCenter's desktop view. This is a virtual
+        entity and is not stored in the database. 
+      
+    
+</div>
+</span>
+</div>
+</div>
+<a name="claimdesktopview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.claim.PublicClaimDesktopViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimdesktopview_totalincurrednet"></a>
+<p class="column">
+<span class="coltitle">TotalIncurredNet</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactClaimsLV.pcf:100</td>
+<td>LV.Claim.Claims.TotalIncurredNet</td>
+<td>ClaimDesktopView.TotalIncurredNet</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopClaimsLV.pcf:145</td>
+<td>LV.Claim.Claims.TotalIncurredNet</td>
+<td>ClaimDesktopView.TotalIncurredNet</td>
+<td>false</td>
+<td>
+UserClaimsPage
+<br>
+UserDetailPage
+<br>
+DesktopClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimdesktopview_totalincurrednet_prop"></a>
+<p class="column">
+<span class="coltitle">TOTALINCURREDNET_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimdesktopview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimDesktopView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimSearchView></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimSearchView <span class='supername'>(subtype of <A HREF="ClaimAbstractView.html#ClaimAssignmentView" TARGET="tableFrame">ClaimAssignmentView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_563" class="reftext" onclick='showAndHideRefBox("refbox_563", "reflink_563")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_563" class="refbox_inner" style="display:none;">
+
+        Supports the efficient creation of claim lists returned through ClaimCenter's search function. This is a virtual
+        entity and is not stored in the database. 
+      
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="claimsearchview_assignedgroup"></a>
+<p class="column">
+<span class="coltitle">AssignedGroup</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:139</td>
+<td>LV.Claim.ClaimSearchResults.Claims.AssignedGroup</td>
+<td>ClaimSearchView.AssignedGroup</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:128</td>
+<td>LV.Claim.ClaimSearchResults.Claims.AssignedGroup</td>
+<td>SimpleClaimSearchView.AssignedGroup</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimsearchview_assignedgroup_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDGROUP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimsearchview_futurepayments"></a>
+<p class="column">
+<span class="coltitle">FuturePayments</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:122</td>
+<td>LV.Claim.ClaimSearchResults.Claims.FuturePayments</td>
+<td>ClaimSearchView.FuturePayments</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:111</td>
+<td>LV.Claim.ClaimSearchResults.Claims.FuturePayments</td>
+<td>SimpleClaimSearchView.FuturePayments</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimsearchview_futurepayments_prop"></a>
+<p class="column">
+<span class="coltitle">FUTUREPAYMENTS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimsearchview_remainingreserves"></a>
+<p class="column">
+<span class="coltitle">RemainingReserves</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:115</td>
+<td>LV.Claim.ClaimSearchResults.Claims.RemainingReserves</td>
+<td>ClaimSearchView.RemainingReserves</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:104</td>
+<td>LV.Claim.ClaimSearchResults.Claims.RemainingReserves</td>
+<td>SimpleClaimSearchView.RemainingReserves</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimsearchview_remainingreserves_prop"></a>
+<p class="column">
+<span class="coltitle">REMAININGRESERVES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimsearchview_reporteddate"></a>
+<p class="column">
+<span class="coltitle">ReportedDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:134</td>
+<td>LV.Claim.ClaimSearchResults.Claims.NoticeDate</td>
+<td>ClaimSearchView.ReportedDate</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:123</td>
+<td>LV.Claim.ClaimSearchResults.Claims.NoticeDate</td>
+<td>SimpleClaimSearchView.ReportedDate</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimsearchview_reporteddate_prop"></a>
+<p class="column">
+<span class="coltitle">REPORTEDDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimsearchview_totalpayments"></a>
+<p class="column">
+<span class="coltitle">TotalPayments</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimSearchResultsLV.active.pcf:129</td>
+<td>LV.Claim.ClaimSearchResults.Claims.TotalPayments</td>
+<td>ClaimSearchView.TotalPayments</td>
+<td>false</td>
+<td>
+ClaimSearchPopup
+<br>
+ClaimSearch
+</td>
+</tr>
+<tr>
+<td>SimpleClaimSearchResultsLV.pcf:118</td>
+<td>LV.Claim.ClaimSearchResults.Claims.TotalPayments</td>
+<td>SimpleClaimSearchView.TotalPayments</td>
+<td>false</td>
+<td>
+CatastropheSearch
+<br>
+SimpleClaimSearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimsearchview_totalpayments_prop"></a>
+<p class="column">
+<span class="coltitle">TOTALPAYMENTS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimsearchview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimSearchView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimTeamView></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimTeamView <span class='supername'>(subtype of <A HREF="ClaimAbstractView.html#ClaimAssignmentView" TARGET="tableFrame">ClaimAssignmentView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_564" class="reftext" onclick='showAndHideRefBox("refbox_564", "reflink_564")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_564" class="refbox_inner" style="display:none;">
+
+        Supports the efficient creation of claim lists appearing on ClaimCenter's team view. This is a virtual entity and
+        is not stored in the database.
+      
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="claimteamview_assignedqueueid"></a>
+<p class="column">
+<span class="coltitle">AssignedQueueID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_assignedqueueid_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUEID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_assigneduserid"></a>
+<p class="column">
+<span class="coltitle">AssignedUserID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_assigneduserid_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.claim.PublicClaimTeamViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_totalincurrednet"></a>
+<p class="column">
+<span class="coltitle">TotalIncurredNet</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TeamClaimsLV.pcf:117</td>
+<td>LV.Claim.TeamClaims.Claims.TotalIncurredNet</td>
+<td>ClaimTeamView.TotalIncurredNet</td>
+<td>false</td>
+<td>
+TeamGroupOtherClaims
+<br>
+TeamUserClaims
+<br>
+TeamGroupClaims
+<br>
+TeamGroupPendingClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimteamview_totalincurrednet_prop"></a>
+<p class="column">
+<span class="coltitle">TOTALINCURREDNET_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimteamview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimTeamView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimVacationView></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimVacationView <span class='supername'>(subtype of <A HREF="ClaimAbstractView.html#ClaimAssignmentView" TARGET="tableFrame">ClaimAssignmentView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_565" class="reftext" onclick='showAndHideRefBox("refbox_565", "reflink_565")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_565" class="refbox_inner" style="display:none;">
+View entity for efficiently displaying Claims on the Desktop page.
+</div>
+</span>
+</div>
+</div>
+<a name="claimvacationview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.claim.PublicClaimVacationViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimvacationview_totalincurrednet"></a>
+<p class="column">
+<span class="coltitle">TotalIncurredNet</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>VacationClaimsLV.pcf:121</td>
+<td>LV.Claim.Claims.TotalIncurredNet</td>
+<td>ClaimVacationView.TotalIncurredNet</td>
+<td>false</td>
+<td>
+VacationClaims
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimvacationview_totalincurrednet_prop"></a>
+<p class="column">
+<span class="coltitle">TOTALINCURREDNET_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimvacationview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimVacationView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

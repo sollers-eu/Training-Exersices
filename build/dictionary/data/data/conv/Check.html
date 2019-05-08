@@ -1,0 +1,2412 @@
+<html>
+<head>
+<title>Check</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Check <span class="entityname">(cc_check) (delegates to <A HREF="EFTDataDelegate.html" TARGET="tableFrame">EFTDataDelegate</A>, <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_497" class="reftext" onclick='showAndHideRefBox("refbox_497", "reflink_497")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_497" class="refbox_inner" style="display:none;">
+
+      A paper Check or EFT issued to a particular payee to deliver one or more Payments. A Check can have multiple payees,
+      in which case distinct Checks to each secondary payee are created in the same CheckSet, and they are all related
+      to the primary check as members of a CheckGroup. For a single payee check, the check's amount is the aggregate
+      of all the payments associated with it. For a multiple-payee check, each of the secondary checks gets a portion
+      of the aggregated payments, and the remainder is the amount of the primary Check.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Check</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>CheckSubmitted</li><li>CheckIssued</li><li>CheckStopped</li><li>CheckRemoved</li><li>CheckAdded</li><li>CheckStatusChanged</li><li>CheckVoided</li><li>CheckChanged</li><li>CheckTransferred</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_498" class="reftext" onclick='showAndHideRefBox("refbox_498", "reflink_498")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_498" class="refbox_inner" style="display:none;">
+<A HREF="../full/BulkInvoiceItemInfo.html" TARGET="tableFrame">BulkInvoiceItemInfo.Check</A><br><A HREF="../full/CheckPayee.html" TARGET="tableFrame">CheckPayee.Check</A><br><A HREF="../full/CheckRpt.html" TARGET="tableFrame">CheckRpt.Check</A><br><A HREF="../full/CheckSearchView.html" TARGET="tableFrame">CheckSearchView.Check</A><br><A HREF="../full/CheckView.html" TARGET="tableFrame">CheckView.Check</A><br><A HREF="../full/Deduction.html" TARGET="tableFrame">Deduction.Check</A><br><A HREF="../full/ServiceRequestStatement.html#ServiceRequestInvoice" TARGET="tableFrame">ServiceRequestInvoice.Check</A><br><A HREF="../full/Transaction.html#Payment" TARGET="tableFrame">Payment.Check</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_499" class="reftext" onclick='showAndHideRefBox("refbox_499", "reflink_499")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_499" class="refbox_inner" style="display:none;">
+<A HREF="../full/CheckGroup.html" TARGET="tableFrame">CheckGroup.Checks</A><br><A HREF="../full/CheckPortion.html" TARGET="tableFrame">CheckPortion.Checks</A><br><A HREF="../full/RecurringCheck.html" TARGET="tableFrame">RecurringCheck.Checks</A><br><A HREF="../full/TransactionSet.html#CheckSet" TARGET="tableFrame">CheckSet.Checks</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="check_accountname"></a>
+<p class="column">
+<span class="exttitle">AccountName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (100)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The name on the account</span>
+<a name="check_bankaccount"></a>
+<p class="column">
+<span class="coltitle">BankAccount</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/BankAccount_tl.html" TARGET="tableFrame">BankAccount</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Source bank account.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:91</td>
+<td>NVV.Financials.Check.BankAccount</td>
+<td>checkSet.PrimaryCheck.BankAccount</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:95</td>
+<td>NVV.Financials.Check.BankAccount</td>
+<td>Check.BankAccount</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:215</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.BankAccount</td>
+<td>Check.BankAccount</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:180</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.BankAccount</td>
+<td>Check.BankAccount</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:43</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.BankAccount</td>
+<td>Payment.Check.BankAccount</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_bankaccountnumber"></a>
+<p class="column">
+<span class="exttitle">BankAccountNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (20)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The bank account number</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:144</td>
+<td>Web.Financials.Check.BankData.BankAccountNumber</td>
+<td>Check.BankAccountNumber</td>
+<td>true</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:209</td>
+<td>Web.Financials.Check.BankData.BankAccountNumber</td>
+<td>Check.BankAccountNumber</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:184</td>
+<td>Web.Financials.Check.BankData.BankAccountNumber</td>
+<td>Check.BankAccountNumber</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:170</td>
+<td>Web.Financials.Check.BankData.BankAccountNumber</td>
+<td>Payment.Check.BankAccountNumber</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_bankaccounttype"></a>
+<p class="column">
+<span class="exttitle">BankAccountType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/BankAccountType_tl.html" TARGET="tableFrame">BankAccountType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The type of bank accout e.g. checking, savings etc</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:133</td>
+<td>Web.Financials.Check.BankData.BankAccountType</td>
+<td>Check.BankAccountType</td>
+<td>true</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:198</td>
+<td>Web.Financials.Check.BankData.BankAccountType</td>
+<td>Check.BankAccountType</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:173</td>
+<td>Web.Financials.Check.BankData.BankAccountType</td>
+<td>Check.BankAccountType</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:159</td>
+<td>Web.Financials.Check.BankData.BankAccountType</td>
+<td>Payment.Check.BankAccountType</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_bankname"></a>
+<p class="column">
+<span class="exttitle">BankName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (100)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The name of the bank</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:121</td>
+<td>Web.Financials.Check.BankData.BankName</td>
+<td>Check.BankName</td>
+<td>true</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:186</td>
+<td>Web.Financials.Check.BankData.BankName</td>
+<td>Check.BankName</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:161</td>
+<td>Web.Financials.Check.BankData.BankName</td>
+<td>Check.BankName</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:147</td>
+<td>Web.Financials.Check.BankData.BankName</td>
+<td>Payment.Check.BankName</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_bankroutingnumber"></a>
+<p class="column">
+<span class="exttitle">BankRoutingNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (20)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The routing number is a nine digit bank code used in the United States</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:154</td>
+<td>Web.Financials.Check.BankData.BankRoutingNumber</td>
+<td>Check.BankRoutingNumber</td>
+<td>true</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:219</td>
+<td>Web.Financials.Check.BankData.BankRoutingNumber</td>
+<td>Check.BankRoutingNumber</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:194</td>
+<td>Web.Financials.Check.BankData.BankRoutingNumber</td>
+<td>Check.BankRoutingNumber</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:180</td>
+<td>Web.Financials.Check.BankData.BankRoutingNumber</td>
+<td>Payment.Check.BankRoutingNumber</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_checkbatching"></a>
+<p class="column">
+<span class="coltitle">CheckBatching</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CheckBatching_tl.html" TARGET="tableFrame">CheckBatching</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">How the check should be batched for sending.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:128</td>
+<td>NVV.Financials.Check.CheckBatching</td>
+<td>checkSet.PrimaryCheck.CheckBatching</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:214</td>
+<td>NVV.Financials.Check.CheckBatching</td>
+<td>Check.CheckBatching</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.default.pcf:32</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.CheckBatching</td>
+<td>Check.CheckBatching</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.single.pcf:36</td>
+<td>NVV.Financials.NewPaymentInstructionsSingle.Check.CheckBatching</td>
+<td>Check.CheckBatching</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_checkinstructions"></a>
+<p class="column">
+<span class="coltitle">CheckInstructions</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CheckHandlingInstructions_tl.html" TARGET="tableFrame">CheckHandlingInstructions</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Special handling instructions for the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:138</td>
+<td>NVV.Financials.Check.CheckInstructions</td>
+<td>checkSet.PrimaryCheck.CheckInstructions</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:225</td>
+<td>NVV.Financials.Check.CheckInstructions</td>
+<td>Check.CheckInstructions</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.default.pcf:38</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.CheckInstructions</td>
+<td>Check.CheckInstructions</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.single.pcf:48</td>
+<td>NVV.Financials.NewPaymentInstructionsSingle.Check.CheckInstructions</td>
+<td>Check.CheckInstructions</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_checknumber"></a>
+<p class="column">
+<span class="coltitle">CheckNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The check or EFT identifier.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:86</td>
+<td>NVV.Financials.Check.CheckNumber</td>
+<td>checkSet.PrimaryCheck.CheckNumber</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:89</td>
+<td>NVV.Financials.Check.CheckNumber</td>
+<td>Check.CheckNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckTransferDV.pcf:38</td>
+<td>NVV.Financials.CheckTransfer.Check.CheckNumber</td>
+<td>NewCheck.CheckNumber</td>
+<td>false</td>
+<td>
+CheckTransfer
+</td>
+</tr>
+<tr>
+<td>ClaimServiceRequests.pcf:633</td>
+<td>LV.Claim.ServiceRequest.Invoice.CheckNumber</td>
+<td>invoice.Check.CheckNumber</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>InvoicePanelSet.pcf:199</td>
+<td>Web.ServiceRequest.Invoices.CheckNumber</td>
+<td>check.CheckNumber</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:209</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.CheckNumber</td>
+<td>Check.CheckNumber</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:174</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.CheckNumber</td>
+<td>Check.CheckNumber</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:38</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.CheckNumber</td>
+<td>Payment.Check.CheckNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckDV.pcf:28</td>
+<td>NVV.Financials.VoidStopCheck.Check.CheckNumber</td>
+<td>Check.CheckNumber</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckGroupLV.pcf:33</td>
+<td>LV.Financials.VoidStopCheckGroup.Check.CheckNumber</td>
+<td>Check.CheckNumber</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_checkset"></a>
+<p class="column">
+<span class="coltitle">CheckSet</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="TransactionSet.html#CheckSet" TARGET="tableFrame">CheckSet</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CheckSetID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">CheckSet this Check belongs to.</span>
+<a name="check_checktype"></a>
+<p class="column">
+<span class="coltitle">CheckType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CheckType_tl.html" TARGET="tableFrame">CheckType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Role of the check in the check group (primary or secondary).</span>
+<a name="check_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimID)&nbsp;&nbsp;&nbsp;&nbsp;(export as id)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>export as id</b><br>Causes the system to create an appropriate identifier for the referenced entity: for example, ClaimIdentifier if the foreign key points to the claim table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The related claim.</span>
+<a name="check_claimcontact"></a>
+<p class="column">
+<span class="coltitle">ClaimContact</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ClaimContact.html" TARGET="tableFrame">ClaimContact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimContactID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claimant the check is being written for, as a ClaimContact.</span>
+<a name="check_comments"></a>
+<p class="column">
+<span class="coltitle">Comments</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Comments about the check, such as a reason it was voided.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:189</td>
+<td>NVV.Financials.Check.Comments</td>
+<td>Check.Comments</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckTransferDV.pcf:65</td>
+<td>NVV.Financials.CheckTransfer.Check.Comments</td>
+<td>NewCheck.Comments</td>
+<td>true</td>
+<td>
+CheckTransfer
+</td>
+</tr>
+<tr>
+<td>ReissueCheckDV.pcf:24</td>
+<td>NVV.Financials.ReissueCheck.Check.Comments</td>
+<td>Check.Comments</td>
+<td>true</td>
+<td>
+ReissueCheck
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckDV.pcf:17</td>
+<td>NVV.Financials.VoidStopCheck.Check.Comments</td>
+<td>Check.Comments</td>
+<td>true</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckGroupDV.pcf:21</td>
+<td>NVV.Financials.VoidStopCheckGroup.Check.Comments</td>
+<td>Check.Comments</td>
+<td>true</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_dateofservice"></a>
+<p class="column">
+<span class="coltitle">DateOfService</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date that the service was performed (if this check is for a service).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:105</td>
+<td>NVV.Financials.Check.DateOfService</td>
+<td>checkSet.PrimaryCheck.DateOfService</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:180</td>
+<td>NVV.Financials.Check.DateOfService</td>
+<td>Check.DateOfService</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:76</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.DateOfService</td>
+<td>Check.DateOfService</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:48</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Check.DateOfService</td>
+<td>Payment.Check.DateOfService</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_deductiontype"></a>
+<p class="column">
+<span class="coltitle">DeductionType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/DeductionType_tl.html" TARGET="tableFrame">DeductionType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Deduction type for secondary checks.  Always NULL for primary checks.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:233</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeductionType</td>
+<td>Check.DeductionType</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeesLV.pcf:50</td>
+<td>LV.Financials.NewCheckPayees.Check.DeductionType</td>
+<td>Check.DeductionType</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:155</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeductionType</td>
+<td>Check.DeductionType</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>ReissueCheckDV.pcf:160</td>
+<td>NVV.Financials.ReissueCheck.Check.DeductionType</td>
+<td>Check.DeductionType</td>
+<td>true</td>
+<td>
+ReissueCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_deliverymethod"></a>
+<p class="column">
+<span class="coltitle">DeliveryMethod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/DeliveryMethod_tl.html" TARGET="tableFrame">DeliveryMethod</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Requested delivery method.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:133</td>
+<td>NVV.Financials.Check.DeliveryMethod</td>
+<td>checkSet.PrimaryCheck.DeliveryMethod</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:220</td>
+<td>NVV.Financials.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:128</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:209</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeesLV.pcf:55</td>
+<td>LV.Financials.NewCheckPayees.Check.DeliverMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:114</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:119</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:195</td>
+<td>NVV.Financials.NewCheckPayee.Check.DeliveryMethod</td>
+<td>Payment.Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>ReissueCheckDV.pcf:121</td>
+<td>NVV.Financials.ReissueCheck.Check.DeliveryMethod</td>
+<td>Check.DeliveryMethod</td>
+<td>true</td>
+<td>
+ReissueCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_enteredtime"></a>
+<p class="column">
+<span class="coltitle">EnteredTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The time the check was created. This is different from CreateTime, which is the time it was stored in the system.</span>
+<a name="check_group"></a>
+<p class="column">
+<span class="coltitle">Group</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="CheckGroup.html" TARGET="tableFrame">CheckGroup</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: GroupID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">CheckGroup this check belongs to, if it's part of a multi-payee check.</span>
+<a name="check_invoicenumber"></a>
+<p class="column">
+<span class="coltitle">InvoiceNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Invoice number associated with the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:95</td>
+<td>NVV.Financials.Check.InvoiceNumber</td>
+<td>checkSet.PrimaryCheck.InvoiceNumber</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:163</td>
+<td>NVV.Financials.Check.InvoiceNumber</td>
+<td>Check.InvoiceNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:104</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.InvoiceNumber</td>
+<td>Check.InvoiceNumber</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:62</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.InvoiceNumber</td>
+<td>Payment.Check.InvoiceNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_isprimary"></a>
+<p class="column">
+<span class="exttitle">IsPrimary</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Indicates if this is the primary EFT record for the contact</span>
+<a name="check_issuedate"></a>
+<p class="column">
+<span class="coltitle">IssueDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date the check was issued.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:237</td>
+<td>NVV.Financials.Check.IssueDate</td>
+<td>Check.IssueDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:204</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.IssueDate</td>
+<td>Check.IssueDate</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:169</td>
+<td>NVV.Financials.ManualPaymentInstructions.Check.IssueDate</td>
+<td>Check.IssueDate</td>
+<td>Check.New</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:34</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.IssueDate</td>
+<td>Payment.Check.IssueDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckDV.pcf:37</td>
+<td>NVV.Financials.VoidStopCheck.Check.IssueDate</td>
+<td>Check.IssueDate</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckGroupLV.pcf:47</td>
+<td>LV.Financials.VoidStopCheckGroup.Check.IssueDate</td>
+<td>Check.IssueDate</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_mailingaddress"></a>
+<p class="column">
+<span class="coltitle">MailingAddress</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Address.html" TARGET="tableFrame">Address</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: MailingAddressID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Address of the person/company to whom the check should be mailed. This represents an Address entity.</span>
+<a name="check_mailto"></a>
+<p class="column">
+<span class="coltitle">MailTo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Name of the person/company to whom the check should be mailed.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:118</td>
+<td>NVV.Financials.Check.MailToContact</td>
+<td>checkSet.PrimaryCheck.MailTo</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:204</td>
+<td>NVV.Financials.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:135</td>
+<td>NVV.Financials.NewCheckPayee.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:216</td>
+<td>NVV.Financials.NewCheckPayee.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:120</td>
+<td>NVV.Financials.NewCheckPayee.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:125</td>
+<td>NVV.Financials.NewCheckPayee.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:202</td>
+<td>NVV.Financials.NewCheckPayee.Check.MailToContact</td>
+<td>Payment.Check.MailTo</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>ReissueCheckDV.pcf:128</td>
+<td>NVV.Financials.ReissueCheck.Check.MailToContact</td>
+<td>Check.MailTo</td>
+<td>true</td>
+<td>
+ReissueCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_mailtoaddress"></a>
+<p class="column">
+<span class="exttitle">MailToAddress</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<b><i>Deprecated</i></b><br>
+<span class="desc">Address of the person/company to whom the check should be mailed.</span>
+<a name="check_memo"></a>
+<p class="column">
+<span class="coltitle">Memo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Memo to include on the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:57</td>
+<td>NVV.Financials.Check.Memo</td>
+<td>checkSet.PrimaryCheck.Memo</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:32</td>
+<td>NVV.Financials.Check.Memo</td>
+<td>Check.Memo</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:110</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.Memo</td>
+<td>Check.Memo</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_paymentmethod"></a>
+<p class="column">
+<span class="coltitle">PaymentMethod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PaymentMethod_tl.html" TARGET="tableFrame">PaymentMethod</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Requested payment method for all payments in the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:123</td>
+<td>NVV.Financials.Check.PaymentMethod</td>
+<td>checkSet.PrimaryCheck.PaymentMethod</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:209</td>
+<td>NVV.Financials.Check.PaymentMethod</td>
+<td>Check.PaymentMethod</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:103</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.PaymentMethod</td>
+<td>Check.PaymentMethod</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:123</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.PaymentMethod</td>
+<td>Check.PaymentMethod</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.default.pcf:26</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.PaymentMethod</td>
+<td>Check.PaymentMethod</td>
+<td>false</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.single.pcf:30</td>
+<td>NVV.Financials.NewPaymentInstructionsSingle.Check.PaymentMethod</td>
+<td>Check.PaymentMethod</td>
+<td>false</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:109</td>
+<td>NVV.Financials.NewPaymentInstructions.Check.PaymentMethod</td>
+<td>Payment.Check.PaymentMethod</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:58</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.PaymentMethod</td>
+<td>Payment.Check.PaymentMethod</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_payto"></a>
+<p class="column">
+<span class="coltitle">PayTo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Pay to the order of.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_17 onclick='showAndHideUIDetails("UITable_17", "showhideUI_17")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_17' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:44</td>
+<td>NVV.Financials.Check.PayTo</td>
+<td>checkSet.PrimaryCheck.PayTo</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:112</td>
+<td>Web.Financials.Check.BankData.BankAcctHolderName</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:17</td>
+<td>NVV.Financials.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckGroupChecksLV.pcf:31</td>
+<td>LV.Financials.CheckGroupChecks.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:26</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:33</td>
+<td>Web.Financials.Check.BankData.BankAcctHolderName</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>DuplicateCheckResultsLV.pcf:21</td>
+<td>LV.Financials.DuplicateCheckResults.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+CheckDuplicatesWorksheet
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:115</td>
+<td>NVV.Financials.NewCheckPayee.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckAdditionalPayeeDV.pcf:177</td>
+<td>Web.Financials.Check.BankData.BankAcctHolderName</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckGroupChecksLV.pcf:29</td>
+<td>LV.Financials.NewCheckGroupChecks.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:135</td>
+<td>NVV.Financials.NewCheckPayee.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:152</td>
+<td>Web.Financials.Check.BankData.BankAcctHolderName</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeesLV.pcf:44</td>
+<td>LV.Financials.NewCheckPayees.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckAdditionalPayeeDV.pcf:103</td>
+<td>NVV.Financials.NewCheckPayee.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:108</td>
+<td>NVV.Financials.NewCheckPayee.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:121</td>
+<td>NVV.Financials.NewCheckPayee.Check.PayTo</td>
+<td>Payment.Check.PayTo</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:138</td>
+<td>Web.Financials.Check.BankData.BankAcctHolderName</td>
+<td>Payment.Check.PayTo</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>RecurrenceChecksLV.pcf:33</td>
+<td>LV.Financials.RecurrenceChecks.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>ReissueCheckDV.pcf:109</td>
+<td>NVV.Financials.ReissueCheck.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>true</td>
+<td>
+ReissueCheck
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:21</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.PayTo</td>
+<td>Payment.Check.PayTo</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckDV.pcf:24</td>
+<td>NVV.Financials.VoidStopCheck.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+<tr>
+<td>VoidStopCheckGroupLV.pcf:29</td>
+<td>LV.Financials.VoidStopCheckGroup.Check.PayTo</td>
+<td>Check.PayTo</td>
+<td>false</td>
+<td>
+VoidStopCheck
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_pendescalationforbulk"></a>
+<p class="column">
+<span class="coltitle">PendEscalationForBulk</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Only escalate as part of a BulkInvoice.</span>
+<a name="check_portion"></a>
+<p class="column">
+<span class="coltitle">Portion</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="CheckPortion.html" TARGET="tableFrame">CheckPortion</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PortionID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The amount of a multi-payee check applicable to this check.</span>
+<a name="check_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="check_recurringcheck"></a>
+<p class="column">
+<span class="coltitle">RecurringCheck</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RecurringCheck.html" TARGET="tableFrame">RecurringCheck</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: RecurringCheckID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The recurring check entity, if any, associated with this check.</span>
+<a name="check_reportability"></a>
+<p class="column">
+<span class="coltitle">Reportability</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ReportabilityType_tl.html" TARGET="tableFrame">ReportabilityType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the payment should be reported to the IRS as income.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_18 onclick='showAndHideUIDetails("UITable_18", "showhideUI_18")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_18' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:70</td>
+<td>NVV.Financials.Check.TaxReporting</td>
+<td>checkSet.PrimaryCheck.Reportability</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:72</td>
+<td>NVV.Financials.Check.TaxReporting</td>
+<td>Check.Reportability</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>NewCheckPayeeDV.pcf:250</td>
+<td>NVV.Financials.NewCheckPayee.Check.Reportability</td>
+<td>Check.Reportability</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+</td>
+</tr>
+<tr>
+<td>NewManualCheckPayeeDV.pcf:159</td>
+<td>NVV.Financials.NewCheckPayee.Check.Reportability</td>
+<td>Check.Reportability</td>
+<td>true</td>
+<td>
+ManualCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>QuickCheckBasicsDV.pcf:231</td>
+<td>NVV.Financials.NewCheckPayee.Check.Reportability</td>
+<td>Payment.Check.Reportability</td>
+<td>true</td>
+<td>
+QuickCreateCheckWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_reportableamount"></a>
+<p class="column">
+<span class="coltitle">ReportableAmount</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "currencyamount")'>currencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Reportable amount of the check in the transaction currency. Used by the BackupWithholdingCalculator as the amount of the check reportable to the IRS, from which it calculates backup withholding Deductions. It is editable in the UI.</span>
+<a name="check_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="check_scheduledsenddate"></a>
+<p class="column">
+<span class="coltitle">ScheduledSendDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "dateonly")'>dateonly</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date that the check is scheduled to be sent.  Also used to determine if the check amount is included in Future Payments (tomorrow or later).  Should only be modified in the UI or PreSetup rules.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_19 onclick='showAndHideUIDetails("UITable_19", "showhideUI_19")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_19' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ApprovalDetailDV.CheckSet.pcf:157</td>
+<td>NVV.Financials.Check.ScheduledSendDate</td>
+<td>checkSet.PrimaryCheck.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ApprovalDetailWorksheet
+</td>
+</tr>
+<tr>
+<td>CheckDV.pcf:241</td>
+<td>NVV.Financials.Check.ScheduledSendDate</td>
+<td>Check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckRecurrenceDetailInputSet.single.pcf:21</td>
+<td>Wizard.NewCheckWizard.CheckInstructions.Recurrence.Single.PaymentDate</td>
+<td>check.ScheduledSendDate</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>CheckSummaryPaymentsLV.pcf:22</td>
+<td>LV.Financials.Payments.Check.ScheduledSendDate</td>
+<td>Payment.Check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+<br>
+VoidStopCheck
+<br>
+ApprovalDetailWorksheet
+<br>
+ReissueCheck
+</td>
+</tr>
+<tr>
+<td>DuplicateCheckResultsLV.pcf:29</td>
+<td>LV.Financials.DuplicateCheckResults.ScheduledSendDate</td>
+<td>Check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+CheckDuplicatesWorksheet
+</td>
+</tr>
+<tr>
+<td>EditableRecurrenceChecksLV.pcf:37</td>
+<td>LV.Financials.EditableRecurrenceChecks.ScheduledSendDate</td>
+<td>Check.ScheduledSendDate</td>
+<td>true</td>
+<td>
+ChangeCheckRecurrence
+</td>
+</tr>
+<tr>
+<td>InvoicePanelSet.pcf:213</td>
+<td>Web.ServiceRequest.Invoices.CheckScheduledSendDate</td>
+<td>check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>NewPaymentInstructionsDV.single.pcf:42</td>
+<td>NVV.Financials.NewPaymentInstructionsSingle.Check.ScheduledSendDate</td>
+<td>Check.ScheduledSendDate</td>
+<td>true</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>RecurrenceChecksLV.pcf:22</td>
+<td>LV.Financials.RecurrenceChecks.ScheduledSendDate</td>
+<td>Check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:30</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.ScheduledSendDate</td>
+<td>Payment.Check.ScheduledSendDate</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_servicepdend"></a>
+<p class="column">
+<span class="coltitle">ServicePdEnd</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">End date of the service period for the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_20 onclick='showAndHideUIDetails("UITable_20", "showhideUI_20")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_20' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:92</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.ServicePeriod.End</td>
+<td>Check.ServicePdEnd</td>
+<td>Check.Editable and !Check.CheckSet.Recurring</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>EditableRecurrenceChecksLV.pcf:55</td>
+<td>LV.Financials.EditableRecurrenceChecks.ServicePeriodEnd</td>
+<td>Check.ServicePdEnd</td>
+<td>Check.hasExposureWithServicePeriod()</td>
+<td>
+ChangeCheckRecurrence
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_servicepdstart"></a>
+<p class="column">
+<span class="coltitle">ServicePdStart</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Start date of the service period for the check.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_21 onclick='showAndHideUIDetails("UITable_21", "showhideUI_21")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_21' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckWizardCheckSummaryInputSet.pcf:84</td>
+<td>NVV.Financials.SubView.CheckWizardCheckSummary.Check.ServicePeriod.Start</td>
+<td>Check.ServicePdStart</td>
+<td>Check.Editable and !Check.CheckSet.Recurring</td>
+<td>
+ManualCreateCheckWizard
+<br>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>EditableRecurrenceChecksLV.pcf:50</td>
+<td>LV.Financials.EditableRecurrenceChecks.ServicePeriodStart</td>
+<td>Check.ServicePdStart</td>
+<td>Check.hasExposureWithServicePeriod()</td>
+<td>
+ChangeCheckRecurrence
+</td>
+</tr>
+</table>
+</div></div>
+<a name="check_status"></a>
+<p class="column">
+<span class="coltitle">Status</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/TransactionStatus_tl.html" TARGET="tableFrame">TransactionStatus</A> using filter <A HREF="../typelist/TransactionStatus_tl.html#check" TARGET="tableFrame">check</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Status of the check (issued, voided, cleared, and so on). Do not update directly. Use methods to initiate operations, or use updateCheckStatus() method.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_22 onclick='showAndHideUIDetails("UITable_22", "showhideUI_22")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_22' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:233</td>
+<td>NVV.Financials.Check.Status</td>
+<td>Check.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>CheckGroupChecksLV.pcf:51</td>
+<td>LV.Financials.CheckGroupChecks.Check.Status</td>
+<td>Check.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>ClaimServiceRequests.pcf:642</td>
+<td>LV.Claim.ServiceRequest.Invoice.CheckStatus</td>
+<td>invoice.Check.Status</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>DuplicateCheckResultsLV.pcf:34</td>
+<td>LV.Financials.DuplicateCheckResults.Status</td>
+<td>Check.Status</td>
+<td>false</td>
+<td>
+CheckDuplicatesWorksheet
+</td>
+</tr>
+<tr>
+<td>InvoicePanelSet.pcf:209</td>
+<td>Web.ServiceRequest.Invoices.CheckStatus</td>
+<td>check.Status</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>RecurrenceChecksLV.pcf:38</td>
+<td>LV.Financials.RecurrenceChecks.Status</td>
+<td>Check.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>TransactionPaymentDetailsInputSet.pcf:17</td>
+<td>NVV.Financials.SubView.TransactionPaymentDetails.Payment.Check.Status</td>
+<td>Payment.Check.Status</td>
+<td>false</td>
+<td>
+ClaimFinancialsTransactionsDetail
+<br>
+TransactionDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for Check"></a><div class="arraysbox">Unique Keys for Check</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>checku7</td>
+<td>ID, Retired, EnteredTime, IssueDate, DateOfService, ClaimID</td></tr>
+<tr><td>checku8</td>
+<td>ID, Retired, ServicePdStart, ServicePdEnd, ClaimID</td></tr>
+<tr><td>checku5</td>
+<td>InvoiceNumber, Retired, ClaimID, ID</td></tr>
+<tr><td>check1a</td>
+<td>PublicID, Retired</td></tr>
+<tr><td>checku6</td>
+<td>GroupID, Retired, ID</td></tr>
+<tr><td>checku3</td>
+<td>CheckNumber, Retired, ClaimID, ID</td></tr>
+<tr><td>checku4</td>
+<td>CreateUserID, EnteredTime, Retired, ClaimID, PayToDenorm, Status, ID</td></tr>
+<tr><td>checku1</td>
+<td>Status, Retired, ID, ScheduledSendDate</td></tr>
+<tr><td>checku2</td>
+<td>Status, Retired, EnteredTime, ID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+showUIDetails('UITable_17', 'showhideUI_17');
+showUIDetails('UITable_18', 'showhideUI_18');
+showUIDetails('UITable_19', 'showhideUI_19');
+showUIDetails('UITable_20', 'showhideUI_20');
+showUIDetails('UITable_21', 'showhideUI_21');
+showUIDetails('UITable_22', 'showhideUI_22');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+hideUIDetails('UITable_17', 'showhideUI_17');
+hideUIDetails('UITable_18', 'showhideUI_18');
+hideUIDetails('UITable_19', 'showhideUI_19');
+hideUIDetails('UITable_20', 'showhideUI_20');
+hideUIDetails('UITable_21', 'showhideUI_21');
+hideUIDetails('UITable_22', 'showhideUI_22');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

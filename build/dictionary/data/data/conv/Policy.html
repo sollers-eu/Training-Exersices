@@ -1,0 +1,2527 @@
+<html>
+<head>
+<title>Policy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Policy <span class="entityname">(cc_policy) (delegates to <A HREF="ClaimContactRoleOwner.html" TARGET="tableFrame">ClaimContactRoleOwner</A>, <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>, <A HREF="Validatable.html" TARGET="tableFrame">Validatable</A>)</span></div>
+<div class="desc">
+<span id="reflink_1814" class="reftext" onclick='showAndHideRefBox("refbox_1814", "reflink_1814")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1814" class="refbox_inner" style="display:none;">
+<code>Policy</code>,
+and associates it to the claim.  There is a one-to-one relationship between
+claims and policies in the system.  If multiple claims have been filed against
+the same actual policy, there will be a distinct <code>Policy</code> for every
+<code>Claim</code> in the system.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Policy</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>PolicyChanged</li><li>PolicyRemoved</li><li>PolicyAdded</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_1815" class="reftext" onclick='showAndHideRefBox("refbox_1815", "reflink_1815")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1815" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.Policy</A><br><A HREF="../full/ClaimContact.html" TARGET="tableFrame">ClaimContact.Policy</A><br><A HREF="../full/ClaimContactRole.html" TARGET="tableFrame">ClaimContactRole.Policy</A><br><A HREF="../full/ClassCode.html" TARGET="tableFrame">ClassCode.Policy</A><br><A HREF="../full/Coverage.html" TARGET="tableFrame">Coverage.Policy</A><br><A HREF="../full/Endorsement.html" TARGET="tableFrame">Endorsement.Policy</A><br><A HREF="../full/PolicyLocation.html" TARGET="tableFrame">PolicyLocation.Policy</A><br><A HREF="../full/PolicyRetrievalResultSet.html" TARGET="tableFrame">PolicyRetrievalResultSet.Result</A><br><A HREF="../full/PolicyStatCodeFilterCriteria.html" TARGET="tableFrame">PolicyStatCodeFilterCriteria.Policy</A><br><A HREF="../full/RiskUnit.html" TARGET="tableFrame">RiskUnit.Policy</A><br><A HREF="../full/StatCode.html" TARGET="tableFrame">StatCode.Policy</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="policy_accountnumber"></a>
+<p class="column">
+<span class="coltitle">AccountNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "account")'>account</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Account number that this Policy belongs to.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:95</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:95</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:95</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:95</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:95</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:103</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:102</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:104</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:105</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:102</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Account.Number</td>
+<td>Policy.AccountNumber</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_assignedrisk"></a>
+<p class="column">
+<span class="coltitle">AssignedRisk</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The policy is an Assigned risk from the state or not.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.AssignedRisk</td>
+<td>Policy.AssignedRisk</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.AssignedRisk</td>
+<td>Policy.AssignedRisk</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:221</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.AssignedRisk</td>
+<td>Policy.AssignedRisk</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:216</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.AssignedRisk</td>
+<td>Policy.AssignedRisk</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_cancellationdate"></a>
+<p class="column">
+<span class="coltitle">CancellationDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date on which the policy was canceled.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:44</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:44</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:44</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:44</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:44</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:51</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:52</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:52</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:51</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:52</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CancellationDate</td>
+<td>Policy.CancellationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_coverageform"></a>
+<p class="column">
+<span class="coltitle">CoverageForm</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CoverageForm_tl.html" TARGET="tableFrame">CoverageForm</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Policy's coverage form.</span>
+<a name="policy_currency"></a>
+<p class="column">
+<span class="coltitle">Currency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Currency of the policy. When set, the new value is also propagated to Claim.Currency.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:69</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:70</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:70</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:69</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:70</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Currency</td>
+<td>Policy.Currency</td>
+<td>!Policy.Verified and Policy.CurrencyEditable</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_customerservicetier"></a>
+<p class="column">
+<span class="coltitle">CustomerServiceTier</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CustomerServiceTier_tl.html" TARGET="tableFrame">CustomerServiceTier</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Service tier behind this policy</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:112</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CustomerServiceTier</td>
+<td>Policy.CustomerServiceTier</td>
+<td>true</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:111</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CustomerServiceTier</td>
+<td>Policy.CustomerServiceTier</td>
+<td>true</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:113</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CustomerServiceTier</td>
+<td>Policy.CustomerServiceTier</td>
+<td>true</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:114</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CustomerServiceTier</td>
+<td>Policy.CustomerServiceTier</td>
+<td>true</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:111</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.CustomerServiceTier</td>
+<td>Policy.CustomerServiceTier</td>
+<td>true</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_effectivedate"></a>
+<p class="column">
+<span class="coltitle">EffectiveDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date on which the policy is effective.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ExistingAccountRefWorksheet.pcf:47</td>
+<td>Web.Admin.Account.Number.ChangeWarning.Policy.EffectiveDate</td>
+<td>policy.EffectiveDate</td>
+<td>false</td>
+<td>
+ExistingAccountRefWorksheet
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:32</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:32</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:32</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:32</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:32</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:40</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:41</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:41</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:40</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:41</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.EffectiveDate</td>
+<td>Policy.EffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_expirationdate"></a>
+<p class="column">
+<span class="coltitle">ExpirationDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date on which the policy expires.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ExistingAccountRefWorksheet.pcf:51</td>
+<td>Web.Admin.Account.Number.ChangeWarning.Policy.ExpirationDate</td>
+<td>policy.ExpirationDate</td>
+<td>false</td>
+<td>
+ExistingAccountRefWorksheet
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:39</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:39</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:39</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:39</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:39</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:46</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:47</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:47</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:46</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:47</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ExpirationDate</td>
+<td>Policy.ExpirationDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_financialinterests"></a>
+<p class="column">
+<span class="coltitle">FinancialInterests</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Other financial interests of note.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:216</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:211</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:213</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:218</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:211</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.OtherFinancialInterests</td>
+<td>Policy.FinancialInterests</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_foreigncoverage"></a>
+<p class="column">
+<span class="coltitle">ForeignCoverage</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the insured has foreign coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:191</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:191</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:191</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:191</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:191</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:210</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:206</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:208</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:212</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:206</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.ForeignCoverage</td>
+<td>Policy.ForeignCoverage</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_insuredsiccode"></a>
+<p class="column">
+<span class="coltitle">InsuredSICCode</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (6)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The insured's SIC code (for workers' comp policies only).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:214</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.InsuredSicCode</td>
+<td>Policy.InsuredSICCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:229</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.InsuredSicCode</td>
+<td>Policy.InsuredSICCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_notes"></a>
+<p class="column">
+<span class="coltitle">Notes</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Other notes on the policy.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:206</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:206</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:227</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:216</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:218</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:224</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:221</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.Notes</td>
+<td>Policy.Notes</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_origeffectivedate"></a>
+<p class="column">
+<span class="coltitle">OrigEffectiveDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">First effective date on which the policyholder had coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:49</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:49</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:49</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:49</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:49</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:56</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:57</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:57</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:56</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:57</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.OrigEffectiveDate</td>
+<td>Policy.OrigEffectiveDate</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_otherinsinfo"></a>
+<p class="column">
+<span class="coltitle">OtherInsInfo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Notes about the insured's other insurance.</span>
+<a name="policy_otherinsurance"></a>
+<p class="column">
+<span class="coltitle">OtherInsurance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the insured has other insurance.</span>
+<a name="policy_participation"></a>
+<p class="column">
+<span class="coltitle">Participation</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "percentagedec")'>percentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Participation percentage (for commercial policies only).</span>
+<a name="policy_policynumber"></a>
+<p class="column">
+<span class="coltitle">PolicyNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "policynumber")'>policynumber</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of the policy (generally a string).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>DuplicateClaimSearchResultsLV.pcf:46</td>
+<td>LV.Claim.DuplicateClaimSearchResults.Claims.PolicyID</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+NewClaimDuplicatesWorksheet
+</td>
+</tr>
+<tr>
+<td>ExistingAccountRefWorksheet.pcf:38</td>
+<td>Web.Admin.Account.Number.ChangeWarning.Policy.PolicyNumber</td>
+<td>policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ExistingAccountRefWorksheet
+</td>
+</tr>
+<tr>
+<td>FailedAssignmentsLV.Claim.pcf:37</td>
+<td>LV.Claim.AssignmentFailedClaims.PolicyID</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+AssignServiceRequestPopup
+<br>
+AssignSubrogationPopup
+<br>
+AssignMattersPopup
+<br>
+AssignExposuresPopup
+<br>
+AssignClaimsPopup
+<br>
+AssignActivitiesPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimLossDetailsDV.Gl.pcf:17</td>
+<td>NVV.Claim.NewClaimLossDetailsGeneralLiability.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimLossDetailsDV.Pr.pcf:21</td>
+<td>NVV.Claim.NewClaimLossDetailsProperty.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:20</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:20</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:20</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:20</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:20</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:28</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:29</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:29</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:28</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:29</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.PolicyNumber</td>
+<td>Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.GL.pcf:75</td>
+<td>NVV.Claim.NewQuickClaimClaimGL.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.QuickClaimAuto.pcf:86</td>
+<td>NVV.Claim.NewQuickClaimClaimAuto.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.QuickClaimProperty.pcf:81</td>
+<td>NVV.Claim.NewQuickClaimClaimProperty.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.TravelBaggageOnly.pcf:85</td>
+<td>NVV.Claim.SubView.NewQuickClaimTravel.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.TravelCancelOnly.pcf:82</td>
+<td>NVV.Claim.SubView.NewQuickClaimTravel.Policy.PolicyNumber</td>
+<td>Claim.Policy.PolicyNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_policyratingplan"></a>
+<p class="column">
+<span class="coltitle">PolicyRatingPlan</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PolicyRatingPlan_tl.html" TARGET="tableFrame">PolicyRatingPlan</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Policy's rating plan (for workers' comp policies only).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:220</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.PolicyRatingPlan</td>
+<td>Policy.PolicyRatingPlan</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:235</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.PolicyRatingPlan</td>
+<td>Policy.PolicyRatingPlan</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_policysource"></a>
+<p class="column">
+<span class="coltitle">PolicySource</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PolicySource_tl.html" TARGET="tableFrame">PolicySource</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Source of the policy information.</span>
+<a name="policy_policysuffix"></a>
+<p class="column">
+<span class="coltitle">PolicySuffix</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Indicates each unique period that a policy has been in effect.  (Sometimes called 'Mod' or 'Module.')</span>
+<a name="policy_policysystemperiodid"></a>
+<p class="column">
+<span class="coltitle">PolicySystemPeriodID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "longint")'>longint</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The id of an associated external policy system period.</span>
+<a name="policy_policytype"></a>
+<p class="column">
+<span class="coltitle">PolicyType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PolicyType_tl.html" TARGET="tableFrame">PolicyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of policy.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ExistingAccountRefWorksheet.pcf:56</td>
+<td>Web.Admin.Account.Number.ChangeWarning.Policy.PolicyType</td>
+<td>policy.PolicyType</td>
+<td>false</td>
+<td>
+ExistingAccountRefWorksheet
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:26</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:26</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:26</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:26</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:26</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:34</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:35</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:35</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:34</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:35</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Type</td>
+<td>Policy.PolicyType</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_producercode"></a>
+<p class="column">
+<span class="coltitle">ProducerCode</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Agency that sold the policy.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:154</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:154</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:154</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:154</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:154</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:169</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:171</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:175</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:169</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.ProducerCode</td>
+<td>Policy.ProducerCode</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="policy_reportingdate"></a>
+<p class="column">
+<span class="coltitle">ReportingDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Extended reporting date for policies with extended coverage (for commercial policies only).</span>
+<a name="policy_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="policy_retroactivedate"></a>
+<p class="column">
+<span class="coltitle">RetroactiveDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Retroactive date for policies with retroactive coverage (for commercial policies only).</span>
+<a name="policy_returntoworkprgm"></a>
+<p class="column">
+<span class="coltitle">ReturnToWorkPrgm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Return to work program (for workers' comp policies only).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:235</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.ReturnToWorkPrgm</td>
+<td>Policy.ReturnToWorkPrgm</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:250</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.ReturnToWorkPrgm</td>
+<td>Policy.ReturnToWorkPrgm</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_status"></a>
+<p class="column">
+<span class="coltitle">Status</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PolicyStatus_tl.html" TARGET="tableFrame">PolicyStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Status of the policy.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_17 onclick='showAndHideUIDetails("UITable_17", "showhideUI_17")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_17' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimIndicatorInputSet.CoverageInQuestionClaimIndicator.pcf:51</td>
+<td>Web.Claim.CoverageInQuestionClaimIndicator.PolicyStatus</td>
+<td>indicator.Claim.Policy.Status</td>
+<td>false</td>
+<td>
+ClaimStatus
+</td>
+</tr>
+<tr>
+<td>NewClaimLossDetailsDV.Gl.pcf:22</td>
+<td>NVV.Claim.NewClaimLossDetailsGeneralLiability.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimLossDetailsDV.Pr.pcf:26</td>
+<td>NVV.Claim.NewClaimLossDetailsProperty.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:55</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:55</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:55</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:55</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:55</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:62</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:62</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:63</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Status</td>
+<td>Policy.Status</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.GL.pcf:80</td>
+<td>NVV.Claim.NewQuickClaimClaimGL.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.QuickClaimAuto.pcf:91</td>
+<td>NVV.Claim.NewQuickClaimClaimAuto.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.QuickClaimProperty.pcf:86</td>
+<td>NVV.Claim.NewQuickClaimClaimProperty.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.TravelBaggageOnly.pcf:90</td>
+<td>NVV.Claim.SubView.NewQuickClaimTravel.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>QuickClaimDV.TravelCancelOnly.pcf:87</td>
+<td>NVV.Claim.SubView.NewQuickClaimTravel.Policy.Status</td>
+<td>Claim.Policy.Status</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_totalproperties"></a>
+<p class="column">
+<span class="coltitle">TotalProperties</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Total number of properties on the master version of the policy.</span>
+<a name="policy_totalvehicles"></a>
+<p class="column">
+<span class="coltitle">TotalVehicles</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Total number of vehicles on the master version of the policy.</span>
+<a name="policy_underwritingco"></a>
+<p class="column">
+<span class="coltitle">UnderwritingCo</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/UnderwritingCompanyType_tl.html" TARGET="tableFrame">UnderwritingCompanyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Underwriting company.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_18 onclick='showAndHideUIDetails("UITable_18", "showhideUI_18")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_18' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:173</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:192</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:188</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:190</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:194</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:188</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Company</td>
+<td>Policy.UnderwritingCo</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_underwritinggroup"></a>
+<p class="column">
+<span class="coltitle">UnderwritingGroup</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/UnderwritingGroupType_tl.html" TARGET="tableFrame">UnderwritingGroupType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Underwriting group.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_19 onclick='showAndHideUIDetails("UITable_19", "showhideUI_19")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_19' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:179</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:179</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:179</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:179</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:179</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:198</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:194</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:196</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:200</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:194</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Underwriting.Group</td>
+<td>Policy.UnderwritingGroup</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_validationlevel"></a>
+<p class="column">
+<span class="coltitle">ValidationLevel</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ValidationLevel_tl.html" TARGET="tableFrame">ValidationLevel</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Validation level that this object passed (if any) before it was stored.</span>
+<a name="policy_verified"></a>
+<p class="column">
+<span class="coltitle">Verified</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">True if no non-internal fields have been changed since this policy was retrieved from external system.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_20 onclick='showAndHideUIDetails("UITable_20", "showhideUI_20")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_20' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Auto.pcf:186</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Gl.pcf:186</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Pr.pcf:186</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Trav.pcf:186</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:186</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Auto.pcf:205</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Gl.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Pr.pcf:203</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Trav.pcf:207</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:201</td>
+<td>NVV.Policy.SubView.PolicyGeneral.Policy.Other.VerifiedPolicy</td>
+<td>Policy.Verified</td>
+<td>false</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_wcotherstates"></a>
+<p class="column">
+<span class="coltitle">WCOtherStates</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Other states in which coverage applies (for workers' comp policies only).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_21 onclick='showAndHideUIDetails("UITable_21", "showhideUI_21")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_21' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:230</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.OtherStates</td>
+<td>Policy.WCOtherStates</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:245</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.OtherStates</td>
+<td>Policy.WCOtherStates</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="policy_wcstates"></a>
+<p class="column">
+<span class="coltitle">WCStates</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">States in which coverage applies (for workers' comp policies only).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_22 onclick='showAndHideUIDetails("UITable_22", "showhideUI_22")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_22' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimPolicyGeneralPanelSet.Wc.pcf:225</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.States</td>
+<td>Policy.WCStates</td>
+<td>!Policy.Verified</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyGeneralPanelSet.Wc.pcf:240</td>
+<td>NVV.Policy.SubView.PolicyGeneralWorkersComp.Policy.WorkersComp.States</td>
+<td>Policy.WCStates</td>
+<td>!Policy.Verified</td>
+<td>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for Policy"></a><div class="arraysbox">Unique Keys for Policy</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>policyu2</td>
+<td>PolicyNumber, Retired, ID</td></tr>
+<tr><td>policyu1</td>
+<td>ID, Retired, PolicyNumber</td></tr>
+<tr><td>policy1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+showUIDetails('UITable_17', 'showhideUI_17');
+showUIDetails('UITable_18', 'showhideUI_18');
+showUIDetails('UITable_19', 'showhideUI_19');
+showUIDetails('UITable_20', 'showhideUI_20');
+showUIDetails('UITable_21', 'showhideUI_21');
+showUIDetails('UITable_22', 'showhideUI_22');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+hideUIDetails('UITable_17', 'showhideUI_17');
+hideUIDetails('UITable_18', 'showhideUI_18');
+hideUIDetails('UITable_19', 'showhideUI_19');
+hideUIDetails('UITable_20', 'showhideUI_20');
+hideUIDetails('UITable_21', 'showhideUI_21');
+hideUIDetails('UITable_22', 'showhideUI_22');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

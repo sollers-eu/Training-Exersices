@@ -1,0 +1,1674 @@
+<html>
+<head>
+<title>Vehicle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Vehicle <span class="entityname">(cc_vehicle) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2961" class="reftext" onclick='showAndHideRefBox("refbox_2961", "reflink_2961")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2961" class="refbox_inner" style="display:none;">
+
+A vehicle (car, boat, etc.) on a policy.  Describes the vehicle's physical
+characteristics (make, model, VIN etc.) and relates the vehicle to its coverages.
+  
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Vehicle</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2962" class="reftext" onclick='showAndHideRefBox("refbox_2962", "reflink_2962")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2962" class="refbox_inner" style="display:none;">
+<A HREF="../full/Incident.html#VehicleIncident" TARGET="tableFrame">VehicleIncident.Vehicle</A><br><A HREF="../full/RiskUnit.html#VehicleRU" TARGET="tableFrame">VehicleRU.Vehicle</A><br><A HREF="../full/VehicleOwner.html" TARGET="tableFrame">VehicleOwner.Vehicle</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="vehicle_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="vehicle_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="vehicle_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_associatedpolicyinternal"></a>
+<p class="column">
+<span class="coltitle">AssociatedPolicyInternal</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Policy</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_boattype"></a>
+<p class="column">
+<span class="coltitle">BoatType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/BoatType_tl.html" TARGET="tableFrame">BoatType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of boat; only applies if vehicle style is boat.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:81</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.BoatType</td>
+<td>VehicleRU.Vehicle.BoatType</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:190</td>
+<td>Web.VehicleIncidentDV.Vehicle.BoatType</td>
+<td>VehicleIncident.Vehicle.BoatType</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_boattype_prop"></a>
+<p class="column">
+<span class="coltitle">BOATTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_color"></a>
+<p class="column">
+<span class="coltitle">Color</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Color of the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:155</td>
+<td>Web.VehicleIncidentDV.Vehicle.Color</td>
+<td>VehicleIncident.Vehicle.Color</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:55</td>
+<td>LV.Policy.Vehicles.Color</td>
+<td>VehicleRU.Vehicle.Color</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:55</td>
+<td>LV.Policy.Vehicles.Color</td>
+<td>vehicle.Color</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:62</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Color</td>
+<td>VehicleRU.Vehicle.Color</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:51</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleColor</td>
+<td>Exposure.VehicleIncident.Vehicle.Color</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:46</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleColor</td>
+<td>VehicleIncident.Vehicle.Color</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:128</td>
+<td>Web.VehicleIncidentDV.Vehicle.Color</td>
+<td>VehicleIncident.Vehicle.Color</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:58</td>
+<td>LV.Policy.Vehicles.Color</td>
+<td>VehicleRU.Vehicle.Color</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_color_prop"></a>
+<p class="column">
+<span class="coltitle">COLOR_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="vehicle_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="vehicle_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_licenseplate"></a>
+<p class="column">
+<span class="coltitle">LicensePlate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">License plate of the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleIncidentsLV.pcf:47</td>
+<td>Web.EditableVehicleIncidentsLV.LicensePlate</td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+FNOLWizard
+<br>
+DuplicateClaimLossDetailsPopup
+<br>
+VehicleIncidentPrint
+<br>
+ClaimLossDetails
+</td>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:167</td>
+<td>Web.VehicleIncidentDV.Vehicle.LicensePlate</td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.Trav.pcf:293</td>
+<td></td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.default.pcf:145</td>
+<td></td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:72</td>
+<td>LV.Policy.Vehicles.LicensePlate</td>
+<td>VehicleRU.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:59</td>
+<td>LV.Policy.Vehicles.LicensePlate</td>
+<td>vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:74</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.LicensePlate</td>
+<td>VehicleRU.Vehicle.LicensePlate</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:61</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleLicensePlate</td>
+<td>Exposure.VehicleIncident.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:54</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleLicensePlate</td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:177</td>
+<td>Web.VehicleIncidentDV.Vehicle.LicensePlate</td>
+<td>VehicleIncident.Vehicle.LicensePlate</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:75</td>
+<td>LV.Policy.Vehicles.LicensePlate</td>
+<td>VehicleRU.Vehicle.LicensePlate</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_licenseplate_prop"></a>
+<p class="column">
+<span class="coltitle">LICENSEPLATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_lienholders_prop"></a>
+<p class="column">
+<span class="coltitle">LIENHOLDERS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_loadcommandid"></a>
+<p class="column">
+<span class="coltitle">LoadCommandID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">LoadCommand for load where row was created. If not null this object was loaded via the loader.</span>
+<a name="vehicle_loadcommandid_prop"></a>
+<p class="column">
+<span class="coltitle">LOADCOMMANDID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_loan"></a>
+<p class="column">
+<span class="coltitle">Loan</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether a loan is owed for the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:305</td>
+<td>Web.LoanInformationDV.Loan</td>
+<td>VehicleIncident.Vehicle.Loan</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>LoanInformationInputSet.pcf:16</td>
+<td>Web.LoanInformationDV.Loan</td>
+<td>VehicleIncident.Vehicle.Loan</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_loan_prop"></a>
+<p class="column">
+<span class="coltitle">LOAN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_loanmonthlypayment"></a>
+<p class="column">
+<span class="coltitle">LoanMonthlyPayment</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Monthly loan payment.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:313</td>
+<td>Web.LoanInformationDV.MonthlyPayment</td>
+<td>VehicleIncident.Vehicle.LoanMonthlyPayment</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>LoanInformationInputSet.pcf:24</td>
+<td>Web.LoanInformationDV.MonthlyPayment</td>
+<td>VehicleIncident.Vehicle.LoanMonthlyPayment</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_loanmonthlypayment_prop"></a>
+<p class="column">
+<span class="coltitle">LOANMONTHLYPAYMENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_loanmonthsremaining"></a>
+<p class="column">
+<span class="coltitle">LoanMonthsRemaining</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Months remaining on loan.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:320</td>
+<td>Web.LoanInformationDV.MonthsRemaining</td>
+<td>VehicleIncident.Vehicle.LoanMonthsRemaining</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>LoanInformationInputSet.pcf:31</td>
+<td>Web.LoanInformationDV.MonthsRemaining</td>
+<td>VehicleIncident.Vehicle.LoanMonthsRemaining</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_loanmonthsremaining_prop"></a>
+<p class="column">
+<span class="coltitle">LOANMONTHSREMAINING_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_loanpayoffamount"></a>
+<p class="column">
+<span class="coltitle">LoanPayoffAmount</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Loan payoff amount.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:326</td>
+<td>Web.LoanInformationDV.PayoffAmount</td>
+<td>VehicleIncident.Vehicle.LoanPayoffAmount</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>LoanInformationInputSet.pcf:37</td>
+<td>Web.LoanInformationDV.PayoffAmount</td>
+<td>VehicleIncident.Vehicle.LoanPayoffAmount</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_loanpayoffamount_prop"></a>
+<p class="column">
+<span class="coltitle">LOANPAYOFFAMOUNT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_make"></a>
+<p class="column">
+<span class="coltitle">Make</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Make of the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:115</td>
+<td>Web.VehicleIncidentDV.Vehicle.Make</td>
+<td>VehicleIncident.Vehicle.Make</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:39</td>
+<td>LV.Policy.Vehicles.Make</td>
+<td>VehicleRU.Vehicle.Make</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:47</td>
+<td>LV.Policy.Vehicles.Make</td>
+<td>vehicle.Make</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:25</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Make</td>
+<td>VehicleRU.Vehicle.Make</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:35</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleMake</td>
+<td>Exposure.VehicleIncident.Vehicle.Make</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:33</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleMake</td>
+<td>VehicleIncident.Vehicle.Make</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:91</td>
+<td>Web.VehicleIncidentDV.Vehicle.Make</td>
+<td>VehicleIncident.Vehicle.Make</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:40</td>
+<td>LV.Policy.Vehicles.Make</td>
+<td>VehicleRU.Vehicle.Make</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_make_prop"></a>
+<p class="column">
+<span class="coltitle">MAKE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_manufacturer"></a>
+<p class="column">
+<span class="coltitle">Manufacturer</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/VehicleManufacturer_tl.html" TARGET="tableFrame">VehicleManufacturer</A> using key filter <A HREF="../typelist/VehicleStyle_tl.html" TARGET="tableFrame">Style</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Company that manufactured the vehicle.</span>
+<a name="vehicle_manufacturer_prop"></a>
+<p class="column">
+<span class="coltitle">MANUFACTURER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_model"></a>
+<p class="column">
+<span class="coltitle">Model</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Model of the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleIncidentsLV.pcf:40</td>
+<td>Web.EditableVehicleIncidentsLV.Model</td>
+<td>VehicleIncident.Vehicle.Model</td>
+<td>false</td>
+<td>
+FNOLWizard
+<br>
+DuplicateClaimLossDetailsPopup
+<br>
+VehicleIncidentPrint
+<br>
+ClaimLossDetails
+</td>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:128</td>
+<td>Web.VehicleIncidentDV.Vehicle.Model</td>
+<td>VehicleIncident.Vehicle.Model</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:44</td>
+<td>LV.Policy.Vehicles.Model</td>
+<td>VehicleRU.Vehicle.Model</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:51</td>
+<td>LV.Policy.Vehicles.Model</td>
+<td>vehicle.Model</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:31</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Model</td>
+<td>VehicleRU.Vehicle.Model</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:40</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleModel</td>
+<td>Exposure.VehicleIncident.Vehicle.Model</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:37</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleModel</td>
+<td>VehicleIncident.Vehicle.Model</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:103</td>
+<td>Web.VehicleIncidentDV.Vehicle.Model</td>
+<td>VehicleIncident.Vehicle.Model</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:46</td>
+<td>LV.Policy.Vehicles.Model</td>
+<td>VehicleRU.Vehicle.Model</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_model_prop"></a>
+<p class="column">
+<span class="coltitle">MODEL_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_offroadstyle"></a>
+<p class="column">
+<span class="coltitle">OffRoadStyle</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/OffRoadVehicleStyle_tl.html" TARGET="tableFrame">OffRoadVehicleStyle</A> using key filter <A HREF="../typelist/VehicleStyle_tl.html" TARGET="tableFrame">Style</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Style of snowmobile or ATV (wheels, tracks etc.). Used by ISO.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:88</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.OffRoadStyle</td>
+<td>VehicleRU.Vehicle.OffRoadStyle</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:203</td>
+<td>Web.VehicleIncidentDV.Vehicle.OffRoadStyle</td>
+<td>VehicleIncident.Vehicle.OffRoadStyle</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_offroadstyle_prop"></a>
+<p class="column">
+<span class="coltitle">OFFROADSTYLE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_policycurrency"></a>
+<p class="column">
+<span class="coltitle">PolicyCurrency</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.Currency</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Retrieves the currency set for this vehicle's associated Policy</span>
+<a name="vehicle_policysystemid"></a>
+<p class="column">
+<span class="coltitle">PolicySystemId</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "policysystemid")'>policysystemid</span> (256)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Identifier for the vehicle in an external policy system</span>
+<a name="vehicle_policysystemid_prop"></a>
+<p class="column">
+<span class="coltitle">POLICYSYSTEMID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="vehicle_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="vehicle_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_serialnumber"></a>
+<p class="column">
+<span class="coltitle">SerialNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (20)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Serial number; only use if VIN is not appropriate (e.g. for boats).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:57</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.SerialNumber</td>
+<td>VehicleRU.Vehicle.SerialNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:152</td>
+<td>Web.VehicleIncidentDV.Vehicle.SerialNumber</td>
+<td>VehicleIncident.Vehicle.SerialNumber</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_serialnumber_prop"></a>
+<p class="column">
+<span class="coltitle">SERIALNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_shortdisplayname"></a>
+<p class="column">
+<span class="coltitle">ShortDisplayName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_state"></a>
+<p class="column">
+<span class="coltitle">State</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Jurisdiction_tl.html" TARGET="tableFrame">Jurisdiction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">State (Jurisdiction) in which the vehicle is registered. The Jurisdiction must be associated with JurisdictionType.TC_VEHICLE_REG.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleIncidentsLV.pcf:54</td>
+<td>Web.EditableVehicleIncidentsLV.State</td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>false</td>
+<td>
+FNOLWizard
+<br>
+DuplicateClaimLossDetailsPopup
+<br>
+VehicleIncidentPrint
+<br>
+ClaimLossDetails
+</td>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:181</td>
+<td>Web.VehicleIncidentDV.Vehicle.State</td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.Trav.pcf:288</td>
+<td></td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.default.pcf:140</td>
+<td></td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:67</td>
+<td>LV.Policy.Vehicles.State</td>
+<td>VehicleRU.Vehicle.State</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:64</td>
+<td>LV.Policy.Vehicles.State</td>
+<td>vehicle.State</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:69</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.State</td>
+<td>VehicleRU.Vehicle.State</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:68</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleLicensePlateState</td>
+<td>Exposure.VehicleIncident.Vehicle.State</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:60</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleLicensePlateState</td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:165</td>
+<td>Web.VehicleIncidentDV.Vehicle.State</td>
+<td>VehicleIncident.Vehicle.State</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:69</td>
+<td>LV.Policy.Vehicles.State</td>
+<td>VehicleRU.Vehicle.State</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_state_prop"></a>
+<p class="column">
+<span class="coltitle">STATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_style"></a>
+<p class="column">
+<span class="coltitle">Style</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/VehicleStyle_tl.html" TARGET="tableFrame">VehicleStyle</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Style of Vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:142</td>
+<td>Web.VehicleIncidentDV.Vehicle.Style</td>
+<td>VehicleIncident.Vehicle.Style</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:43</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Style</td>
+<td>VehicleRU.Vehicle.Style</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:46</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleStyle</td>
+<td>Exposure.VehicleIncident.Vehicle.Style</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:42</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleStyle</td>
+<td>VehicleIncident.Vehicle.Style</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:116</td>
+<td>Web.VehicleIncidentDV.Vehicle.Style</td>
+<td>VehicleIncident.Vehicle.Style</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_style_prop"></a>
+<p class="column">
+<span class="coltitle">STYLE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.Vehicle></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="vehicle_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="vehicle_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_vin"></a>
+<p class="column">
+<span class="coltitle">Vin</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "vin")'>vin</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">VIN of the vehicle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:193</td>
+<td>Web.VehicleIncidentDV.Vehicle.VIN</td>
+<td>VehicleIncident.Vehicle.Vin</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.Trav.pcf:298</td>
+<td></td>
+<td>VehicleIncident.Vehicle.Vin</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_NewLossDetailsScreen.default.pcf:150</td>
+<td></td>
+<td>VehicleIncident.Vehicle.Vin</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:61</td>
+<td>LV.Policy.Vehicles.VIN</td>
+<td>VehicleRU.Vehicle.Vin</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:43</td>
+<td>LV.Policy.Vehicles.VIN</td>
+<td>vehicle.Vin</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:51</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.VIN</td>
+<td>VehicleRU.Vehicle.Vin</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:56</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleVin</td>
+<td>Exposure.VehicleIncident.Vehicle.Vin</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:50</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleVin</td>
+<td>VehicleIncident.Vehicle.Vin</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:140</td>
+<td>Web.VehicleIncidentDV.Vehicle.VIN</td>
+<td>VehicleIncident.Vehicle.Vin</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:63</td>
+<td>LV.Policy.Vehicles.VIN</td>
+<td>VehicleRU.Vehicle.Vin</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_vin_prop"></a>
+<p class="column">
+<span class="coltitle">VIN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="vehicle_year"></a>
+<p class="column">
+<span class="coltitle">Year</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "year")'>year</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Year of the vehicle's manufacture.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLVehicleIncidentPopup.pcf:102</td>
+<td>Web.VehicleIncidentDV.Vehicle.Year</td>
+<td>VehicleIncident.Vehicle.Year</td>
+<td>true</td>
+<td>
+FNOLVehicleIncidentPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:50</td>
+<td>LV.Policy.Vehicles.Year</td>
+<td>VehicleRU.Vehicle.Year</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:37</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Year</td>
+<td>VehicleRU.Vehicle.Year</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorDV.pcf:30</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleYear</td>
+<td>Exposure.VehicleIncident.Vehicle.Year</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>TotalLossCalculatorPopup.pcf:29</td>
+<td>NVV.Exposure.SubView.TotalLossCalculator.VehicleYear</td>
+<td>VehicleIncident.Vehicle.Year</td>
+<td>false</td>
+<td>
+TotalLossCalculatorPopup
+</td>
+</tr>
+<tr>
+<td>VehicleIncidentDV.pcf:79</td>
+<td>Web.VehicleIncidentDV.Vehicle.Year</td>
+<td>VehicleIncident.Vehicle.Year</td>
+<td>true</td>
+<td>
+NewVehicleIncidentPopup
+<br>
+EditVehicleIncidentPopup
+<br>
+VehicleIncidentDetailPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:53</td>
+<td>LV.Policy.Vehicles.Year</td>
+<td>VehicleRU.Vehicle.Year</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehicle_year_prop"></a>
+<p class="column">
+<span class="coltitle">YEAR_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="vehicle_lienholders"></a>
+<p class="column">
+<span class="coltitle">Lienholders</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="VehicleOwner.html" TARGET="tableFrame">VehicleOwner</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">List of lienholders for the vehicle.</span>
+<a name="Unique Keys for Vehicle"></a><div class="arraysbox">Unique Keys for Vehicle</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>vehicle1a</td>
+<td>PublicID, Retired</td></tr>
+<tr><td>vehicleu1</td>
+<td>Vin, Retired, ID</td></tr>
+<tr><td>vehicleu2</td>
+<td>LicensePlate, Retired, ID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

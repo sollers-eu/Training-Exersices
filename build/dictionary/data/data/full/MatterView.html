@@ -1,0 +1,710 @@
+<html>
+<head>
+<title>MatterView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">MatterView <span class="entityname">(Virtual) (delegates to <A HREF="KeyableBean.html" TARGET="tableFrame">KeyableBean</A>)</span></div>
+<div class="desc">
+<span id="reflink_1658" class="reftext" onclick='showAndHideRefBox("refbox_1658", "reflink_1658")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1658" class="refbox_inner" style="display:none;">
+
+            Aggregates the information needed to display one matter row (base entity for all other matter views).
+            
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">MatterView</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+MatterTeamView</td>
+<td><A HREF="#MatterTeamView" TARGET="tableFrame">MatterTeamView</A></td>
+</tr>
+<tr>
+<td>
+MatterUserView</td>
+<td><A HREF="#MatterUserView" TARGET="tableFrame">MatterUserView</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="matterview_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="matterview_assignedqueuedisplayname"></a>
+<p class="column">
+<span class="coltitle">AssignedQueueDisplayName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assignedqueuedisplayname_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUEDISPLAYNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assigneduserdisplayname"></a>
+<p class="column">
+<span class="coltitle">AssignedUserDisplayName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assigneduserdisplayname_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERDISPLAYNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assigneedisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assignmentstatus"></a>
+<p class="column">
+<span class="coltitle">AssignmentStatus</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/AssignmentStatus_tl.html" TARGET="tableFrame">AssignmentStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: unassigned)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_assignmentstatus_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTSTATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_casenumber"></a>
+<p class="column">
+<span class="coltitle">CaseNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (128)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactMattersLV.pcf:51</td>
+<td>LV.Matter.ABContactMatters.CaseNumber</td>
+<td>MatterView.CaseNumber</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>TeamMattersLV.pcf:55</td>
+<td>Web.Matter.CaseNumber</td>
+<td>MatterTeamView.CaseNumber</td>
+<td>false</td>
+<td>
+TeamUserMatters
+<br>
+TeamGroupPendingMatters
+<br>
+TeamGroupOtherMatters
+<br>
+TeamGroupMatters
+</td>
+</tr>
+<tr>
+<td>UserMattersLV.pcf:36</td>
+<td>LV.Matter.Matters.CaseNumber</td>
+<td>MatterUserView.CaseNumber</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserMattersPage
+</td>
+</tr>
+</table>
+</div></div>
+<a name="matterview_casenumber_prop"></a>
+<p class="column">
+<span class="coltitle">CASENUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_claimcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimCurrency</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.Currency</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_claimnumber"></a>
+<p class="column">
+<span class="coltitle">ClaimNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "claimnumber")'>claimnumber</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactMattersLV.pcf:41</td>
+<td>LV.Matter.ABContactMatters.ClaimNumber</td>
+<td>MatterView.ClaimNumber</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>TeamMattersLV.pcf:60</td>
+<td>Web.Matter.Claim</td>
+<td>MatterTeamView.ClaimNumber</td>
+<td>false</td>
+<td>
+TeamUserMatters
+<br>
+TeamGroupPendingMatters
+<br>
+TeamGroupOtherMatters
+<br>
+TeamGroupMatters
+</td>
+</tr>
+</table>
+</div></div>
+<a name="matterview_claimnumber_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_finalsettlecost"></a>
+<p class="column">
+<span class="coltitle">FinalSettleCost</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactMattersLV.pcf:56</td>
+<td>LV.Matter.ABContactMatters.EstSettleCost</td>
+<td>MatterView.FinalSettleCost</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>TeamMattersLV.pcf:65</td>
+<td>Web.Matter.EstSettleCost</td>
+<td>MatterTeamView.FinalSettleCost</td>
+<td>false</td>
+<td>
+TeamUserMatters
+<br>
+TeamGroupPendingMatters
+<br>
+TeamGroupOtherMatters
+<br>
+TeamGroupMatters
+</td>
+</tr>
+<tr>
+<td>UserMattersLV.pcf:41</td>
+<td>LV.Matter.Matters.EstSettleCost</td>
+<td>MatterUserView.FinalSettleCost</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserMattersPage
+</td>
+</tr>
+</table>
+</div></div>
+<a name="matterview_finalsettlecost_prop"></a>
+<p class="column">
+<span class="coltitle">FINALSETTLECOST_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_id_dynprop"></a>
+<p class="column">
+<span class="coltitle">ID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_matter"></a>
+<p class="column">
+<span class="coltitle">Matter</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Matter.html" TARGET="tableFrame">Matter</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_matter_prop"></a>
+<p class="column">
+<span class="coltitle">MATTER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_matterclaim"></a>
+<p class="column">
+<span class="coltitle">MatterClaim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_matterclaim_prop"></a>
+<p class="column">
+<span class="coltitle">MATTERCLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_name"></a>
+<p class="column">
+<span class="coltitle">Name</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (128)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactMattersLV.pcf:46</td>
+<td>LV.Matter.ABContactMatters.Name</td>
+<td>MatterView.Name</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>TeamMattersLV.pcf:51</td>
+<td>Web.Matter.Name</td>
+<td>MatterTeamView.Name</td>
+<td>false</td>
+<td>
+TeamUserMatters
+<br>
+TeamGroupPendingMatters
+<br>
+TeamGroupOtherMatters
+<br>
+TeamGroupMatters
+</td>
+</tr>
+<tr>
+<td>UserMattersLV.pcf:32</td>
+<td>LV.Matter.Matters.Name</td>
+<td>MatterUserView.Name</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserMattersPage
+</td>
+</tr>
+</table>
+</div></div>
+<a name="matterview_name_prop"></a>
+<p class="column">
+<span class="coltitle">NAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="matterview_publicid_dynprop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">MatterView</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="matterview_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_trialdate"></a>
+<p class="column">
+<span class="coltitle">TrialDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactMattersLV.pcf:61</td>
+<td>LV.Matter.ABContactMatters.TrialDate</td>
+<td>MatterView.TrialDate</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>TeamMattersLV.pcf:72</td>
+<td>Web.Matter.TrialDate</td>
+<td>MatterTeamView.TrialDate</td>
+<td>false</td>
+<td>
+TeamUserMatters
+<br>
+TeamGroupPendingMatters
+<br>
+TeamGroupOtherMatters
+<br>
+TeamGroupMatters
+</td>
+</tr>
+<tr>
+<td>UserMattersLV.pcf:48</td>
+<td>LV.Matter.Matters.TrialDate</td>
+<td>MatterUserView.TrialDate</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserMattersPage
+</td>
+</tr>
+</table>
+</div></div>
+<a name="matterview_trialdate_prop"></a>
+<p class="column">
+<span class="coltitle">TRIALDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.MatterView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=MatterTeamView></a>
+<div class="titlebox">
+<div class="filtertitle">MatterTeamView <span class='supername'>(subtype of <A HREF="MatterView.html" TARGET="tableFrame">MatterView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1659" class="reftext" onclick='showAndHideRefBox("refbox_1659", "reflink_1659")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1659" class="refbox_inner" style="display:none;">
+
+            Aggregates the information needed to display one matter row in the matter team page (subtype of MatterView).
+            
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="matterteamview_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterteamview_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterteamview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.matter.PublicMatterTeamViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterteamview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.MatterTeamView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=MatterUserView></a>
+<div class="titlebox">
+<div class="filtertitle">MatterUserView <span class='supername'>(subtype of <A HREF="MatterView.html" TARGET="tableFrame">MatterView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_1660" class="reftext" onclick='showAndHideRefBox("refbox_1660", "reflink_1660")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1660" class="refbox_inner" style="display:none;">
+
+            Aggregates the information needed to display one matter row in the user administration page (subtype of MatterView).
+            
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="matteruserview_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matteruserview_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matteruserview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.matter.PublicMatterUserViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matteruserview_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.MatterUserView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

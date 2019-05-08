@@ -1,0 +1,1660 @@
+<html>
+<head>
+<title>ServiceRequest</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ServiceRequest <span class="entityname">(cc_servicerequest) (delegates to <A HREF="CCAssignable.html" TARGET="tableFrame">CCAssignable</A>, <A HREF="Editable.html" TARGET="tableFrame">Editable</A>, <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Validatable.html" TARGET="tableFrame">Validatable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2367" class="reftext" onclick='showAndHideRefBox("refbox_2367", "reflink_2367")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2367" class="refbox_inner" style="display:none;">
+
+    Represents a unit of work requested of a specialist or vendor, including instructions that describe the work to be
+    done and the current state of the ServiceRequest.
+  
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ServiceRequest</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>ServiceRequestOperation_approvequote</li><li>ServiceRequestOperation_submitinstruction</li><li>ServiceRequestOperation_specialistresumedwork</li><li>ServiceRequestOperation_updatequoteecd</li><li>ServiceRequestRemoved</li><li>ServiceRequestAdded</li><li>ServiceRequestOperation_cancelservicerequest</li><li>ServiceRequestOperation_specialistwaiting</li><li>ServiceRequestOperation_requestrequote</li><li>ServiceRequestOperation_updateserviceecd</li><li>ServiceRequestOperation_addquote</li><li>ServiceRequestOperation_specialistdeclined</li><li>ServiceRequestOperation_specialistcompletedwork</li><li>ServiceRequestChanged</li><li>ServiceRequestOperation_specialistacceptedwork</li><li>ServiceRequestOperation_specialistcanceled</li><li>ServiceRequestOperation_addinvoice</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_2368" class="reftext" onclick='showAndHideRefBox("refbox_2368", "reflink_2368")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2368" class="refbox_inner" style="display:none;">
+<A HREF="../full/Activity.html" TARGET="tableFrame">Activity.ServiceRequest</A><br><A HREF="../full/DocumentSearchCriteria.html" TARGET="tableFrame">DocumentSearchCriteria.ServiceRequest</A><br><A HREF="../full/Evaluation.html" TARGET="tableFrame">Evaluation.ServiceRequest</A><br><A HREF="../full/Negotiation.html" TARGET="tableFrame">Negotiation.ServiceRequest</A><br><A HREF="../full/Note.html" TARGET="tableFrame">Note.ServiceRequest</A><br><A HREF="../full/NoteSearchCriteria.html" TARGET="tableFrame">NoteSearchCriteria.ServiceRequest</A><br><A HREF="../full/ServiceRequest.html" TARGET="tableFrame">ServiceRequest.OriginatingServiceRequest</A><br><A HREF="../full/ServiceRequestChange.html" TARGET="tableFrame">ServiceRequestChange.ServiceRequest</A><br><A HREF="../full/ServiceRequestDocumentLink.html" TARGET="tableFrame">ServiceRequestDocumentLink.ServiceRequest</A><br><A HREF="../full/ServiceRequestInstruction.html" TARGET="tableFrame">ServiceRequestInstruction.ServiceRequest</A><br><A HREF="../full/ServiceRequestMessage.html" TARGET="tableFrame">ServiceRequestMessage.ServiceRequest</A><br><A HREF="../full/ServiceRequestMetric.html" TARGET="tableFrame">ServiceRequestMetric.ServiceRequest</A><br><A HREF="../full/ServiceRequestPromotion.html" TARGET="tableFrame">ServiceRequestPromotion.ForeignEntity</A><br><A HREF="../full/ServiceRequestPromotion.html" TARGET="tableFrame">ServiceRequestPromotion.Owner</A><br><A HREF="../full/ServiceRequestStatement.html" TARGET="tableFrame">ServiceRequestStatement.ServiceRequest</A><br><A HREF="../full/Servreqactinst.html" TARGET="tableFrame">Servreqactinst.Owner</A><br><A HREF="../full/Servreqltstqte.html" TARGET="tableFrame">Servreqltstqte.Owner</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2369" class="reftext" onclick='showAndHideRefBox("refbox_2369", "reflink_2369")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_2369" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.ServiceRequests</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.ServiceRequests</A><br><A HREF="../full/Incident.html" TARGET="tableFrame">Incident.ServiceRequests</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="servicerequest_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="servicerequest_activechecksamount"></a>
+<p class="column">
+<span class="coltitle">ActiveChecksAmount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmount</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns the sum of the amounts of the checks linked to this service request that are in one of the following
+"active" states:
+<ul>
+<li>Pending approval</li>
+<li>Awaiting submission</li>
+<li>Requesting</li>
+<li>Requested</li>
+<li>Notifying</li>
+<li>Issued</li>
+<li>Cleared</li>
+</ul>
+This list of states is intended to include checks that are likely to be successfully sent.</span>
+<a name="servicerequest_activechecksamountincludesnonexclusivechecks"></a>
+<p class="column">
+<span class="coltitle">ActiveChecksAmountIncludesNonExclusiveChecks</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns true if any of the checks included in ActiveChecksAmount are linked to ServiceRequestInvoices on other
+ServiceRequests</span>
+<a name="servicerequest_activities_prop"></a>
+<p class="column">
+<span class="coltitle">ACTIVITIES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_alreadypromoted"></a>
+<p class="column">
+<span class="coltitle">AlreadyPromoted</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether this Service Request has been promoted</span>
+<a name="servicerequest_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="servicerequest_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignedbyuser"></a>
+<p class="column">
+<span class="coltitle">AssignedByUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: AssignedByUserID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">User who assigned this entity.</span>
+<a name="servicerequest_assignedbyuser_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDBYUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignedgroup"></a>
+<p class="column">
+<span class="coltitle">AssignedGroup</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Group.html" TARGET="tableFrame">Group</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: AssignedGroupID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Group to which this entity is assigned; null if none assigned</span>
+<a name="servicerequest_assignedgroup_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDGROUP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignedqueue"></a>
+<p class="column">
+<span class="coltitle">AssignedQueue</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="AssignableQueue.html" TARGET="tableFrame">AssignableQueue</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: AssignedQueueID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Either the Queue to which this entity is assigned (if AssignmentStatus is 'assigned'), the Queue to which the system suggests assignment (if AssignmentStatus is 'manual'), or null if none assigned. Only one of AssignedUserID or AssignedQueueID should be non null.</span>
+<a name="servicerequest_assignedqueue_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assigneduser"></a>
+<p class="column">
+<span class="coltitle">AssignedUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: AssignedUserID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Either the User to which this entity is assigned (if AssignmentStatus is 'assigned'), the User to which the system suggests assignment (if AssignmentStatus is 'manual'), or null if none assigned. Only one of AssignedUserID or AssignedQueueID should be non null.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestLV.pcf:6</td>
+<td>LV.Claim.ServiceRequest.AssignedUser</td>
+<td>serviceRequest.AssignedUser</td>
+<td>false</td>
+<td>
+ClaimSummary
+<br>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_assigneduser_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assigneeandgroupdisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeAndGroupDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assigneedisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assigneegrouponlydisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeGroupOnlyDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignmentadded_event"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTADDED_EVENT</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignmentchanged_event"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTCHANGED_EVENT</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignmentdate"></a>
+<p class="column">
+<span class="coltitle">AssignmentDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Time when entity last assigned</span>
+<a name="servicerequest_assignmentdate_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignmentremoved_event"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTREMOVED_EVENT</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_assignmentstatus"></a>
+<p class="column">
+<span class="coltitle">AssignmentStatus</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/AssignmentStatus_tl.html" TARGET="tableFrame">AssignmentStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: unassigned)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Typelist describing assignment status.</span>
+<a name="servicerequest_assignmentstatus_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTSTATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_availablekinds"></a>
+<p class="column">
+<span class="coltitle">AvailableKinds</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<typekey.ServiceRequestKind></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets a list of ServiceRequestKinds that are compatible with the selected services and should be allowed for
+this ServiceRequest. This list is intended to be used to populate a drop-down menu in the UI to let the user
+choose a kind for the ServiceRequest.</span>
+<a name="servicerequest_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_canceledreason"></a>
+<p class="column">
+<span class="exttitle">CanceledReason</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "longtext")'>longtext</span> (65000)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The reason the service request was canceled</span>
+<a name="servicerequest_canceledreason_prop"></a>
+<p class="column">
+<span class="coltitle">CANCELEDREASON_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_childrenforcascadeassignment"></a>
+<p class="column">
+<span class="coltitle">ChildrenForCascadeAssignment</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<gw.api.assignment.CCAssignableMethods></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The related claim.</span>
+<a name="servicerequest_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_closedate"></a>
+<p class="column">
+<span class="coltitle">CloseDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date and time when this entity was closed. (Not applicable to all assignable entities)</span>
+<a name="servicerequest_closedate_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSEDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_completiondate"></a>
+<p class="column">
+<span class="coltitle">CompletionDate</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_contentextensions"></a>
+<p class="column">
+<span class="coltitle">ContentExtensions</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.extension.entity.IServiceRequestExtensions</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="servicerequest_createtime_dynprop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="servicerequest_createuser_dynprop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_currency"></a>
+<p class="column">
+<span class="coltitle">Currency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The currency of this service request, which is used for its quotes, invoices, and checks.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:92</td>
+<td>Web.ServiceRequest.Currency</td>
+<td>serviceRequest.Currency</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_currency_prop"></a>
+<p class="column">
+<span class="coltitle">CURRENCY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_currentassignment"></a>
+<p class="column">
+<span class="coltitle">CurrentAssignment</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning CCAssignable</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_decimalservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">DecimalServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning DecimalServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_defaultrequestedquotecompletiondate"></a>
+<p class="column">
+<span class="coltitle">DefaultRequestedQuoteCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_defaultrequestedservicecompletiondate"></a>
+<p class="column">
+<span class="coltitle">DefaultRequestedServiceCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_documentlinks_prop"></a>
+<p class="column">
+<span class="coltitle">DOCUMENTLINKS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_documents"></a>
+<p class="column">
+<span class="coltitle">Documents</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Collection<entity.Document></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_expectedquotecompletiondate"></a>
+<p class="column">
+<span class="exttitle">ExpectedQuoteCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date by which the specialist expects to submit the quote, or null if the specialist has not indicated such a date.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:73</td>
+<td>Web.ServiceRequest.ExpectedQuoteCompletionDate</td>
+<td>serviceRequest.ExpectedQuoteCompletionDate</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_expectedquotecompletiondate_prop"></a>
+<p class="column">
+<span class="coltitle">EXPECTEDQUOTECOMPLETIONDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_expectedquotecompletiondatemovetoendofday"></a>
+<p class="column">
+<span class="coltitle">ExpectedQuoteCompletionDateMoveToEndOfDay</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_expectedservicecompletiondate"></a>
+<p class="column">
+<span class="exttitle">ExpectedServiceCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date by which the specialist expects to complete the work, or null if the specialist has not indicated such a date.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:80</td>
+<td>Web.ServiceRequest.ExpectedServiceCompletionDate</td>
+<td>serviceRequest.ExpectedServiceCompletionDate</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_expectedservicecompletiondate_prop"></a>
+<p class="column">
+<span class="coltitle">EXPECTEDSERVICECOMPLETIONDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_expectedservicecompletiondatemovetoendofday"></a>
+<p class="column">
+<span class="coltitle">ExpectedServiceCompletionDateMoveToEndOfDay</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_exposure"></a>
+<p class="column">
+<span class="exttitle">Exposure</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Exposure.html" TARGET="tableFrame">Exposure</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ExposureID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The exposure that led to the work requested by this service request.</span>
+<a name="servicerequest_exposure_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_globalspecialistwaitingthreshold"></a>
+<p class="column">
+<span class="coltitle">GlobalSpecialistWaitingThreshold</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning int</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_history_prop"></a>
+<p class="column">
+<span class="coltitle">HISTORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_incident"></a>
+<p class="column">
+<span class="exttitle">Incident</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Incident.html" TARGET="tableFrame">Incident</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: IncidentID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The incident that led to the work requested by this service request.</span>
+<a name="servicerequest_incident_prop"></a>
+<p class="column">
+<span class="coltitle">INCIDENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_instruction"></a>
+<p class="column">
+<span class="coltitle">Instruction</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ServiceRequestInstruction.html" TARGET="tableFrame">ServiceRequestInstruction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The active instruction associated with this service request.</span>
+<a name="servicerequest_instruction_prop"></a>
+<p class="column">
+<span class="coltitle">INSTRUCTION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_instructionhistory_prop"></a>
+<p class="column">
+<span class="coltitle">INSTRUCTIONHISTORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_integerservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">IntegerServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning IntegerServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_invoices_prop"></a>
+<p class="column">
+<span class="coltitle">INVOICES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_invoicevariancevsquoteservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">InvoiceVarianceVsQuoteServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning InvoiceVarianceVsQuoteServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_isactive"></a>
+<p class="column">
+<span class="coltitle">IsActive</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether the Service Request is in an "active" state</span>
+<a name="servicerequest_isdone"></a>
+<p class="column">
+<span class="coltitle">IsDone</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether the Service Request is in a "done" state</span>
+<a name="servicerequest_iseditableinui"></a>
+<p class="column">
+<span class="coltitle">IsEditableInUI</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Used in UI to determine whether this service request can be edited or deleted</span>
+<a name="servicerequest_ispromotablequoteonly"></a>
+<p class="column">
+<span class="coltitle">IsPromotableQuoteOnly</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether the create new quote and service request should be available</span>
+<a name="servicerequest_ispromotion"></a>
+<p class="column">
+<span class="coltitle">IsPromotion</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether this Service Request is the result of promoting another Service Request</span>
+<a name="servicerequest_kind"></a>
+<p class="column">
+<span class="coltitle">Kind</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ServiceRequestKind_tl.html" TARGET="tableFrame">ServiceRequestKind</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The kind for this service request.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewServiceRequestDV.pcf:79</td>
+<td>Web.ServiceRequest.Kind</td>
+<td>serviceRequest.Kind</td>
+<td>not serviceRequest.IsPromotion</td>
+<td>
+PromoteQuoteOnly
+<br>
+OtherServiceRequestPopup
+<br>
+NewServiceRequest
+</td>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:128</td>
+<td>Web.ServiceRequest.Kind</td>
+<td>serviceRequest.Kind</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_kind_prop"></a>
+<p class="column">
+<span class="coltitle">KIND_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_latestchange"></a>
+<p class="column">
+<span class="coltitle">LatestChange</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ServiceRequestChange</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_latestchangetimestampdenorm"></a>
+<p class="column">
+<span class="coltitle">LatestChangeTimestampDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The timestamp of the latest ServiceRequestChange in the History. This value is denormalized here for ease of ordering ServiceRequests in queries. This is non-nullable because History cannot be empty.</span>
+<a name="servicerequest_latestchangetimestampdenorm_prop"></a>
+<p class="column">
+<span class="coltitle">LATESTCHANGETIMESTAMPDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_latestquote"></a>
+<p class="column">
+<span class="coltitle">LatestQuote</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ServiceRequestStatement.html#ServiceRequestQuote" TARGET="tableFrame">ServiceRequestQuote</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The latest quote associated with this service request. It is null if no quote has been added to the service request</span>
+<a name="servicerequest_latestquote_prop"></a>
+<p class="column">
+<span class="coltitle">LATESTQUOTE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_messages_prop"></a>
+<p class="column">
+<span class="coltitle">MESSAGES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_moneyservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">MoneyServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning MoneyServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_notes_prop"></a>
+<p class="column">
+<span class="coltitle">NOTES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_numberofdelaysservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">NumberOfDelaysServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning NumberOfDelaysServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_orderedhistory"></a>
+<p class="column">
+<span class="coltitle">OrderedHistory</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<entity.ServiceRequestChange></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_originatingservicerequest"></a>
+<p class="column">
+<span class="coltitle">OriginatingServiceRequest</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ServiceRequest.html" TARGET="tableFrame">ServiceRequest</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The originating quote-only service request for this service request. Note: This will be non-null only when a quote-only service request is promoted to a quote and service service request.</span>
+<a name="servicerequest_originatingservicerequest_prop"></a>
+<p class="column">
+<span class="coltitle">ORIGINATINGSERVICEREQUEST_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_outstandinginvoicesamount"></a>
+<p class="column">
+<span class="coltitle">OutstandingInvoicesAmount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmount</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns the sum of the amounts of the invoices on this Service Request that have been approved but have not been
+paid, rejected, or withdrawn</span>
+<a name="servicerequest_owningassignable"></a>
+<p class="column">
+<span class="coltitle">OwningAssignable</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Assignable</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_owningclaim"></a>
+<p class="column">
+<span class="coltitle">OwningClaim</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Claim</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_passedwaitingthreshold"></a>
+<p class="column">
+<span class="coltitle">PassedWaitingThreshold</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets whether this service request has been in "specialist waiting" state
+for more than a global threshold.</span>
+<a name="servicerequest_percentservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">PercentServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning PercentServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_previousgroup"></a>
+<p class="column">
+<span class="coltitle">PreviousGroup</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Group.html" TARGET="tableFrame">Group</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PreviousGroupID)</span>
+<br>
+<span class="desc">Group to which this entity was previously assigned.</span>
+<a name="servicerequest_previousgroup_prop"></a>
+<p class="column">
+<span class="coltitle">PREVIOUSGROUP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_previousqueue"></a>
+<p class="column">
+<span class="coltitle">PreviousQueue</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="AssignableQueue.html" TARGET="tableFrame">AssignableQueue</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PreviousQueueID)</span>
+<br>
+<span class="desc">Queue to which this entity was previously assigned.</span>
+<a name="servicerequest_previousqueue_prop"></a>
+<p class="column">
+<span class="coltitle">PREVIOUSQUEUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_previoususer"></a>
+<p class="column">
+<span class="coltitle">PreviousUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PreviousUserID)</span>
+<br>
+<span class="desc">User to which this entity was previously assigned.</span>
+<a name="servicerequest_previoususer_prop"></a>
+<p class="column">
+<span class="coltitle">PREVIOUSUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_progress"></a>
+<p class="column">
+<span class="coltitle">Progress</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ServiceRequestProgress_tl.html" TARGET="tableFrame">ServiceRequestProgress</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">This service request's current place in its life cycle.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:29</td>
+<td>Web.ServiceRequest.Progress</td>
+<td>serviceRequest.Progress</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_progress_prop"></a>
+<p class="column">
+<span class="coltitle">PROGRESS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_promotionservicerequest"></a>
+<p class="column">
+<span class="coltitle">PromotionServiceRequest</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ServiceRequest</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the Service Request that was created as a result of a promotion for this Service Request</span>
+<a name="servicerequest_promotionservicerequests"></a>
+<p class="column">
+<span class="coltitle">PromotionServiceRequests</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<entity.ServiceRequest></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="servicerequest_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_quotelabel"></a>
+<p class="column">
+<span class="coltitle">QuoteLabel</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the label for the quote details based on the quote state in the Service Request</span>
+<a name="servicerequest_quotes_prop"></a>
+<p class="column">
+<span class="coltitle">QUOTES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_quotestatus"></a>
+<p class="column">
+<span class="coltitle">QuoteStatus</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ServiceRequestQuoteStatus_tl.html" TARGET="tableFrame">ServiceRequestQuoteStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The current quote status for this service request.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:35</td>
+<td>Web.ServiceRequest.QuoteStatus</td>
+<td>serviceRequest.QuoteStatus</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_quotestatus_prop"></a>
+<p class="column">
+<span class="coltitle">QUOTESTATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_quotetimelinessservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">QuoteTimelinessServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning QuoteTimelinessServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_rejectedandwithdrawninvoicesamount"></a>
+<p class="column">
+<span class="coltitle">RejectedAndWithdrawnInvoicesAmount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmount</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the total amount of all the invoices in this Service Request that are in states 'rejected' or 'withdrawn'</span>
+<a name="servicerequest_relatedto"></a>
+<p class="column">
+<span class="coltitle">RelatedTo</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.core.Bean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the entity this Service Request is "related to". Each Service Request is associated
+with an Incident, an Exposure, or the Claim itself.</span>
+<a name="servicerequest_relatedtoname"></a>
+<p class="column">
+<span class="coltitle">RelatedToName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the exposure's display name, incident's type prefixed name, or a displaykey indicating the service request is at claim level</span>
+<a name="servicerequest_requestedquotecompletiondate"></a>
+<p class="column">
+<span class="exttitle">RequestedQuoteCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Desired date by which the specialist will have submitted the quote, or null if the specialist has not indicated such a date.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:59</td>
+<td>Web.ServiceRequest.RequestedQuoteCompletionDate</td>
+<td>serviceRequest.RequestedQuoteCompletionDate</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_requestedquotecompletiondate_prop"></a>
+<p class="column">
+<span class="coltitle">REQUESTEDQUOTECOMPLETIONDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_requestedquotecompletiondatemovetoendofday"></a>
+<p class="column">
+<span class="coltitle">RequestedQuoteCompletionDateMoveToEndOfDay</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_requestedservicecompletiondate"></a>
+<p class="column">
+<span class="exttitle">RequestedServiceCompletionDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Desired date by which the specialist will have completed the work, or null if the specialist has not indicated such a date.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:66</td>
+<td>Web.ServiceRequest.RequestedServiceCompletionDate</td>
+<td>serviceRequest.RequestedServiceCompletionDate</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_requestedservicecompletiondate_prop"></a>
+<p class="column">
+<span class="coltitle">REQUESTEDSERVICECOMPLETIONDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_requestedservicecompletiondatemovetoendofday"></a>
+<p class="column">
+<span class="coltitle">RequestedServiceCompletionDateMoveToEndOfDay</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Date</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicecycletimeservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">ServiceCycleTimeServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ServiceCycleTimeServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestmetrics_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTMETRICS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestnumber"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">A globally-unique, user-readable identifier for this service request. This number is normally generated within ClaimCenter.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CheckDV.pcf:330</td>
+<td>LV.Financials.Check.Invoices.ServiceRequestNumber</td>
+<td>invoice.ServiceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+ClaimFinancialsChecksDetail
+<br>
+ClaimFinancialsChecksDetailPrint
+<br>
+DeleteSinglePayment
+</td>
+</tr>
+<tr>
+<td>FailedAssignmentsLV.ServiceRequest.pcf:30</td>
+<td>LV.Claim.ServiceRequest.ServiceRequestNumber</td>
+<td>ServiceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+AssignServiceRequestPopup
+<br>
+AssignSubrogationPopup
+<br>
+AssignMattersPopup
+<br>
+AssignExposuresPopup
+<br>
+AssignClaimsPopup
+<br>
+AssignActivitiesPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimSavedDV.pcf:56</td>
+<td>LV.Claim.ServiceRequest.ServiceRequestNumber</td>
+<td>serviceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+NewClaimSaved
+</td>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:19</td>
+<td>Web.ServiceRequest.ServiceRequestNumber</td>
+<td>serviceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>ServiceRequestInvoiceInputSet.multiple.pcf:39</td>
+<td>NVV.Financials.NewCheck.Check.ServiceRequestInvoice.ServiceNumber</td>
+<td>invoice.ServiceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+ManualCreateCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>ServiceRequestInvoiceInputSet.single.pcf:31</td>
+<td>NVV.Financials.NewCheck.Check.ServiceRequestInvoice.ServiceNumber</td>
+<td>invoice.ServiceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+EditCheckWizard
+<br>
+EditRecurrenceCheckWizard
+<br>
+ManualCreateCheckWizard
+<br>
+NormalCreateCheckWizard
+<br>
+CloneCheckWizard
+<br>
+QuickCreateCheckWizard
+</td>
+</tr>
+<tr>
+<td>ServiceRequestLV.pcf:68</td>
+<td>LV.Claim.ServiceRequest.ServiceRequestNumber</td>
+<td>serviceRequest.ServiceRequestNumber</td>
+<td>false</td>
+<td>
+ClaimSummary
+<br>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_servicerequestnumber_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestpromotionarray_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTPROMOTIONARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestpromotions_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTPROMOTIONS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicerequestreferencenumber"></a>
+<p class="column">
+<span class="exttitle">ServiceRequestReferenceNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">A string identifier assigned to this ServiceRequest by the specialist. The value of this field may only be meaningful to the specialist.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditReferenceNumberPopup.pcf:31</td>
+<td>Web.ServiceRequest.UpdateState.ServiceRequestReferenceNumber</td>
+<td>serviceRequest.ServiceRequestReferenceNumber</td>
+<td>true</td>
+<td>
+EditReferenceNumberPopup
+</td>
+</tr>
+<tr>
+<td>FailedAssignmentsLV.ServiceRequest.pcf:34</td>
+<td>LV.Claim.ServiceRequest.ServiceRequestReferenceNumber</td>
+<td>ServiceRequest.ServiceRequestReferenceNumber</td>
+<td>false</td>
+<td>
+AssignServiceRequestPopup
+<br>
+AssignSubrogationPopup
+<br>
+AssignMattersPopup
+<br>
+AssignExposuresPopup
+<br>
+AssignClaimsPopup
+<br>
+AssignActivitiesPopup
+</td>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:24</td>
+<td>Web.ServiceRequest.ServiceRequestReferenceNumber</td>
+<td>serviceRequest.ServiceRequestReferenceNumber</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+<tr>
+<td>ServiceRequestLV.pcf:74</td>
+<td>LV.Claim.ServiceRequest.ServiceRequestReferenceNumber</td>
+<td>serviceRequest.ServiceRequestReferenceNumber</td>
+<td>false</td>
+<td>
+ClaimSummary
+<br>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_servicerequestreferencenumber_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTREFERENCENUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servicesstring"></a>
+<p class="column">
+<span class="coltitle">ServicesString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets a string representing the services to be performed for this service request, formatted as "ParentServiceType - MostSpecificServiceType"</span>
+<a name="servicerequest_servicetimelinessservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">ServiceTimelinessServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning ServiceTimelinessServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servreqactinstarray_prop"></a>
+<p class="column">
+<span class="coltitle">SERVREQACTINSTARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_servreqltstqtearray_prop"></a>
+<p class="column">
+<span class="coltitle">SERVREQLTSTQTEARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_shortdisplayname"></a>
+<p class="column">
+<span class="coltitle">ShortDisplayName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_specialist"></a>
+<p class="column">
+<span class="coltitle">Specialist</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: SpecialistID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The vendor or internal entity selected to do the work requested by this service request.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLWizard_AutoFirstAndFinalScreen.pcf:12</td>
+<td>Web.FNOLWizard.AutoFirstAndFinal.RepairShop</td>
+<td>serviceRequest.Specialist</td>
+<td>Wizard.FirstFinalReportedAgency != typekey.FirstFinalReportedAgency.TC_VENDOR</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_specialist_prop"></a>
+<p class="column">
+<span class="coltitle">SPECIALIST_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_specialistandcreateclaimcontact"></a>
+<p class="column">
+<span class="coltitle">SpecialistAndCreateClaimContact</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Contact</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_specialistcommmethod"></a>
+<p class="column">
+<span class="exttitle">SpecialistCommMethod</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/SpecialistCommMethod_tl.html" TARGET="tableFrame">SpecialistCommMethod</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The channel through which the carrier will communicate with the specialist.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewServiceRequestDV.pcf:126</td>
+<td>Web.ServiceRequest.SpecialistCommMethod</td>
+<td>serviceRequest.SpecialistCommMethod</td>
+<td>false</td>
+<td>
+PromoteQuoteOnly
+<br>
+OtherServiceRequestPopup
+<br>
+NewServiceRequest
+</td>
+</tr>
+<tr>
+<td>ServiceRequestDV.pcf:111</td>
+<td>Web.ServiceRequest.SpecialistCommMethod</td>
+<td>serviceRequest.SpecialistCommMethod</td>
+<td>false</td>
+<td>
+ClaimServiceRequests
+</td>
+</tr>
+</table>
+</div></div>
+<a name="servicerequest_specialistcommmethod_prop"></a>
+<p class="column">
+<span class="coltitle">SPECIALISTCOMMMETHOD_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_specialistinitialresponsetimeservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">SpecialistInitialResponseTimeServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning SpecialistInitialResponseTimeServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_specialistname"></a>
+<p class="column">
+<span class="coltitle">SpecialistName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the specialist's display name or a displaykey indicating no specialist is assigned</span>
+<a name="servicerequest_specialistservicesincompatiblewithincident"></a>
+<p class="column">
+<span class="coltitle">SpecialistServicesIncompatibleWithIncident</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<entity.ServiceRequestInstructionService></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_statusicon"></a>
+<p class="column">
+<span class="coltitle">StatusIcon</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.vendormanagement.ServiceRequestStatus</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the status icon for this Service Request</span>
+<a name="servicerequest_terminal_progress_filter"></a>
+<p class="column">
+<span class="coltitle">TERMINAL_PROGRESS_FILTER</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_terminalprogressvalues"></a>
+<p class="column">
+<span class="coltitle">TerminalProgressValues</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.Set<typekey.ServiceRequestProgress></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns whether this ServiceRequest has reached a terminal state</span>
+<a name="servicerequest_terminated"></a>
+<p class="column">
+<span class="coltitle">Terminated</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns whether this ServiceRequest has reached a terminal progres value</span>
+<a name="servicerequest_tier"></a>
+<p class="column">
+<span class="coltitle">Tier</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ServiceRequestTier_tl.html" TARGET="tableFrame">ServiceRequestTier</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The tier of this service request.</span>
+<a name="servicerequest_tier_prop"></a>
+<p class="column">
+<span class="coltitle">TIER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_timebasedservicerequestmetric"></a>
+<p class="column">
+<span class="coltitle">TimeBasedServiceRequestMetric</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning TimeBasedServiceRequestMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ServiceRequest></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_typeprefixedincidentname"></a>
+<p class="column">
+<span class="coltitle">TypePrefixedIncidentName</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the incident's type prefixed name or a displaykey indicating the service request is at claim level</span>
+<a name="servicerequest_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="servicerequest_updatetime_dynprop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="servicerequest_updateuser_dynprop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_validation_results_dynprop"></a>
+<p class="column">
+<span class="coltitle">VALIDATION_RESULTS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_validationresult"></a>
+<p class="column">
+<span class="coltitle">ValidationResult</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.validation.ValidationResult</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="servicerequest_viewabledocumentlinksanddocuments"></a>
+<p class="column">
+<span class="coltitle">ViewableDocumentLinksAndDocuments</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<gw.util.Pair<entity.ServiceRequestDocumentLink, entity.Document>></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Returns a list of pairs of document links and documents for this service request where
+the user has permission to view the document.</span>
+<a name="servicerequest_waitingforinvoicealerttext"></a>
+<p class="column">
+<span class="coltitle">WaitingForInvoiceAlertText</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="servicerequest_activities"></a>
+<p class="column">
+<span class="coltitle">Activities</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="Activity.html" TARGET="tableFrame">Activity</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The activities associated with this service request</span>
+<a name="servicerequest_documentlinks"></a>
+<p class="column">
+<span class="coltitle">DocumentLinks</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestDocumentLink.html" TARGET="tableFrame">ServiceRequestDocumentLink</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup></span>
+<br>
+<span class="desc">The link information for documents associated with this service request</span>
+<a name="servicerequest_history"></a>
+<p class="column">
+<span class="coltitle">History</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestChange.html" TARGET="tableFrame">ServiceRequestChange</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup></span>
+<br>
+<span class="desc">The changes that have been applied to this service request, which together comprise its history.</span>
+<a name="servicerequest_instructionhistory"></a>
+<p class="column">
+<span class="coltitle">InstructionHistory</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestInstruction.html" TARGET="tableFrame">ServiceRequestInstruction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">All instructions that have been created for this service request, including instructions that are no longer active.</span>
+<a name="servicerequest_invoices"></a>
+<p class="column">
+<span class="coltitle">Invoices</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestStatement.html#ServiceRequestInvoice" TARGET="tableFrame">ServiceRequestInvoice</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Invoices associated with this service request</span>
+<a name="servicerequest_messages"></a>
+<p class="column">
+<span class="coltitle">Messages</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestMessage.html" TARGET="tableFrame">ServiceRequestMessage</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Messages related to this service request</span>
+<a name="servicerequest_notes"></a>
+<p class="column">
+<span class="coltitle">Notes</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="Note.html" TARGET="tableFrame">Note</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The notes associated with this service request</span>
+<a name="servicerequest_noteswithpermcheck"></a>
+<p class="column">
+<span class="coltitle">NotesWithPermCheck</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Note</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the notes that are viewable by the current user, based on their permissions</span>
+<a name="servicerequest_quotes"></a>
+<p class="column">
+<span class="coltitle">Quotes</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestStatement.html#ServiceRequestQuote" TARGET="tableFrame">ServiceRequestQuote</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Quotes associated with this service request</span>
+<a name="servicerequest_servicerequestmetrics"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestMetrics</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestMetric.html" TARGET="tableFrame">ServiceRequestMetric</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Metrics related to this service request</span>
+<a name="servicerequest_servicerequestpromotions"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestPromotions</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ServiceRequestPromotion.html" TARGET="tableFrame">ServiceRequestPromotion</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Array of ServiceRequestPromotions linking this ServiceRequest to other ServiceRequests to which this was promoted.</span>
+<a name="servicerequest_suggestedassignees"></a>
+<p class="column">
+<span class="coltitle">SuggestedAssignees</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning gw.api.assignment.Assignee</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ServiceRequest"></a><div class="arraysbox">Unique Keys for ServiceRequest</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>servicerequestu1</td>
+<td>ServiceRequestNumber</td></tr>
+<tr><td>servicerequest1a</td>
+<td>PublicID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

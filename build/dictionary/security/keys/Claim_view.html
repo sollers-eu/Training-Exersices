@@ -1,0 +1,643 @@
+<html>
+<head>
+<title>Claim view</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Claim view <span class="entityname">(object-based)</span></div>
+<div class="desc">
+<span id="reflink_398" class="reftext" onclick='showAndHideRefBox("refbox_398", "reflink_398")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_398" class="refbox_inner" style="display:none;">
+Permission to view a claim
+</div>
+</span>
+</div>
+</div>
+<a name="Related Permissions"></a><div class="arraysbox">Related Permissions</div>
+<a name="claimview"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimview.html'>claimview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">General permission to view a claim</span>
+<a name="Page References"></a><div class="arraysbox">Page References</div>
+<a name="activitynotespage"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ActivityNotesPage.html'>ActivityNotesPage</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="baggageincidentsprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/BaggageIncidentsPrint.html'>BaggageIncidentsPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimallnotesprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimAllNotesPrint.html'>ClaimAllNotesPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimassociationdetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimAssociationDetail.html'>ClaimAssociationDetail</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimassociationdetailforward"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimAssociationDetailForward.html'>ClaimAssociationDetailForward</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimassociations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimAssociations.html'>ClaimAssociations</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimassociationsearchpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimAssociationSearchPopup.html'>ClaimAssociationSearchPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimcalendargroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimCalendarGroup.html'>ClaimCalendarGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontactdetailpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimContactDetailPopup.html'>ClaimContactDetailPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimContacts.html'>ClaimContacts</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimdocuments"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimDocuments.html'>ClaimDocuments</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimdocumentsprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimDocumentsPrint.html'>ClaimDocumentsPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimevaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimEvaluations.html'>ClaimEvaluations</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimExposures.html'>ClaimExposures</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialsgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsGroup.html'>ClaimFinancialsGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialssummary"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsSummary.html'>ClaimFinancialsSummary</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimhistory"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimHistory.html'>ClaimHistory</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claiminfoforward"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimInfoForward.html'>ClaimInfoForward</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimlossdetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimLossDetails.html'>ClaimLossDetails</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimlossdetailsgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimLossDetailsGroup.html'>ClaimLossDetailsGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimnegotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimNegotiations.html'>ClaimNegotiations</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimnoconfidentialnotesprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimNoConfidentialNotesPrint.html'>ClaimNoConfidentialNotesPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimnotes"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimNotes.html'>ClaimNotes</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpartiesgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPartiesGroup.html'>ClaimPartiesGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpartiesinvolveddetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPartiesInvolvedDetail.html'>ClaimPartiesInvolvedDetail</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimplanofactiongroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPlanOfActionGroup.html'>ClaimPlanOfActionGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicygroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyGroup.html'>ClaimPolicyGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimprintout"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimservicerequests"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimServiceRequests.html'>ClaimServiceRequests</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotbaggageincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotBaggageIncidentPopup.html'>ClaimSnapshotBaggageIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotdocuments"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotDocuments.html'>ClaimSnapshotDocuments</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotdwellingincident600popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotDwellingIncident600Popup.html'>ClaimSnapshotDwellingIncident600Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotdwellingincident700popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotDwellingIncident700Popup.html'>ClaimSnapshotDwellingIncident700Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotdwellingincident800popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotDwellingIncident800Popup.html'>ClaimSnapshotDwellingIncident800Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotdwellingincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotDwellingIncidentPopup.html'>ClaimSnapshotDwellingIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotExposures.html'>ClaimSnapshotExposures</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotextrafields"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotExtraFields.html'>ClaimSnapshotExtraFields</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotfixedpropertyincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotFixedPropertyIncidentPopup.html'>ClaimSnapshotFixedPropertyIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotGroup.html'>ClaimSnapshotGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotinjuredinjuryincident600popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotInjuredInjuryIncident600Popup.html'>ClaimSnapshotInjuredInjuryIncident600Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotinjuredinjuryincident700popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotInjuredInjuryIncident700Popup.html'>ClaimSnapshotInjuredInjuryIncident700Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotinjuredinjuryincident800popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotInjuredInjuryIncident800Popup.html'>ClaimSnapshotInjuredInjuryIncident800Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotinjuredinjuryincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotInjuredInjuryIncidentPopup.html'>ClaimSnapshotInjuredInjuryIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotinjuryincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotInjuryIncidentPopup.html'>ClaimSnapshotInjuryIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotlossdetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotLossDetails.html'>ClaimSnapshotLossDetails</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotnotes"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotNotes.html'>ClaimSnapshotNotes</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshototherstructureincident600popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotOtherStructureIncident600Popup.html'>ClaimSnapshotOtherStructureIncident600Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshototherstructureincident700popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotOtherStructureIncident700Popup.html'>ClaimSnapshotOtherStructureIncident700Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshototherstructureincident800popup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotOtherStructureIncident800Popup.html'>ClaimSnapshotOtherStructureIncident800Popup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshototherstructureincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotOtherStructureIncidentPopup.html'>ClaimSnapshotOtherStructureIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotpartiesinvolved"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotPartiesInvolved.html'>ClaimSnapshotPartiesInvolved</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshottripincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotTripIncidentPopup.html'>ClaimSnapshotTripIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsnapshotvehicleincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSnapshotVehicleIncidentPopup.html'>ClaimSnapshotVehicleIncidentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimstatus"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimStatus.html'>ClaimStatus</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsubrogationgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSubrogationGroup.html'>ClaimSubrogationGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummary"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummary.html'>ClaimSummary</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummaryactivitiesprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryActivitiesPrint.html'>ClaimSummaryActivitiesPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummaryassociatedprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryAssociatedPrint.html'>ClaimSummaryAssociatedPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummaryexposuresprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryExposuresPrint.html'>ClaimSummaryExposuresPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummarygroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryGroup.html'>ClaimSummaryGroup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummarymattersprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryMattersPrint.html'>ClaimSummaryMattersPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummarynotesprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryNotesPrint.html'>ClaimSummaryNotesPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummarypeopleinvolvedprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryPeopleInvolvedPrint.html'>ClaimSummaryPeopleInvolvedPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimsummarytopprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimSummaryTopPrint.html'>ClaimSummaryTopPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimusers"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimUsers.html'>ClaimUsers</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimworkplan"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimWorkplan.html'>ClaimWorkplan</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="duplicateclaimlossdetailspopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/DuplicateClaimLossDetailsPopup.html'>DuplicateClaimLossDetailsPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="fixedpropertyincidentprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/FixedPropertyIncidentPrint.html'>FixedPropertyIncidentPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="injuryincidentsprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/InjuryIncidentsPrint.html'>InjuryIncidentsPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="isomatchreportdetailpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ISOMatchReportDetailPopup.html'>ISOMatchReportDetailPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newclaimassociation"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewClaimAssociation.html'>NewClaimAssociation</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="pickexistingdocumentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/PickExistingDocumentPopup.html'>PickExistingDocumentPopup</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="sidetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SIDetails.html'>SIDetails</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="subroadversepartydetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SubroAdversePartyDetail.html'>SubroAdversePartyDetail</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="subrogationgeneral"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SubrogationGeneral.html'>SubrogationGeneral</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="subrogationparties"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SubrogationParties.html'>SubrogationParties</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="supervisorclaimcalendar"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SupervisorClaimCalendar.html'>SupervisorClaimCalendar</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="tripincidentsprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TripIncidentsPrint.html'>TripIncidentsPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="vehicleincidentprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/VehicleIncidentPrint.html'>VehicleIncidentPrint</a></span>  <span class="titleDesc">canVisit attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Element References"></a><div class="arraysbox">Element References</div>
+<a name="inputsetref"></a>
+<p class="column">
+<span class="coltitle">InputSetRef</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewActivityDV.html'>NewActivityDV</a> (NewActivityDV.pcf)</span>
+<a name="link document (pickertoolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Link Document (PickerToolbarButton)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ActivityDetailScreen-editable.html'>ActivityDetailScreen.editable</a> (ActivityDetailScreen.editable.pcf)</span>
+<a name="link document (pickertoolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Link Document (PickerToolbarButton)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewActivity.html'>NewActivity</a> (NewActivity.pcf)</span>
+<a name="link document (pickertoolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Link Document (PickerToolbarButton)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewNoteWorksheet.html'>NewNoteWorksheet</a> (NewNoteWorksheet.pcf)</span>
+<a name="view notes (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">View Notes (ToolbarButton)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ActivityDetailScreen-editable.html'>ActivityDetailScreen.editable</a> (ActivityDetailScreen.editable.pcf)</span>
+<a name="view notes (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">View Notes (ToolbarButton)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ActivityDetailScreen-readonly.html'>ActivityDetailScreen.readonly</a> (ActivityDetailScreen.readonly.pcf)</span>
+</body>
+</html>

@@ -1,0 +1,942 @@
+<html>
+<head>
+<title>WCBenefitParameterSet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">WCBenefitParameterSet <span class="entityname">(cc_WCBenefitParameterSet) (delegates to <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2983" class="reftext" onclick='showAndHideRefBox("refbox_2983", "reflink_2983")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2983" class="refbox_inner" style="display:none;">
+Reference table tracking state-specific temporary disability minimum and maximum
+      monetary benefits for particular date ranges.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">WCBenefitParameterSet</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2984" class="reftext" onclick='showAndHideRefBox("refbox_2984", "reflink_2984")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2984" class="refbox_inner" style="display:none;">
+<A HREF="../full/WCBenefitFactorDetail.html" TARGET="tableFrame">WCBenefitFactorDetail.WCBenefitParameterSet</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="wcbenefitparameterset_enddate"></a>
+<p class="column">
+<span class="coltitle">EndDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">PD Benefit Expiration Date</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:36</td>
+<td>DV.Admin.WCBenefitParameterSet.EndDate</td>
+<td>WCBenefitParameterSet.EndDate</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WCBenefitParameterSetLV.pcf:41</td>
+<td>LV.Admin.WCBenefitParameterSet.EndDate</td>
+<td>WCBenefitParameterSet.EndDate</td>
+<td>false</td>
+<td>
+WCBenefitParameterSet
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_jurisdictionstate"></a>
+<p class="column">
+<span class="coltitle">JurisdictionState</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Jurisdiction_tl.html" TARGET="tableFrame">Jurisdiction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Jurisdiction State. The Jurisdiction must be associated with JurisdictionType.TC_INSURANCE.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:22</td>
+<td>DV.Admin.WCBenefitParameterSet.JurisdictionState</td>
+<td>WCBenefitParameterSet.JurisdictionState</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WCBenefitParameterSetLV.pcf:29</td>
+<td>LV.Admin.WCBenefitParameterSet.JurisdictionState</td>
+<td>WCBenefitParameterSet.JurisdictionState</td>
+<td>false</td>
+<td>
+WCBenefitParameterSet
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ppdmax"></a>
+<p class="column">
+<span class="coltitle">PPDMax</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Max State PPD limit</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:175</td>
+<td>DV.Admin.WCBenefitParameterSet.PPDMax</td>
+<td>WCBenefitParameterSet.PPDMax</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ppdmin"></a>
+<p class="column">
+<span class="coltitle">PPDMin</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">MinState PPD limit </span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:182</td>
+<td>DV.Admin.WCBenefitParameterSet.PPDMin</td>
+<td>WCBenefitParameterSet.PPDMin</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ppdminadjtoaww"></a>
+<p class="column">
+<span class="coltitle">PPDMinAdjToAWW</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">For PPD, if true and AWW is less than Min then set Min to AWW</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:187</td>
+<td>DV.Admin.WCBenefitParameterSet.PPDMinAdjToAWW</td>
+<td>WCBenefitParameterSet.PPDMinAdjToAWW</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ppdpercentofwages"></a>
+<p class="column">
+<span class="coltitle">PPDPercentOfWages</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "rate")'>rate</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The percentage of wages paid for  Permanent Partial Disability  (e.g. 80%)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:168</td>
+<td>DV.Admin.WCBenefitParameterSet.PPDPercentOfWages</td>
+<td>WCBenefitParameterSet.PPDPercentOfWages</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ptdmax"></a>
+<p class="column">
+<span class="coltitle">PTDMax</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Max State PTD limit</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:146</td>
+<td>DV.Admin.WCBenefitParameterSet.PTDMax</td>
+<td>WCBenefitParameterSet.PTDMax</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ptdmin"></a>
+<p class="column">
+<span class="coltitle">PTDMin</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">MinState PTD limit </span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:153</td>
+<td>DV.Admin.WCBenefitParameterSet.PTDMin</td>
+<td>WCBenefitParameterSet.PTDMin</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ptdminadjtoaww"></a>
+<p class="column">
+<span class="coltitle">PTDMinAdjToAWW</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">For PTD, if true and AWW is less than Min then set Min to AWW</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:158</td>
+<td>DV.Admin.WCBenefitParameterSet.PTDMinAdjToAWW</td>
+<td>WCBenefitParameterSet.PTDMinAdjToAWW</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ptdpercentofwages"></a>
+<p class="column">
+<span class="coltitle">PTDPercentOfWages</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "rate")'>rate</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The percentage of wages paid for Permanent Total Disability  (e.g. 80%)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:139</td>
+<td>DV.Admin.WCBenefitParameterSet.PTDPercentOfWages</td>
+<td>WCBenefitParameterSet.PTDPercentOfWages</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="wcbenefitparameterset_ratecomments"></a>
+<p class="column">
+<span class="coltitle">RateComments</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Additional comments.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:41</td>
+<td>DV.Admin.WCBenefitParameterSet.RateComments</td>
+<td>WCBenefitParameterSet.RateComments</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WCBenefitParameterSetLV.pcf:45</td>
+<td>LV.Admin.WCBenefitParameterSet.Comments</td>
+<td>WCBenefitParameterSet.RateComments</td>
+<td>false</td>
+<td>
+WCBenefitParameterSet
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="wcbenefitparameterset_retroactiveperiod"></a>
+<p class="column">
+<span class="coltitle">RetroactivePeriod</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The number of days at which the injured worker reimbursed for the Waiting Period presuming worker is still unable to work.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:119</td>
+<td>DV.Admin.WCBenefitParameterSet.RetroactivePeriod</td>
+<td>WCBenefitParameterSet.RetroactivePeriod</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_startdate"></a>
+<p class="column">
+<span class="coltitle">StartDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">PD Benefit Effective Date</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:29</td>
+<td>DV.Admin.WCBenefitParameterSet.StartDate</td>
+<td>WCBenefitParameterSet.StartDate</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WCBenefitParameterSetLV.pcf:35</td>
+<td>LV.Admin.WCBenefitParameterSet.StartDate</td>
+<td>WCBenefitParameterSet.StartDate</td>
+<td>false</td>
+<td>
+WCBenefitParameterSet
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_tpdmax"></a>
+<p class="column">
+<span class="coltitle">TPDMax</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Max State TPD limit</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:87</td>
+<td>DV.Admin.WCBenefitParameterSet.TPDMax</td>
+<td>WCBenefitParameterSet.TPDMax</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_tpdmin"></a>
+<p class="column">
+<span class="coltitle">TPDMin</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">MinState TPD limit </span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:94</td>
+<td>DV.Admin.WCBenefitParameterSet.TPDMin</td>
+<td>WCBenefitParameterSet.TPDMin</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_tpdminadjtoaww"></a>
+<p class="column">
+<span class="coltitle">TPDMinAdjToAWW</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">For TPD, if true and AWW is less than Min then set Min to AWW</span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:99</td>
+<td>DV.Admin.WCBenefitParameterSet.TPDMinAdjToAWW</td>
+<td>WCBenefitParameterSet.TPDMinAdjToAWW</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_tpdpercentofwages"></a>
+<p class="column">
+<span class="coltitle">TPDPercentOfWages</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "rate")'>rate</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The percentage of wages paid for Temporary Partial Disability (e.g. 80%)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:80</td>
+<td>DV.Admin.WCBenefitParameterSet.TPDPercentOfWages</td>
+<td>WCBenefitParameterSet.TPDPercentOfWages</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ttdmax"></a>
+<p class="column">
+<span class="coltitle">TTDMax</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Max State TTD limit</span>
+<div class='screenrefbody'>
+<span id=showhideUI_17 onclick='showAndHideUIDetails("UITable_17", "showhideUI_17")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_17' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:58</td>
+<td>DV.Admin.WCBenefitParameterSet.TTDMax</td>
+<td>WCBenefitParameterSet.TTDMax</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ttdmin"></a>
+<p class="column">
+<span class="coltitle">TTDMin</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Min State TTD limit </span>
+<div class='screenrefbody'>
+<span id=showhideUI_18 onclick='showAndHideUIDetails("UITable_18", "showhideUI_18")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_18' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:65</td>
+<td>DV.Admin.WCBenefitParameterSet.TTDMin</td>
+<td>WCBenefitParameterSet.TTDMin</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ttdminadjtoaww"></a>
+<p class="column">
+<span class="coltitle">TTDMinAdjToAWW</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">For TTD, if true and AWW is less than Min then set Min to AWW</span>
+<div class='screenrefbody'>
+<span id=showhideUI_19 onclick='showAndHideUIDetails("UITable_19", "showhideUI_19")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_19' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:70</td>
+<td>DV.Admin.WCBenefitParameterSet.TTDMinAdjToAWW</td>
+<td>WCBenefitParameterSet.TTDMinAdjToAWW</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_ttdpercentofwages"></a>
+<p class="column">
+<span class="coltitle">TTDPercentOfWages</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "rate")'>rate</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The percentage of wages paid for Temporary Total Disability (e.g. 80%)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_20 onclick='showAndHideUIDetails("UITable_20", "showhideUI_20")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_20' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:51</td>
+<td>DV.Admin.WCBenefitParameterSet.TTDPercentOfWages</td>
+<td>WCBenefitParameterSet.TTDPercentOfWages</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_waitingperioddays"></a>
+<p class="column">
+<span class="coltitle">WaitingPeriodDays</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of days injured worker required to wait before benefits are paid.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_21 onclick='showAndHideUIDetails("UITable_21", "showhideUI_21")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_21' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:112</td>
+<td>DV.Admin.WCBenefitParameterSet.NumberOfDays</td>
+<td>WCBenefitParameterSet.WaitingPeriodDays</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_wpnotappliedtoppd"></a>
+<p class="column">
+<span class="coltitle">WPNotAppliedToPPD</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">If true, Waiting Period is not applied for PPD</span>
+<div class='screenrefbody'>
+<span id=showhideUI_22 onclick='showAndHideUIDetails("UITable_22", "showhideUI_22")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_22' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:129</td>
+<td>DV.Admin.WCBenefitParameterSet.WPNotAppliedToPPD</td>
+<td>WCBenefitParameterSet.WPNotAppliedToPPD</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WaitingPeriodInputSet.pcf:32</td>
+<td>NVV.Exposure.LostWagesBenefits.WaitingPeriod.WPNotAppliedToPPD</td>
+<td>claim.findWCBeneCalcRef().WPNotAppliedToPPD</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="wcbenefitparameterset_wpnotappliedtoptd"></a>
+<p class="column">
+<span class="coltitle">WPNotAppliedToPTD</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">If true, Waiting Period is not applied for PTD</span>
+<div class='screenrefbody'>
+<span id=showhideUI_23 onclick='showAndHideUIDetails("UITable_23", "showhideUI_23")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_23' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WCBenefitParameterSetDV.pcf:124</td>
+<td>DV.Admin.WCBenefitParameterSet.WPNotAppliedToPTD</td>
+<td>WCBenefitParameterSet.WPNotAppliedToPTD</td>
+<td>true</td>
+<td>
+WCBenefitParameterSetPopup
+</td>
+</tr>
+<tr>
+<td>WaitingPeriodInputSet.pcf:37</td>
+<td>NVV.Exposure.LostWagesBenefits.WaitingPeriod.WPNotAppliedToPTD</td>
+<td>claim.findWCBeneCalcRef().WPNotAppliedToPTD</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for WCBenefitParameterSet"></a><div class="arraysbox">Unique Keys for WCBenefitParameterSet</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>WCBenefitIndex1</td>
+<td>JurisdictionState, StartDate, Retired</td></tr>
+<tr><td>WCBenefitIndex2</td>
+<td>JurisdictionState, EndDate, Retired</td></tr>
+<tr><td>WCBenefitParamet1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+showUIDetails('UITable_17', 'showhideUI_17');
+showUIDetails('UITable_18', 'showhideUI_18');
+showUIDetails('UITable_19', 'showhideUI_19');
+showUIDetails('UITable_20', 'showhideUI_20');
+showUIDetails('UITable_21', 'showhideUI_21');
+showUIDetails('UITable_22', 'showhideUI_22');
+showUIDetails('UITable_23', 'showhideUI_23');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+hideUIDetails('UITable_17', 'showhideUI_17');
+hideUIDetails('UITable_18', 'showhideUI_18');
+hideUIDetails('UITable_19', 'showhideUI_19');
+hideUIDetails('UITable_20', 'showhideUI_20');
+hideUIDetails('UITable_21', 'showhideUI_21');
+hideUIDetails('UITable_22', 'showhideUI_22');
+hideUIDetails('UITable_23', 'showhideUI_23');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

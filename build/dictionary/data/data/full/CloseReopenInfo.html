@@ -1,0 +1,755 @@
+<html>
+<head>
+<title>CloseReopenInfo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">CloseReopenInfo <span class="entityname">(Virtual) (delegates to <A HREF="Versionable.html" TARGET="tableFrame">Versionable</A>)</span></div>
+<div class="desc">
+<span id="reflink_791" class="reftext" onclick='showAndHideRefBox("refbox_791", "reflink_791")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_791" class="refbox_inner" style="display:none;">
+
+        Temporary entity that holds transitional internal state information during all close or reopen operations.
+        This acts as a abstract base entity for ClaimCloseReopenInfo, MatterCloseReopenInfo, and ExpCloseReopenInfo.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">CloseReopenInfo</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+ClaimCloseReopenInfo</td>
+<td><A HREF="#ClaimCloseReopenInfo" TARGET="tableFrame">ClaimCloseReopenInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+CloseClaimInfo</td>
+<td><A HREF="#CloseClaimInfo" TARGET="tableFrame">CloseClaimInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ReopenClaimInfo</td>
+<td><A HREF="#ReopenClaimInfo" TARGET="tableFrame">ReopenClaimInfo</A></td>
+</tr>
+<tr>
+<td>
+ExpCloseReopenInfo</td>
+<td><A HREF="#ExpCloseReopenInfo" TARGET="tableFrame">ExpCloseReopenInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+CloseExposureInfo</td>
+<td><A HREF="#CloseExposureInfo" TARGET="tableFrame">CloseExposureInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ReopenExposureInfo</td>
+<td><A HREF="#ReopenExposureInfo" TARGET="tableFrame">ReopenExposureInfo</A></td>
+</tr>
+<tr>
+<td>
+MatterCloseReopenInfo</td>
+<td><A HREF="#MatterCloseReopenInfo" TARGET="tableFrame">MatterCloseReopenInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+CloseMatterInfo</td>
+<td><A HREF="#CloseMatterInfo" TARGET="tableFrame">CloseMatterInfo</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ReopenMatterInfo</td>
+<td><A HREF="#ReopenMatterInfo" TARGET="tableFrame">ReopenMatterInfo</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="closereopeninfo_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="closereopeninfo_beanversion_dynprop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_note"></a>
+<p class="column">
+<span class="coltitle">note</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Comments on the action taken.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CloseClaimInfoDV.pcf:19</td>
+<td>NVV.Claim.CloseClaim.Note</td>
+<td>CloseClaimInfo.note</td>
+<td>true</td>
+<td>
+CloseClaimPopup
+</td>
+</tr>
+<tr>
+<td>CloseExposureInfoDV.pcf:19</td>
+<td>NVV.Exposure.CloseExposure.Note</td>
+<td>CloseExposureInfo.note</td>
+<td>true</td>
+<td>
+CloseExposurePopup
+</td>
+</tr>
+<tr>
+<td>CloseMatterInfoDV.pcf:19</td>
+<td>NVV.Matter.CloseMatter.Note</td>
+<td>CloseMatterInfo.note</td>
+<td>true</td>
+<td>
+CloseMatterPopup
+</td>
+</tr>
+<tr>
+<td>ReopenClaimInfoDV.pcf:18</td>
+<td>NVV.Claim.ReopenClaim.Note</td>
+<td>ReopenClaimInfo.note</td>
+<td>true</td>
+<td>
+ReopenClaimPopup
+</td>
+</tr>
+<tr>
+<td>ReopenExposureInfoDV.pcf:18</td>
+<td>NVV.Exposure.ReopenExposure.Note</td>
+<td>ReopenExposureInfo.note</td>
+<td>true</td>
+<td>
+ReopenExposurePopup
+</td>
+</tr>
+<tr>
+<td>ReopenMatterInfoDV.pcf:18</td>
+<td>NVV.Matter.ReopenMatter.Note</td>
+<td>ReopenMatterInfo.note</td>
+<td>true</td>
+<td>
+ReopenMatterPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="closereopeninfo_note_prop"></a>
+<p class="column">
+<span class="coltitle">NOTE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="closereopeninfo_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">CloseReopenInfo</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="closereopeninfo_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closereopeninfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CloseReopenInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=ClaimCloseReopenInfo></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimCloseReopenInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html" TARGET="tableFrame">CloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_792" class="reftext" onclick='showAndHideRefBox("refbox_792", "reflink_792")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_792" class="refbox_inner" style="display:none;">
+
+      Holds transitional internal state information during all claim close or reopen operations. This is an abstract base
+      entity for CloseClaimInfo and ReopenClaimInfo. ClaimCloseReopenInfo is a virtual entity and is not represented in the database.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<a name="claimclosereopeninfo_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claim that the action was applied.</span>
+<a name="claimclosereopeninfo_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimclosereopeninfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimCloseReopenInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=CloseClaimInfo></a>
+<div class="titlebox">
+<div class="filtertitle">CloseClaimInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#ClaimCloseReopenInfo" TARGET="tableFrame">ClaimCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_793" class="reftext" onclick='showAndHideRefBox("refbox_793", "reflink_793")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_793" class="refbox_inner" style="display:none;">
+
+        Temporary entity that holds transitional internal state information during the close claim operation.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<a name="closeclaiminfo_outcome"></a>
+<p class="column">
+<span class="coltitle">outcome</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ClaimClosedOutcomeType_tl.html" TARGET="tableFrame">ClaimClosedOutcomeType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Reason claim was closed.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CloseClaimInfoDV.pcf:25</td>
+<td>NVV.Claim.CloseClaim.Outcome</td>
+<td>CloseClaimInfo.outcome</td>
+<td>true</td>
+<td>
+CloseClaimPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="closeclaiminfo_outcome_prop"></a>
+<p class="column">
+<span class="coltitle">OUTCOME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closeclaiminfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CloseClaimInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=CloseExposureInfo></a>
+<div class="titlebox">
+<div class="filtertitle">CloseExposureInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#ExpCloseReopenInfo" TARGET="tableFrame">ExpCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_794" class="reftext" onclick='showAndHideRefBox("refbox_794", "reflink_794")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_794" class="refbox_inner" style="display:none;">
+
+      Temporary entity that holds transitional internal state information during the
+      close exposure operation.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="closeexposureinfo_outcome"></a>
+<p class="column">
+<span class="coltitle">outcome</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ExposureClosedOutcomeType_tl.html" TARGET="tableFrame">ExposureClosedOutcomeType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CloseExposureInfoDV.pcf:25</td>
+<td>NVV.Exposure.CloseExposure.Outcome</td>
+<td>CloseExposureInfo.outcome</td>
+<td>true</td>
+<td>
+CloseExposurePopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="closeexposureinfo_outcome_prop"></a>
+<p class="column">
+<span class="coltitle">OUTCOME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closeexposureinfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CloseExposureInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=CloseMatterInfo></a>
+<div class="titlebox">
+<div class="filtertitle">CloseMatterInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#MatterCloseReopenInfo" TARGET="tableFrame">MatterCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_795" class="reftext" onclick='showAndHideRefBox("refbox_795", "reflink_795")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_795" class="refbox_inner" style="display:none;">
+
+            Temporary entity that holds transitional internal state information during the close matter operation.
+            This is an internal, virtual entity, the system does not store it.
+            
+    
+</div>
+</span>
+</div>
+</div>
+<a name="closematterinfo_resolution"></a>
+<p class="column">
+<span class="coltitle">resolution</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ResolutionType_tl.html" TARGET="tableFrame">ResolutionType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The type of resolution.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>CloseMatterInfoDV.pcf:25</td>
+<td>NVV.Matter.CloseMatter.Resolution</td>
+<td>CloseMatterInfo.resolution</td>
+<td>true</td>
+<td>
+CloseMatterPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="closematterinfo_resolution_prop"></a>
+<p class="column">
+<span class="coltitle">RESOLUTION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="closematterinfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.CloseMatterInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ExpCloseReopenInfo></a>
+<div class="titlebox">
+<div class="filtertitle">ExpCloseReopenInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html" TARGET="tableFrame">CloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_796" class="reftext" onclick='showAndHideRefBox("refbox_796", "reflink_796")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_796" class="refbox_inner" style="display:none;">
+
+      Holds transitional internal state information during all exposure close or
+      reopen operations. This acts as a abstract base entity for CloseExposureInfo and
+      ReopenExposureInfo.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="expclosereopeninfo_exposure"></a>
+<p class="column">
+<span class="coltitle">Exposure</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Exposure.html" TARGET="tableFrame">Exposure</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ExposureID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expclosereopeninfo_exposure_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="expclosereopeninfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ExpCloseReopenInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=MatterCloseReopenInfo></a>
+<div class="titlebox">
+<div class="filtertitle">MatterCloseReopenInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html" TARGET="tableFrame">CloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_797" class="reftext" onclick='showAndHideRefBox("refbox_797", "reflink_797")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_797" class="refbox_inner" style="display:none;">
+
+            Holds transitional internal state information during all matter close or reopen operations.
+            This acts as a abstract base entity for CloseMatterInfo and ReopenMatterInfo. The system does not
+            store MatterCloseReopenInfo in the database.
+            
+    
+</div>
+</span>
+</div>
+</div>
+<a name="matterclosereopeninfo_matter"></a>
+<p class="column">
+<span class="coltitle">Matter</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Matter.html" TARGET="tableFrame">Matter</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: MatterID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Related matter.</span>
+<a name="matterclosereopeninfo_matter_prop"></a>
+<p class="column">
+<span class="coltitle">MATTER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="matterclosereopeninfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.MatterCloseReopenInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ReopenClaimInfo></a>
+<div class="titlebox">
+<div class="filtertitle">ReopenClaimInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#ClaimCloseReopenInfo" TARGET="tableFrame">ClaimCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_798" class="reftext" onclick='showAndHideRefBox("refbox_798", "reflink_798")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_798" class="refbox_inner" style="display:none;">
+
+        Holds transitional internal state information during the reopen claim operation. The system does not store this entity.
+      
+    
+</div>
+</span>
+</div>
+</div>
+<a name="reopenclaiminfo_reopenreason"></a>
+<p class="column">
+<span class="coltitle">reopenReason</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ClaimReopenedReason_tl.html" TARGET="tableFrame">ClaimReopenedReason</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Reason the claim is being reopened.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ReopenClaimInfoDV.pcf:24</td>
+<td>NVV.Claim.ReopenClaim.Reason</td>
+<td>ReopenClaimInfo.reopenReason</td>
+<td>true</td>
+<td>
+ReopenClaimPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="reopenclaiminfo_reopenreason_prop"></a>
+<p class="column">
+<span class="coltitle">REOPENREASON_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="reopenclaiminfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ReopenClaimInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ReopenExposureInfo></a>
+<div class="titlebox">
+<div class="filtertitle">ReopenExposureInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#ExpCloseReopenInfo" TARGET="tableFrame">ExpCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_799" class="reftext" onclick='showAndHideRefBox("refbox_799", "reflink_799")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_799" class="refbox_inner" style="display:none;">
+
+      Holds transitional internal state information during the reopen exposure
+      operation. This is an internal, virtual entity, the system does not store it.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="reopenexposureinfo_reopenreason"></a>
+<p class="column">
+<span class="coltitle">reopenReason</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ExposureReopenedReason_tl.html" TARGET="tableFrame">ExposureReopenedReason</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ReopenExposureInfoDV.pcf:24</td>
+<td>NVV.Exposure.ReopenExposure.Reason</td>
+<td>ReopenExposureInfo.reopenReason</td>
+<td>true</td>
+<td>
+ReopenExposurePopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="reopenexposureinfo_reopenreason_prop"></a>
+<p class="column">
+<span class="coltitle">REOPENREASON_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="reopenexposureinfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ReopenExposureInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ReopenMatterInfo></a>
+<div class="titlebox">
+<div class="filtertitle">ReopenMatterInfo <span class='supername'>(subtype of <A HREF="CloseReopenInfo.html#MatterCloseReopenInfo" TARGET="tableFrame">MatterCloseReopenInfo</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_800" class="reftext" onclick='showAndHideRefBox("refbox_800", "reflink_800")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_800" class="refbox_inner" style="display:none;">
+
+            Temporary entity that holds transitional internal state information during the reopen matter operation. 
+            This is an internal, virtual entity, the system does not store it.
+            
+    
+</div>
+</span>
+</div>
+</div>
+<a name="reopenmatterinfo_reopenreason"></a>
+<p class="column">
+<span class="coltitle">reopenReason</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/MatterReopenedReason_tl.html" TARGET="tableFrame">MatterReopenedReason</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The reason for reopening the matter.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ReopenMatterInfoDV.pcf:24</td>
+<td>NVV.Matter.ReopenMatter.Reason</td>
+<td>ReopenMatterInfo.reopenReason</td>
+<td>true</td>
+<td>
+ReopenMatterPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="reopenmatterinfo_reopenreason_prop"></a>
+<p class="column">
+<span class="coltitle">REOPENREASON_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="reopenmatterinfo_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ReopenMatterInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

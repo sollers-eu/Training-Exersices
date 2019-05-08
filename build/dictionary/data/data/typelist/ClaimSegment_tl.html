@@ -1,0 +1,891 @@
+<html>
+<head>
+<title>ClaimSegment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">ClaimSegment</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_claimsegment)</span>
+</div>
+<div class="desc">Types of segments a claim can have</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3645" class="reftext" onclick='showAndHideRefBox("refbox_3645", "reflink_3645")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3645" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.Segment</A><br><A HREF="../full/ConditionFilter.html#SegmentConditionFilter" TARGET="tableFrame">SegmentConditionFilter.Segment</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.Segment</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_glass>auto_glass</a></td>
+<td>Auto - glass</td>
+<td>Auto - glass</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_high>auto_high</a></td>
+<td>Auto - high complexity</td>
+<td>Auto - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_low>auto_low</a></td>
+<td>Auto - low complexity</td>
+<td>Auto - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_mid>auto_mid</a></td>
+<td>Auto - mid complexity</td>
+<td>Auto - mid complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#contents_high>contents_high</a></td>
+<td>Contents - high complexity</td>
+<td>Contents - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#contents_low>contents_low</a></td>
+<td>Contents - low complexity</td>
+<td>Contents - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injury_high>injury_high</a></td>
+<td>Injury - high complexity</td>
+<td>Injury - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injury_low>injury_low</a></td>
+<td>Injury - low complexity</td>
+<td>Injury - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injury_mid>injury_mid</a></td>
+<td>Injury - mid complexity</td>
+<td>Injury - mid complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#liab_high>liab_high</a></td>
+<td>Liability - high complexity</td>
+<td>Liability - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#liab_low>liab_low</a></td>
+<td>Liability - low complexity</td>
+<td>Liability - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#liab_mid>liab_mid</a></td>
+<td>Liability - mid complexity</td>
+<td>Liability - mid complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prop_high>prop_high</a></td>
+<td>Property - high complexity</td>
+<td>Property - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prop_low>prop_low</a></td>
+<td>Property - low complexity</td>
+<td>Property - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prop_mid>prop_mid</a></td>
+<td>Property - mid complexity</td>
+<td>Property - mid complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#travel_high>travel_high</a></td>
+<td>Travel - high complexity</td>
+<td>Travel - high complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#travel_low>travel_low</a></td>
+<td>Travel - low complexity</td>
+<td>Travel - low complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#travel_mid>travel_mid</a></td>
+<td>Travel - mid complexity</td>
+<td>Travel - mid complexity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#unknown>unknown</a></td>
+<td>Unknown</td>
+<td>Unknown segment, or segment not automatically set by rules</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_liability>wc_liability</a></td>
+<td>Workers' Comp - employer's liability</td>
+<td>Workers' Comp - employer's liability</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_lost_time>wc_lost_time</a></td>
+<td>Workers' Comp - indemnity</td>
+<td>Workers' Comp - indemnity</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_med_only>wc_med_only</a></td>
+<td>Workers' Comp - med only</td>
+<td>Workers' Comp - med only</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=auto_glass></a>
+<div class="titlebox">
+<div class="filtertitle">auto_glass <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3646" class="reftext" onclick='showAndHideRefBox("refbox_3646", "reflink_3646")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3646" class="refbox_inner" style="display:none;">
+Auto - glass
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#AUTO" TARGET="tableFrame">LossType.AUTO</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - glass</td>
+<td>Auto - glass</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=auto_high></a>
+<div class="titlebox">
+<div class="filtertitle">auto_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3647" class="reftext" onclick='showAndHideRefBox("refbox_3647", "reflink_3647")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3647" class="refbox_inner" style="display:none;">
+Auto - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#AUTO" TARGET="tableFrame">LossType.AUTO</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - high complexity</td>
+<td>Auto - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=auto_low></a>
+<div class="titlebox">
+<div class="filtertitle">auto_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3648" class="reftext" onclick='showAndHideRefBox("refbox_3648", "reflink_3648")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3648" class="refbox_inner" style="display:none;">
+Auto - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#AUTO" TARGET="tableFrame">LossType.AUTO</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - low complexity</td>
+<td>Auto - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=auto_mid></a>
+<div class="titlebox">
+<div class="filtertitle">auto_mid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3649" class="reftext" onclick='showAndHideRefBox("refbox_3649", "reflink_3649")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3649" class="refbox_inner" style="display:none;">
+Auto - mid complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#AUTO" TARGET="tableFrame">LossType.AUTO</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - mid complexity</td>
+<td>Auto - mid complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=contents_high></a>
+<div class="titlebox">
+<div class="filtertitle">contents_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3650" class="reftext" onclick='showAndHideRefBox("refbox_3650", "reflink_3650")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3650" class="refbox_inner" style="display:none;">
+Contents - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contents - high complexity</td>
+<td>Contents - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=contents_low></a>
+<div class="titlebox">
+<div class="filtertitle">contents_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3651" class="reftext" onclick='showAndHideRefBox("refbox_3651", "reflink_3651")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3651" class="refbox_inner" style="display:none;">
+Contents - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contents - low complexity</td>
+<td>Contents - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injury_high></a>
+<div class="titlebox">
+<div class="filtertitle">injury_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3652" class="reftext" onclick='showAndHideRefBox("refbox_3652", "reflink_3652")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3652" class="refbox_inner" style="display:none;">
+Injury - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injury - high complexity</td>
+<td>Injury - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injury_low></a>
+<div class="titlebox">
+<div class="filtertitle">injury_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3653" class="reftext" onclick='showAndHideRefBox("refbox_3653", "reflink_3653")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3653" class="refbox_inner" style="display:none;">
+Injury - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injury - low complexity</td>
+<td>Injury - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injury_mid></a>
+<div class="titlebox">
+<div class="filtertitle">injury_mid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3654" class="reftext" onclick='showAndHideRefBox("refbox_3654", "reflink_3654")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3654" class="refbox_inner" style="display:none;">
+Injury - mid complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injury - mid complexity</td>
+<td>Injury - mid complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=liab_high></a>
+<div class="titlebox">
+<div class="filtertitle">liab_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3655" class="reftext" onclick='showAndHideRefBox("refbox_3655", "reflink_3655")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3655" class="refbox_inner" style="display:none;">
+Liability - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#GL" TARGET="tableFrame">LossType.GL</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Liability - high complexity</td>
+<td>Liability - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=liab_low></a>
+<div class="titlebox">
+<div class="filtertitle">liab_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3656" class="reftext" onclick='showAndHideRefBox("refbox_3656", "reflink_3656")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3656" class="refbox_inner" style="display:none;">
+Liability - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#GL" TARGET="tableFrame">LossType.GL</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Liability - low complexity</td>
+<td>Liability - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=liab_mid></a>
+<div class="titlebox">
+<div class="filtertitle">liab_mid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3657" class="reftext" onclick='showAndHideRefBox("refbox_3657", "reflink_3657")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3657" class="refbox_inner" style="display:none;">
+Liability - mid complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#GL" TARGET="tableFrame">LossType.GL</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Liability - mid complexity</td>
+<td>Liability - mid complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prop_high></a>
+<div class="titlebox">
+<div class="filtertitle">prop_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3658" class="reftext" onclick='showAndHideRefBox("refbox_3658", "reflink_3658")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3658" class="refbox_inner" style="display:none;">
+Property - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#PR" TARGET="tableFrame">LossType.PR</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Property - high complexity</td>
+<td>Property - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prop_low></a>
+<div class="titlebox">
+<div class="filtertitle">prop_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3659" class="reftext" onclick='showAndHideRefBox("refbox_3659", "reflink_3659")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3659" class="refbox_inner" style="display:none;">
+Property - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#PR" TARGET="tableFrame">LossType.PR</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Property - low complexity</td>
+<td>Property - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prop_mid></a>
+<div class="titlebox">
+<div class="filtertitle">prop_mid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3660" class="reftext" onclick='showAndHideRefBox("refbox_3660", "reflink_3660")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3660" class="refbox_inner" style="display:none;">
+Property - mid complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#PR" TARGET="tableFrame">LossType.PR</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Property - mid complexity</td>
+<td>Property - mid complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=travel_high></a>
+<div class="titlebox">
+<div class="filtertitle">travel_high <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3661" class="reftext" onclick='showAndHideRefBox("refbox_3661", "reflink_3661")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3661" class="refbox_inner" style="display:none;">
+Travel - high complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#TRAV" TARGET="tableFrame">LossType.TRAV</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Travel - high complexity</td>
+<td>Travel - high complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=travel_low></a>
+<div class="titlebox">
+<div class="filtertitle">travel_low <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3662" class="reftext" onclick='showAndHideRefBox("refbox_3662", "reflink_3662")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3662" class="refbox_inner" style="display:none;">
+Travel - low complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#TRAV" TARGET="tableFrame">LossType.TRAV</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Travel - low complexity</td>
+<td>Travel - low complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=travel_mid></a>
+<div class="titlebox">
+<div class="filtertitle">travel_mid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3663" class="reftext" onclick='showAndHideRefBox("refbox_3663", "reflink_3663")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3663" class="refbox_inner" style="display:none;">
+Travel - mid complexity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#TRAV" TARGET="tableFrame">LossType.TRAV</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Travel - mid complexity</td>
+<td>Travel - mid complexity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=unknown></a>
+<div class="titlebox">
+<div class="filtertitle">unknown <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3664" class="reftext" onclick='showAndHideRefBox("refbox_3664", "reflink_3664")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3664" class="refbox_inner" style="display:none;">
+Unknown segment, or segment not automatically set by rules
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Unknown</td>
+<td>Unknown segment, or segment not automatically set by rules</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_liability></a>
+<div class="titlebox">
+<div class="filtertitle">wc_liability <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3665" class="reftext" onclick='showAndHideRefBox("refbox_3665", "reflink_3665")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3665" class="refbox_inner" style="display:none;">
+Workers' Comp - employer's liability
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - employer's liability</td>
+<td>Workers' Comp - employer's liability</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_lost_time></a>
+<div class="titlebox">
+<div class="filtertitle">wc_lost_time <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3666" class="reftext" onclick='showAndHideRefBox("refbox_3666", "reflink_3666")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3666" class="refbox_inner" style="display:none;">
+Workers' Comp - indemnity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - indemnity</td>
+<td>Workers' Comp - indemnity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_med_only></a>
+<div class="titlebox">
+<div class="filtertitle">wc_med_only <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3667" class="reftext" onclick='showAndHideRefBox("refbox_3667", "reflink_3667")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3667" class="refbox_inner" style="display:none;">
+Workers' Comp - med only
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="LossType_tl.html#WC" TARGET="tableFrame">LossType.WC</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - med only</td>
+<td>Workers' Comp - med only</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>Preferred Vendor Admin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Preferred Vendor Admin <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_615" class="reftext" onclick='showAndHideRefBox("refbox_615", "reflink_615")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_615" class="refbox_inner" style="display:none;">
+Permissions for managing preferred vendors
+</div>
+</span>
+</div>
+</div>
+<a name="Permissions"></a><div class="arraysbox">Permissions</div>
+<a name="create address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abcreate.html'>abcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new contact in the address book</span>
+<a name="create address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abcreatepref.html'>abcreatepref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add a preferred vendor to the address book</span>
+<a name="delete address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abdelete.html'>abdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete an existing contact in the address book</span>
+<a name="delete address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abdeletepref.html'>abdeletepref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete an existing preferred vendor address book entry</span>
+<a name="edit address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abedit.html'>abedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an existing contact in the address book</span>
+<a name="edit address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abeditpref.html'>abeditpref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to modify an existing preferred vendor address book entry</span>
+<a name="view address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abview.html'>abview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of contact entries in the address book</span>
+<a name="view address book contact search pages"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abviewsearch.html'>abviewsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to search contact entries in the address book</span>
+<a name="create contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagcreate.html'>anytagcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new contact regardless of which tag(s) it has</span>
+<a name="delete contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagdelete.html'>anytagdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a contact regardless of which tag(s) it has</span>
+<a name="edit contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagedit.html'>anytagedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the details of a contact regardless of which tag(s) it has</span>
+<a name="view contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagview.html'>anytagview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of a contact regardless of which tag(s) it has</span>
+<a name="create local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctccreate.html'>ctccreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new local contact</span>
+<a name="edit local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctcedit.html'>ctcedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an existing local contact</span>
+<a name="view local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctcview.html'>ctcview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view and search local contact entries</span>
+<a name="create review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewcreate.html'>reviewcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new Review</span>
+<a name="delete completed review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewdeletecompleted.html'>reviewdeletecompleted</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a Review</span>
+<a name="delete incomplete review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewdeleteincomplete.html'>reviewdeleteincomplete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a Review</span>
+<a name="edit review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewedit.html'>reviewedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the Review page where the scores are entered for each claim</span>
+<a name="view review details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewdetail.html'>reviewviewdetail</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission view the Review page to see the answers entered for each claim</span>
+<a name="view reviews list"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewlist.html'>reviewviewlist</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of Reviews and the reviews tab on a Contact</span>
+<a name="edit user language"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usereditlang.html'>usereditlang</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit language</span>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<html>
+<head>
+<title>viewteam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">viewteam <span class="entityname">(static) - View team</span></div>
+<div class="desc">
+<span id="reflink_278" class="reftext" onclick='showAndHideRefBox("refbox_278", "reflink_278")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_278" class="refbox_inner" style="display:none;">
+Permission to view the Team tab
+</div>
+</span>
+</div>
+</div>
+<a name="Roles"></a><div class="arraysbox">Roles</div>
+<a name="claims supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/claims_supervisor.html'>Claims Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/manager.html'>Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a manager</span>
+<a name="new loss processing supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/newloss_supervisor.html'>New Loss Processing Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="superuser"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/superuser.html'>Superuser</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Superuser with full permissions</span>
+<a name="Related Application Permission Keys"></a><div class="arraysbox">Related Application Permission Keys</div>
+<a name="user viewteam"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/User_viewteam.html'>User viewteam</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the team pages</span>
+<a name="Related Pages"></a><div class="arraysbox">Related Pages</div>
+<a name="team"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/Team.html'>Team</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupactivities"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupActivities.html'>TeamGroupActivities</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupaging"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupAging.html'>TeamGroupAging</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupclaims"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupClaims.html'>TeamGroupClaims</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupExposures.html'>TeamGroupExposures</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupGroup.html'>TeamGroupGroup</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupmatters"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupMatters.html'>TeamGroupMatters</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupotheractivities"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupOtherActivities.html'>TeamGroupOtherActivities</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupotherclaims"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupOtherClaims.html'>TeamGroupOtherClaims</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupotherexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupOtherExposures.html'>TeamGroupOtherExposures</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupothermatters"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupOtherMatters.html'>TeamGroupOtherMatters</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupothersubrogations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupOtherSubrogations.html'>TeamGroupOtherSubrogations</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgrouppendingactivities"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupPendingActivities.html'>TeamGroupPendingActivities</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgrouppendingclaims"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupPendingClaims.html'>TeamGroupPendingClaims</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgrouppendingexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupPendingExposures.html'>TeamGroupPendingExposures</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgrouppendingmatters"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupPendingMatters.html'>TeamGroupPendingMatters</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgrouppendingsubrogations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupPendingSubrogations.html'>TeamGroupPendingSubrogations</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupqueuedactivities"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupQueuedActivities.html'>TeamGroupQueuedActivities</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupsubrogations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupSubrogations.html'>TeamGroupSubrogations</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamgroupsummary"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamGroupSummary.html'>TeamGroupSummary</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamuseractivities"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamUserActivities.html'>TeamUserActivities</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamuserclaims"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamUserClaims.html'>TeamUserClaims</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamuserexposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamUserExposures.html'>TeamUserExposures</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamusermatters"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamUserMatters.html'>TeamUserMatters</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="teamusersubrogations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/TeamUserSubrogations.html'>TeamUserSubrogations</a></span>  <span class="titleDesc">via <a href='../keys/User_viewteam.html'>User viewteam</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Related Elements"></a><div class="arraysbox">Related Elements</div>
+<a name="inputset"></a>
+<p class="column">
+<span class="coltitle">InputSet</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/UserStatisticsDV.html'>UserStatisticsDV</a> (UserStatisticsDV.pcf)</span>
+<a name="my group's pending assignments (toolbarfilteroption)"></a>
+<p class="column">
+<span class="coltitle">My group's pending assignments (ToolbarFilterOption)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/DesktopAwaitingAssignmentLV.html'>DesktopAwaitingAssignmentLV</a> (DesktopAwaitingAssignmentLV.pcf)</span>
+<a name="team (tab)"></a>
+<p class="column">
+<span class="coltitle">Team (Tab)</span>  <span class="titleDesc">visible attribute</span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/TabBar.html'>TabBar</a> (TabBar.pcf)</span>
+</body>
+</html>

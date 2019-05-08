@@ -1,0 +1,563 @@
+<html>
+<head>
+<title>RuleOperator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">RuleOperator</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_ruleoperator)</span>
+</div>
+<div class="desc">Operators for biz rules</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_7993" class="reftext" onclick='showAndHideRefBox("refbox_7993", "reflink_7993")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_7993" class="refbox_inner" style="display:none;">
+<A HREF="../full/RuleConditionLine.html" TARGET="tableFrame">RuleConditionLine.Operator</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#Contains>Contains</a></td>
+<td>Contains</td>
+<td>When the left-hand-side operand evaluates to an array, this operator is the only one that is available. Evaluates to true if at least one of the elements in the array matches the right-hand operand.</td>
+<td align=center>11</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DoesNotContain>DoesNotContain</a></td>
+<td>Does Not Contain</td>
+<td>The opposite of Contains</td>
+<td align=center>12</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Equals>Equals</a></td>
+<td>=</td>
+<td>Equals</td>
+<td align=center>1</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#GreaterThan>GreaterThan</a></td>
+<td>></td>
+<td>Greater Than</td>
+<td align=center>5</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#GreaterThanOrEqual>GreaterThanOrEqual</a></td>
+<td>>=</td>
+<td>Greater Than Or Equal</td>
+<td align=center>6</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#HasAValue>HasAValue</a></td>
+<td>Has a Value</td>
+<td>Has a Value</td>
+<td align=center>13</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#HasNoValue>HasNoValue</a></td>
+<td>Has No Value</td>
+<td>Has No Value</td>
+<td align=center>14</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IsFalse>IsFalse</a></td>
+<td>Is False</td>
+<td>Is False</td>
+<td align=center>8</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IsIn>IsIn</a></td>
+<td>Is In</td>
+<td>The right-hand-side operand must evaluate to an array, and the left-hand-side operand must evaluate to a type matching a single element in the array. Evaluates to true if at least one of the elements in the array matches the left-hand operand.</td>
+<td align=center>9</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IsNotIn>IsNotIn</a></td>
+<td>Is Not In</td>
+<td>The opposite of IsIn</td>
+<td align=center>10</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IsTrue>IsTrue</a></td>
+<td>Is True</td>
+<td>Is True</td>
+<td align=center>7</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#LessThan>LessThan</a></td>
+<td><</td>
+<td>Less Than</td>
+<td align=center>3</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#LessThanOrEqual>LessThanOrEqual</a></td>
+<td><=</td>
+<td>Less Than Or Equal</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#NotEquals>NotEquals</a></td>
+<td>Is Not Equal To</td>
+<td>NotEquals</td>
+<td align=center>2</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=Contains></a>
+<div class="titlebox">
+<div class="filtertitle">Contains <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7994" class="reftext" onclick='showAndHideRefBox("refbox_7994", "reflink_7994")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7994" class="refbox_inner" style="display:none;">
+When the left-hand-side operand evaluates to an array, this operator is the only one that is available. Evaluates to true if at least one of the elements in the array matches the right-hand operand.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contains</td>
+<td>When the left-hand-side operand evaluates to an array, this operator is the only one that is available. Evaluates to true if at least one of the elements in the array matches the right-hand operand.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DoesNotContain></a>
+<div class="titlebox">
+<div class="filtertitle">DoesNotContain <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7995" class="reftext" onclick='showAndHideRefBox("refbox_7995", "reflink_7995")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7995" class="refbox_inner" style="display:none;">
+The opposite of Contains
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Does Not Contain</td>
+<td>The opposite of Contains</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Equals></a>
+<div class="titlebox">
+<div class="filtertitle">Equals <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7996" class="reftext" onclick='showAndHideRefBox("refbox_7996", "reflink_7996")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7996" class="refbox_inner" style="display:none;">
+Equals
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>=</td>
+<td>Equals</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=GreaterThan></a>
+<div class="titlebox">
+<div class="filtertitle">GreaterThan <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7997" class="reftext" onclick='showAndHideRefBox("refbox_7997", "reflink_7997")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7997" class="refbox_inner" style="display:none;">
+Greater Than
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>></td>
+<td>Greater Than</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=GreaterThanOrEqual></a>
+<div class="titlebox">
+<div class="filtertitle">GreaterThanOrEqual <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7998" class="reftext" onclick='showAndHideRefBox("refbox_7998", "reflink_7998")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7998" class="refbox_inner" style="display:none;">
+Greater Than Or Equal
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>>=</td>
+<td>Greater Than Or Equal</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=HasAValue></a>
+<div class="titlebox">
+<div class="filtertitle">HasAValue <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7999" class="reftext" onclick='showAndHideRefBox("refbox_7999", "reflink_7999")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7999" class="refbox_inner" style="display:none;">
+Has a Value
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Has A Value</td>
+<td>Has A Value</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=HasNoValue></a>
+<div class="titlebox">
+<div class="filtertitle">HasNoValue <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8000" class="reftext" onclick='showAndHideRefBox("refbox_8000", "reflink_8000")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8000" class="refbox_inner" style="display:none;">
+Has No Value
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Has No Value</td>
+<td>Has No Value</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IsFalse></a>
+<div class="titlebox">
+<div class="filtertitle">IsFalse <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8001" class="reftext" onclick='showAndHideRefBox("refbox_8001", "reflink_8001")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8001" class="refbox_inner" style="display:none;">
+Is False
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Is False</td>
+<td>Is False</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IsIn></a>
+<div class="titlebox">
+<div class="filtertitle">IsIn <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8002" class="reftext" onclick='showAndHideRefBox("refbox_8002", "reflink_8002")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8002" class="refbox_inner" style="display:none;">
+The right-hand-side operand must evaluate to an array, and the left-hand-side operand must evaluate to a type matching a single element in the array. Evaluates to true if at least one of the elements in the array matches the left-hand operand.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Is In</td>
+<td>The right-hand-side operand must evaluate to an array, and the left-hand-side operand must evaluate to a type matching a single element in the array. Evaluates to true if at least one of the elements in the array matches the left-hand operand.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IsNotIn></a>
+<div class="titlebox">
+<div class="filtertitle">IsNotIn <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8003" class="reftext" onclick='showAndHideRefBox("refbox_8003", "reflink_8003")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8003" class="refbox_inner" style="display:none;">
+The opposite of IsIn
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Is Not In</td>
+<td>The opposite of IsIn</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IsTrue></a>
+<div class="titlebox">
+<div class="filtertitle">IsTrue <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8004" class="reftext" onclick='showAndHideRefBox("refbox_8004", "reflink_8004")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8004" class="refbox_inner" style="display:none;">
+Is True
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Is True</td>
+<td>Is True</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=LessThan></a>
+<div class="titlebox">
+<div class="filtertitle">LessThan <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8005" class="reftext" onclick='showAndHideRefBox("refbox_8005", "reflink_8005")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8005" class="refbox_inner" style="display:none;">
+Less Than
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td><</td>
+<td>Less Than</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=LessThanOrEqual></a>
+<div class="titlebox">
+<div class="filtertitle">LessThanOrEqual <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8006" class="reftext" onclick='showAndHideRefBox("refbox_8006", "reflink_8006")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8006" class="refbox_inner" style="display:none;">
+Less Than Or Equal
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td><=</td>
+<td>Less Than Or Equal</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=NotEquals></a>
+<div class="titlebox">
+<div class="filtertitle">NotEquals <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8007" class="reftext" onclick='showAndHideRefBox("refbox_8007", "reflink_8007")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8007" class="refbox_inner" style="display:none;">
+NotEquals
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Is Not Equal To</td>
+<td>NotEquals</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

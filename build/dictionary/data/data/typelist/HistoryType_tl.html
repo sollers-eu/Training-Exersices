@@ -1,0 +1,859 @@
+<html>
+<head>
+<title>HistoryType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">HistoryType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_historytype)</span>
+</div>
+<div class="desc">The type of claim/exposure history</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_6185" class="reftext" onclick='showAndHideRefBox("refbox_6185", "reflink_6185")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_6185" class="refbox_inner" style="display:none;">
+<A HREF="../full/History.html" TARGET="tableFrame">History.Type</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#approval>approval</a></td>
+<td>Approval or Rejection</td>
+<td>A referral was approved/rejected</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#archived>archived</a></td>
+<td>Archived</td>
+<td>Claim was archived</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#assignment>assignment</a></td>
+<td>Assigned</td>
+<td>Claim, exposure or subrogation was assigned</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#catastrophe>catastrophe</a></td>
+<td>Catastrophe warning</td>
+<td>Catastrophe warning</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checkdeleted>checkdeleted</a></td>
+<td>Check deleted</td>
+<td>A check was deleted</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checkstopped>checkstopped</a></td>
+<td>Check stopped</td>
+<td>A check was stopped</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checktransferred>checktransferred</a></td>
+<td>Check transferred</td>
+<td>A check was transferred to another claim</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checkvoided>checkvoided</a></td>
+<td>Check voided</td>
+<td>A check was voided</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#closed>closed</a></td>
+<td>Closed</td>
+<td>Claim, exposure, or subrogation was closed</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#custom>custom</a></td>
+<td>Custom</td>
+<td>A custom history event happened; see CustomType for details</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#delayed>delayed</a></td>
+<td>Activity due date changed</td>
+<td>Due date on an activity was changed</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#escalationmvd>escalationmvd</a></td>
+<td>Activity escalation date moved</td>
+<td>The escalation date on an activity was changed</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#flagged>flagged</a></td>
+<td>Flagged</td>
+<td>Claim flagged indicator status was changed</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#import>import</a></td>
+<td>Imported</td>
+<td>Claim or exposure was imported</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#litigated>litigated</a></td>
+<td>Litigated</td>
+<td>Claim was litigated</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#opened>opened</a></td>
+<td>Opened</td>
+<td>A new claim or exposure was opened</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#policyedited>policyedited</a></td>
+<td>Policy edited</td>
+<td>The policy was edited, and thus marked unverified</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#policyselected>policyselected</a></td>
+<td>Policy selected or refreshed</td>
+<td>A different policy was selected for the claim, or the existing policy was refreshed</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#referred>referred</a></td>
+<td>Referred</td>
+<td>Subrogation was referred</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#reopened>reopened</a></td>
+<td>Reopened</td>
+<td>Claim or exposure was reopened</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#restored>restored</a></td>
+<td>Retrieved</td>
+<td>Archived claim was retrieved</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#viewing>viewing</a></td>
+<td>Viewed</td>
+<td>Claim or exposure was viewed by a user</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=approval></a>
+<div class="titlebox">
+<div class="filtertitle">approval <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6186" class="reftext" onclick='showAndHideRefBox("refbox_6186", "reflink_6186")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6186" class="refbox_inner" style="display:none;">
+A referral was approved/rejected
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Approval or Rejection</td>
+<td>A referral was approved/rejected</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=archived></a>
+<div class="titlebox">
+<div class="filtertitle">archived <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6187" class="reftext" onclick='showAndHideRefBox("refbox_6187", "reflink_6187")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6187" class="refbox_inner" style="display:none;">
+Claim was archived
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Archived</td>
+<td>Claim was archived</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=assignment></a>
+<div class="titlebox">
+<div class="filtertitle">assignment <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6188" class="reftext" onclick='showAndHideRefBox("refbox_6188", "reflink_6188")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6188" class="refbox_inner" style="display:none;">
+Claim, exposure or subrogation was assigned
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Assigned</td>
+<td>Claim, exposure or subrogation was assigned</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=catastrophe></a>
+<div class="titlebox">
+<div class="filtertitle">catastrophe <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6189" class="reftext" onclick='showAndHideRefBox("refbox_6189", "reflink_6189")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6189" class="refbox_inner" style="display:none;">
+Catastrophe warning
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Catastrophe warning</td>
+<td>Catastrophe warning</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checkdeleted></a>
+<div class="titlebox">
+<div class="filtertitle">checkdeleted <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6190" class="reftext" onclick='showAndHideRefBox("refbox_6190", "reflink_6190")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6190" class="refbox_inner" style="display:none;">
+A check was deleted
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check deleted</td>
+<td>A check was deleted</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checkstopped></a>
+<div class="titlebox">
+<div class="filtertitle">checkstopped <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6191" class="reftext" onclick='showAndHideRefBox("refbox_6191", "reflink_6191")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6191" class="refbox_inner" style="display:none;">
+A check was stopped
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check stopped</td>
+<td>A check was stopped</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checktransferred></a>
+<div class="titlebox">
+<div class="filtertitle">checktransferred <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6192" class="reftext" onclick='showAndHideRefBox("refbox_6192", "reflink_6192")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6192" class="refbox_inner" style="display:none;">
+A check was transferred to another claim
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check transferred</td>
+<td>A check was transferred to another claim</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checkvoided></a>
+<div class="titlebox">
+<div class="filtertitle">checkvoided <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6193" class="reftext" onclick='showAndHideRefBox("refbox_6193", "reflink_6193")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6193" class="refbox_inner" style="display:none;">
+A check was voided
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check voided</td>
+<td>A check was voided</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=closed></a>
+<div class="titlebox">
+<div class="filtertitle">closed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6194" class="reftext" onclick='showAndHideRefBox("refbox_6194", "reflink_6194")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6194" class="refbox_inner" style="display:none;">
+Claim, exposure, or subrogation was closed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Closed</td>
+<td>Claim, exposure, or subrogation was closed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=custom></a>
+<div class="titlebox">
+<div class="filtertitle">custom <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6195" class="reftext" onclick='showAndHideRefBox("refbox_6195", "reflink_6195")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6195" class="refbox_inner" style="display:none;">
+A custom history event happened; see CustomType for details
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Custom</td>
+<td>A custom history event happened; see CustomType for details</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=delayed></a>
+<div class="titlebox">
+<div class="filtertitle">delayed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6196" class="reftext" onclick='showAndHideRefBox("refbox_6196", "reflink_6196")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6196" class="refbox_inner" style="display:none;">
+Due date on an activity was changed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Activity due date changed</td>
+<td>Due date on an activity was changed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=escalationmvd></a>
+<div class="titlebox">
+<div class="filtertitle">escalationmvd <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6197" class="reftext" onclick='showAndHideRefBox("refbox_6197", "reflink_6197")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6197" class="refbox_inner" style="display:none;">
+The escalation date on an activity was changed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Activity escalation date moved</td>
+<td>The escalation date on an activity was changed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=flagged></a>
+<div class="titlebox">
+<div class="filtertitle">flagged <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6198" class="reftext" onclick='showAndHideRefBox("refbox_6198", "reflink_6198")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6198" class="refbox_inner" style="display:none;">
+Claim flagged indicator status was changed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Flagged</td>
+<td>Claim flagged indicator status was changed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=import></a>
+<div class="titlebox">
+<div class="filtertitle">import <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6199" class="reftext" onclick='showAndHideRefBox("refbox_6199", "reflink_6199")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6199" class="refbox_inner" style="display:none;">
+Claim or exposure was imported
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Imported</td>
+<td>Claim or exposure was imported</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=litigated></a>
+<div class="titlebox">
+<div class="filtertitle">litigated <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6200" class="reftext" onclick='showAndHideRefBox("refbox_6200", "reflink_6200")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6200" class="refbox_inner" style="display:none;">
+Claim was litigated
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Litigated</td>
+<td>Claim was litigated</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=opened></a>
+<div class="titlebox">
+<div class="filtertitle">opened <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6201" class="reftext" onclick='showAndHideRefBox("refbox_6201", "reflink_6201")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6201" class="refbox_inner" style="display:none;">
+A new claim or exposure was opened
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Opened</td>
+<td>A new claim or exposure was opened</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=policyedited></a>
+<div class="titlebox">
+<div class="filtertitle">policyedited <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6202" class="reftext" onclick='showAndHideRefBox("refbox_6202", "reflink_6202")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6202" class="refbox_inner" style="display:none;">
+The policy was edited, and thus marked unverified
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Policy edited</td>
+<td>The policy was edited, and thus marked unverified</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=policyselected></a>
+<div class="titlebox">
+<div class="filtertitle">policyselected <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6203" class="reftext" onclick='showAndHideRefBox("refbox_6203", "reflink_6203")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6203" class="refbox_inner" style="display:none;">
+A different policy was selected for the claim, or the existing policy was refreshed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Policy selected or refreshed</td>
+<td>A different policy was selected for the claim, or the existing policy was refreshed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=referred></a>
+<div class="titlebox">
+<div class="filtertitle">referred <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6204" class="reftext" onclick='showAndHideRefBox("refbox_6204", "reflink_6204")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6204" class="refbox_inner" style="display:none;">
+Subrogation was referred
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Referred</td>
+<td>Subrogation was referred</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=reopened></a>
+<div class="titlebox">
+<div class="filtertitle">reopened <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6205" class="reftext" onclick='showAndHideRefBox("refbox_6205", "reflink_6205")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6205" class="refbox_inner" style="display:none;">
+Claim or exposure was reopened
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Reopened</td>
+<td>Claim or exposure was reopened</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=restored></a>
+<div class="titlebox">
+<div class="filtertitle">restored <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6206" class="reftext" onclick='showAndHideRefBox("refbox_6206", "reflink_6206")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6206" class="refbox_inner" style="display:none;">
+Archived claim was retrieved
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Retrieved</td>
+<td>Archived claim was retrieved</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=viewing></a>
+<div class="titlebox">
+<div class="filtertitle">viewing <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6207" class="reftext" onclick='showAndHideRefBox("refbox_6207", "reflink_6207")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6207" class="refbox_inner" style="display:none;">
+Claim or exposure was viewed by a user
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Viewed</td>
+<td>Claim or exposure was viewed by a user</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

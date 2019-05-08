@@ -1,0 +1,1332 @@
+<html>
+<head>
+<title>Coverage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Coverage <span class="entityname">(cc_coverage) (delegates to <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_987" class="reftext" onclick='showAndHideRefBox("refbox_987", "reflink_987")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_987" class="refbox_inner" style="display:none;">
+
+Abstract superclass describing a specific coverage on a policy. Contains
+information about deductibles, limits, and effective dates of the coverage. A
+policy may have multiple coverages.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Coverage</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup>, Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>CoverageRemoved</li><li>CoverageAdded</li><li>CoverageChanged</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_988" class="reftext" onclick='showAndHideRefBox("refbox_988", "reflink_988")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_988" class="refbox_inner" style="display:none;">
+<A HREF="../full/CovTerm.html" TARGET="tableFrame">CovTerm.Coverage</A><br><A HREF="../full/Deductible.html" TARGET="tableFrame">Deductible.Coverage</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.Coverage</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+PolicyCoverage</td>
+<td><A HREF="#PolicyCoverage" TARGET="tableFrame">PolicyCoverage</A></td>
+</tr>
+<tr>
+<td>
+RUCoverage</td>
+<td><A HREF="#RUCoverage" TARGET="tableFrame">RUCoverage</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+PropertyCoverage</td>
+<td><A HREF="#PropertyCoverage" TARGET="tableFrame">PropertyCoverage</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+VehicleCoverage</td>
+<td><A HREF="#VehicleCoverage" TARGET="tableFrame">VehicleCoverage</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="coverage_currency"></a>
+<p class="column">
+<span class="coltitle">Currency</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Currency_tl.html" TARGET="tableFrame">Currency</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The currency of the coverage. Once set, this value can be updated only when CoverageMethods.allowCurrencyChange() returns true.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:47</td>
+<td>LV.Policy.PolicyCoverages.Currency</td>
+<td>PolicyCoverage.Currency</td>
+<td>PolicyCoverage.allowCurrencyChange()</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:42</td>
+<td>LV.Policy.PolicyCoverages.Currency</td>
+<td>PolicyCoverage.Currency</td>
+<td>PolicyCoverage.allowCurrencyChange()</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:44</td>
+<td>LV.Policy.EditablePropertyCoverages.Currency</td>
+<td>PropertyCoverage.Currency</td>
+<td>PropertyCoverage.allowCurrencyChange()</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:43</td>
+<td>LV.Policy.PolicyCoverages.Currency</td>
+<td>PolicyCoverage.Currency</td>
+<td>PolicyCoverage.allowCurrencyChange()</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:47</td>
+<td>LV.Policy.PolicyCoverages.Currency</td>
+<td>PolicyCoverage.Currency</td>
+<td>PolicyCoverage.allowCurrencyChange()</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:41</td>
+<td>LV.Policy.EditableTripCoverages.Currency</td>
+<td>TripCoverage.Currency</td>
+<td>TripCoverage.allowCurrencyChange()</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:45</td>
+<td>LV.Policy.EditableVehicleCoverages.Currency</td>
+<td>VehicleCoverage.Currency</td>
+<td>VehicleCoverage.allowCurrencyChange()</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:42</td>
+<td>LV.Policy.PolicyCoverages.Currency</td>
+<td>PolicyCoverage.Currency</td>
+<td>PolicyCoverage.allowCurrencyChange()</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_deductible"></a>
+<p class="column">
+<span class="coltitle">Deductible</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Deductible for this coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:57</td>
+<td>LV.Policy.PolicyCoverages.Deductible</td>
+<td>PolicyCoverage.Deductible</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:50</td>
+<td>LV.Policy.PolicyCoverages.Deductible</td>
+<td>PolicyCoverage.Deductible</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:52</td>
+<td>LV.Policy.EditablePropertyCoverages.Deductible</td>
+<td>PropertyCoverage.Deductible</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:51</td>
+<td>LV.Policy.PolicyCoverages.Deductible</td>
+<td>PolicyCoverage.Deductible</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:57</td>
+<td>LV.Policy.PolicyCoverages.Deductible</td>
+<td>PolicyCoverage.Deductible</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:49</td>
+<td>LV.Policy.EditableTripCoverages.Deductible</td>
+<td>TripCoverage.Deductible</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:53</td>
+<td>LV.Policy.EditableVehicleCoverages.Deductible</td>
+<td>VehicleCoverage.Deductible</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:50</td>
+<td>LV.Policy.PolicyCoverages.Deductible</td>
+<td>PolicyCoverage.Deductible</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_effectivedate"></a>
+<p class="column">
+<span class="coltitle">EffectiveDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date on which the coverage is effective.</span>
+<a name="coverage_expirationdate"></a>
+<p class="column">
+<span class="coltitle">ExpirationDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date on which the coverage is expired.</span>
+<a name="coverage_exposurelimit"></a>
+<p class="column">
+<span class="coltitle">ExposureLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Dollar limit per exposure.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:64</td>
+<td>LV.Policy.PolicyCoverages.ExposureLimit</td>
+<td>PolicyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:56</td>
+<td>LV.Policy.PolicyCoverages.ExposureLimit</td>
+<td>PolicyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:58</td>
+<td>LV.Policy.EditablePropertyCoverages.ExposureLimit</td>
+<td>PropertyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:57</td>
+<td>LV.Policy.PolicyCoverages.ExposureLimit</td>
+<td>PolicyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:64</td>
+<td>LV.Policy.PolicyCoverages.ExposureLimit</td>
+<td>PolicyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:55</td>
+<td>LV.Policy.EditableTripCoverages.ExposureLimit</td>
+<td>TripCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:58</td>
+<td>LV.Policy.EditableVehicleCoverages.ExposureLimit</td>
+<td>VehicleCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:56</td>
+<td>LV.Policy.PolicyCoverages.ExposureLimit</td>
+<td>PolicyCoverage.ExposureLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_incidentlimit"></a>
+<p class="column">
+<span class="coltitle">IncidentLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Dollar limit per incident.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:71</td>
+<td>LV.Policy.PolicyCoverages.IncidentLimit</td>
+<td>PolicyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:62</td>
+<td>LV.Policy.PolicyCoverages.IncidentLimit</td>
+<td>PolicyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:64</td>
+<td>LV.Policy.EditablePropertyCoverages.IncidentLimit</td>
+<td>PropertyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:63</td>
+<td>LV.Policy.PolicyCoverages.IncidentLimit</td>
+<td>PolicyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:71</td>
+<td>LV.Policy.PolicyCoverages.IncidentLimit</td>
+<td>PolicyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:61</td>
+<td>LV.Policy.EditableTripCoverages.IncidentLimit</td>
+<td>TripCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:63</td>
+<td>LV.Policy.EditableVehicleCoverages.IncidentLimit</td>
+<td>VehicleCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:62</td>
+<td>LV.Policy.PolicyCoverages.IncidentLimit</td>
+<td>PolicyCoverage.IncidentLimit</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_limitsindicator"></a>
+<p class="column">
+<span class="coltitle">LimitsIndicator</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LimitsIndicator_tl.html" TARGET="tableFrame">LimitsIndicator</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Whether a coverage type can be combined.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:82</td>
+<td>LV.Policy.EditablePropertyCoverages.LimitsIndicator</td>
+<td>PropertyCoverage.LimitsIndicator</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:67</td>
+<td>LV.Policy.EditableTripCoverages.LimitsIndicator</td>
+<td>TripCoverage.LimitsIndicator</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:93</td>
+<td>LV.Policy.EditableVehicleCoverages.LimitsIndicator</td>
+<td>VehicleCoverage.LimitsIndicator</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_notes"></a>
+<p class="column">
+<span class="coltitle">Notes</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Additional notes on this coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:77</td>
+<td>LV.Policy.PolicyCoverages.Notes</td>
+<td>PolicyCoverage.Notes</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:67</td>
+<td>LV.Policy.PolicyCoverages.Notes</td>
+<td>PolicyCoverage.Notes</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:87</td>
+<td>LV.Policy.EditablePropertyCoverages.Notes</td>
+<td>PropertyCoverage.Notes</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:68</td>
+<td>LV.Policy.PolicyCoverages.Notes</td>
+<td>PolicyCoverage.Notes</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:77</td>
+<td>LV.Policy.PolicyCoverages.Notes</td>
+<td>PolicyCoverage.Notes</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:72</td>
+<td>LV.Policy.EditableTripCoverages.Notes</td>
+<td>TripCoverage.Notes</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:98</td>
+<td>LV.Policy.EditableVehicleCoverages.Notes</td>
+<td>VehicleCoverage.Notes</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:67</td>
+<td>LV.Policy.PolicyCoverages.Notes</td>
+<td>PolicyCoverage.Notes</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+</table>
+</div></div>
+<a name="coverage_policy"></a>
+<p class="column">
+<span class="coltitle">Policy</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Policy.html" TARGET="tableFrame">Policy</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PolicyID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Policy to which the coverage belongs.</span>
+<a name="coverage_policysystemid"></a>
+<p class="column">
+<span class="coltitle">PolicySystemId</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "policysystemid")'>policysystemid</span> (256)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Identifier for the coverage in an external policy system</span>
+<a name="coverage_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="coverage_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="coverage_state"></a>
+<p class="column">
+<span class="coltitle">State</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/State_tl.html" TARGET="tableFrame">State</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The state in which this coverage is applicable, if state-specific.</span>
+<a name="coverage_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">Coverage</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="coverage_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CoverageType_tl.html" TARGET="tableFrame">CoverageType</A> using key filter <A HREF="../typelist/PolicyType_tl.html" TARGET="tableFrame">Policy.PolicyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableAutoPolicyCoveragesLV.pcf:34</td>
+<td>LV.Policy.PolicyCoverages.CoverageType</td>
+<td>PolicyCoverage.Type</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableGeneralLiabilityPolicyCoveragesLV.pcf:31</td>
+<td>LV.Policy.PolicyCoverages.CoverageType</td>
+<td>PolicyCoverage.Type</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:33</td>
+<td>LV.Policy.EditablePropertyCoverages.CoverageType</td>
+<td>PropertyCoverage.Type</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>EditablePropertyPolicyCoveragesLV.pcf:32</td>
+<td>LV.Policy.PolicyCoverages.CoverageType</td>
+<td>PolicyCoverage.Type</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTravelPolicyCoveragesLV.pcf:34</td>
+<td>LV.Policy.PolicyCoverages.CoverageType</td>
+<td>PolicyCoverage.Type</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>EditableTripCoveragesLV.pcf:30</td>
+<td>LV.Policy.EditableTripCoverages.CoverageType</td>
+<td>TripCoverage.Type</td>
+<td>true</td>
+<td>
+ClaimPolicyTrips
+<br>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:33</td>
+<td>LV.Policy.EditableVehicleCoverages.CoverageType</td>
+<td>VehicleCoverage.Type</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>EditableWorkersCompPolicyCoveragesLV.pcf:31</td>
+<td>LV.Policy.PolicyCoverages.CoverageType</td>
+<td>PolicyCoverage.Type</td>
+<td>true</td>
+<td>
+FNOLWizard
+<br>
+ClaimPolicyGeneral
+</td>
+</tr>
+<tr>
+<td>FNOLWizard_BasicInfoRightPanelSet.Trav.pcf:77</td>
+<td></td>
+<td>anRUCoverage.Type</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for Coverage"></a><div class="arraysbox">Unique Keys for Coverage</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>coverage1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=PolicyCoverage></a>
+<div class="titlebox">
+<div class="filtertitle">PolicyCoverage <span class='supername'>(subtype of <A HREF="Coverage.html" TARGET="tableFrame">Coverage</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_989" class="reftext" onclick='showAndHideRefBox("refbox_989", "reflink_989")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_989" class="refbox_inner" style="display:none;">
+
+A <code>Coverage</code> associated directly with a <code>Policy</code>, as
+opposed to being associated with a vehicle or property.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_990" class="reftext" onclick='showAndHideRefBox("refbox_990", "reflink_990")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_990" class="refbox_inner" style="display:none;">
+<A HREF="../full/Policy.html" TARGET="tableFrame">Policy.Coverages</A>
+</div>
+</span>
+</div>
+<a name="Unique Keys for PolicyCoverage"></a><div class="arraysbox">Unique Keys for PolicyCoverage</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>coverage1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=PropertyCoverage></a>
+<div class="titlebox">
+<div class="filtertitle">PropertyCoverage <span class='supername'>(subtype of <A HREF="Coverage.html#RUCoverage" TARGET="tableFrame">RUCoverage</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_991" class="reftext" onclick='showAndHideRefBox("refbox_991", "reflink_991")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_991" class="refbox_inner" style="display:none;">
+
+A <code>RUCoverage</code> with extra data specific to LocationBasedRUs.  Contains
+Coinsurance and CoverageBasis information.
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="propertycoverage_coinsurance"></a>
+<p class="column">
+<span class="coltitle">Coinsurance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "percentagedec")'>percentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Co-insurance percentage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:70</td>
+<td>LV.Policy.EditablePropertyCoverages.Coinsurance</td>
+<td>PropertyCoverage.Coinsurance</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="propertycoverage_coveragebasis"></a>
+<p class="column">
+<span class="coltitle">CoverageBasis</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/CoverageBasis_tl.html" TARGET="tableFrame">CoverageBasis</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Coverage basis.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditablePropertyCoveragesLV.pcf:76</td>
+<td>LV.Policy.EditablePropertyCoverages.CoverageBasis</td>
+<td>PropertyCoverage.CoverageBasis</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Unique Keys for PropertyCoverage"></a><div class="arraysbox">Unique Keys for PropertyCoverage</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>coverage1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=RUCoverage></a>
+<div class="titlebox">
+<div class="filtertitle">RUCoverage <span class='supername'>(subtype of <A HREF="Coverage.html" TARGET="tableFrame">Coverage</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_992" class="reftext" onclick='showAndHideRefBox("refbox_992", "reflink_992")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_992" class="refbox_inner" style="display:none;">
+
+A <code>Coverage</code> associated with a <code>RiskUnit</code>.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_993" class="reftext" onclick='showAndHideRefBox("refbox_993", "reflink_993")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_993" class="refbox_inner" style="display:none;">
+<A HREF="../full/RiskUnit.html" TARGET="tableFrame">RiskUnit.Coverages</A>
+</div>
+</span>
+</div>
+<a name="rucoverage_riskunit"></a>
+<p class="column">
+<span class="coltitle">RiskUnit</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="RiskUnit.html" TARGET="tableFrame">RiskUnit</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: RiskUnitID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">RiskUnit associated with the coverage.</span>
+<a name="Unique Keys for RUCoverage"></a><div class="arraysbox">Unique Keys for RUCoverage</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>coverage1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=VehicleCoverage></a>
+<div class="titlebox">
+<div class="filtertitle">VehicleCoverage <span class='supername'>(subtype of <A HREF="Coverage.html#RUCoverage" TARGET="tableFrame">RUCoverage</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_994" class="reftext" onclick='showAndHideRefBox("refbox_994", "reflink_994")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_994" class="refbox_inner" style="display:none;">
+
+A <code>RUCoverage</code> with extra data specific to VehicleRUs.
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="vehiclecoverage_claimagglimit"></a>
+<p class="column">
+<span class="coltitle">ClaimAggLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The per incident dollar limit for all PIP coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:87</td>
+<td>LV.Policy.EditableVehicleCoverages.PIPClaimAgg</td>
+<td>VehicleCoverage.ClaimAggLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehiclecoverage_nonmedagglimit"></a>
+<p class="column">
+<span class="coltitle">NonmedAggLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The dollar limit for all PIP Non-Medical coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:69</td>
+<td>LV.Policy.EditableVehicleCoverages.PIPNonmedAgg</td>
+<td>VehicleCoverage.NonmedAggLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehiclecoverage_personagglimit"></a>
+<p class="column">
+<span class="coltitle">PersonAggLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The per person dollar limit for all PIP coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:81</td>
+<td>LV.Policy.EditableVehicleCoverages.PIPPersonAgg</td>
+<td>VehicleCoverage.PersonAggLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="vehiclecoverage_replaceagglimit"></a>
+<p class="column">
+<span class="coltitle">ReplaceAggLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The dollar limit for all PIP Lost Wage and Replacement Services coverage.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableVehicleCoveragesLV.pcf:75</td>
+<td>LV.Policy.EditableVehicleCoverages.PIPReplaceAgg</td>
+<td>VehicleCoverage.ReplaceAggLimit</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Unique Keys for VehicleCoverage"></a><div class="arraysbox">Unique Keys for VehicleCoverage</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>coverage1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

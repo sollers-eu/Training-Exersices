@@ -1,0 +1,674 @@
+<html>
+<head>
+<title>MetroReportStatus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">MetroReportStatus</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_metroreportstatus)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_7000" class="reftext" onclick='showAndHideRefBox("refbox_7000", "reflink_7000")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_7000" class="refbox_inner" style="display:none;">
+<A HREF="../full/MetroReport.html" TARGET="tableFrame">MetroReport.Status</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#accepted>accepted</a></td>
+<td>Accepted</td>
+<td>The Report Order File is sent and accepted by Metro</td>
+<td align=center>6</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#closed>closed</a></td>
+<td>Closed</td>
+<td>The Report is Closed</td>
+<td align=center>15</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#deferred>deferred</a></td>
+<td>Deferred</td>
+<td>An image was returned with a notice that the data source will take some additional time to provide the requested information</td>
+<td align=center>9</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#downloadingreport>downloadingreport</a></td>
+<td>DownloadingReport</td>
+<td>The system is in the process of downloading the report</td>
+<td align=center>12</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#duplicate>duplicate</a></td>
+<td>Duplicate</td>
+<td>The Report request failed due to a duplicate request</td>
+<td align=center>17</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#error>error</a></td>
+<td>Error</td>
+<td>The Report request has errors</td>
+<td align=center>16</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#hasreport>hasreport</a></td>
+<td>HasReport</td>
+<td>The Report is ready on the external server</td>
+<td align=center>11</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#hold>hold</a></td>
+<td>Hold</td>
+<td>The order is awaiting additional information from the customer</td>
+<td align=center>8</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#inquiryfailed>inquiryfailed</a></td>
+<td>InquiryFailed</td>
+<td>The inquiry request is failed based on the result sent back from Metro</td>
+<td align=center>14</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#insufficientdata>insufficientdata</a></td>
+<td>InsufficientData</td>
+<td>Some of the required fields are missing</td>
+<td align=center>2</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#new>new</a></td>
+<td>New</td>
+<td>The initial status of the report request</td>
+<td align=center>1</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#orderfailed>orderfailed</a></td>
+<td>OrderFailed</td>
+<td>The order request is failed based on the result sent back from Metro</td>
+<td align=center>5</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pending>pending</a></td>
+<td>Pending</td>
+<td>The order was received and in process</td>
+<td align=center>7</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#received>received</a></td>
+<td>Received</td>
+<td>The Report is received (download) to our server</td>
+<td align=center>13</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#sendinginquiry>sendinginquiry</a></td>
+<td>SendingInquiry</td>
+<td>The Report Inquiry File is sent and waiting for the response from Metro</td>
+<td align=center>10</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#sendingorder>sendingorder</a></td>
+<td>SendingOrder</td>
+<td>The request is sent and waiting for the response from Metro</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#validated>validated</a></td>
+<td>Validated</td>
+<td>The request is validated and ready to be sent out</td>
+<td align=center>3</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=accepted></a>
+<div class="titlebox">
+<div class="filtertitle">accepted <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7001" class="reftext" onclick='showAndHideRefBox("refbox_7001", "reflink_7001")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7001" class="refbox_inner" style="display:none;">
+The Report Order File is sent and accepted by Metro
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Accepted</td>
+<td>The Report Order File is sent and accepted by Metro</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=closed></a>
+<div class="titlebox">
+<div class="filtertitle">closed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7002" class="reftext" onclick='showAndHideRefBox("refbox_7002", "reflink_7002")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7002" class="refbox_inner" style="display:none;">
+The Report is Closed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Closed</td>
+<td>The Report is Closed</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=deferred></a>
+<div class="titlebox">
+<div class="filtertitle">deferred <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7003" class="reftext" onclick='showAndHideRefBox("refbox_7003", "reflink_7003")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7003" class="refbox_inner" style="display:none;">
+An image was returned with a notice that the data source will take some additional time to provide the requested information
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Deferred</td>
+<td>An image was returned with a notice that the data source will take some additional time to provide the requested information</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=downloadingreport></a>
+<div class="titlebox">
+<div class="filtertitle">downloadingreport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7004" class="reftext" onclick='showAndHideRefBox("refbox_7004", "reflink_7004")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7004" class="refbox_inner" style="display:none;">
+The system is in the process of downloading the report
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>DownloadingReport</td>
+<td>The system is in the process of downloading the report</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=duplicate></a>
+<div class="titlebox">
+<div class="filtertitle">duplicate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7005" class="reftext" onclick='showAndHideRefBox("refbox_7005", "reflink_7005")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7005" class="refbox_inner" style="display:none;">
+The Report request failed due to a duplicate request
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Duplicate</td>
+<td>The Report request failed due to a duplicate request</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=error></a>
+<div class="titlebox">
+<div class="filtertitle">error <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7006" class="reftext" onclick='showAndHideRefBox("refbox_7006", "reflink_7006")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7006" class="refbox_inner" style="display:none;">
+The Report request has errors
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Error</td>
+<td>The Report request has errors</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=hasreport></a>
+<div class="titlebox">
+<div class="filtertitle">hasreport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7007" class="reftext" onclick='showAndHideRefBox("refbox_7007", "reflink_7007")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7007" class="refbox_inner" style="display:none;">
+The Report is ready on the external server
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>HasReport</td>
+<td>The Report is ready on the external server</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=hold></a>
+<div class="titlebox">
+<div class="filtertitle">hold <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7008" class="reftext" onclick='showAndHideRefBox("refbox_7008", "reflink_7008")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7008" class="refbox_inner" style="display:none;">
+The order is awaiting additional information from the customer
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Hold</td>
+<td>The order is awaiting additional information from the customer</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=inquiryfailed></a>
+<div class="titlebox">
+<div class="filtertitle">inquiryfailed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7009" class="reftext" onclick='showAndHideRefBox("refbox_7009", "reflink_7009")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7009" class="refbox_inner" style="display:none;">
+The inquiry request is failed based on the result sent back from Metro
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>InquiryFailed</td>
+<td>The inquiry request is failed based on the result sent back from Metro</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=insufficientdata></a>
+<div class="titlebox">
+<div class="filtertitle">insufficientdata <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7010" class="reftext" onclick='showAndHideRefBox("refbox_7010", "reflink_7010")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7010" class="refbox_inner" style="display:none;">
+Some of the required fields are missing
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>InsufficientData</td>
+<td>Some of the required fields are missing</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=new></a>
+<div class="titlebox">
+<div class="filtertitle">new <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7011" class="reftext" onclick='showAndHideRefBox("refbox_7011", "reflink_7011")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7011" class="refbox_inner" style="display:none;">
+The initial status of the report request
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>New</td>
+<td>The initial status of the report request</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=orderfailed></a>
+<div class="titlebox">
+<div class="filtertitle">orderfailed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7012" class="reftext" onclick='showAndHideRefBox("refbox_7012", "reflink_7012")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7012" class="refbox_inner" style="display:none;">
+The order request is failed based on the result sent back from Metro
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>OrderFailed</td>
+<td>The order request is failed based on the result sent back from Metro</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pending></a>
+<div class="titlebox">
+<div class="filtertitle">pending <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7013" class="reftext" onclick='showAndHideRefBox("refbox_7013", "reflink_7013")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7013" class="refbox_inner" style="display:none;">
+The order was received and in process
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending</td>
+<td>The order was received and in process</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=received></a>
+<div class="titlebox">
+<div class="filtertitle">received <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7014" class="reftext" onclick='showAndHideRefBox("refbox_7014", "reflink_7014")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7014" class="refbox_inner" style="display:none;">
+The Report is received (download) to our server
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Received</td>
+<td>The Report is received (download) to our server</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=sendinginquiry></a>
+<div class="titlebox">
+<div class="filtertitle">sendinginquiry <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7015" class="reftext" onclick='showAndHideRefBox("refbox_7015", "reflink_7015")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7015" class="refbox_inner" style="display:none;">
+The Report Inquiry File is sent and waiting for the response from Metro
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>SendingInquiry</td>
+<td>The Report Inquiry File is sent and waiting for the response from Metro</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=sendingorder></a>
+<div class="titlebox">
+<div class="filtertitle">sendingorder <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7016" class="reftext" onclick='showAndHideRefBox("refbox_7016", "reflink_7016")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7016" class="refbox_inner" style="display:none;">
+The request is sent and waiting for the response from Metro
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>SendingOrder</td>
+<td>The request is sent and waiting for the response from Metro</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=validated></a>
+<div class="titlebox">
+<div class="filtertitle">validated <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7017" class="reftext" onclick='showAndHideRefBox("refbox_7017", "reflink_7017")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7017" class="refbox_inner" style="display:none;">
+The request is validated and ready to be sent out
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Validated</td>
+<td>The request is validated and ready to be sent out</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

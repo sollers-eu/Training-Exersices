@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>ctccreate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ctccreate <span class="entityname">(static) - Create local contacts</span></div>
+<div class="desc">
+<span id="reflink_82" class="reftext" onclick='showAndHideRefBox("refbox_82", "reflink_82")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_82" class="refbox_inner" style="display:none;">
+Permission to create a new local contact
+</div>
+</span>
+</div>
+</div>
+<a name="Roles"></a><div class="arraysbox">Roles</div>
+<a name="adjuster"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/adjuster.html'>Adjuster</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for an adjuster</span>
+<a name="claims supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/claims_supervisor.html'>Claims Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="clerical"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/clerical.html'>Clerical</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a clerical user</span>
+<a name="customer service representative"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/customer_service_rep.html'>Customer Service Representative</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Limited view for a customer service representative</span>
+<a name="manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/manager.html'>Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a manager</span>
+<a name="new loss processing supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/newloss_supervisor.html'>New Loss Processing Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="preferred vendor admin"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/pref_vendor_admin.html'>Preferred Vendor Admin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permissions for managing preferred vendors</span>
+<a name="reinsurance manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/reinsurance_manager.html'>Reinsurance Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a reinsurance manager</span>
+<a name="superuser"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/superuser.html'>Superuser</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Superuser with full permissions</span>
+<a name="Related Application Permission Keys"></a><div class="arraysbox">Related Application Permission Keys</div>
+<a name="contact createlocal"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new contact</span>
+<a name="Related Pages"></a><div class="arraysbox">Related Pages</div>
+<a name="addexistingpartyinvolvedpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/AddExistingPartyInvolvedPopup.html'>AddExistingPartyInvolvedPopup</a></span>  <span class="titleDesc">via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="addressbooksearchnewcontactpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/AddressBookSearchNewContactPopup.html'>AddressBookSearchNewContactPopup</a></span>  <span class="titleDesc">via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="addselectedduplicatepartiesinvolvedpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/AddSelectedDuplicatePartiesInvolvedPopup.html'>AddSelectedDuplicatePartiesInvolvedPopup</a></span>  <span class="titleDesc">via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newcontactpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewContactPopup.html'>NewContactPopup</a></span>  <span class="titleDesc">via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newpartyinvolvedpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewPartyInvolvedPopup.html'>NewPartyInvolvedPopup</a></span>  <span class="titleDesc">via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Related Elements"></a><div class="arraysbox">Related Elements</div>
+<a name="create as new contact (pickertoolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Create as New Contact (PickerToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewCheckWizardAddressBookPickerPopup.html'>NewCheckWizardAddressBookPickerPopup</a> (NewCheckWizardAddressBookPickerPopup.pcf)</span>
+<a name="create as new contact (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Create as New Contact (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewCheckWizardAddressBookPickerPopup.html'>NewCheckWizardAddressBookPickerPopup</a> (NewCheckWizardAddressBookPickerPopup.pcf)</span>
+<a name="new contact (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">New Contact (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimContacts.html'>ClaimContacts</a> (ClaimContacts.pcf)</span>
+<a name="new contact (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">New Contact (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Contact_createlocal.html'>Contact createlocal</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewClaimWizard_PartiesInvolvedScreen.html'>NewClaimWizard_PartiesInvolvedScreen</a> (NewClaimWizard_PartiesInvolvedScreen.pcf)</span>
+</body>
+</html>

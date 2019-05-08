@@ -1,0 +1,1118 @@
+<html>
+<head>
+<title>ConsistencyCheckType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">ConsistencyCheckType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_consistencychecktype)</span>
+</div>
+<div class="desc">Type of consistency check</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3809" class="reftext" onclick='showAndHideRefBox("refbox_3809", "reflink_3809")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3809" class="refbox_inner" style="display:none;">
+<A HREF="../full/ConsistencyCheckWorkItem.html" TARGET="tableFrame">ConsistencyCheckWorkItem.CheckType</A><br><A HREF="../full/DBConsistCheckQueryExec.html" TARGET="tableFrame">DBConsistCheckQueryExec.ConsistencyCheckType</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#0lengthstringcheck>0lengthstringcheck</a></td>
+<td>0 length string check</td>
+<td>Verifies no 0 length strings within varchar column</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#adtvaluescheck>adtvaluescheck</a></td>
+<td>ADT values check</td>
+<td>Verifies values are valid for abstract data types</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#appspecificcheck>appspecificcheck</a></td>
+<td>Application-specific check</td>
+<td>Verifies application-specific relationships in the database</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#arrayrequiredmatch>arrayrequiredmatch</a></td>
+<td>Array required match</td>
+<td>Verifies that every row in the container has a nonempty array</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#assignmentcheck>assignmentcheck</a></td>
+<td>Assignment check</td>
+<td>Verifies that the database is consistent relative to assignment</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#beanversioncheck>beanversioncheck</a></td>
+<td>Bean version check</td>
+<td>Verifies that the database is consistent relative to bean versions</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#caseinsensitivecheck>caseinsensitivecheck</a></td>
+<td>Linguistic search denorm check</td>
+<td>Verifies that the linguistic search denorm columns are in sync with the associated source columns</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#checkconstraintcheck>checkconstraintcheck</a></td>
+<td>Check constraint check</td>
+<td>Verifies data is valid relative to check constraints</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#consistentchildren>consistentchildren</a></td>
+<td>Consistent children</td>
+<td>Verifies that the consistent children property holds</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#customcheck>customcheck</a></td>
+<td>Custom check</td>
+<td>Custom consistency check declared in a data model file</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#datetimeorderingcheck>datetimeorderingcheck</a></td>
+<td>Datetime ordering check</td>
+<td>Verifies data is valid relative to datetime orderings</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#edgefknonnullcheck>edgefknonnullcheck</a></td>
+<td>Edge foreign key non-null check</td>
+<td>Verifies that non-nullable edge foreign key relationships have one referring entity</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#effdatedregistrycheck>effdatedregistrycheck</a></td>
+<td>Effdated registry check</td>
+<td>Verifies that an effdated table appears in the effdated registry of all referenced branches</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#financialscheck>financialscheck</a></td>
+<td>financials check</td>
+<td>Verifies ClaimCenter financials</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#fkcheck>fkcheck</a></td>
+<td>Foreign key check</td>
+<td>Verifies foreign key references when RI is not enforced in the database</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#fksubtypecheck>fksubtypecheck</a></td>
+<td>Foreign key subtype check</td>
+<td>Verifies foreign key reference to a subtype is to correct subtype</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#jointablecheck>jointablecheck</a></td>
+<td>Join table check</td>
+<td>Verifies data is valid relative to jointable declarations</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#localizedcolumncheck>localizedcolumncheck</a></td>
+<td>Localized column check</td>
+<td>Verifies required localized columns have values for all languages</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#maxkeycheck>maxkeycheck</a></td>
+<td>Max key check</td>
+<td>Verifies data in max key table is in synch with table</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#onetoonecheck>onetoonecheck</a></td>
+<td>One-to-one check</td>
+<td>Verifies that one-to-one relationships have at most one referring entity</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#onetoonenonnullcheck>onetoonenonnullcheck</a></td>
+<td>One-to-one non-null check</td>
+<td>Verifies that non-nullable one-to-one relationships have one referring entity</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#revisioningcheck>revisioningcheck</a></td>
+<td>Revisioning check</td>
+<td>Verifies that the database is consistent relative to revisioning</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#searchdenormcheck>searchdenormcheck</a></td>
+<td>Search denorm check</td>
+<td>Verifies that the search denorm columns are in sync with the associated source columns</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#subtypecolumncheck>subtypecolumncheck</a></td>
+<td>Subtype column check</td>
+<td>Verifies subtype column contains valid values</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#subtypenonnullcheck>subtypenonnullcheck</a></td>
+<td>Subtype non-null check</td>
+<td>Verifies non-nullable subtype-specific columns have non-null values for subtype rows</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#subtypespecificcheck>subtypespecificcheck</a></td>
+<td>Subtype-specific column check</td>
+<td>Verifies subtype-specific columns are null when row is a different subtype</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#typekeycheck>typekeycheck</a></td>
+<td>Typekey check</td>
+<td>Verifies typekey column contains valid values</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#typelisttablecheck>typelisttablecheck</a></td>
+<td>Typelist table check</td>
+<td>Verifies values in typelist table and data model are in sync</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#upgradewarningcheck>upgradewarningcheck</a></td>
+<td>Upgrade warning check</td>
+<td>Verifies that data will pass associated version check at the beginning of the upgrade to a subsequent version of the product</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=0lengthstringcheck></a>
+<div class="titlebox">
+<div class="filtertitle">0lengthstringcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3810" class="reftext" onclick='showAndHideRefBox("refbox_3810", "reflink_3810")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3810" class="refbox_inner" style="display:none;">
+Verifies no 0 length strings within varchar column
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>0 length string check</td>
+<td>Verifies no 0 length strings within varchar column</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=adtvaluescheck></a>
+<div class="titlebox">
+<div class="filtertitle">adtvaluescheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3811" class="reftext" onclick='showAndHideRefBox("refbox_3811", "reflink_3811")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3811" class="refbox_inner" style="display:none;">
+Verifies values are valid for abstract data types
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ADT values check</td>
+<td>Verifies values are valid for abstract data types</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=appspecificcheck></a>
+<div class="titlebox">
+<div class="filtertitle">appspecificcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3812" class="reftext" onclick='showAndHideRefBox("refbox_3812", "reflink_3812")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3812" class="refbox_inner" style="display:none;">
+Verifies application-specific relationships in the database
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Application-specific check</td>
+<td>Verifies application-specific relationships in the database</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=arrayrequiredmatch></a>
+<div class="titlebox">
+<div class="filtertitle">arrayrequiredmatch <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3813" class="reftext" onclick='showAndHideRefBox("refbox_3813", "reflink_3813")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3813" class="refbox_inner" style="display:none;">
+Verifies that every row in the container has a nonempty array
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Array required match</td>
+<td>Verifies that every row in the container has a nonempty array</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=assignmentcheck></a>
+<div class="titlebox">
+<div class="filtertitle">assignmentcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3814" class="reftext" onclick='showAndHideRefBox("refbox_3814", "reflink_3814")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3814" class="refbox_inner" style="display:none;">
+Verifies that the database is consistent relative to assignment
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Assignment check</td>
+<td>Verifies that the database is consistent relative to assignment</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=beanversioncheck></a>
+<div class="titlebox">
+<div class="filtertitle">beanversioncheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3815" class="reftext" onclick='showAndHideRefBox("refbox_3815", "reflink_3815")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3815" class="refbox_inner" style="display:none;">
+Verifies that the database is consistent relative to bean versions
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bean version check</td>
+<td>Verifies that the database is consistent relative to bean versions</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=caseinsensitivecheck></a>
+<div class="titlebox">
+<div class="filtertitle">caseinsensitivecheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3816" class="reftext" onclick='showAndHideRefBox("refbox_3816", "reflink_3816")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3816" class="refbox_inner" style="display:none;">
+Verifies that the linguistic search denorm columns are in sync with the associated source columns
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Linguistic search denorm check</td>
+<td>Verifies that the linguistic search denorm columns are in sync with the associated source columns</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=checkconstraintcheck></a>
+<div class="titlebox">
+<div class="filtertitle">checkconstraintcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3817" class="reftext" onclick='showAndHideRefBox("refbox_3817", "reflink_3817")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3817" class="refbox_inner" style="display:none;">
+Verifies data is valid relative to check constraints
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Check constraint check</td>
+<td>Verifies data is valid relative to check constraints</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=consistentchildren></a>
+<div class="titlebox">
+<div class="filtertitle">consistentchildren <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3818" class="reftext" onclick='showAndHideRefBox("refbox_3818", "reflink_3818")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3818" class="refbox_inner" style="display:none;">
+Verifies that the consistent children property holds
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Consistent children</td>
+<td>Verifies that the consistent children property holds</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=customcheck></a>
+<div class="titlebox">
+<div class="filtertitle">customcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3819" class="reftext" onclick='showAndHideRefBox("refbox_3819", "reflink_3819")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3819" class="refbox_inner" style="display:none;">
+Custom consistency check declared in a data model file
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Custom check</td>
+<td>Custom consistency check declared in a data model file</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=datetimeorderingcheck></a>
+<div class="titlebox">
+<div class="filtertitle">datetimeorderingcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3820" class="reftext" onclick='showAndHideRefBox("refbox_3820", "reflink_3820")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3820" class="refbox_inner" style="display:none;">
+Verifies data is valid relative to datetime orderings
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Datetime ordering check</td>
+<td>Verifies data is valid relative to datetime orderings</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=edgefknonnullcheck></a>
+<div class="titlebox">
+<div class="filtertitle">edgefknonnullcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3821" class="reftext" onclick='showAndHideRefBox("refbox_3821", "reflink_3821")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3821" class="refbox_inner" style="display:none;">
+Verifies that non-nullable edge foreign key relationships have one referring entity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Edge foreign key non-null check</td>
+<td>Verifies that non-nullable edge foreign key relationships have one referring entity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=effdatedregistrycheck></a>
+<div class="titlebox">
+<div class="filtertitle">effdatedregistrycheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3822" class="reftext" onclick='showAndHideRefBox("refbox_3822", "reflink_3822")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3822" class="refbox_inner" style="display:none;">
+Verifies that an effdated table appears in the effdated registry of all referenced branches
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Effdated registry check</td>
+<td>Verifies that an effdated table appears in the effdated registry of all referenced branches</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=financialscheck></a>
+<div class="titlebox">
+<div class="filtertitle">financialscheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3823" class="reftext" onclick='showAndHideRefBox("refbox_3823", "reflink_3823")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3823" class="refbox_inner" style="display:none;">
+Verifies ClaimCenter financials
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>financials check</td>
+<td>Verifies ClaimCenter financials</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=fkcheck></a>
+<div class="titlebox">
+<div class="filtertitle">fkcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3824" class="reftext" onclick='showAndHideRefBox("refbox_3824", "reflink_3824")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3824" class="refbox_inner" style="display:none;">
+Verifies foreign key references when RI is not enforced in the database
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Foreign key check</td>
+<td>Verifies foreign key references when RI is not enforced in the database</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=fksubtypecheck></a>
+<div class="titlebox">
+<div class="filtertitle">fksubtypecheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3825" class="reftext" onclick='showAndHideRefBox("refbox_3825", "reflink_3825")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3825" class="refbox_inner" style="display:none;">
+Verifies foreign key reference to a subtype is to correct subtype
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Foreign key subtype check</td>
+<td>Verifies foreign key reference to a subtype is to correct subtype</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=jointablecheck></a>
+<div class="titlebox">
+<div class="filtertitle">jointablecheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3826" class="reftext" onclick='showAndHideRefBox("refbox_3826", "reflink_3826")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3826" class="refbox_inner" style="display:none;">
+Verifies data is valid relative to jointable declarations
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Join table check</td>
+<td>Verifies data is valid relative to jointable declarations</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=localizedcolumncheck></a>
+<div class="titlebox">
+<div class="filtertitle">localizedcolumncheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3827" class="reftext" onclick='showAndHideRefBox("refbox_3827", "reflink_3827")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3827" class="refbox_inner" style="display:none;">
+Verifies required localized columns have values for all languages
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Localized column check</td>
+<td>Verifies required localized columns have values for all languages</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=maxkeycheck></a>
+<div class="titlebox">
+<div class="filtertitle">maxkeycheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3828" class="reftext" onclick='showAndHideRefBox("refbox_3828", "reflink_3828")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3828" class="refbox_inner" style="display:none;">
+Verifies data in max key table is in synch with table
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Max key check</td>
+<td>Verifies data in max key table is in synch with table</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=onetoonecheck></a>
+<div class="titlebox">
+<div class="filtertitle">onetoonecheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3829" class="reftext" onclick='showAndHideRefBox("refbox_3829", "reflink_3829")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3829" class="refbox_inner" style="display:none;">
+Verifies that one-to-one relationships have at most one referring entity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>One-to-one check</td>
+<td>Verifies that one-to-one relationships have at most one referring entity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=onetoonenonnullcheck></a>
+<div class="titlebox">
+<div class="filtertitle">onetoonenonnullcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3830" class="reftext" onclick='showAndHideRefBox("refbox_3830", "reflink_3830")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3830" class="refbox_inner" style="display:none;">
+Verifies that non-nullable one-to-one relationships have one referring entity
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>One-to-one non-null check</td>
+<td>Verifies that non-nullable one-to-one relationships have one referring entity</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=revisioningcheck></a>
+<div class="titlebox">
+<div class="filtertitle">revisioningcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3831" class="reftext" onclick='showAndHideRefBox("refbox_3831", "reflink_3831")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3831" class="refbox_inner" style="display:none;">
+Verifies that the database is consistent relative to revisioning
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Revisioning check</td>
+<td>Verifies that the database is consistent relative to revisioning</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=searchdenormcheck></a>
+<div class="titlebox">
+<div class="filtertitle">searchdenormcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3832" class="reftext" onclick='showAndHideRefBox("refbox_3832", "reflink_3832")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3832" class="refbox_inner" style="display:none;">
+Verifies that the search denorm columns are in sync with the associated source columns
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Search denorm check</td>
+<td>Verifies that the search denorm columns are in sync with the associated source columns</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=subtypecolumncheck></a>
+<div class="titlebox">
+<div class="filtertitle">subtypecolumncheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3833" class="reftext" onclick='showAndHideRefBox("refbox_3833", "reflink_3833")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3833" class="refbox_inner" style="display:none;">
+Verifies subtype column contains valid values
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Subtype column check</td>
+<td>Verifies subtype column contains valid values</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=subtypenonnullcheck></a>
+<div class="titlebox">
+<div class="filtertitle">subtypenonnullcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3834" class="reftext" onclick='showAndHideRefBox("refbox_3834", "reflink_3834")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3834" class="refbox_inner" style="display:none;">
+Verifies non-nullable subtype-specific columns have non-null values for subtype rows
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Subtype non-null check</td>
+<td>Verifies non-nullable subtype-specific columns have non-null values for subtype rows</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=subtypespecificcheck></a>
+<div class="titlebox">
+<div class="filtertitle">subtypespecificcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3835" class="reftext" onclick='showAndHideRefBox("refbox_3835", "reflink_3835")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3835" class="refbox_inner" style="display:none;">
+Verifies subtype-specific columns are null when row is a different subtype
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Subtype-specific column check</td>
+<td>Verifies subtype-specific columns are null when row is a different subtype</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=typekeycheck></a>
+<div class="titlebox">
+<div class="filtertitle">typekeycheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3836" class="reftext" onclick='showAndHideRefBox("refbox_3836", "reflink_3836")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3836" class="refbox_inner" style="display:none;">
+Verifies typekey column contains valid values
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Typekey check</td>
+<td>Verifies typekey column contains valid values</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=typelisttablecheck></a>
+<div class="titlebox">
+<div class="filtertitle">typelisttablecheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3837" class="reftext" onclick='showAndHideRefBox("refbox_3837", "reflink_3837")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3837" class="refbox_inner" style="display:none;">
+Verifies values in typelist table and data model are in sync
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Typelist table check</td>
+<td>Verifies values in typelist table and data model are in sync</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=upgradewarningcheck></a>
+<div class="titlebox">
+<div class="filtertitle">upgradewarningcheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3838" class="reftext" onclick='showAndHideRefBox("refbox_3838", "reflink_3838")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3838" class="refbox_inner" style="display:none;">
+Verifies that data will pass associated version check at the beginning of the upgrade to a subsequent version of the product
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Upgrade warning check</td>
+<td>Verifies that data will pass associated version check at the beginning of the upgrade to a subsequent version of the product</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

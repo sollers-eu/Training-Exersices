@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Screen
+    id="ActivityDetailScreen"
+    mode="readonly">
+    <Require
+      name="Activity"
+      type="Activity"/>
+    <Require
+      name="activityDetailHelper"
+      type="gw.api.activity.ActivityDetailHelper"/>
+    <Require
+      name="hasParent"
+      type="boolean"/>
+    <Toolbar>
+      <ToolbarButton
+        action="gw.api.assignment.AssignmentUtil.assignActivity(Activity)"
+        id="ReadOnlyActivityDetailWorksheet_AssignButton"
+        label="DisplayKey.get(&quot;Button.Activity.Assign&quot;)"
+        shortcut="G"
+        visible="Activity.canAssign()"/>
+      <ToolbarDivider/>
+      <ToolbarButton
+        action="ActivityNotesPage.goInMain(Activity.Claim, Activity)"
+        id="ReadOnlyActivityDetailWorksheet_NotesButton"
+        label="DisplayKey.get(&quot;Button.Activity.Notes&quot;)"
+        shortcut="N"
+        visible="perm.Claim.view(Activity.Claim) and perm.System.viewclaimnotes"/>
+      <ToolbarDivider/>
+      <ToolbarButton
+        action="gw.api.web.workspace.WorkspaceUtil.closeActiveWorksheet(); activityDetailHelper.worksheetClosed(Activity)"
+        id="Close"
+        label="DisplayKey.get(&quot;Button.Activity.Close&quot;)"
+        visible="!CurrentLocation.InEditMode"/>
+    </Toolbar>
+    <PanelRef
+      def="ActivitySansNoteDV(Activity)"
+      mode="Activity.ActivityPattern.Code"/>
+  </Screen>
+</PCF>

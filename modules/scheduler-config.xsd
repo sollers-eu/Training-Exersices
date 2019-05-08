@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <xsd:element name="CronSchedule">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <!-- This is the day of month for repeating based on day of month.  Or '*' for every day
+           of the month, or '?' if selecting by day of week. -->
+      <xsd:attribute name="dayofmonth" type="xsd:string" default="*"/>
+      <!-- This is the day 0-7 for repeating based on that day.  Or '?' if ignore day of week
+           (using day of month). -->
+      <xsd:attribute name="dayofweek" type="xsd:string" default="?"/>
+      <!-- This is the hours for repeating based on hours. Or '*' if every hour. -->
+      <xsd:attribute name="hours" type="xsd:string" default="*"/>
+      <!-- This is the minutes for repeating based on minutes.  Or '*' if every minute.  Defaults
+           to '0'. -->
+      <xsd:attribute name="minutes" type="xsd:string" default="0"/>
+      <!-- This is the month numbers for only those months.  Or '*' for every month. -->
+      <xsd:attribute name="month" type="xsd:string" default="*"/>
+      <!-- This is the seconds for repeating based on seconds.  Or '*' if every second.  Defaults
+           to '0'. -->
+      <xsd:attribute name="seconds" type="xsd:string" default="0"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ProcessSchedule">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="CronSchedule" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <!-- This is the environment where the batch process will run. -->
+      <xsd:attribute name="env" type="xsd:string"/>
+      <!-- This is the batch process that is being scheduled. -->
+      <xsd:attribute name="process" type="ProcessType" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:simpleType name="ProcessType">
+    <xsd:restriction base="xsd:string">
+      <!-- Activity escalation monitor -->
+      <xsd:enumeration value="ActivityEsc"/>
+      <!-- Archiving item writer -->
+      <xsd:enumeration value="Archive"/>
+      <!-- Escalate Bulk Invoices from Awaiting-submission status to Requesting status -->
+      <xsd:enumeration value="BulkInvoiceEsc"/>
+      <!-- Transitions invoices from PendingInvoiceItemValidation status to 'AwaitingSubmission'
+           or 'InvalidInvoiceItems' status once the invoice is ready -->
+      <xsd:enumeration value="BulkInvoiceWF"/>
+      <!-- Purge records through table updates -->
+      <xsd:enumeration value="BulkPurge"/>
+      <!-- Finds possible claims related to a catastrophe and creates a 'Review for Catastrophe'
+           activity on the claim. -->
+      <xsd:enumeration value="CatastropheClaimFinder"/>
+      <!-- Claim exception monitor -->
+      <xsd:enumeration value="ClaimException"/>
+      <!-- Calculates health indictators and metrics for all claims that do not have any metrics
+           calculated -->
+      <xsd:enumeration value="ClaimHealthCalc"/>
+      <!-- Automatically synchronize the local contacts that are out of sync and marked 'allow'
+           auto-sync. -->
+      <xsd:enumeration value="ContactAutoSync"/>
+      <!-- Attempt to retire a Contacts marked as possibly retireable. -->
+      <xsd:enumeration value="ContactRetire"/>
+      <!-- Database consistency checks -->
+      <xsd:enumeration value="DBConsistencyCheck"/>
+      <!-- Database statistics -->
+      <xsd:enumeration value="DBStats"/>
+      <!-- Statistics for the executive dashboard -->
+      <xsd:enumeration value="DashboardStatistics"/>
+      <!-- Upgrades encryption for entity fields -->
+      <xsd:enumeration value="EncryptionUpgrade"/>
+      <!-- Creates a new ExchangeRateSet using ExchangeRateSetPlugin -->
+      <xsd:enumeration value="ExchangeRate"/>
+      <!-- Financials escalation monitor - escalates checks from Awaiting-submission status to
+           Requesting status so that the downstream system will be alerted -->
+      <xsd:enumeration value="FinancialsEsc"/>
+      <!-- Geocoding Addresses queue writer. -->
+      <xsd:enumeration value="Geocode"/>
+      <!-- Group exception monitor -->
+      <xsd:enumeration value="GroupException"/>
+      <!-- Idle claim exception monitor -->
+      <xsd:enumeration value="IdleClaim"/>
+      <!-- Idle closed claim exception monitor -->
+      <xsd:enumeration value="IdleClosedClaim"/>
+      <!-- Invoke plugin on completion of monitored worker queue -->
+      <xsd:enumeration value="ProcessCompletionMonitor"/>
+      <!-- Purge batch process history data -->
+      <xsd:enumeration value="ProcessHistoryPurge"/>
+      <!-- Purge old ClusterMember entities -->
+      <xsd:enumeration value="PurgeClusterMembers"/>
+      <!-- Purge failed work items from all queues. -->
+      <xsd:enumeration value="PurgeFailedWorkItems"/>
+      <!-- Purges old messages from the message history table -->
+      <xsd:enumeration value="PurgeMessageHistory"/>
+      <!-- Purge profiler data at regular intervals -->
+      <xsd:enumeration value="PurgeProfilerData"/>
+      <!-- Purge external transaction id that no longer need to be tracked, by age. -->
+      <xsd:enumeration value="PurgeTransactionIds"/>
+      <!-- Purge completed workflows logs, this executes gw.processes.PurgeWorkflowLogs.gs -->
+      <xsd:enumeration value="PurgeWorkflowLogs"/>
+      <!-- Purge completed workflows after resetting any referenced workflows, this executes
+           gw.processes.PurgeWorkflow.gs -->
+      <xsd:enumeration value="PurgeWorkflows"/>
+      <!-- Recalculates claim metrics for claims whose metric update time has passed. -->
+      <xsd:enumeration value="RecalculateMetrics"/>
+      <!-- Disconnects claim graph objects from retired policy objects so that those claims can
+           be archived -->
+      <xsd:enumeration value="RetiredPolicyGraphDisconnector"/>
+      <!-- Transmits completed reviews to ContactManager. -->
+      <xsd:enumeration value="ReviewSync"/>
+      <!-- Escalates service metrics when they have exceeded an upper limit -->
+      <xsd:enumeration value="ServiceRequestMetricEscalation"/>
+      <!-- Performs a full data import of the app database into the Solr/Lucene index -->
+      <xsd:enumeration value="SolrDataImport"/>
+      <!-- Statistics calculator -->
+      <xsd:enumeration value="Statistics"/>
+      <!-- TAccounts escalation monitor to transition payments and reserves from FutureDated
+           state to Awaiting-submission state -->
+      <xsd:enumeration value="TAccountEsc"/>
+      <!-- User exception monitor -->
+      <xsd:enumeration value="UserException"/>
+      <!-- Updates user weighted workload -->
+      <xsd:enumeration value="UserWorkloadUpdate"/>
+      <!-- Purge WorkItemSet data -->
+      <xsd:enumeration value="WorkItemSetPurge"/>
+      <!-- Purge instrumentation data for work queues -->
+      <xsd:enumeration value="WorkQueueInstrumentationPurge"/>
+      <!-- Workflows work queue writer. -->
+      <xsd:enumeration value="Workflow"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="Schedule">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ProcessSchedule" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <!-- Time in seconds to delay schedule processing after a server startup -->
+      <xsd:attribute name="initialDelay" type="xsd:integer" use="required"/>
+      <xsd:attribute name="server" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,563 @@
+<html>
+<head>
+<title>ClaimStrategy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">ClaimStrategy</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_claimstrategy)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3676" class="reftext" onclick='showAndHideRefBox("refbox_3676", "reflink_3676")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3676" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.Strategy</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.Strategy</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_fast>auto_fast</a></td>
+<td>Auto - Fast Track</td>
+<td>Auto - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#auto_normal>auto_normal</a></td>
+<td>Auto - Investigate</td>
+<td>Auto - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#contents_fast>contents_fast</a></td>
+<td>Contents - Fast Track</td>
+<td>Contents - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#contents_normal>contents_normal</a></td>
+<td>Contents - Investigate</td>
+<td>Contents - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injury_fast>injury_fast</a></td>
+<td>Injury - Fast Track</td>
+<td>Injury - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injury_normal>injury_normal</a></td>
+<td>Injury - Investigate</td>
+<td>Injury - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#liab_fast>liab_fast</a></td>
+<td>Liability - Fast Track</td>
+<td>Liability - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#liab_normal>liab_normal</a></td>
+<td>Liability - Investigate</td>
+<td>Liability - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prop_fast>prop_fast</a></td>
+<td>Property - Fast Track</td>
+<td>Property - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#prop_normal>prop_normal</a></td>
+<td>Property - Investigate</td>
+<td>Property - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#unknown>unknown</a></td>
+<td>Unknown</td>
+<td>Unknown strategy, or strategy not assigned by rules</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_fast>wc_fast</a></td>
+<td>Workers' Comp - Fast Track</td>
+<td>Workers' Comp - Fast Track</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_investigate>wc_investigate</a></td>
+<td>Workers' Comp - Investigate</td>
+<td>Workers' Comp - Investigate</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#wc_normal>wc_normal</a></td>
+<td>Workers' Comp - Manage Loss</td>
+<td>Workers' Comp - Manage Loss</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=auto_fast></a>
+<div class="titlebox">
+<div class="filtertitle">auto_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3677" class="reftext" onclick='showAndHideRefBox("refbox_3677", "reflink_3677")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3677" class="refbox_inner" style="display:none;">
+Auto - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - Fast Track</td>
+<td>Auto - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=auto_normal></a>
+<div class="titlebox">
+<div class="filtertitle">auto_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3678" class="reftext" onclick='showAndHideRefBox("refbox_3678", "reflink_3678")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3678" class="refbox_inner" style="display:none;">
+Auto - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Auto - Investigate</td>
+<td>Auto - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=contents_fast></a>
+<div class="titlebox">
+<div class="filtertitle">contents_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3679" class="reftext" onclick='showAndHideRefBox("refbox_3679", "reflink_3679")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3679" class="refbox_inner" style="display:none;">
+Contents - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contents - Fast Track</td>
+<td>Contents - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=contents_normal></a>
+<div class="titlebox">
+<div class="filtertitle">contents_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3680" class="reftext" onclick='showAndHideRefBox("refbox_3680", "reflink_3680")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3680" class="refbox_inner" style="display:none;">
+Contents - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contents - Investigate</td>
+<td>Contents - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injury_fast></a>
+<div class="titlebox">
+<div class="filtertitle">injury_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3681" class="reftext" onclick='showAndHideRefBox("refbox_3681", "reflink_3681")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3681" class="refbox_inner" style="display:none;">
+Injury - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injury - Fast Track</td>
+<td>Injury - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injury_normal></a>
+<div class="titlebox">
+<div class="filtertitle">injury_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3682" class="reftext" onclick='showAndHideRefBox("refbox_3682", "reflink_3682")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3682" class="refbox_inner" style="display:none;">
+Injury - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injury - Investigate</td>
+<td>Injury - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=liab_fast></a>
+<div class="titlebox">
+<div class="filtertitle">liab_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3683" class="reftext" onclick='showAndHideRefBox("refbox_3683", "reflink_3683")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3683" class="refbox_inner" style="display:none;">
+Liability - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Liability - Fast Track</td>
+<td>Liability - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=liab_normal></a>
+<div class="titlebox">
+<div class="filtertitle">liab_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3684" class="reftext" onclick='showAndHideRefBox("refbox_3684", "reflink_3684")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3684" class="refbox_inner" style="display:none;">
+Liability - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Liability - Investigate</td>
+<td>Liability - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prop_fast></a>
+<div class="titlebox">
+<div class="filtertitle">prop_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3685" class="reftext" onclick='showAndHideRefBox("refbox_3685", "reflink_3685")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3685" class="refbox_inner" style="display:none;">
+Property - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Property - Fast Track</td>
+<td>Property - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=prop_normal></a>
+<div class="titlebox">
+<div class="filtertitle">prop_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3686" class="reftext" onclick='showAndHideRefBox("refbox_3686", "reflink_3686")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3686" class="refbox_inner" style="display:none;">
+Property - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Property - Investigate</td>
+<td>Property - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=unknown></a>
+<div class="titlebox">
+<div class="filtertitle">unknown <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3687" class="reftext" onclick='showAndHideRefBox("refbox_3687", "reflink_3687")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3687" class="refbox_inner" style="display:none;">
+Unknown strategy, or strategy not assigned by rules
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Unknown</td>
+<td>Unknown strategy, or strategy not assigned by rules</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_fast></a>
+<div class="titlebox">
+<div class="filtertitle">wc_fast <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3688" class="reftext" onclick='showAndHideRefBox("refbox_3688", "reflink_3688")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3688" class="refbox_inner" style="display:none;">
+Workers' Comp - Fast Track
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - Fast Track</td>
+<td>Workers' Comp - Fast Track</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_investigate></a>
+<div class="titlebox">
+<div class="filtertitle">wc_investigate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3689" class="reftext" onclick='showAndHideRefBox("refbox_3689", "reflink_3689")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3689" class="refbox_inner" style="display:none;">
+Workers' Comp - Investigate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - Investigate</td>
+<td>Workers' Comp - Investigate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=wc_normal></a>
+<div class="titlebox">
+<div class="filtertitle">wc_normal <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3690" class="reftext" onclick='showAndHideRefBox("refbox_3690", "reflink_3690")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3690" class="refbox_inner" style="display:none;">
+Workers' Comp - Manage Loss
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workers' Comp - Manage Loss</td>
+<td>Workers' Comp - Manage Loss</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

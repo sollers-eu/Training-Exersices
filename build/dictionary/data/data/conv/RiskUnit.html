@@ -1,0 +1,926 @@
+<html>
+<head>
+<title>RiskUnit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">RiskUnit <span class="entityname">(cc_riskunit) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2205" class="reftext" onclick='showAndHideRefBox("refbox_2205", "reflink_2205")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2205" class="refbox_inner" style="display:none;">
+Supertype for all risk units.
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">RiskUnit</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2206" class="reftext" onclick='showAndHideRefBox("refbox_2206", "reflink_2206")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2206" class="refbox_inner" style="display:none;">
+<A HREF="../full/Coverage.html#RUCoverage" TARGET="tableFrame">RUCoverage.RiskUnit</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2207" class="reftext" onclick='showAndHideRefBox("refbox_2207", "reflink_2207")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_2207" class="refbox_inner" style="display:none;">
+<A HREF="../full/Policy.html" TARGET="tableFrame">Policy.RiskUnits</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+LocationBasedRU</td>
+<td><A HREF="#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+BuildingRU</td>
+<td><A HREF="#BuildingRU" TARGET="tableFrame">BuildingRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+GeneralLiabilityRU</td>
+<td><A HREF="#GeneralLiabilityRU" TARGET="tableFrame">GeneralLiabilityRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+InlandMarineRU</td>
+<td><A HREF="#InlandMarineRU" TARGET="tableFrame">InlandMarineRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+LocationMiscRU</td>
+<td><A HREF="#LocationMiscRU" TARGET="tableFrame">LocationMiscRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+PropertyRU</td>
+<td><A HREF="#PropertyRU" TARGET="tableFrame">PropertyRU</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+WCCovEmpRU</td>
+<td><A HREF="#WCCovEmpRU" TARGET="tableFrame">WCCovEmpRU</A></td>
+</tr>
+<tr>
+<td>
+TripRU</td>
+<td><A HREF="#TripRU" TARGET="tableFrame">TripRU</A></td>
+</tr>
+<tr>
+<td>
+VehicleRU</td>
+<td><A HREF="#VehicleRU" TARGET="tableFrame">VehicleRU</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="riskunit_classcode"></a>
+<p class="column">
+<span class="coltitle">ClassCode</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ClassCode.html" TARGET="tableFrame">ClassCode</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClassCodeID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Class Code (if any) assigned to this risk unit</span>
+<a name="riskunit_description"></a>
+<p class="column">
+<span class="coltitle">Description</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Description of this risk</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>LocationBasedRULV.pcf:32</td>
+<td>NVV.Policy.LocationDetail.Property.Risks.Description</td>
+<td>RU.Description</td>
+<td>false</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyLocationRUDetailsDV.pcf:32</td>
+<td>NVV.Policy.LocationDetail.Property.Risks.Description</td>
+<td>RU.Description</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingPropertyRULV.pcf:51</td>
+<td>Web.Address.Default.BuildingDescription</td>
+<td>propertyRU.Description</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riskunit_policy"></a>
+<p class="column">
+<span class="coltitle">Policy</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Policy.html" TARGET="tableFrame">Policy</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PolicyID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Related policy.</span>
+<a name="riskunit_policysystemid"></a>
+<p class="column">
+<span class="coltitle">PolicySystemId</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "policysystemid")'>policysystemid</span> (256)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Identifier for the risk in an external policy system</span>
+<a name="riskunit_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="riskunit_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="riskunit_runumber"></a>
+<p class="column">
+<span class="coltitle">RUNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of the risk unit on the policy.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>LocationBasedRULV.pcf:28</td>
+<td>NVV.Policy.LocationDetail.Property.Risks.Number</td>
+<td>RU.RUNumber</td>
+<td>false</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimVehiclesLV.pcf:34</td>
+<td>LV.Policy.Vehicles.Number</td>
+<td>VehicleRU.RUNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyLocationRUDetailsDV.pcf:17</td>
+<td>NVV.Policy.LocationDetail.Property.Risks.Number</td>
+<td>RU.RUNumber</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingPropertyRULV.pcf:39</td>
+<td>Web.Address.Default.Number</td>
+<td>propertyRU.RUNumber</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyRefreshExistingVehicleRULV.pcf:39</td>
+<td>LV.Policy.Vehicles.Number</td>
+<td>riskUnitWrapper.RiskUnit.RUNumber</td>
+<td>false</td>
+<td>
+PolicyRefreshWizard
+</td>
+</tr>
+<tr>
+<td>PolicyVehicleDetailPanelSet.pcf:19</td>
+<td>NVV.Policy.PolicyVehicleDetail.Vehicle.Number</td>
+<td>VehicleRU.RUNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyVehicleDetail
+<br>
+NewClaimWizard_NewPolicyVehiclePopup
+<br>
+ClaimPolicyVehicles
+<br>
+NewClaimWizard_PolicyVehicleDetailPopup
+</td>
+</tr>
+<tr>
+<td>TripRUScreen.pcf:31</td>
+<td>Web.ClaimPolicy.Trips.TripNumber</td>
+<td>aTripRU.RUNumber</td>
+<td>true</td>
+<td>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+<tr>
+<td>VehiclesLV.pcf:34</td>
+<td>LV.Policy.Vehicles.Number</td>
+<td>VehicleRU.RUNumber</td>
+<td>false</td>
+<td>
+ClaimSnapshotLossDetails
+<br>
+ClaimPolicyVehicles
+</td>
+</tr>
+</table>
+</div></div>
+<a name="riskunit_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">RiskUnit</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for RiskUnit"></a><div class="arraysbox">Unique Keys for RiskUnit</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=BuildingRU></a>
+<div class="titlebox">
+<div class="filtertitle">BuildingRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2208" class="reftext" onclick='showAndHideRefBox("refbox_2208", "reflink_2208")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2208" class="refbox_inner" style="display:none;">
+
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for BuildingRU"></a><div class="arraysbox">Unique Keys for BuildingRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=GeneralLiabilityRU></a>
+<div class="titlebox">
+<div class="filtertitle">GeneralLiabilityRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2209" class="reftext" onclick='showAndHideRefBox("refbox_2209", "reflink_2209")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2209" class="refbox_inner" style="display:none;">
+
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for GeneralLiabilityRU"></a><div class="arraysbox">Unique Keys for GeneralLiabilityRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=InlandMarineRU></a>
+<div class="titlebox">
+<div class="filtertitle">InlandMarineRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2210" class="reftext" onclick='showAndHideRefBox("refbox_2210", "reflink_2210")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2210" class="refbox_inner" style="display:none;">
+
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for InlandMarineRU"></a><div class="arraysbox">Unique Keys for InlandMarineRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=LocationBasedRU></a>
+<div class="titlebox">
+<div class="filtertitle">LocationBasedRU <span class='supername'>(subtype of <A HREF="RiskUnit.html" TARGET="tableFrame">RiskUnit</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2211" class="reftext" onclick='showAndHideRefBox("refbox_2211", "reflink_2211")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2211" class="refbox_inner" style="display:none;">
+A RiskUnit that has a (Policy) Location associated with it.
+</div>
+</span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2212" class="reftext" onclick='showAndHideRefBox("refbox_2212", "reflink_2212")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2212" class="refbox_inner" style="display:none;">
+<A HREF="../full/PropertyOwner.html" TARGET="tableFrame">PropertyOwner.LocationBasedRU</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2213" class="reftext" onclick='showAndHideRefBox("refbox_2213", "reflink_2213")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_2213" class="refbox_inner" style="display:none;">
+<A HREF="../full/PolicyLocation.html" TARGET="tableFrame">PolicyLocation.LocationBasedRisks</A>
+</div>
+</span>
+</div>
+<a name="locationbasedru_building"></a>
+<p class="column">
+<span class="coltitle">Building</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Building.html" TARGET="tableFrame">Building</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: BuildingID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The building on the location that corresponds to this riskunit.</span>
+<a name="locationbasedru_policylocation"></a>
+<p class="column">
+<span class="coltitle">PolicyLocation</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="PolicyLocation.html" TARGET="tableFrame">PolicyLocation</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PolicyLocationID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The PolicyLocation associated with this RiskUnit.</span>
+<a name="Unique Keys for LocationBasedRU"></a><div class="arraysbox">Unique Keys for LocationBasedRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=LocationMiscRU></a>
+<div class="titlebox">
+<div class="filtertitle">LocationMiscRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2214" class="reftext" onclick='showAndHideRefBox("refbox_2214", "reflink_2214")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2214" class="refbox_inner" style="display:none;">
+A miscellaneous type of RiskUnit. Examples are Accounts Receivable, Scheduled Equipment, Signs etc.
+</div>
+</span>
+</div>
+</div>
+<a name="locationmiscru_otherrisktype"></a>
+<p class="column">
+<span class="coltitle">OtherRiskType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/OtherRiskType_tl.html" TARGET="tableFrame">OtherRiskType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of location based miscellaneous risk unit</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>PolicyLocationRUDetailsDV.pcf:26</td>
+<td>NVV.Policy.LocationDetail.Property.Risks.MiscType</td>
+<td>(RU as entity.LocationMiscRU).OtherRiskType</td>
+<td>true</td>
+<td>
+PolicyLocationPrint
+<br>
+ClaimPolicyLocations
+<br>
+PolicyLocationPopup
+<br>
+FNOLWizard
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Unique Keys for LocationMiscRU"></a><div class="arraysbox">Unique Keys for LocationMiscRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=PropertyRU></a>
+<div class="titlebox">
+<div class="filtertitle">PropertyRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2215" class="reftext" onclick='showAndHideRefBox("refbox_2215", "reflink_2215")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2215" class="refbox_inner" style="display:none;">
+RiskUnit containing a policy.
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for PropertyRU"></a><div class="arraysbox">Unique Keys for PropertyRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=TripRU></a>
+<div class="titlebox">
+<div class="filtertitle">TripRU <span class='supername'>(subtype of <A HREF="RiskUnit.html" TARGET="tableFrame">RiskUnit</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2216" class="reftext" onclick='showAndHideRefBox("refbox_2216", "reflink_2216")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2216" class="refbox_inner" style="display:none;">
+A RiskUnit that has travel legs associated with it.
+</div>
+</span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2217" class="reftext" onclick='showAndHideRefBox("refbox_2217", "reflink_2217")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2217" class="refbox_inner" style="display:none;">
+<A HREF="../full/Incident.html#BaggageIncident" TARGET="tableFrame">BaggageIncident.RelatedTripRU</A><br><A HREF="../full/Incident.html#TripIncident" TARGET="tableFrame">TripIncident.TripRU</A>
+</div>
+</span>
+</div>
+<a name="tripru_enddate"></a>
+<p class="column">
+<span class="coltitle">EndDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The date this trip will end</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewTripIncidentScreen.pcf:51</td>
+<td>Web.ClaimPolicy.Trips.EndDate</td>
+<td>aTripIncident.TripRU.EndDate</td>
+<td>false</td>
+<td>
+TripIncidentDetailPrint
+<br>
+TripIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PolicyTripLV.pcf:41</td>
+<td>Web.ClaimPolicy.Trips.EndDate</td>
+<td>aTripRU.EndDate</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>TripLDV.pcf:41</td>
+<td>NVV.Policy.Trip.EndDate</td>
+<td>aTripRU.EndDate</td>
+<td>false</td>
+<td>
+ClaimPolicyTrips
+</td>
+</tr>
+<tr>
+<td>TripRUScreen.pcf:59</td>
+<td>Web.ClaimPolicy.Trips.EndDate</td>
+<td>aTripRU.EndDate</td>
+<td>true</td>
+<td>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="tripru_geographicalregion"></a>
+<p class="column">
+<span class="coltitle">GeographicalRegion</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/GeographicalRegion_tl.html" TARGET="tableFrame">GeographicalRegion</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Geographical regions for travel</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FNOLWizard_BasicInfoRightPanelSet.Trav.pcf:56</td>
+<td>Web.BasicInfoScreen.TripPanelColumn.GeographicalRegion</td>
+<td>Trip.GeographicalRegion</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewTripIncidentScreen.pcf:43</td>
+<td>Web.ClaimPolicy.Trips.GeographicalRegion</td>
+<td>aTripIncident.TripRU.GeographicalRegion</td>
+<td>false</td>
+<td>
+TripIncidentDetailPrint
+<br>
+TripIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PolicyTripLV.pcf:33</td>
+<td>Web.ClaimPolicy.Trips.GeographicalRegion</td>
+<td>aTripRU.GeographicalRegion</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>TripLDV.pcf:46</td>
+<td>NVV.Policy.Trip.GeographicalRegion</td>
+<td>aTripRU.GeographicalRegion</td>
+<td>false</td>
+<td>
+ClaimPolicyTrips
+</td>
+</tr>
+<tr>
+<td>TripRUScreen.pcf:44</td>
+<td>Web.ClaimPolicy.Trips.GeographicalRegion</td>
+<td>aTripRU.GeographicalRegion</td>
+<td>true</td>
+<td>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="tripru_startdate"></a>
+<p class="column">
+<span class="coltitle">StartDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The date this trip will start</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewTripIncidentScreen.pcf:47</td>
+<td>Web.ClaimPolicy.Trips.StartDate</td>
+<td>aTripIncident.TripRU.StartDate</td>
+<td>false</td>
+<td>
+TripIncidentDetailPrint
+<br>
+TripIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PolicyTripLV.pcf:37</td>
+<td>Web.ClaimPolicy.Trips.StartDate</td>
+<td>aTripRU.StartDate</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>TripLDV.pcf:36</td>
+<td>NVV.Policy.Trip.StartDate</td>
+<td>aTripRU.StartDate</td>
+<td>false</td>
+<td>
+ClaimPolicyTrips
+</td>
+</tr>
+<tr>
+<td>TripRUScreen.pcf:51</td>
+<td>Web.ClaimPolicy.Trips.StartDate</td>
+<td>aTripRU.StartDate</td>
+<td>true</td>
+<td>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="tripru_tripdescription"></a>
+<p class="column">
+<span class="coltitle">TripDescription</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (60)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">A brief description of the trip</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>TripRUScreen.pcf:36</td>
+<td>Web.ClaimPolicy.Trips.Description</td>
+<td>aTripRU.TripDescription</td>
+<td>true</td>
+<td>
+TripRUPopup
+<br>
+TripRUPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="Unique Keys for TripRU"></a><div class="arraysbox">Unique Keys for TripRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=VehicleRU></a>
+<div class="titlebox">
+<div class="filtertitle">VehicleRU <span class='supername'>(subtype of <A HREF="RiskUnit.html" TARGET="tableFrame">RiskUnit</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2218" class="reftext" onclick='showAndHideRefBox("refbox_2218", "reflink_2218")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2218" class="refbox_inner" style="display:none;">
+RiskUnit containing a vehicle.
+</div>
+</span>
+</div>
+</div>
+<a name="vehicleru_vehicle"></a>
+<p class="column">
+<span class="coltitle">Vehicle</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Vehicle.html" TARGET="tableFrame">Vehicle</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: VehicleID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Related vehicle.</span>
+<a name="vehicleru_vehiclelocation"></a>
+<p class="column">
+<span class="coltitle">VehicleLocation</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="PolicyLocation.html" TARGET="tableFrame">PolicyLocation</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: VehicleLocationID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The PolicyLocation associted with this Vehicle Risk Unit, if any.</span>
+<a name="Unique Keys for VehicleRU"></a><div class="arraysbox">Unique Keys for VehicleRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=WCCovEmpRU></a>
+<div class="titlebox">
+<div class="filtertitle">WCCovEmpRU <span class='supername'>(subtype of <A HREF="RiskUnit.html#LocationBasedRU" TARGET="tableFrame">LocationBasedRU</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_2219" class="reftext" onclick='showAndHideRefBox("refbox_2219", "reflink_2219")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2219" class="refbox_inner" style="display:none;">
+
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for WCCovEmpRU"></a><div class="arraysbox">Unique Keys for WCCovEmpRU</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>riskunitu1</td>
+<td>PolicyID, Retired, RUNumber, Subtype, ClassCodeID</td></tr>
+<tr><td>riskunit1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

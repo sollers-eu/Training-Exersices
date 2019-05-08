@@ -1,0 +1,674 @@
+<html>
+<head>
+<title>VehicleDirection</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">VehicleDirection</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_vehicledirection)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_9182" class="reftext" onclick='showAndHideRefBox("refbox_9182", "reflink_9182")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_9182" class="refbox_inner" style="display:none;">
+<A HREF="../full/Incident.html#VehicleIncident" TARGET="tableFrame">VehicleIncident.VehicleDirection</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#curve>curve</a></td>
+<td>Negotiating curve</td>
+<td>Negotiating curve</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#disabled>disabled</a></td>
+<td>Disabled in traffic lane</td>
+<td>Disabled in traffic lane</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#forward>forward</a></td>
+<td>Forward</td>
+<td>Forward</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#leave>leave</a></td>
+<td>Leaving parking space</td>
+<td>Leaving parking space</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#merge>merge</a></td>
+<td>Merging/changing lanes</td>
+<td>Merging/changing lanes</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#oth>oth</a></td>
+<td>Other maneuver</td>
+<td>Other maneuver</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#park>park</a></td>
+<td>Entering parking space</td>
+<td>Entering parking space</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pass>pass</a></td>
+<td>Passing other vehicle(s)</td>
+<td>Passing other vehicle(s)</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#passed>passed</a></td>
+<td>Being passed by other vehicle(s)</td>
+<td>Being passed by other vehicle(s)</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#reverse>reverse</a></td>
+<td>Backing up</td>
+<td>Backing up</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#start>start</a></td>
+<td>Starting in traffic lane</td>
+<td>Starting in traffic lane</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stop_shoulder>stop_shoulder</a></td>
+<td>Stopped on shoulder of road</td>
+<td>Stopped on shoulder of road</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stop_traffic>stop_traffic</a></td>
+<td>Stopped in traffic lane</td>
+<td>Stopped in traffic lane</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#straight>straight</a></td>
+<td>Going straight</td>
+<td>Going straight</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#turningleft>turningleft</a></td>
+<td>Turning left</td>
+<td>Turning left</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#turningright>turningright</a></td>
+<td>Turning right</td>
+<td>Turning right</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#uturn>uturn</a></td>
+<td>Making U-turn</td>
+<td>Making U-turn</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=curve></a>
+<div class="titlebox">
+<div class="filtertitle">curve <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9183" class="reftext" onclick='showAndHideRefBox("refbox_9183", "reflink_9183")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9183" class="refbox_inner" style="display:none;">
+Negotiating curve
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Negotiating curve</td>
+<td>Negotiating curve</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=disabled></a>
+<div class="titlebox">
+<div class="filtertitle">disabled <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9184" class="reftext" onclick='showAndHideRefBox("refbox_9184", "reflink_9184")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9184" class="refbox_inner" style="display:none;">
+Disabled in traffic lane
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Disabled in traffic lane</td>
+<td>Disabled in traffic lane</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=forward></a>
+<div class="titlebox">
+<div class="filtertitle">forward <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9185" class="reftext" onclick='showAndHideRefBox("refbox_9185", "reflink_9185")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9185" class="refbox_inner" style="display:none;">
+Forward
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Forward</td>
+<td>Forward</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=leave></a>
+<div class="titlebox">
+<div class="filtertitle">leave <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9186" class="reftext" onclick='showAndHideRefBox("refbox_9186", "reflink_9186")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9186" class="refbox_inner" style="display:none;">
+Leaving parking space
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Leaving parking space</td>
+<td>Leaving parking space</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=merge></a>
+<div class="titlebox">
+<div class="filtertitle">merge <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9187" class="reftext" onclick='showAndHideRefBox("refbox_9187", "reflink_9187")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9187" class="refbox_inner" style="display:none;">
+Merging/changing lanes
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Merging/changing lanes</td>
+<td>Merging/changing lanes</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=oth></a>
+<div class="titlebox">
+<div class="filtertitle">oth <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9188" class="reftext" onclick='showAndHideRefBox("refbox_9188", "reflink_9188")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9188" class="refbox_inner" style="display:none;">
+Other maneuver
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Other maneuver</td>
+<td>Other maneuver</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=park></a>
+<div class="titlebox">
+<div class="filtertitle">park <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9189" class="reftext" onclick='showAndHideRefBox("refbox_9189", "reflink_9189")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9189" class="refbox_inner" style="display:none;">
+Entering parking space
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Entering parking space</td>
+<td>Entering parking space</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pass></a>
+<div class="titlebox">
+<div class="filtertitle">pass <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9190" class="reftext" onclick='showAndHideRefBox("refbox_9190", "reflink_9190")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9190" class="refbox_inner" style="display:none;">
+Passing other vehicle(s)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Passing other vehicle(s)</td>
+<td>Passing other vehicle(s)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=passed></a>
+<div class="titlebox">
+<div class="filtertitle">passed <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9191" class="reftext" onclick='showAndHideRefBox("refbox_9191", "reflink_9191")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9191" class="refbox_inner" style="display:none;">
+Being passed by other vehicle(s)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Being passed by other vehicle(s)</td>
+<td>Being passed by other vehicle(s)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=reverse></a>
+<div class="titlebox">
+<div class="filtertitle">reverse <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9192" class="reftext" onclick='showAndHideRefBox("refbox_9192", "reflink_9192")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9192" class="refbox_inner" style="display:none;">
+Backing up
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Backing up</td>
+<td>Backing up</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=start></a>
+<div class="titlebox">
+<div class="filtertitle">start <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9193" class="reftext" onclick='showAndHideRefBox("refbox_9193", "reflink_9193")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9193" class="refbox_inner" style="display:none;">
+Starting in traffic lane
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Starting in traffic lane</td>
+<td>Starting in traffic lane</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stop_shoulder></a>
+<div class="titlebox">
+<div class="filtertitle">stop_shoulder <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9194" class="reftext" onclick='showAndHideRefBox("refbox_9194", "reflink_9194")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9194" class="refbox_inner" style="display:none;">
+Stopped on shoulder of road
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Stopped on shoulder of road</td>
+<td>Stopped on shoulder of road</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stop_traffic></a>
+<div class="titlebox">
+<div class="filtertitle">stop_traffic <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9195" class="reftext" onclick='showAndHideRefBox("refbox_9195", "reflink_9195")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9195" class="refbox_inner" style="display:none;">
+Stopped in traffic lane
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Stopped in traffic lane</td>
+<td>Stopped in traffic lane</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=straight></a>
+<div class="titlebox">
+<div class="filtertitle">straight <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9196" class="reftext" onclick='showAndHideRefBox("refbox_9196", "reflink_9196")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9196" class="refbox_inner" style="display:none;">
+Going straight
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Going straight</td>
+<td>Going straight</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=turningleft></a>
+<div class="titlebox">
+<div class="filtertitle">turningleft <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9197" class="reftext" onclick='showAndHideRefBox("refbox_9197", "reflink_9197")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9197" class="refbox_inner" style="display:none;">
+Turning left
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Turning left</td>
+<td>Turning left</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=turningright></a>
+<div class="titlebox">
+<div class="filtertitle">turningright <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9198" class="reftext" onclick='showAndHideRefBox("refbox_9198", "reflink_9198")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9198" class="refbox_inner" style="display:none;">
+Turning right
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Turning right</td>
+<td>Turning right</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=uturn></a>
+<div class="titlebox">
+<div class="filtertitle">uturn <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9199" class="reftext" onclick='showAndHideRefBox("refbox_9199", "reflink_9199")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9199" class="refbox_inner" style="display:none;">
+Making U-turn
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Making U-turn</td>
+<td>Making U-turn</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

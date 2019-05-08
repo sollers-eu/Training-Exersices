@@ -1,0 +1,954 @@
+<html>
+<head>
+<title>AutomatedHandler</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">AutomatedHandler <span class="entityname">(cc_automatedhandler) (delegates to <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_312" class="reftext" onclick='showAndHideRefBox("refbox_312", "reflink_312")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_312" class="refbox_inner" style="display:none;">
+
+        This entity is the superclass for the two types of Special Handling automated handlers, one for generating email notifications and one for generating activities.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">AutomatedHandler</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup>, Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_313" class="reftext" onclick='showAndHideRefBox("refbox_313", "reflink_313")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_313" class="refbox_inner" style="display:none;">
+<A HREF="../full/ClaimIndicatorTrigger.html" TARGET="tableFrame">ClaimIndicatorTrigger.AutomatedHandler</A><br><A HREF="../full/FinancialThresholdTrigger.html" TARGET="tableFrame">FinancialThresholdTrigger.AutomatedHandler</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_314" class="reftext" onclick='showAndHideRefBox("refbox_314", "reflink_314")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_314" class="refbox_inner" style="display:none;">
+<A HREF="../full/SpecialHandling.html" TARGET="tableFrame">SpecialHandling.AutomatedHandlers</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+AutomatedActivityHandler</td>
+<td><A HREF="#AutomatedActivityHandler" TARGET="tableFrame">AutomatedActivityHandler</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ClaimIndicatorAutomatedActivityHandler</td>
+<td><A HREF="#ClaimIndicatorAutomatedActivityHandler" TARGET="tableFrame">ClaimIndicatorAutomatedActivityHandler</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FinancialAutomatedActivityHandler</td>
+<td><A HREF="#FinancialAutomatedActivityHandler" TARGET="tableFrame">FinancialAutomatedActivityHandler</A></td>
+</tr>
+<tr>
+<td>
+AutomatedNotificationHandler</td>
+<td><A HREF="#AutomatedNotificationHandler" TARGET="tableFrame">AutomatedNotificationHandler</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ClaimIndicatorAutomatedNotificationHandler</td>
+<td><A HREF="#ClaimIndicatorAutomatedNotificationHandler" TARGET="tableFrame">ClaimIndicatorAutomatedNotificationHandler</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+FinancialAutomatedNotificationHandler</td>
+<td><A HREF="#FinancialAutomatedNotificationHandler" TARGET="tableFrame">FinancialAutomatedNotificationHandler</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="automatedhandler_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="automatedhandler_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="automatedhandler_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="automatedhandler_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_keyproperties"></a>
+<p class="column">
+<span class="coltitle">KeyProperties</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<java.lang.String></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_policytype"></a>
+<p class="column">
+<span class="coltitle">PolicyType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/PolicyType_tl.html" TARGET="tableFrame">PolicyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">If non-null, then this handler will only apply to Claims created for Policies that have this particular Policy Type</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerBaseInputSet.pcf:23</td>
+<td>Web.Admin.AutomatedHandlerBase.PolicyType</td>
+<td>automatedHandler.PolicyType</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+<tr>
+<td>AutomatedHandlerBaseInputSet.pcf:32</td>
+<td>Web.Admin.AutomatedHandlerBase.PolicyType</td>
+<td>automatedHandler.PolicyType</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+<tr>
+<td>SpecialHandlingAutomatedActivitiesLV.pcf:53</td>
+<td>Web.Admin.SpecialHandlingAutomatedActivities.PolicyTypeHeader</td>
+<td>automatedActivity.PolicyType</td>
+<td>false</td>
+<td>
+AccountDetail
+<br>
+NewAccount
+<br>
+NewCustomerServiceTier
+<br>
+CustomerServiceTierDetail
+</td>
+</tr>
+<tr>
+<td>SpecialHandlingAutomatedNotificationsLV.pcf:53</td>
+<td>Web.Admin.SpecialHandlingAutomatedNotifications.PolicyTypeHeader</td>
+<td>automatedNotification.PolicyType</td>
+<td>false</td>
+<td>
+AccountDetail
+<br>
+NewAccount
+<br>
+NewCustomerServiceTier
+<br>
+CustomerServiceTierDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatedhandler_policytype_prop"></a>
+<p class="column">
+<span class="coltitle">POLICYTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="automatedhandler_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="automatedhandler_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_specialhandling"></a>
+<p class="column">
+<span class="coltitle">SpecialHandling</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="SpecialHandling.html" TARGET="tableFrame">SpecialHandling</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: SpecialHandlingID)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The instance of Special Handling that owns this Automated Handler</span>
+<a name="automatedhandler_specialhandling_prop"></a>
+<p class="column">
+<span class="coltitle">SPECIALHANDLING_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">AutomatedHandler</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="automatedhandler_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_trigger"></a>
+<p class="column">
+<span class="coltitle">Trigger</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.specialhandling.AutomatedHandlerTrigger</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AutomatedHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="automatedhandler_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedhandler_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="automatedhandler_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for AutomatedHandler"></a><div class="arraysbox">Unique Keys for AutomatedHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=AutomatedActivityHandler></a>
+<div class="titlebox">
+<div class="filtertitle">AutomatedActivityHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html" TARGET="tableFrame">AutomatedHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_315" class="reftext" onclick='showAndHideRefBox("refbox_315", "reflink_315")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_315" class="refbox_inner" style="display:none;">
+
+        A subtype of AutomatedHandler that causes activities to be generated when the associated trigger is executed by
+        changes to a Claim.
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<a name="automatedactivityhandler_activitypattern"></a>
+<p class="column">
+<span class="coltitle">ActivityPattern</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ActivityPattern.html" TARGET="tableFrame">ActivityPattern</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ActivityPatternID)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Activity pattern to use for activity generation</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.activity.pcf:23</td>
+<td>Web.Admin.AutomatedHandlerAction.Activity.ActivityPattern</td>
+<td>automatedActivityHandler.ActivityPattern</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+<tr>
+<td>SpecialHandlingAutomatedActivitiesLV.pcf:60</td>
+<td>Web.Admin.SpecialHandlingAutomatedActivities.ActivityPatternHeader</td>
+<td>automatedActivity.ActivityPattern</td>
+<td>false</td>
+<td>
+AccountDetail
+<br>
+NewAccount
+<br>
+NewCustomerServiceTier
+<br>
+CustomerServiceTierDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatedactivityhandler_activitypattern_prop"></a>
+<p class="column">
+<span class="coltitle">ACTIVITYPATTERN_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedactivityhandler_emailtemplateoverride"></a>
+<p class="column">
+<span class="coltitle">EmailTemplateOverride</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Optional alternate template to use for activity generation</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.activity.pcf:42</td>
+<td>Web.Admin.AutomatedHandlerAction.Activity.EmailTemplate</td>
+<td>automatedActivityHandler.EmailTemplateOverride</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatedactivityhandler_emailtemplateoverride_prop"></a>
+<p class="column">
+<span class="coltitle">EMAILTEMPLATEOVERRIDE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatedactivityhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AutomatedActivityHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for AutomatedActivityHandler"></a><div class="arraysbox">Unique Keys for AutomatedActivityHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=AutomatedNotificationHandler></a>
+<div class="titlebox">
+<div class="filtertitle">AutomatedNotificationHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html" TARGET="tableFrame">AutomatedHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_316" class="reftext" onclick='showAndHideRefBox("refbox_316", "reflink_316")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_316" class="refbox_inner" style="display:none;">
+
+        A subtype of AutomatedHandler that causes emails to be generated when the associated trigger is executed by changes to a Claim.
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup></div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_317" class="reftext" onclick='showAndHideRefBox("refbox_317", "reflink_317")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_317" class="refbox_inner" style="display:none;">
+<A HREF="../full/SpecialHandlingEmailAddress.html" TARGET="tableFrame">SpecialHandlingEmailAddress.AutomatedNotificationHandler</A>
+</div>
+</span>
+</div>
+<a name="automatednotificationhandler_emailaddress"></a>
+<p class="column">
+<span class="coltitle">EmailAddress</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (60)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Email address to which the generated email should be sent</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.notification.pcf:50</td>
+<td>Web.Admin.AutomatedHandlerAction.Notification.EmailAddress</td>
+<td>automatedNotificationHandler.EmailAddress</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatednotificationhandler_emailaddress_prop"></a>
+<p class="column">
+<span class="coltitle">EMAILADDRESS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatednotificationhandler_emailaddresses"></a>
+<p class="column">
+<span class="coltitle">EmailAddresses</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="SpecialHandlingEmailAddress.html" TARGET="tableFrame">SpecialHandlingEmailAddress</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Email addresses for multi-recipient lists.</span>
+<a name="automatednotificationhandler_emailaddresses_prop"></a>
+<p class="column">
+<span class="coltitle">EMAILADDRESSES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatednotificationhandler_emailrole"></a>
+<p class="column">
+<span class="coltitle">EmailRole</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ContactRole_tl.html" TARGET="tableFrame">ContactRole</A> using filter <A HREF="../typelist/ContactRole_tl.html#specialhandling" TARGET="tableFrame">specialhandling</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">This is set when email address should be determined dynamically based on the contact assigned to this role.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.notification.pcf:43</td>
+<td>Web.Admin.AutomatedHandlerAction.Notification.ContactRole</td>
+<td>automatedNotificationHandler.EmailRole</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatednotificationhandler_emailrole_prop"></a>
+<p class="column">
+<span class="coltitle">EMAILROLE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatednotificationhandler_emailtemplate"></a>
+<p class="column">
+<span class="coltitle">EmailTemplate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The ID of the email template to use when generating the email after the associated trigger fires.  The id gets passed to IEmailTemplateSource to retrieve the EmailTemplateDescriptor.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.notification.pcf:25</td>
+<td>Web.Admin.AutomatedHandlerAction.Notification.EmailTemplate</td>
+<td>automatedNotificationHandler.EmailTemplate</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatednotificationhandler_emailtemplate_prop"></a>
+<p class="column">
+<span class="coltitle">EMAILTEMPLATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatednotificationhandler_notificationtype"></a>
+<p class="column">
+<span class="coltitle">NotificationType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/NotificationType_tl.html" TARGET="tableFrame">NotificationType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: email)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Notification type for either notification to a fixed email address or a specific contact on a claim</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AutomatedHandlerActionInputSet.notification.pcf:32</td>
+<td>Web.Admin.AutomatedHandlerAction.Notification.NotificationType</td>
+<td>automatedNotificationHandler.NotificationType</td>
+<td>true</td>
+<td>
+NewAutomatedActivityHandlerPopup
+<br>
+NewAutomatedNotificationHandlerPopup
+<br>
+AutomatedNotificationHandlerDetailPopup
+<br>
+AutomatedActivityHandlerDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="automatednotificationhandler_notificationtype_prop"></a>
+<p class="column">
+<span class="coltitle">NOTIFICATIONTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="automatednotificationhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AutomatedNotificationHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for AutomatedNotificationHandler"></a><div class="arraysbox">Unique Keys for AutomatedNotificationHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimIndicatorAutomatedActivityHandler></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimIndicatorAutomatedActivityHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html#AutomatedActivityHandler" TARGET="tableFrame">AutomatedActivityHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_318" class="reftext" onclick='showAndHideRefBox("refbox_318", "reflink_318")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_318" class="refbox_inner" style="display:none;">
+
+        A subtype of Automated Handler that generates an activity when a specified ClaimIndicator for a given Claim changes its value.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="claimindicatorautomatedactivityhandler_claimindicatortrigger"></a>
+<p class="column">
+<span class="coltitle">ClaimIndicatorTrigger</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ClaimIndicatorTrigger.html" TARGET="tableFrame">ClaimIndicatorTrigger</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The associated ClaimIndicatorTrigger whose execution would result in an activity being generated according to the specifications of this handler</span>
+<a name="claimindicatorautomatedactivityhandler_claimindicatortrigger_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINDICATORTRIGGER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimindicatorautomatedactivityhandler_claimindicatortriggerarray_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINDICATORTRIGGERARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimindicatorautomatedactivityhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimIndicatorAutomatedActivityHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ClaimIndicatorAutomatedActivityHandler"></a><div class="arraysbox">Unique Keys for ClaimIndicatorAutomatedActivityHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ClaimIndicatorAutomatedNotificationHandler></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimIndicatorAutomatedNotificationHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html#AutomatedNotificationHandler" TARGET="tableFrame">AutomatedNotificationHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_319" class="reftext" onclick='showAndHideRefBox("refbox_319", "reflink_319")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_319" class="refbox_inner" style="display:none;">
+ator for a given Claim changes its value.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="claimindicatorautomatednotificationhandler_claimindicatortrigger"></a>
+<p class="column">
+<span class="coltitle">ClaimIndicatorTrigger</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ClaimIndicatorTrigger.html" TARGET="tableFrame">ClaimIndicatorTrigger</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The associated ClaimIndicatorTrigger whose execution would result in an email being generated according to the specifications of this handler</span>
+<a name="claimindicatorautomatednotificationhandler_claimindicatortrigger_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINDICATORTRIGGER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimindicatorautomatednotificationhandler_claimindicatortriggerarray_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINDICATORTRIGGERARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimindicatorautomatednotificationhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimIndicatorAutomatedNotificationHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for ClaimIndicatorAutomatedNotificationHandler"></a><div class="arraysbox">Unique Keys for ClaimIndicatorAutomatedNotificationHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FinancialAutomatedActivityHandler></a>
+<div class="titlebox">
+<div class="filtertitle">FinancialAutomatedActivityHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html#AutomatedActivityHandler" TARGET="tableFrame">AutomatedActivityHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_320" class="reftext" onclick='showAndHideRefBox("refbox_320", "reflink_320")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_320" class="refbox_inner" style="display:none;">
+
+        A subtype of Automated Handler that generates an email when a specified FinancialThreshold for a given Claim changes its value.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="financialautomatedactivityhandler_financialthresholdtrigger"></a>
+<p class="column">
+<span class="coltitle">FinancialThresholdTrigger</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="FinancialThresholdTrigger.html" TARGET="tableFrame">FinancialThresholdTrigger</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The associated FinancialThresholdTrigger whose execution would result in an email being generated according to the specifications of this handler</span>
+<a name="financialautomatedactivityhandler_financialthresholdtrigger_prop"></a>
+<p class="column">
+<span class="coltitle">FINANCIALTHRESHOLDTRIGGER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="financialautomatedactivityhandler_financialthresholdtriggerarray_prop"></a>
+<p class="column">
+<span class="coltitle">FINANCIALTHRESHOLDTRIGGERARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="financialautomatedactivityhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FinancialAutomatedActivityHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FinancialAutomatedActivityHandler"></a><div class="arraysbox">Unique Keys for FinancialAutomatedActivityHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=FinancialAutomatedNotificationHandler></a>
+<div class="titlebox">
+<div class="filtertitle">FinancialAutomatedNotificationHandler <span class='supername'>(subtype of <A HREF="AutomatedHandler.html#AutomatedNotificationHandler" TARGET="tableFrame">AutomatedNotificationHandler</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_321" class="reftext" onclick='showAndHideRefBox("refbox_321", "reflink_321")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_321" class="refbox_inner" style="display:none;">
+
+        A subtype of Automated Handler that generates an email when a specified FinancialThreshold for a given Claim changes its value.
+    
+</div>
+</span>
+</div>
+</div>
+<a name="financialautomatednotificationhandler_financialthresholdtrigger"></a>
+<p class="column">
+<span class="coltitle">FinancialThresholdTrigger</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="FinancialThresholdTrigger.html" TARGET="tableFrame">FinancialThresholdTrigger</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The associated FinancialThresholdTrigger whose execution would result in an email being generated according to the specifications of this handler</span>
+<a name="financialautomatednotificationhandler_financialthresholdtrigger_prop"></a>
+<p class="column">
+<span class="coltitle">FINANCIALTHRESHOLDTRIGGER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="financialautomatednotificationhandler_financialthresholdtriggerarray_prop"></a>
+<p class="column">
+<span class="coltitle">FINANCIALTHRESHOLDTRIGGERARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="financialautomatednotificationhandler_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.FinancialAutomatedNotificationHandler></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for FinancialAutomatedNotificationHandler"></a><div class="arraysbox">Unique Keys for FinancialAutomatedNotificationHandler</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>automatedhandler1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

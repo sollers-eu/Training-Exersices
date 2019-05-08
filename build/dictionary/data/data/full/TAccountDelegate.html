@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>TAccountDelegate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">TAccountDelegate <span class="entityname">(Virtual)</span></div>
+<div class="desc">
+<span id="reflink_53" class="reftext" onclick='showAndHideRefBox("refbox_53", "reflink_53")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_53" class="refbox_inner" style="display:none;">
+The delegate for TAccount and RITAccount.
+    TAccounts are used in ClaimCenter to provide a rolled-up view of all financials transactions
+    entered into the system.  Each Reserve Line (unique combination of Claim, Exposure, Cost Type and Cost Category) has
+    22 distinct TAccounts that together represent every possible life cycle state for each of the four transaction subtypes
+    (Payment, Reserve, Recovery and Recovery Reserve).  The Taccounts occur in pairs; a debit account (example: ReservesXX,
+    which holds the amount of a reserve) and a matching credit account (example: Cash Out). Every life cycle state transition
+    for a transaction (e.g., from pending-approval to awaiting-submission) affects one debit and one credit T-account equally
+    (example: a payment debits ReservesXX and credits Cash Out).  ClaimCenter provides useful calculated values by combining
+    the balances of various TAccounts as appropriate.
+  
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">TAccountDelegate</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup></span>
+</div>
+</div>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="taccountdelegate_creditbalance"></a>
+<p class="column">
+<span class="coltitle">CreditBalance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The balance of the claim currency credit side of this t-account's ledger.</span>
+<a name="taccountdelegate_creditbalance_dynprop"></a>
+<p class="column">
+<span class="coltitle">CREDITBALANCE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_creditrptbalance"></a>
+<p class="column">
+<span class="coltitle">CreditRptBalance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The balance of the reporting currency credit side of this t-account's ledger.</span>
+<a name="taccountdelegate_creditrptbalance_dynprop"></a>
+<p class="column">
+<span class="coltitle">CREDITRPTBALANCE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_debitbalance"></a>
+<p class="column">
+<span class="coltitle">DebitBalance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The balance of the claim currency debit side of this t-account's ledger.</span>
+<a name="taccountdelegate_debitbalance_dynprop"></a>
+<p class="column">
+<span class="coltitle">DEBITBALANCE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_debitrptbalance"></a>
+<p class="column">
+<span class="coltitle">DebitRptBalance</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "money")'>money</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The balance of the reporting currency debit side of this t-account's ledger.</span>
+<a name="taccountdelegate_debitrptbalance_dynprop"></a>
+<p class="column">
+<span class="coltitle">DEBITRPTBALANCE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_normalbalance"></a>
+<p class="column">
+<span class="coltitle">NormalBalance</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LedgerSide_tl.html" TARGET="tableFrame">LedgerSide</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Indicates whether this t-account's normal balance is 'credit normal' or 'debit normal'.</span>
+<a name="taccountdelegate_normalbalance_dynprop"></a>
+<p class="column">
+<span class="coltitle">NORMALBALANCE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_numcontributingtxns"></a>
+<p class="column">
+<span class="coltitle">NumContributingTxns</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativeinteger")'>nonnegativeinteger</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Stores a denormalized counter of the number of financial transactions currently contributing to this taccount's net balance</span>
+<a name="taccountdelegate_numcontributingtxns_dynprop"></a>
+<p class="column">
+<span class="coltitle">NUMCONTRIBUTINGTXNS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_taccounttype"></a>
+<p class="column">
+<span class="coltitle">TAccountType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/TAccountType_tl.html" TARGET="tableFrame">TAccountType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">The type of this t-account, i.e., the transaction subtype(s) and lifecycle state that it reflects.</span>
+<a name="taccountdelegate_taccounttype_dynprop"></a>
+<p class="column">
+<span class="coltitle">TACCOUNTTYPE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccountdelegate_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TAccountDelegate></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+</body>
+</html>

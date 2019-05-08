@@ -1,0 +1,986 @@
+<html>
+<head>
+<title>StatCode</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">StatCode <span class="entityname">(cc_statcode) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2516" class="reftext" onclick='showAndHideRefBox("refbox_2516", "reflink_2516")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2516" class="refbox_inner" style="display:none;">
+
+A statistical code or statistical line associated with a worker's comp policy.
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">StatCode</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2517" class="reftext" onclick='showAndHideRefBox("refbox_2517", "reflink_2517")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2517" class="refbox_inner" style="display:none;">
+<A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.StatLine</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2518" class="reftext" onclick='showAndHideRefBox("refbox_2518", "reflink_2518")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_2518" class="refbox_inner" style="display:none;">
+<A HREF="../full/Policy.html" TARGET="tableFrame">Policy.StatCodes</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="statcode_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="statcode_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="statcode_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_buildingnumber"></a>
+<p class="column">
+<span class="coltitle">BuildingNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Building number with which this stat line is associated.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:55</td>
+<td>LV.Policy.StatCodes.BuildingNumber</td>
+<td>StatCode.BuildingNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:42</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.BuildingNumber</td>
+<td>StatCode.BuildingNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:45</td>
+<td>LV.Policy.StatCodes.BuildingNumber</td>
+<td>StatCode.BuildingNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:54</td>
+<td>LV.Policy.StatCodes.BuildingNumber</td>
+<td>StatCode.BuildingNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_buildingnumber_prop"></a>
+<p class="column">
+<span class="coltitle">BUILDINGNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_classcode"></a>
+<p class="column">
+<span class="coltitle">ClassCode</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Workers comp class code with which this stat line is associated.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:65</td>
+<td>LV.Policy.StatCodes.ClassCode</td>
+<td>StatCode.ClassCode</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:52</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.ClassCode</td>
+<td>StatCode.ClassCode</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:55</td>
+<td>LV.Policy.StatCodes.ClassCode</td>
+<td>StatCode.ClassCode</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:64</td>
+<td>LV.Policy.StatCodes.ClassCode</td>
+<td>StatCode.ClassCode</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_classcode_prop"></a>
+<p class="column">
+<span class="coltitle">CLASSCODE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="statcode_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="statcode_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_insuranceline"></a>
+<p class="column">
+<span class="coltitle">InsuranceLine</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/InsuranceLine_tl.html" TARGET="tableFrame">InsuranceLine</A> using key filter <A HREF="../typelist/PolicyType_tl.html" TARGET="tableFrame">Policy.PolicyType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Insurance line (also known as major line or bureau).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:39</td>
+<td>LV.Policy.StatCodes.InsuranceLine</td>
+<td>StatCode.InsuranceLine</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:25</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.InsuranceLine</td>
+<td>StatCode.InsuranceLine</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:29</td>
+<td>LV.Policy.StatCodes.InsuranceLine</td>
+<td>StatCode.InsuranceLine</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:38</td>
+<td>LV.Policy.StatCodes.InsuranceLine</td>
+<td>StatCode.InsuranceLine</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_insuranceline_prop"></a>
+<p class="column">
+<span class="coltitle">INSURANCELINE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_insurancesubline"></a>
+<p class="column">
+<span class="coltitle">InsuranceSubLine</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/InsuranceSubLine_tl.html" TARGET="tableFrame">InsuranceSubLine</A> using key filter <A HREF="../typelist/InsuranceLine_tl.html" TARGET="tableFrame">InsuranceLine</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Insurance sub-line (also known as risk group or risk unit).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:45</td>
+<td>LV.Policy.StatCodes.InsuranceSubLine</td>
+<td>StatCode.InsuranceSubLine</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:32</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.InsuranceSubLine</td>
+<td>StatCode.InsuranceSubLine</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:35</td>
+<td>LV.Policy.StatCodes.InsuranceSubLine</td>
+<td>StatCode.InsuranceSubLine</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:44</td>
+<td>LV.Policy.StatCodes.InsuranceSubLine</td>
+<td>StatCode.InsuranceSubLine</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_insurancesubline_prop"></a>
+<p class="column">
+<span class="coltitle">INSURANCESUBLINE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_linenumber"></a>
+<p class="column">
+<span class="coltitle">LineNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Statistical data line number.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:33</td>
+<td>LV.Policy.StatCodes.LineNumber</td>
+<td>StatCode.LineNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:18</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.LineNumber</td>
+<td>StatCode.LineNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:23</td>
+<td>LV.Policy.StatCodes.LineNumber</td>
+<td>StatCode.LineNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:32</td>
+<td>LV.Policy.StatCodes.LineNumber</td>
+<td>StatCode.LineNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_linenumber_prop"></a>
+<p class="column">
+<span class="coltitle">LINENUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_loadcommandid"></a>
+<p class="column">
+<span class="coltitle">LoadCommandID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">LoadCommand for load where row was created. If not null this object was loaded via the loader.</span>
+<a name="statcode_loadcommandid_prop"></a>
+<p class="column">
+<span class="coltitle">LOADCOMMANDID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_locationnumber"></a>
+<p class="column">
+<span class="coltitle">LocationNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Location number with which this stat line is associated.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:50</td>
+<td>LV.Policy.StatCodes.LocationNumber</td>
+<td>StatCode.LocationNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:37</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.LocationNumber</td>
+<td>StatCode.LocationNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:40</td>
+<td>LV.Policy.StatCodes.LocationNumber</td>
+<td>StatCode.LocationNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:49</td>
+<td>LV.Policy.StatCodes.LocationNumber</td>
+<td>StatCode.LocationNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_locationnumber_prop"></a>
+<p class="column">
+<span class="coltitle">LOCATIONNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_majorperil"></a>
+<p class="column">
+<span class="coltitle">MajorPeril</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/MajorPerils_tl.html" TARGET="tableFrame">MajorPerils</A> using key filter <A HREF="../typelist/InsuranceLine_tl.html" TARGET="tableFrame">InsuranceLine</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Major peril.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:71</td>
+<td>LV.Policy.StatCodes.MajorPeril</td>
+<td>StatCode.MajorPeril</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:64</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.MajorPeril</td>
+<td>StatCode.MajorPeril</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:61</td>
+<td>LV.Policy.StatCodes.MajorPeril</td>
+<td>StatCode.MajorPeril</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:70</td>
+<td>LV.Policy.StatCodes.MajorPeril</td>
+<td>StatCode.MajorPeril</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_majorperil_prop"></a>
+<p class="column">
+<span class="coltitle">MAJORPERIL_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_notes"></a>
+<p class="column">
+<span class="coltitle">Notes</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Description of the endorsement.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:82</td>
+<td>LV.Policy.StatCodes.Notes</td>
+<td>StatCode.Notes</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:69</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.Notes</td>
+<td>StatCode.Notes</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:72</td>
+<td>LV.Policy.StatCodes.Notes</td>
+<td>StatCode.Notes</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:81</td>
+<td>LV.Policy.StatCodes.Notes</td>
+<td>StatCode.Notes</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_notes_prop"></a>
+<p class="column">
+<span class="coltitle">NOTES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_policy"></a>
+<p class="column">
+<span class="coltitle">Policy</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Policy.html" TARGET="tableFrame">Policy</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PolicyID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Policy with which the statistical code is associated.</span>
+<a name="statcode_policy_prop"></a>
+<p class="column">
+<span class="coltitle">POLICY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="statcode_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="statcode_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_state"></a>
+<p class="column">
+<span class="coltitle">State</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/State_tl.html" TARGET="tableFrame">State</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">State in which the statistical code applies.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:77</td>
+<td>LV.Policy.StatCodes.State</td>
+<td>StatCode.State</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:58</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.State</td>
+<td>StatCode.State</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:67</td>
+<td>LV.Policy.StatCodes.State</td>
+<td>StatCode.State</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:76</td>
+<td>LV.Policy.StatCodes.State</td>
+<td>StatCode.State</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_state_prop"></a>
+<p class="column">
+<span class="coltitle">STATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.StatCode></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="statcode_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="statcode_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="statcode_vehiclenumber"></a>
+<p class="column">
+<span class="coltitle">VehicleNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Vehicle number with which this stat line is associated.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>NewClaimStatCodesLV.pcf:60</td>
+<td>LV.Policy.StatCodes.VehicleNumber</td>
+<td>StatCode.VehicleNumber</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>StatCodeDetailDV.pcf:47</td>
+<td>NVV.Policy.StatCodeDetail.StatCodes.VehicleNumber</td>
+<td>StatCode.VehicleNumber</td>
+<td>true</td>
+<td>
+ClaimPolicyStatCodeDetail
+<br>
+ClaimPolicyStatCodes
+<br>
+NewClaimWizard_NewStatCodePopup
+<br>
+NewClaimWizard_StatCodeDetailPopup
+</td>
+</tr>
+<tr>
+<td>StatCodePickerLV.pcf:50</td>
+<td>LV.Policy.StatCodes.VehicleNumber</td>
+<td>StatCode.VehicleNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodePickerPopup
+</td>
+</tr>
+<tr>
+<td>StatCodesLV.pcf:59</td>
+<td>LV.Policy.StatCodes.VehicleNumber</td>
+<td>StatCode.VehicleNumber</td>
+<td>false</td>
+<td>
+ClaimPolicyStatCodesPrint
+<br>
+ClaimPolicyStatCodes
+</td>
+</tr>
+</table>
+</div></div>
+<a name="statcode_vehiclenumber_prop"></a>
+<p class="column">
+<span class="coltitle">VEHICLENUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for StatCode"></a><div class="arraysbox">Unique Keys for StatCode</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>statcode1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

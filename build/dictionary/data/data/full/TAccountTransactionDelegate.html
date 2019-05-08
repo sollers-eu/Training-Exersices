@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>TAccountTransactionDelegate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">TAccountTransactionDelegate <span class="entityname">(Virtual)</span></div>
+<div class="desc">
+<span id="reflink_56" class="reftext" onclick='showAndHideRefBox("refbox_56", "reflink_56")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_56" class="refbox_inner" style="display:none;">
+Delegate for the TAccountTransaction types (normal/plain and RI).
+    Contains the TAccountLineItems that change a pair of T-accounts to account for a transaction as it moves
+    through its LifeCycle States. For example, when a reserve becomes committed, it is debited (removed from) Pending Approval ReservesXX
+    T-Account and added (credited) to the ReservesXX T-Account.  Each TAccountTransaction has a link to its succeeding TAccountTransaction,
+    thus providing a history of the life of the associated transaction. It may have 2 or 4 TAccountLineItemDelegates: 2 to undo previous contributions,
+    and 2 to effect the new contributions. If one of the previous or target states does not have a T-account (i.e. New, Rejected), then there will
+    be only 2 line items.
+  
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">TAccountTransactionDelegate</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup></span>
+</div>
+</div>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="taccounttransactiondelegate_comments"></a>
+<p class="column">
+<span class="coltitle">Comments</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Comments about the transaction, such as the LifeCycleState transition for which it was created.</span>
+<a name="taccounttransactiondelegate_comments_dynprop"></a>
+<p class="column">
+<span class="coltitle">COMMENTS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="taccounttransactiondelegate_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TAccountTransactionDelegate></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>TmpExpToIncidentCopy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">TmpExpToIncidentCopy <span class="entityname">(cc_tmpexptoincidentcopy)</span></div>
+<div class="desc">
+<span id="reflink_2679" class="reftext" onclick='showAndHideRefBox("refbox_2679", "reflink_2679")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2679" class="refbox_inner" style="display:none;">
+Temp table used to copy a variety of injury related fields from the cc_incident table to the cc_exposure table
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">TmpExpToIncidentCopy</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Temporary<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Temporary</b><br>A temporary entity created as part of an upgrade or staging table loading. The entity is deleted after the operation is complete.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="tmpexptoincidentcopy_detailedinjurytypetmp"></a>
+<p class="column">
+<span class="coltitle">DetailedInjuryTypeTmp</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/DetailedInjuryType_tl.html" TARGET="tableFrame">DetailedInjuryType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The DetailedInjuryType value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_detailedinjurytypetmp_prop"></a>
+<p class="column">
+<span class="coltitle">DETAILEDINJURYTYPETMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_generalinjurytypetmp"></a>
+<p class="column">
+<span class="coltitle">GeneralInjuryTypeTmp</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/InjuryType_tl.html" TARGET="tableFrame">InjuryType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The GeneralInjuryType value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_generalinjurytypetmp_prop"></a>
+<p class="column">
+<span class="coltitle">GENERALINJURYTYPETMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_impairmenttmp"></a>
+<p class="column">
+<span class="coltitle">ImpairmentTmp</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "percentagedec")'>percentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Impairment value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_impairmenttmp_prop"></a>
+<p class="column">
+<span class="coltitle">IMPAIRMENTTMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_incidentid"></a>
+<p class="column">
+<span class="coltitle">IncidentID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The ID of the incident to be updated by a join to this temp table</span>
+<a name="tmpexptoincidentcopy_incidentid_prop"></a>
+<p class="column">
+<span class="coltitle">INCIDENTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_lostwagestmp"></a>
+<p class="column">
+<span class="coltitle">LostWagesTmp</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The LostWages value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_lostwagestmp_prop"></a>
+<p class="column">
+<span class="coltitle">LOSTWAGESTMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_medicaltrtmnttypetmp"></a>
+<p class="column">
+<span class="coltitle">MedicaltrtmntTypeTmp</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/MedicalTreatmentType_tl.html" TARGET="tableFrame">MedicalTreatmentType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The MedicalTreatmentType value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_medicaltrtmnttypetmp_prop"></a>
+<p class="column">
+<span class="coltitle">MEDICALTRTMNTTYPETMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_severitytmp"></a>
+<p class="column">
+<span class="coltitle">SeverityTmp</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/SeverityType_tl.html" TARGET="tableFrame">SeverityType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The SeverityType value to copy from cc_exposure to cc_incident</span>
+<a name="tmpexptoincidentcopy_severitytmp_prop"></a>
+<p class="column">
+<span class="coltitle">SEVERITYTMP_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="tmpexptoincidentcopy_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TmpExpToIncidentCopy></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for TmpExpToIncidentCopy"></a><div class="arraysbox">Unique Keys for TmpExpToIncidentCopy</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>exptoincidentu1</td>
+<td>IncidentID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

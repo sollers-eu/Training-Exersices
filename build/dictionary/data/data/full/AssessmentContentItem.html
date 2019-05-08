@@ -1,0 +1,1368 @@
+<html>
+<head>
+<title>AssessmentContentItem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">AssessmentContentItem <span class="entityname">(cc_assessmentcontentitem) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_214" class="reftext" onclick='showAndHideRefBox("refbox_214", "reflink_214")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_214" class="refbox_inner" style="display:none;">
+An assessment detail line regarding Content
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">AssessmentContentItem</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_215" class="reftext" onclick='showAndHideRefBox("refbox_215", "reflink_215")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_215" class="refbox_inner" style="display:none;">
+<A HREF="../full/Incident.html" TARGET="tableFrame">Incident.ContentItemLine</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="assessmentcontentitem_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="assessmentcontentitem_action"></a>
+<p class="column">
+<span class="coltitle">Action</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/AssessmentContentAction_tl.html" TARGET="tableFrame">AssessmentContentAction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">AssessmentContentAction</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:173</td>
+<td>LV.Incident.FixedProperty.ContentItem.Action</td>
+<td>AssessmentContentItem.Action</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:52</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Action</td>
+<td>AssessmentContentItem.Action</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:59</td>
+<td>LV.Incident.FixedProperty.ContentItem.Action</td>
+<td>AssessmentContentItem.Action</td>
+<td>true</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_action_prop"></a>
+<p class="column">
+<span class="coltitle">ACTION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_actualcashvalue"></a>
+<p class="column">
+<span class="coltitle">ActualCashValue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmount</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Calculates total ACV as:
+ACV = RCV - (ReplacementValue * DepreciationPercentage * Age)
+If any of the values involved is null, returns null.  Minimum value is 0.</span>
+<a name="assessmentcontentitem_age"></a>
+<p class="column">
+<span class="coltitle">Age</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.math.BigDecimal</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_amountafterlimit"></a>
+<p class="column">
+<span class="coltitle">AmountAfterLimit</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The amount payable on the item(s)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:283</td>
+<td>Web.BaggageIncident.ContentItem.LimitAmount</td>
+<td>item.AmountAfterLimit</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:231</td>
+<td>Web.PropertyContentsIncident.LineItemAmountAfterLimit</td>
+<td>item.AmountAfterLimit</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_amountafterlimit_prop"></a>
+<p class="column">
+<span class="coltitle">AMOUNTAFTERLIMIT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="assessmentcontentitem_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_assessmentsource"></a>
+<p class="column">
+<span class="coltitle">AssessmentSource</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="AssessmentSource.html" TARGET="tableFrame">AssessmentSource</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: AssessmentSourceID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Related AssessmentSource if applicable</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:59</td>
+<td>NVV.Incident.FixedProperty.ContentItem.RelatedSource</td>
+<td>AssessmentContentItem.AssessmentSource</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:76</td>
+<td>LV.Incident.FixedProperty.ContentItem.RelatedSource</td>
+<td>AssessmentContentItem.AssessmentSource</td>
+<td>true</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_assessmentsource_prop"></a>
+<p class="column">
+<span class="coltitle">ASSESSMENTSOURCE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_brand"></a>
+<p class="column">
+<span class="coltitle">Brand</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Brand Name / Manufacturer</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:159</td>
+<td>LV.Incident.FixedProperty.ContentItem.Brand</td>
+<td>AssessmentContentItem.Brand</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:35</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Brand</td>
+<td>AssessmentContentItem.Brand</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:42</td>
+<td>LV.Incident.FixedProperty.ContentItem.Brand</td>
+<td>AssessmentContentItem.Brand</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_brand_prop"></a>
+<p class="column">
+<span class="coltitle">BRAND_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_calculateddepreciationamount"></a>
+<p class="column">
+<span class="coltitle">CalculatedDepreciationAmount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.financials.CurrencyAmount</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Calculates the DepreciationAmount as:
+DepreciationAmount = ReplacementValue * DepreciationPercentage * Age
+Note that this is not the same as the Depreciation property, which is a persistant db field.</span>
+<a name="assessmentcontentitem_claimcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimCurrency</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.Currency</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_claimordefaultcurrency"></a>
+<p class="column">
+<span class="coltitle">ClaimOrDefaultCurrency</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning typekey.Currency</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Gets the ClaimCurrency or, if it is null, the DefaultCurrency.</span>
+<a name="assessmentcontentitem_contentcategory"></a>
+<p class="column">
+<span class="coltitle">ContentCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ContentLineItemCategory_tl.html" TARGET="tableFrame">ContentLineItemCategory</A> using key filter <A HREF="../typelist/ContentLineItemSchedule_tl.html" TARGET="tableFrame">ContentSchedule</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Assessment Category for Property</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:211</td>
+<td>Web.BaggageIncident.ContentItem.Category</td>
+<td>item.ContentCategory</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:149</td>
+<td>LV.Incident.FixedProperty.ContentItem.Category</td>
+<td>AssessmentContentItem.ContentCategory</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:24</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Category</td>
+<td>AssessmentContentItem.ContentCategory</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:32</td>
+<td>LV.Incident.FixedProperty.ContentItem.Category</td>
+<td>AssessmentContentItem.ContentCategory</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:159</td>
+<td>Web.PropertyContentsIncident.LineItemCategory</td>
+<td>item.ContentCategory</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_contentcategory_prop"></a>
+<p class="column">
+<span class="coltitle">CONTENTCATEGORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_contentschedule"></a>
+<p class="column">
+<span class="coltitle">ContentSchedule</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ContentLineItemSchedule_tl.html" TARGET="tableFrame">ContentLineItemSchedule</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Assessment Schedule for Property</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:143</td>
+<td>LV.Incident.FixedProperty.ContentItem.PropertySchedule</td>
+<td>AssessmentContentItem.ContentSchedule</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:18</td>
+<td>NVV.Incident.FixedProperty.ContentItem.PropertySchedule</td>
+<td>AssessmentContentItem.ContentSchedule</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:27</td>
+<td>LV.Incident.FixedProperty.ContentItem.PropertySchedule</td>
+<td>AssessmentContentItem.ContentSchedule</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_contentschedule_prop"></a>
+<p class="column">
+<span class="coltitle">CONTENTSCHEDULE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:63</td>
+<td>NVV.Incident.FixedProperty.ContentItem.CreateTime</td>
+<td>AssessmentContentItem.CreateTime</td>
+<td>false</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="assessmentcontentitem_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_dateacquired"></a>
+<p class="column">
+<span class="coltitle">DateAcquired</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when this item was acquired</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:228</td>
+<td>Web.BaggageIncident.ContentItem.DateAcquired</td>
+<td>item.DateAcquired</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:168</td>
+<td>LV.Incident.FixedProperty.ContentItem.DateAcquired</td>
+<td>AssessmentContentItem.DateAcquired</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:46</td>
+<td>NVV.Incident.FixedProperty.ContentItem.DateAcquired</td>
+<td>AssessmentContentItem.DateAcquired</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:53</td>
+<td>LV.Incident.FixedProperty.ContentItem.DateAcquired</td>
+<td>AssessmentContentItem.DateAcquired</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:176</td>
+<td>Web.PropertyContentsIncident.LineItemPurchaseDate</td>
+<td>item.DateAcquired</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_dateacquired_prop"></a>
+<p class="column">
+<span class="coltitle">DATEACQUIRED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_depreciation"></a>
+<p class="column">
+<span class="coltitle">Depreciation</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Depreciation</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:85</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Depreciation</td>
+<td>AssessmentContentItem.Depreciation</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_depreciation_prop"></a>
+<p class="column">
+<span class="coltitle">DEPRECIATION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_depreciationpercentage"></a>
+<p class="column">
+<span class="coltitle">DepreciationPercentage</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "percentagedec")'>percentagedec</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Depreciation percentage, per year</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:250</td>
+<td>Web.BaggageIncident.ContentItem.DepreciationPercentage</td>
+<td>item.DepreciationPercentage</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:198</td>
+<td>Web.PropertyContentsIncident.LineItemDepreciationPercentage</td>
+<td>item.DepreciationPercentage</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_depreciationpercentage_prop"></a>
+<p class="column">
+<span class="coltitle">DEPRECIATIONPERCENTAGE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_description"></a>
+<p class="column">
+<span class="coltitle">Description</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Assessment line.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:204</td>
+<td>Web.BaggageIncident.ContentItem.Description</td>
+<td>item.Description</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:164</td>
+<td>LV.Incident.FixedProperty.ContentItem.Description</td>
+<td>AssessmentContentItem.Description</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:41</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Description</td>
+<td>AssessmentContentItem.Description</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:49</td>
+<td>LV.Incident.FixedProperty.ContentItem.Description</td>
+<td>AssessmentContentItem.Description</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:152</td>
+<td>Web.PropertyContentsIncident.LineItemName</td>
+<td>item.Description</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_description_prop"></a>
+<p class="column">
+<span class="coltitle">DESCRIPTION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_incident"></a>
+<p class="column">
+<span class="coltitle">Incident</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Incident.html" TARGET="tableFrame">Incident</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: IncidentID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Related Incident</span>
+<a name="assessmentcontentitem_incident_prop"></a>
+<p class="column">
+<span class="coltitle">INCIDENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_incidentorder"></a>
+<p class="column">
+<span class="coltitle">IncidentOrder</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Order of the item on the Incident</span>
+<a name="assessmentcontentitem_incidentorder_prop"></a>
+<p class="column">
+<span class="coltitle">INCIDENTORDER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_itemcomment"></a>
+<p class="column">
+<span class="coltitle">ItemComment</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Assessment Item Comment</span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:294</td>
+<td>Web.BaggageIncident.ContentItem.Notes</td>
+<td>item.ItemComment</td>
+<td>false</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:68</td>
+<td>NVV.Incident.FixedProperty.ContentItem.ItemComment</td>
+<td>AssessmentContentItem.ItemComment</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:237</td>
+<td>Web.PropertyContentsIncident.LineItemNotes</td>
+<td>item.ItemComment</td>
+<td>false</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_itemcomment_prop"></a>
+<p class="column">
+<span class="coltitle">ITEMCOMMENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_loadcommandid"></a>
+<p class="column">
+<span class="coltitle">LoadCommandID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">LoadCommand for load where row was created. If not null this object was loaded via the loader.</span>
+<a name="assessmentcontentitem_loadcommandid_prop"></a>
+<p class="column">
+<span class="coltitle">LOADCOMMANDID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_numberofitems"></a>
+<p class="column">
+<span class="coltitle">NumberOfItems</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Number of Items</span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:197</td>
+<td>Web.BaggageIncident.ContentItem.NumberOfItems</td>
+<td>item.NumberOfItems</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:155</td>
+<td>LV.Incident.FixedProperty.ContentItem.NumberOfItems</td>
+<td>AssessmentContentItem.NumberOfItems</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:30</td>
+<td>NVV.Incident.FixedProperty.ContentItem.NumberOfItems</td>
+<td>AssessmentContentItem.NumberOfItems</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:38</td>
+<td>LV.Incident.FixedProperty.ContentItem.NumberOfItems</td>
+<td>AssessmentContentItem.NumberOfItems</td>
+<td>false</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:144</td>
+<td>Web.PropertyContentsIncident.LineItemQuantity</td>
+<td>item.NumberOfItems</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_numberofitems_prop"></a>
+<p class="column">
+<span class="coltitle">NUMBEROFITEMS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_proofofownershipprovided"></a>
+<p class="column">
+<span class="coltitle">ProofOfOwnershipProvided</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Did the loss occur on this leg of the schedule</span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:288</td>
+<td>Web.BaggageIncident.ContentItem.ProofOfOwnershipProvided</td>
+<td>item.ProofOfOwnershipProvided</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_proofofownershipprovided_prop"></a>
+<p class="column">
+<span class="coltitle">PROOFOFOWNERSHIPPROVIDED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="assessmentcontentitem_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_purchasecost"></a>
+<p class="column">
+<span class="coltitle">PurchaseCost</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">PurchaseCost</span>
+<div class='screenrefbody'>
+<span id=showhideUI_14 onclick='showAndHideUIDetails("UITable_14", "showhideUI_14")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_14' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:221</td>
+<td>Web.BaggageIncident.ContentItem.PurchaseCost</td>
+<td>item.PurchaseCost</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>FixPropAssessSourceDetailsDV.pcf:179</td>
+<td>LV.Incident.FixedProperty.ContentItem.PurchaseCost</td>
+<td>AssessmentContentItem.PurchaseCost</td>
+<td>false</td>
+<td>
+NewFixPropAssessSourcePopup
+<br>
+FixPropAssessSourcePopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:77</td>
+<td>NVV.Incident.FixedProperty.ContentItem.PurchaseCost</td>
+<td>AssessmentContentItem.PurchaseCost</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+<tr>
+<td>FixPropContentItemLV.pcf:64</td>
+<td>LV.Incident.FixedProperty.ContentItem.PurchaseCost</td>
+<td>AssessmentContentItem.PurchaseCost</td>
+<td>true</td>
+<td>
+EditFixedPropertyIncidentPopup
+<br>
+FixedPropertyIncidentDetailPrint
+<br>
+NewFixedPropertyIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:169</td>
+<td>Web.PropertyContentsIncident.LineItemOriginalCost</td>
+<td>item.PurchaseCost</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_purchasecost_prop"></a>
+<p class="column">
+<span class="coltitle">PURCHASECOST_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_replacementvalue"></a>
+<p class="column">
+<span class="coltitle">ReplacementValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Estimated cost of replacing item(s)</span>
+<div class='screenrefbody'>
+<span id=showhideUI_15 onclick='showAndHideUIDetails("UITable_15", "showhideUI_15")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_15' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>BaggageIncidentDV.pcf:262</td>
+<td>Web.BaggageIncident.ContentItem.ReplacementValue</td>
+<td>item.ReplacementValue</td>
+<td>true</td>
+<td>
+BaggageIncidentDetailPrint
+<br>
+BaggageIncidentPopup
+</td>
+</tr>
+<tr>
+<td>PropertyContentsIncidentPanelSet.pcf:210</td>
+<td>Web.PropertyContentsIncident.LineItemReplacementValue</td>
+<td>item.ReplacementValue</td>
+<td>true</td>
+<td>
+EditPropertyContentsIncidentPopup
+<br>
+NewPropertyContentsIncidentPopup
+<br>
+PropertyContentsIncidentPrint
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_replacementvalue_prop"></a>
+<p class="column">
+<span class="coltitle">REPLACEMENTVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="assessmentcontentitem_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_salvage"></a>
+<p class="column">
+<span class="coltitle">Salvage</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "nonnegativecurrencyamount")'>nonnegativecurrencyamount</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Salvage</span>
+<div class='screenrefbody'>
+<span id=showhideUI_16 onclick='showAndHideUIDetails("UITable_16", "showhideUI_16")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_16' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>FixPropContentItemDetailsDV.pcf:93</td>
+<td>NVV.Incident.FixedProperty.ContentItem.Salvage</td>
+<td>AssessmentContentItem.Salvage</td>
+<td>true</td>
+<td>
+NewFixPropContentItemPopup
+<br>
+FixPropContentItemPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="assessmentcontentitem_salvage_prop"></a>
+<p class="column">
+<span class="coltitle">SALVAGE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AssessmentContentItem></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="assessmentcontentitem_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="assessmentcontentitem_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="assessmentcontentitem_vehiclecategory"></a>
+<p class="column">
+<span class="coltitle">VehicleCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/VehicleLineItemCategory_tl.html" TARGET="tableFrame">VehicleLineItemCategory</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">AssessmentCatetory for Vehicles</span>
+<a name="assessmentcontentitem_vehiclecategory_prop"></a>
+<p class="column">
+<span class="coltitle">VEHICLECATEGORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for AssessmentContentItem"></a><div class="arraysbox">Unique Keys for AssessmentContentItem</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>assessmentconten1a</td>
+<td>PublicID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+showUIDetails('UITable_14', 'showhideUI_14');
+showUIDetails('UITable_15', 'showhideUI_15');
+showUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+hideUIDetails('UITable_14', 'showhideUI_14');
+hideUIDetails('UITable_15', 'showhideUI_15');
+hideUIDetails('UITable_16', 'showhideUI_16');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

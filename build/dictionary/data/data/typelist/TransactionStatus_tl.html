@@ -1,0 +1,996 @@
+<html>
+<head>
+<title>TransactionStatus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">TransactionStatus</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_transactionstatus)</span>
+</div>
+<div class="desc">The status of a transaction, from draft through approval to submission</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_9015" class="reftext" onclick='showAndHideRefBox("refbox_9015", "reflink_9015")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_9015" class="refbox_inner" style="display:none;">
+<A HREF="../full/TransactionTAccountOperationsDelegate.html" TARGET="tableFrame">TransactionTAccountOperationsDelegate.Status</A><br><A HREF="../full/Check.html" TARGET="tableFrame">Check.Status</A><br><A HREF="../full/CheckSearchView.html" TARGET="tableFrame">CheckSearchView.Status</A><br><A HREF="../full/CheckView.html" TARGET="tableFrame">CheckView.Status</A><br><A HREF="../full/PaymentSearchCriteria.html" TARGET="tableFrame">PaymentSearchCriteria.CheckStatus</A><br><A HREF="../full/RITransaction.html" TARGET="tableFrame">RITransaction.Status</A><br><A HREF="../full/RecoverySearchCriteria.html" TARGET="tableFrame">RecoverySearchCriteria.RecoveryStatus</A><br><A HREF="../full/Transaction.html" TARGET="tableFrame">Transaction.Status</A><br><A HREF="../full/TransactionSearchView.html" TARGET="tableFrame">TransactionSearchView.Status</A><br><A HREF="../full/TransactionView.html" TARGET="tableFrame">TransactionView.Status</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#awaitingsubmission>awaitingsubmission</a></td>
+<td>Awaiting submission</td>
+<td>Awaiting for the send date to arrive, at which point the status will change to Submitting (applicable only to payments)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cleared>cleared</a></td>
+<td>Cleared</td>
+<td>Check has cleared</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#denied>denied</a></td>
+<td>Denied</td>
+<td>Denied by the downstream system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#draft>draft</a></td>
+<td>Draft</td>
+<td>Draft; not yet submitted to a back-end accounting system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#issued>issued</a></td>
+<td>Issued</td>
+<td>Check has been issued</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#notifying>notifying</a></td>
+<td>Notifying</td>
+<td>In the process of notifying the accounting system of a new manual check</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingapproval>pendingapproval</a></td>
+<td>Pending approval</td>
+<td>Pending approval</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingrecode>pendingrecode</a></td>
+<td>Pending recode</td>
+<td>Transaction that is pending recode</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingstop>pendingstop</a></td>
+<td>Pending stop</td>
+<td>A stop payment request is pending (applicable only to payments)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingtransfer>pendingtransfer</a></td>
+<td>Pending transfer</td>
+<td>Transaction that is pending transfer from one claim to another claim</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingvoid>pendingvoid</a></td>
+<td>Pending void</td>
+<td>A void transaction request is pending (applicable only to payments and recoveries)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#recoded>recoded</a></td>
+<td>Recoded</td>
+<td>Transaction that is recoded</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#rejected>rejected</a></td>
+<td>Rejected</td>
+<td>Rejected by the user assigned to approve the transaction</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#requested>requested</a></td>
+<td>Requested</td>
+<td>Requested of the accounting system (applicable only to checks)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#requesting>requesting</a></td>
+<td>Requesting</td>
+<td>In the process of being requested from the accounting system (applicable only to checks)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stopped>stopped</a></td>
+<td>Stopped</td>
+<td>A stop payment has been issued for this payment's check (applicable only to payments)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#submitted>submitted</a></td>
+<td>Submitted</td>
+<td>Submitted to the accounting system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#submitting>submitting</a></td>
+<td>Submitting</td>
+<td>In the process of being submitted to the accounting system</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#transferred>transferred</a></td>
+<td>Transferred</td>
+<td>Transaction that is transferred from one claim to another claim</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#voided>voided</a></td>
+<td>Voided</td>
+<td>The transaction is voided (applicable only to payments and recoveries)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=awaitingsubmission></a>
+<div class="titlebox">
+<div class="filtertitle">awaitingsubmission <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9016" class="reftext" onclick='showAndHideRefBox("refbox_9016", "reflink_9016")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9016" class="refbox_inner" style="display:none;">
+Awaiting for the send date to arrive, at which point the status will change to Submitting (applicable only to payments)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Awaiting submission</td>
+<td>Awaiting for the send date to arrive, at which point the status will change to Submitting (applicable only to payments)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cleared></a>
+<div class="titlebox">
+<div class="filtertitle">cleared <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9017" class="reftext" onclick='showAndHideRefBox("refbox_9017", "reflink_9017")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9017" class="refbox_inner" style="display:none;">
+Check has cleared
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Cleared</td>
+<td>Check has cleared</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=denied></a>
+<div class="titlebox">
+<div class="filtertitle">denied <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9018" class="reftext" onclick='showAndHideRefBox("refbox_9018", "reflink_9018")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9018" class="refbox_inner" style="display:none;">
+Denied by the downstream system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Denied</td>
+<td>Denied by the downstream system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=draft></a>
+<div class="titlebox">
+<div class="filtertitle">draft <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9019" class="reftext" onclick='showAndHideRefBox("refbox_9019", "reflink_9019")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9019" class="refbox_inner" style="display:none;">
+Draft; not yet submitted to a back-end accounting system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Draft</td>
+<td>Draft; not yet submitted to a back-end accounting system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=issued></a>
+<div class="titlebox">
+<div class="filtertitle">issued <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9020" class="reftext" onclick='showAndHideRefBox("refbox_9020", "reflink_9020")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9020" class="refbox_inner" style="display:none;">
+Check has been issued
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Issued</td>
+<td>Check has been issued</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=notifying></a>
+<div class="titlebox">
+<div class="filtertitle">notifying <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9021" class="reftext" onclick='showAndHideRefBox("refbox_9021", "reflink_9021")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9021" class="refbox_inner" style="display:none;">
+In the process of notifying the accounting system of a new manual check
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Notifying</td>
+<td>In the process of notifying the accounting system of a new manual check</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingapproval></a>
+<div class="titlebox">
+<div class="filtertitle">pendingapproval <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9022" class="reftext" onclick='showAndHideRefBox("refbox_9022", "reflink_9022")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9022" class="refbox_inner" style="display:none;">
+Pending approval
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval</td>
+<td>Pending approval</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingrecode></a>
+<div class="titlebox">
+<div class="filtertitle">pendingrecode <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9023" class="reftext" onclick='showAndHideRefBox("refbox_9023", "reflink_9023")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9023" class="refbox_inner" style="display:none;">
+Transaction that is pending recode
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending recode</td>
+<td>Transaction that is pending recode</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingstop></a>
+<div class="titlebox">
+<div class="filtertitle">pendingstop <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9024" class="reftext" onclick='showAndHideRefBox("refbox_9024", "reflink_9024")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9024" class="refbox_inner" style="display:none;">
+A stop payment request is pending (applicable only to payments)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending stop</td>
+<td>A stop payment request is pending (applicable only to payments)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingtransfer></a>
+<div class="titlebox">
+<div class="filtertitle">pendingtransfer <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9025" class="reftext" onclick='showAndHideRefBox("refbox_9025", "reflink_9025")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9025" class="refbox_inner" style="display:none;">
+Transaction that is pending transfer from one claim to another claim
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending transfer</td>
+<td>Transaction that is pending transfer from one claim to another claim</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingvoid></a>
+<div class="titlebox">
+<div class="filtertitle">pendingvoid <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9026" class="reftext" onclick='showAndHideRefBox("refbox_9026", "reflink_9026")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9026" class="refbox_inner" style="display:none;">
+A void transaction request is pending (applicable only to payments and recoveries)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending void</td>
+<td>A void transaction request is pending (applicable only to payments and recoveries)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=recoded></a>
+<div class="titlebox">
+<div class="filtertitle">recoded <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9027" class="reftext" onclick='showAndHideRefBox("refbox_9027", "reflink_9027")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9027" class="refbox_inner" style="display:none;">
+Transaction that is recoded
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Recoded</td>
+<td>Transaction that is recoded</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=rejected></a>
+<div class="titlebox">
+<div class="filtertitle">rejected <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9028" class="reftext" onclick='showAndHideRefBox("refbox_9028", "reflink_9028")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9028" class="refbox_inner" style="display:none;">
+Rejected by the user assigned to approve the transaction
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Rejected</td>
+<td>Rejected by the user assigned to approve the transaction</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=requested></a>
+<div class="titlebox">
+<div class="filtertitle">requested <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9029" class="reftext" onclick='showAndHideRefBox("refbox_9029", "reflink_9029")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9029" class="refbox_inner" style="display:none;">
+Requested of the accounting system (applicable only to checks)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Requested</td>
+<td>Requested of the accounting system (applicable only to checks)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=requesting></a>
+<div class="titlebox">
+<div class="filtertitle">requesting <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9030" class="reftext" onclick='showAndHideRefBox("refbox_9030", "reflink_9030")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9030" class="refbox_inner" style="display:none;">
+In the process of being requested from the accounting system (applicable only to checks)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Requesting</td>
+<td>In the process of being requested from the accounting system (applicable only to checks)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stopped></a>
+<div class="titlebox">
+<div class="filtertitle">stopped <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9031" class="reftext" onclick='showAndHideRefBox("refbox_9031", "reflink_9031")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9031" class="refbox_inner" style="display:none;">
+A stop payment has been issued for this payment's check (applicable only to payments)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Stopped</td>
+<td>A stop payment has been issued for this payment's check (applicable only to payments)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=submitted></a>
+<div class="titlebox">
+<div class="filtertitle">submitted <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9032" class="reftext" onclick='showAndHideRefBox("refbox_9032", "reflink_9032")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9032" class="refbox_inner" style="display:none;">
+Submitted to the accounting system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Submitted</td>
+<td>Submitted to the accounting system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=submitting></a>
+<div class="titlebox">
+<div class="filtertitle">submitting <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9033" class="reftext" onclick='showAndHideRefBox("refbox_9033", "reflink_9033")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9033" class="refbox_inner" style="display:none;">
+In the process of being submitted to the accounting system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Submitting</td>
+<td>In the process of being submitted to the accounting system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=transferred></a>
+<div class="titlebox">
+<div class="filtertitle">transferred <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9034" class="reftext" onclick='showAndHideRefBox("refbox_9034", "reflink_9034")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9034" class="refbox_inner" style="display:none;">
+Transaction that is transferred from one claim to another claim
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Transferred</td>
+<td>Transaction that is transferred from one claim to another claim</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=voided></a>
+<div class="titlebox">
+<div class="filtertitle">voided <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9035" class="reftext" onclick='showAndHideRefBox("refbox_9035", "reflink_9035")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9035" class="refbox_inner" style="display:none;">
+The transaction is voided (applicable only to payments and recoveries)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Voided</td>
+<td>The transaction is voided (applicable only to payments and recoveries)</td>
+</tr>
+</table>
+</div>
+<a name="Typefilters"></a><div class="arraysbox">Typefilters</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">transaction <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9036" class="reftext" onclick='showAndHideRefBox("refbox_9036", "reflink_9036")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9036" class="refbox_inner" style="display:none;">
+All status codes that apply to transactions
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#draft" TARGET="tableFrame">draft</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingapproval" TARGET="tableFrame">pendingapproval</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#awaitingsubmission" TARGET="tableFrame">awaitingsubmission</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#submitting" TARGET="tableFrame">submitting</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#submitted" TARGET="tableFrame">submitted</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#rejected" TARGET="tableFrame">rejected</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingvoid" TARGET="tableFrame">pendingvoid</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#voided" TARGET="tableFrame">voided</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingstop" TARGET="tableFrame">pendingstop</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#stopped" TARGET="tableFrame">stopped</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingrecode" TARGET="tableFrame">pendingrecode</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#recoded" TARGET="tableFrame">recoded</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingtransfer" TARGET="tableFrame">pendingtransfer</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#transferred" TARGET="tableFrame">transferred</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#denied" TARGET="tableFrame">denied</A></td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">check <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9037" class="reftext" onclick='showAndHideRefBox("refbox_9037", "reflink_9037")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9037" class="refbox_inner" style="display:none;">
+All status codes that apply to checks
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#draft" TARGET="tableFrame">draft</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingapproval" TARGET="tableFrame">pendingapproval</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#awaitingsubmission" TARGET="tableFrame">awaitingsubmission</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#requesting" TARGET="tableFrame">requesting</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#requested" TARGET="tableFrame">requested</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#rejected" TARGET="tableFrame">rejected</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingvoid" TARGET="tableFrame">pendingvoid</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#voided" TARGET="tableFrame">voided</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingstop" TARGET="tableFrame">pendingstop</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#stopped" TARGET="tableFrame">stopped</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingtransfer" TARGET="tableFrame">pendingtransfer</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#transferred" TARGET="tableFrame">transferred</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#issued" TARGET="tableFrame">issued</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#cleared" TARGET="tableFrame">cleared</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#notifying" TARGET="tableFrame">notifying</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#denied" TARGET="tableFrame">denied</A></td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">recovery <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_9038" class="reftext" onclick='showAndHideRefBox("refbox_9038", "reflink_9038")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_9038" class="refbox_inner" style="display:none;">
+All status codes that apply to recovery
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#draft" TARGET="tableFrame">draft</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#submitting" TARGET="tableFrame">submitting</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#submitted" TARGET="tableFrame">submitted</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingvoid" TARGET="tableFrame">pendingvoid</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#voided" TARGET="tableFrame">voided</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#pendingtransfer" TARGET="tableFrame">pendingtransfer</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#transferred" TARGET="tableFrame">transferred</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#denied" TARGET="tableFrame">denied</A></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

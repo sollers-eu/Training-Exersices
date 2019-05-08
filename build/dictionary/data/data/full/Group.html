@@ -1,0 +1,878 @@
+<html>
+<head>
+<title>Group</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Group <span class="entityname">(cc_group) (delegates to <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>, <A HREF="Validatable.html" TARGET="tableFrame">Validatable</A>)</span></div>
+<div class="desc">
+<span id="reflink_1375" class="reftext" onclick='showAndHideRefBox("refbox_1375", "reflink_1375")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_1375" class="refbox_inner" style="display:none;">
+Groups of users.
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">Group</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>GroupRemoved</li><li>GroupAdded</li><li>GroupChanged</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_1376" class="reftext" onclick='showAndHideRefBox("refbox_1376", "reflink_1376")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_1376" class="refbox_inner" style="display:none;">
+<A HREF="../full/Assignable.html" TARGET="tableFrame">Assignable.AssignedGroup</A><br><A HREF="../full/Assignable.html" TARGET="tableFrame">Assignable.PreviousGroup</A><br><A HREF="../full/CCAssignable.html" TARGET="tableFrame">CCAssignable.AssignedGroup</A><br><A HREF="../full/ClaimAccessData.html" TARGET="tableFrame">ClaimAccessData.Group</A><br><A HREF="../full/LastAssignedUserContainer.html" TARGET="tableFrame">LastAssignedUserContainer.LastClaimGrp</A><br><A HREF="../full/LastAssignedUserContainer.html" TARGET="tableFrame">LastAssignedUserContainer.LastExposureGrp</A><br><A HREF="../full/LastAssignedUserContainer.html" TARGET="tableFrame">LastAssignedUserContainer.LastMatterGrp</A><br><A HREF="../full/LastAssignedUserContainer.html" TARGET="tableFrame">LastAssignedUserContainer.LastServiceRequestGrp</A><br><A HREF="../full/LastAssignedUserContainer.html" TARGET="tableFrame">LastAssignedUserContainer.LastSubrogationGrp</A><br><A HREF="../full/LastAssignedUserContainerBase.html" TARGET="tableFrame">LastAssignedUserContainerBase.LastActivityGrp</A><br><A HREF="../full/LastAssignedUserContainerBase.html" TARGET="tableFrame">LastAssignedUserContainerBase.LastReviewGrp</A><br><A HREF="../full/UserRoleAssignmentDelegate.html" TARGET="tableFrame">UserRoleAssignmentDelegate.AssignedGroup</A><br><A HREF="../full/Activity.html" TARGET="tableFrame">Activity.AssignedGroup</A><br><A HREF="../full/Activity.html" TARGET="tableFrame">Activity.PreviousGroup</A><br><A HREF="../full/AssignableQueue.html" TARGET="tableFrame">AssignableQueue.Group</A><br><A HREF="../full/AttributeBasedAssignmentCriteria.html" TARGET="tableFrame">AttributeBasedAssignmentCriteria.Group</A><br><A HREF="../full/Claim.html" TARGET="tableFrame">Claim.AssignedGroup</A><br><A HREF="../full/Claim.html" TARGET="tableFrame">Claim.PreviousGroup</A><br><A HREF="../full/ClaimAccess.html" TARGET="tableFrame">ClaimAccess.Group</A><br><A HREF="../full/ClaimInfo.html" TARGET="tableFrame">ClaimInfo.AssignedGroup</A><br><A HREF="../full/ClaimInfoAccess.html" TARGET="tableFrame">ClaimInfoAccess.Group</A><br><A HREF="../full/ClaimUserModel.html" TARGET="tableFrame">ClaimUserModel.Group</A><br><A HREF="../full/DashboardStats.html" TARGET="tableFrame">DashboardStats.Group</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastActivityGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastClaimGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastExposureGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastMatterGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastReviewGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastServiceRequestGrp</A><br><A HREF="../full/DynamicAssignmentState.html" TARGET="tableFrame">DynamicAssignmentState.LastSubrogationGrp</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.AssignedGroup</A><br><A HREF="../full/Exposure.html" TARGET="tableFrame">Exposure.PreviousGroup</A><br><A HREF="../full/Group.html" TARGET="tableFrame">Group.Parent</A><br><A HREF="../full/Group.html" TARGET="tableFrame">Group.VisibilityZone</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.Group</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastActivityGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastClaimGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastExposureGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastMatterGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastReviewGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastServiceRequestGrp</A><br><A HREF="../full/GroupAssignmentState.html" TARGET="tableFrame">GroupAssignmentState.LastSubrogationGrp</A><br><A HREF="../full/GroupParentView.html" TARGET="tableFrame">GroupParentView.Group</A><br><A HREF="../full/GroupParentView.html" TARGET="tableFrame">GroupParentView.Parent</A><br><A HREF="../full/GroupRegion.html" TARGET="tableFrame">GroupRegion.Group</A><br><A HREF="../full/GroupSearchCriteria.html" TARGET="tableFrame">GroupSearchCriteria.ParentGroup</A><br><A HREF="../full/GroupSearchCriterion.html" TARGET="tableFrame">GroupSearchCriterion.AssignedToGroup</A><br><A HREF="../full/GroupTypeCriteria.html" TARGET="tableFrame">GroupTypeCriteria.Group</A><br><A HREF="../full/GroupUser.html" TARGET="tableFrame">GroupUser.Group</A><br><A HREF="../full/Group_Name_L10N.html" TARGET="tableFrame">Group_Name_L10N.Owner</A><br><A HREF="../full/Matter.html" TARGET="tableFrame">Matter.AssignedGroup</A><br><A HREF="../full/Matter.html" TARGET="tableFrame">Matter.PreviousGroup</A><br><A HREF="../full/Organization.html" TARGET="tableFrame">Organization.RootGroup</A><br><A HREF="../full/Orggroup.html" TARGET="tableFrame">Orggroup.ForeignEntity</A><br><A HREF="../full/Parentgroup.html" TARGET="tableFrame">Parentgroup.ForeignEntity</A><br><A HREF="../full/Parentgroup.html" TARGET="tableFrame">Parentgroup.Owner</A><br><A HREF="../full/ScriptParameter.html" TARGET="tableFrame">ScriptParameter.Group</A><br><A HREF="../full/ServiceRequest.html" TARGET="tableFrame">ServiceRequest.AssignedGroup</A><br><A HREF="../full/ServiceRequest.html" TARGET="tableFrame">ServiceRequest.PreviousGroup</A><br><A HREF="../full/Subrogation.html" TARGET="tableFrame">Subrogation.AssignedGroup</A><br><A HREF="../full/Subrogation.html" TARGET="tableFrame">Subrogation.PreviousGroup</A><br><A HREF="../full/SupervisedGroup.html" TARGET="tableFrame">SupervisedGroup.SupervisedGroup</A><br><A HREF="../full/UserGroupStats.html" TARGET="tableFrame">UserGroupStats.Group</A><br><A HREF="../full/UserRoleAssignment.html" TARGET="tableFrame">UserRoleAssignment.AssignedGroup</A><br><A HREF="../full/UserRoleAssignment.html" TARGET="tableFrame">UserRoleAssignment.PreviousGroup</A><br><A HREF="../full/UserSearchCriteria.html" TARGET="tableFrame">UserSearchCriteria.Group</A><br><A HREF="../full/UserSearchCriteria.html" TARGET="tableFrame">UserSearchCriteria.ParentGroup</A><br><A HREF="../full/Visibilityzone.html" TARGET="tableFrame">Visibilityzone.ForeignEntity</A><br><A HREF="../full/Visibilityzone.html" TARGET="tableFrame">Visibilityzone.Owner</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_1377" class="reftext" onclick='showAndHideRefBox("refbox_1377", "reflink_1377")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_1377" class="refbox_inner" style="display:none;">
+<A HREF="../full/SecurityZone.html" TARGET="tableFrame">SecurityZone.Groups</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="group_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="group_assignablequeues_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNABLEQUEUES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="group_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="group_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.community.PublicGroupFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_grouptype"></a>
+<p class="column">
+<span class="coltitle">GroupType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/GroupType_tl.html" TARGET="tableFrame">GroupType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of group (describes its function).</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:37</td>
+<td>Web.Admin.GroupDetail.BasicDV.Type</td>
+<td>Group.GroupType</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>GroupSearchPickerResultsLV.pcf:41</td>
+<td>Web.GroupSearchResults.Type</td>
+<td>group.GroupType</td>
+<td>false</td>
+<td>
+GroupSearchPopup
+</td>
+</tr>
+<tr>
+<td>GroupSearchResultsLV.pcf:32</td>
+<td>LV.Admin.GroupSearchResults.Type</td>
+<td>Group.GroupType</td>
+<td>false</td>
+<td>
+AdminGroupSearchPage
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:29</td>
+<td>Web.Admin.GroupDetail.BasicDV.Type</td>
+<td>Group.GroupType</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_grouptype_prop"></a>
+<p class="column">
+<span class="coltitle">GROUPTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_loadfactor"></a>
+<p class="column">
+<span class="coltitle">LoadFactor</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: 100)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Percentage value of normal workload to be given to this group. This is used for round-robin assignment.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailPage.pcf:69</td>
+<td>NVV.Admin.GroupBasics.AdminGroupDetails.Assignment.LoadFactor</td>
+<td>Group.LoadFactor</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>LoadFactorDV.pcf:19</td>
+<td>NVV.Admin.LoadFactor.GroupLoadFactor</td>
+<td>Group.LoadFactor</td>
+<td>true</td>
+<td>
+LoadFactorsPopup
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:74</td>
+<td>NVV.Admin.GroupBasics.AdminGroupDetails.Assignment.LoadFactor</td>
+<td>Group.LoadFactor</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_loadfactor_prop"></a>
+<p class="column">
+<span class="coltitle">LOADFACTOR_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_membersnosystemusersaslist"></a>
+<p class="column">
+<span class="coltitle">MembersNoSystemUsersAsList</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.List<java.lang.Object></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_name"></a>
+<p class="column">
+<span class="coltitle">Name</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (100)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(localized)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>localized</b><br>The property is represented by a different localized table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The group name; this must be unique.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:17</td>
+<td>(gw.api.util.LocaleUtil.CurrentLocaleType == LocaleType.TC_JA_JP) ? DisplayKey.get("Web.Admin.GroupDetail.BasicDV.NamePhonetic") : DisplayKey.get("Web.Admin.GroupDetail.BasicDV.Name")</td>
+<td>Group.Name</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:16</td>
+<td>(gw.api.util.LocaleUtil.CurrentLocaleType == LocaleType.TC_JA_JP) ? DisplayKey.get("Web.Admin.GroupDetail.BasicDV.NamePhonetic") : DisplayKey.get("Web.Admin.GroupDetail.BasicDV.Name")</td>
+<td>Group.Name</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_name_en_us"></a>
+<p class="column">
+<span class="coltitle">Name_en_US</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_name_l10n_array_prop"></a>
+<p class="column">
+<span class="coltitle">NAME_L10N_ARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_name_prop"></a>
+<p class="column">
+<span class="coltitle">NAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_namekanji"></a>
+<p class="column">
+<span class="exttitle">NameKanji</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (100)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The group name in Kanji. Used only for Japanese and will be null otherwise.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:30</td>
+<td>Web.Admin.GroupDetail.BasicDV.Name</td>
+<td>Group.NameKanji</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:22</td>
+<td>Web.Admin.GroupDetail.BasicDV.Name</td>
+<td>Group.NameKanji</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_namekanji_prop"></a>
+<p class="column">
+<span class="coltitle">NAMEKANJI_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_openactivitycount"></a>
+<p class="column">
+<span class="coltitle">OpenActivityCount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning int</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_openclaimcount"></a>
+<p class="column">
+<span class="coltitle">OpenClaimCount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning int</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_openexposurecount"></a>
+<p class="column">
+<span class="coltitle">OpenExposureCount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning int</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_openmattercount"></a>
+<p class="column">
+<span class="coltitle">OpenMatterCount</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning int</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_organization"></a>
+<p class="column">
+<span class="coltitle">Organization</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Organization.html" TARGET="tableFrame">Organization</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: OrganizationID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The Organization that this group belongs to.</span>
+<a name="group_organization_prop"></a>
+<p class="column">
+<span class="coltitle">ORGANIZATION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_parent"></a>
+<p class="column">
+<span class="coltitle">Parent</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Group.html" TARGET="tableFrame">Group</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(export as id)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>export as id</b><br>Causes the system to create an appropriate identifier for the referenced entity: for example, ClaimIdentifier if the foreign key points to the claim table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The group's parent group.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AssignmentGroupLV.pcf:7</td>
+<td>Web.Assignment.Search.ParentGroup</td>
+<td>group.Parent</td>
+<td>false</td>
+<td>
+AssigneePickerPopup
+<br>
+AssignServiceRequestPopup
+<br>
+AssignSubrogationPopup
+<br>
+AssignMattersPopup
+<br>
+AssignExposuresPopup
+<br>
+AssignClaimsPopup
+<br>
+AssignActivitiesPopup
+</td>
+</tr>
+<tr>
+<td>AssignmentUserLV.pcf:7</td>
+<td>Web.Assignment.Search.ParentGroup</td>
+<td>gUser.Group.Parent</td>
+<td>false</td>
+<td>
+AssigneePickerPopup
+<br>
+AssignServiceRequestPopup
+<br>
+AssignSubrogationPopup
+<br>
+AssignMattersPopup
+<br>
+AssignExposuresPopup
+<br>
+AssignClaimsPopup
+<br>
+AssignActivitiesPopup
+</td>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:7</td>
+<td>Web.Admin.GroupDetail.BasicDV.Parent</td>
+<td>Group.Parent</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>GroupSearchPickerResultsLV.pcf:7</td>
+<td>Web.GroupSearchResults.ParentGroup</td>
+<td>group.Parent</td>
+<td>false</td>
+<td>
+GroupSearchPopup
+</td>
+</tr>
+<tr>
+<td>GroupSearchResultsLV.pcf:7</td>
+<td>LV.Admin.GroupSearchResults.ParentGroup</td>
+<td>Group.Parent</td>
+<td>false</td>
+<td>
+AdminGroupSearchPage
+</td>
+</tr>
+<tr>
+<td>GroupUserLV.pcf:7</td>
+<td>Web.Assignment.Search.ParentGroup</td>
+<td>GroupUser.Group.Parent</td>
+<td>false</td>
+<td>
+GroupUserPickerPopup
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:7</td>
+<td>Web.Admin.GroupDetail.BasicDV.Parent</td>
+<td>Group.Parent</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_parent_prop"></a>
+<p class="column">
+<span class="coltitle">PARENT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_parentgrouparray_prop"></a>
+<p class="column">
+<span class="coltitle">PARENTGROUPARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="group_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_regions_prop"></a>
+<p class="column">
+<span class="coltitle">REGIONS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="group_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_rootgroup"></a>
+<p class="column">
+<span class="coltitle">RootGroup</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Group</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_rootgroupid"></a>
+<p class="column">
+<span class="coltitle">RootGroupId</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.core.Key</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_safetodelete"></a>
+<p class="column">
+<span class="coltitle">SafeToDelete</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_securityzone"></a>
+<p class="column">
+<span class="coltitle">SecurityZone</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="SecurityZone.html" TARGET="tableFrame">SecurityZone</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: SecurityZoneID)&nbsp;&nbsp;&nbsp;&nbsp;(export as id)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>export as id</b><br>Causes the system to create an appropriate identifier for the referenced entity: for example, ClaimIdentifier if the foreign key points to the claim table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Security zone to which the group belongs.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:64</td>
+<td>Web.Admin.GroupDetail.BasicDV.SecurityZone</td>
+<td>Group.SecurityZone</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:52</td>
+<td>Web.Admin.GroupDetail.BasicDV.SecurityZone</td>
+<td>Group.SecurityZone</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_securityzone_prop"></a>
+<p class="column">
+<span class="coltitle">SECURITYZONE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_supervisor"></a>
+<p class="column">
+<span class="coltitle">Supervisor</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: SupervisorID)&nbsp;&nbsp;&nbsp;&nbsp;(export as id)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>export as id</b><br>Causes the system to create an appropriate identifier for the referenced entity: for example, ClaimIdentifier if the foreign key points to the claim table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Supervisor of the group.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>GroupDetailDV.pcf:6</td>
+<td>Web.Admin.GroupDetail.BasicDV.Supervisor</td>
+<td>Group.Supervisor</td>
+<td>true</td>
+<td>
+GroupDetailPage
+</td>
+</tr>
+<tr>
+<td>NewGroupDetailDV.pcf:6</td>
+<td>Web.Admin.GroupDetail.BasicDV.Supervisor</td>
+<td>Group.Supervisor</td>
+<td>true</td>
+<td>
+NewGroup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="group_supervisor_prop"></a>
+<p class="column">
+<span class="coltitle">SUPERVISOR_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.Group></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="group_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="group_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_users_prop"></a>
+<p class="column">
+<span class="coltitle">USERS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_validation_results_dynprop"></a>
+<p class="column">
+<span class="coltitle">VALIDATION_RESULTS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_validationlevel"></a>
+<p class="column">
+<span class="coltitle">ValidationLevel</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ValidationLevel_tl.html" TARGET="tableFrame">ValidationLevel</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Validation level that this object passed (if any) before it was stored.</span>
+<a name="group_validationlevel_prop"></a>
+<p class="column">
+<span class="coltitle">VALIDATIONLEVEL_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_validationresult"></a>
+<p class="column">
+<span class="coltitle">ValidationResult</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.validation.ValidationResult</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_visibilityzone"></a>
+<p class="column">
+<span class="coltitle">VisibilityZone</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Group.html" TARGET="tableFrame">Group</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(export as id)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>export as id</b><br>Causes the system to create an appropriate identifier for the referenced entity: for example, ClaimIdentifier if the foreign key points to the claim table.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Group that defines the visibility zone for this group. A visibility zone is defined by a direct child of the root group. The visibility zone of the root group will always be null.</span>
+<a name="group_visibilityzone_prop"></a>
+<p class="column">
+<span class="coltitle">VISIBILITYZONE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_visibilityzonearray_prop"></a>
+<p class="column">
+<span class="coltitle">VISIBILITYZONEARRAY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_worldvisible"></a>
+<p class="column">
+<span class="coltitle">WorldVisible</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: true)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">If true, this group is visible to all users, regardless of what groups they belong to.</span>
+<a name="group_worldvisible_prop"></a>
+<p class="column">
+<span class="coltitle">WORLDVISIBLE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="group_assignablequeues"></a>
+<p class="column">
+<span class="coltitle">AssignableQueues</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="AssignableQueue.html" TARGET="tableFrame">AssignableQueue</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Assignment queues associated with this group.</span>
+<a name="group_childgroups"></a>
+<p class="column">
+<span class="coltitle">ChildGroups</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Group</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_members"></a>
+<p class="column">
+<span class="coltitle">Members</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning GroupUser</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_membersnosystemusers"></a>
+<p class="column">
+<span class="coltitle">MembersNoSystemUsers</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning GroupUser</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_membersnosystemuserssortedbyname"></a>
+<p class="column">
+<span class="coltitle">MembersNoSystemUsersSortedByName</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning GroupUser</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_name_l10n_array"></a>
+<p class="column">
+<span class="coltitle">Name_L10N_ARRAY</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="Group_Name_L10N.html" TARGET="tableFrame">Group_Name_L10N</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="group_openactivities"></a>
+<p class="column">
+<span class="coltitle">OpenActivities</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Activity</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="group_openclaims"></a>
+<p class="column">
+<span class="coltitle">OpenClaims</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Claim</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<b><i>Deprecated</i></b><br>
+<span class="desc"></span>
+<a name="group_openexposures"></a>
+<p class="column">
+<span class="coltitle">OpenExposures</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Exposure</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<b><i>Deprecated</i></b><br>
+<span class="desc"></span>
+<a name="group_openmatters"></a>
+<p class="column">
+<span class="coltitle">OpenMatters</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning Matter</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<b><i>Deprecated</i></b><br>
+<span class="desc"></span>
+<a name="group_regions"></a>
+<p class="column">
+<span class="coltitle">Regions</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="GroupRegion.html" TARGET="tableFrame">GroupRegion</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Regions associated with this group.</span>
+<a name="group_users"></a>
+<p class="column">
+<span class="coltitle">Users</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="GroupUser.html" TARGET="tableFrame">GroupUser</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Users belonging to this group.</span>
+<a name="group_usersnosystemusers"></a>
+<p class="column">
+<span class="coltitle">UsersNoSystemUsers</span>&nbsp;&nbsp;<span class="titleDesc">Derived array returning GroupUser</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Unique Keys for Group"></a><div class="arraysbox">Unique Keys for Group</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>groupu2</td>
+<td>ID, Retired, Name</td></tr>
+<tr><td>group1a</td>
+<td>PublicID, Retired</td></tr>
+<tr><td>group1</td>
+<td>Name, OrganizationID, Retired</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1871 @@
+<html>
+<head>
+<title>Superuser</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Superuser <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_619" class="reftext" onclick='showAndHideRefBox("refbox_619", "reflink_619")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_619" class="refbox_inner" style="display:none;">
+Superuser with full permissions
+</div>
+</span>
+</div>
+</div>
+<a name="Permissions"></a><div class="arraysbox">Permissions</div>
+<a name="create address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abcreate.html'>abcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new contact in the address book</span>
+<a name="create address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abcreatepref.html'>abcreatepref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add a preferred vendor to the address book</span>
+<a name="delete address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abdelete.html'>abdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete an existing contact in the address book</span>
+<a name="delete address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abdeletepref.html'>abdeletepref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete an existing preferred vendor address book entry</span>
+<a name="edit address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abedit.html'>abedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an existing contact in the address book</span>
+<a name="edit address book preferred vendors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abeditpref.html'>abeditpref</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to modify an existing preferred vendor address book entry</span>
+<a name="view address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abview.html'>abview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of contact entries in the address book</span>
+<a name="view address book contact search pages"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abviewsearch.html'>abviewsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to search contact entries in the address book</span>
+<a name="manage account"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/accountmng.html'>accountmng</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add, edit, or delete accounts</span>
+<a name="view account"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/accountview.html'>accountview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view accounts</span>
+<a name="approve any approval activity"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actapproveany.html'>actapproveany</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to approve any approval activity even if the activity is assigned to someone else; the approver is still subject to authority limit restrictions</span>
+<a name="create activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actcreate.html'>actcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create new activities</span>
+<a name="create activities on closed claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actcreateclsd.html'>actcreateclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new activity associated with a closed claim</span>
+<a name="edit unowned activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/acteditunowned.html'>acteditunowned</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to modify (edit/skip/close) activities owned by other users</span>
+<a name="approve rule"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/activityruleapprove.html'>activityruleapprove</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to approve Rule</span>
+<a name="deploy rule"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/activityruledeploy.html'>activityruledeploy</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to deploy Rule</span>
+<a name="edit rule"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/activityruleedit.html'>activityruleedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit Rule</span>
+<a name="import rule"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/activityruleimport.html'>activityruleimport</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to import Rule</span>
+<a name="view rule"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/activityruleview.html'>activityruleview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view Rule</span>
+<a name="make activities mandatory"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actmakemand.html'>actmakemand</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to set whether an activity is mandatory</span>
+<a name="own activity"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actown.html'>actown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own an activity and to see the Desktop Activities page</span>
+<a name="create activity pattern"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actpatcreate.html'>actpatcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create new activity patterns</span>
+<a name="delete activity pattern"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actpatdelete.html'>actpatdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete activity patterns</span>
+<a name="edit activity pattern"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actpatedit.html'>actpatedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit activity patterns</span>
+<a name="view activity pattern"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actpatview.html'>actpatview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of activity patterns or activity pattern details</span>
+<a name="assign activity from queue"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actqueueassign.html'>actqueueassign</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to assign an activity from a queue</span>
+<a name="get next activity from queue"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actqueuenext.html'>actqueuenext</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to get the next activity off of a queue</span>
+<a name="pick activity from queue"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actqueuepick.html'>actqueuepick</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to pick an activity from a queue</span>
+<a name="reassign owned activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actraown.html'>actraown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign your own activities</span>
+<a name="reassign unowned activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actraunown.html'>actraunown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign activities owned by other users</span>
+<a name="review assignments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actreviewassign.html'>actreviewassign</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to review and approve manually-approved assignables</span>
+<a name="view activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actview.html'>actview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view activities</span>
+<a name="view all activity queues"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actviewallqueues.html'>actviewallqueues</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view all activity queues, even those in other security zones</span>
+<a name="execute data change"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/admindatachangeexec.html'>admindatachangeexec</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to execute the data change.</span>
+<a name="view data change"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/admindatachangeview.html'>admindatachangeview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the data change page.</span>
+<a name="manage authority limit profiles"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/alpmanage.html'>alpmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission create, edit, or delete authority limit profiles</span>
+<a name="view authority limit profiles"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/alpview.html'>alpview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view authority limit profiles</span>
+<a name="create contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagcreate.html'>anytagcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new contact regardless of which tag(s) it has</span>
+<a name="delete contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagdelete.html'>anytagdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a contact regardless of which tag(s) it has</span>
+<a name="edit contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagedit.html'>anytagedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the details of a contact regardless of which tag(s) it has</span>
+<a name="view contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagview.html'>anytagview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of a contact regardless of which tag(s) it has</span>
+<a name="archive objects"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/archive.html'>archive</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to archive objects</span>
+<a name="manage claim associations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/assocmanage.html'>assocmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete claim associations</span>
+<a name="view claim associations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/assocview.html'>assocview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view claim associations on a claim</span>
+<a name="manage attributes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/attrmanage.html'>attrmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete user attributes</span>
+<a name="view attributes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/attrview.html'>attrview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of user attributes or attribute details</span>
+<a name="create bulk invoices"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/bulkinvcreate.html'>bulkinvcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create bulk invoices</span>
+<a name="delete bulk invoices"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/bulkinvdelete.html'>bulkinvdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete bulk invoices</span>
+<a name="edit bulk invoices"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/bulkinvedit.html'>bulkinvedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit bulk invoices</span>
+<a name="view bulk invoices"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/bulkinvview.html'>bulkinvview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view bulk invoices</span>
+<a name="manage business week"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/buswkmanage.html'>buswkmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete business week</span>
+<a name="view business week"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/buswkview.html'>buswkview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of business week</span>
+<a name="manage catastrophes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/catmanage.html'>catmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and activate/deactivate catastrophes</span>
+<a name="view catastrophes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/catview.html'>catview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of catastrophes and details of individual catastrophes</span>
+<a name="change contact subtype"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/changecontactsubtype.html'>changecontactsubtype</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to change contact subtype</span>
+<a name="transfer checks"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/checktransfer.html'>checktransfer</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to transfer a check</span>
+<a name="close claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimclose.html'>claimclose</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to close a claim</span>
+<a name="create claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimcreate.html'>claimcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new claim</span>
+<a name="edit claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimedit.html'>claimedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a claim</span>
+<a name="edit closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimeditclsd.html'>claimeditclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a closed claim</span>
+<a name="manage claim integration"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimintegadmin.html'>claimintegadmin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to perform integration admin functions on a claim</span>
+<a name="own claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimown.html'>claimown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own a claim and see the Desktop Claims page</span>
+<a name="print claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimprint.html'>claimprint</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to print a claim</span>
+<a name="manage claim parties"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimprtsmanage.html'>claimprtsmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete parties from a claim</span>
+<a name="manage parties on closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimprtsmanclsd.html'>claimprtsmanclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to manage parties involved on a closed claim</span>
+<a name="reassign owned claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimraown.html'>claimraown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign your own claims</span>
+<a name="reassign unowned claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimraunown.html'>claimraunown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign claims owned by other users</span>
+<a name="remove claim flag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimremflag.html'>claimremflag</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to remove the flag from flagged claims</span>
+<a name="reopen claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimreopen.html'>claimreopen</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reopen a claim</span>
+<a name="select policy"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimselectplcy.html'>claimselectplcy</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to select a new policy for an existing claim</span>
+<a name="select policy on closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimslplcyclsd.html'>claimslplcyclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to select a new policy for a closed claim</span>
+<a name="manage claim users"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimusermanage.html'>claimusermanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to manage claim users</span>
+<a name="manage users on closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimusermanclsd.html'>claimusermanclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to manage claim users on a closed claim</span>
+<a name="validate claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimvalidate.html'>claimvalidate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to run validation rules on a claim</span>
+<a name="view claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimview.html'>claimview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">General permission to view a claim</span>
+<a name="view payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewpay.html'>claimviewpay</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view checks and payments (and derived information) on a claim</span>
+<a name="view recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewrec.html'>claimviewrec</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recoveries (and derived information) on a claim</span>
+<a name="view recovery reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewrecres.html'>claimviewrecres</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recovery reserves (and derived information) on a claim</span>
+<a name="view reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewres.html'>claimviewres</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view reserves (and derived information) on a claim</span>
+<a name="void cleared payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/clearedpayvoid.html'>clearedpayvoid</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to void a cleared check</span>
+<a name="manage coverage verification"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/covverifymanage.html'>covverifymanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete Coverage Verification values</span>
+<a name="view coverage verification"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/covverifyview.html'>covverifyview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of Coverage Verification values</span>
+<a name="create local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctccreate.html'>ctccreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new local contact</span>
+<a name="edit local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctcedit.html'>ctcedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an existing local contact</span>
+<a name="view local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctcview.html'>ctcview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view and search local contact entries</span>
+<a name="manage service tier"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/custsvctiermng.html'>custsvctiermng</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add, edit, or delete service tiers</span>
+<a name="view service tier"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/custsvctierview.html'>custsvctierview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view service tiers</span>
+<a name="always access debug tools"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/debugtools.html'>debugtools</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access debug tools, even when they are disabled by a configuration parameter</span>
+<a name="delete medical note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/delmednote.html'>delmednote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a medical note</span>
+<a name="delete private note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/delprivnote.html'>delprivnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a private note</span>
+<a name="delete sensitive documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/delsensdoc.html'>delsensdoc</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a sensitive document</span>
+<a name="delete sensitive note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/delsensnote.html'>delsensnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a sensitive note</span>
+<a name="create documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/doccreate.html'>doccreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add documents</span>
+<a name="create documents on closed claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/doccreateclsd.html'>doccreateclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add documents to a closed claim</span>
+<a name="delete documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docdelete.html'>docdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to remove documents</span>
+<a name="delete documents on closed claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docdeleteclsd.html'>docdeleteclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to remove documents from a closed claim</span>
+<a name="edit documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docedit.html'>docedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit documents</span>
+<a name="modify all documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docmodifyall.html'>docmodifyall</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit or delete all documents, regardless of the permissions set on the individual documents</span>
+<a name="view documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docview.html'>docview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view documents</span>
+<a name="view all documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docviewall.html'>docviewall</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view all documents, regardless of the permissions set on the individual documents</span>
+<a name="view dashboard claim activity"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/edbclaimact.html'>edbclaimact</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Dashboard claim activity screen</span>
+<a name="view dashboard claim counts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/edbclaimcounts.html'>edbclaimcounts</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Dashboard claim counts screen</span>
+<a name="view dashboard current financials"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/edbcurrfin.html'>edbcurrfin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Dashboard current financials screen</span>
+<a name="view dashboard period financials"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/edbpdfin.html'>edbpdfin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Dashboard period financials screen</span>
+<a name="edit deductible"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editdeductible.html'>editdeductible</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit Deductible</span>
+<a name="edit medical note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editmednote.html'>editmednote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a medical note</span>
+<a name="edit private note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editprivnote.html'>editprivnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a private note</span>
+<a name="edit reference data"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editrefdata.html'>editrefdata</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit administration reference data</span>
+<a name="edit sensitive documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editsensdoc.html'>editsensdoc</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a sensitive document</span>
+<a name="edit sensitive med case mgmt details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editSensMCMdetails.html'>editSensMCMdetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit sensitive Medical Case Management details</span>
+<a name="edit sensitive note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editsensnote.html'>editsensnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a sensitive note</span>
+<a name="edit sensitive siu details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editSensSIUdetails.html'>editSensSIUdetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit sensitive SIU details</span>
+<a name="edit subrogation details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/editsubrodetails.html'>editsubrodetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit Subrogation-related information</span>
+<a name="create evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/evalcreate.html'>evalcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create an evaluation on a claim</span>
+<a name="edit evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/evaledit.html'>evaledit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an evaluation on a claim</span>
+<a name="edit evaluation on a closed claim"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/evaleditclsd.html'>evaleditclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an evaluation on a closed claim</span>
+<a name="view evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/evalview.html'>evalview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view an evaluation on a claim</span>
+<a name="view event messages"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/eventmessageview.html'>eventmessageview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the event messages page</span>
+<a name="exchange rate manual override"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/exchratemanual.html'>exchratemanual</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to override exchange rate with a custom exchange rate.</span>
+<a name="close exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expclose.html'>expclose</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to close an exposure</span>
+<a name="create exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expcreate.html'>expcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new exposure</span>
+<a name="edit exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expedit.html'>expedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an exposure on a claim</span>
+<a name="edit closed exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expeditclsd.html'>expeditclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a closed exposure</span>
+<a name="own exposure"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expown.html'>expown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own an exposure and to see the Desktop Exposures page</span>
+<a name="reassign owned exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expraown.html'>expraown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign your own exposures</span>
+<a name="reassign unowned exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expraunown.html'>expraunown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign exposures owned by other users</span>
+<a name="reopen exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expreopen.html'>expreopen</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reopen an exposure</span>
+<a name="validate exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expvalidate.html'>expvalidate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to run validation rules on exposures</span>
+<a name="view exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expview.html'>expview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view exposures on a claim</span>
+<a name="create groups"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/groupcreate.html'>groupcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create groups</span>
+<a name="delete groups"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/groupdelete.html'>groupdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete groups</span>
+<a name="edit groups"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/groupedit.html'>groupedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit groups</span>
+<a name="view group tree"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/grouptreeview.html'>grouptreeview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to see the user/group tree on the Administration tab</span>
+<a name="view groups"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/groupview.html'>groupview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view details of a group</span>
+<a name="manage holidays"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/holidaymanage.html'>holidaymanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete holidays</span>
+<a name="view holidays"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/holidayview.html'>holidayview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a list of holidays or holiday details</span>
+<a name="ignore acls"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ignoreacl.html'>ignoreacl</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission that grants the user permissions as if they were always on a claim's ACL with every possible ClaimAccessType</span>
+<a name="administer integration"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/integadmin.html'>integadmin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to administer integration events</span>
+<a name="all internal tools"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/internaltools.html'>internaltools</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access all Internal Tools</span>
+<a name="print listviews"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/lvprint.html'>lvprint</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to print listviews</span>
+<a name="manage load factors"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/manageldfctrs.html'>manageldfctrs</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to modify the load factors on all users and groups</span>
+<a name="create manual payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/manpaycreate.html'>manpaycreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create manual payment transactions</span>
+<a name="delete manual payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/manpaydelete.html'>manpaydelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete manual payment transactions</span>
+<a name="edit manual payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/manpayedit.html'>manpayedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit manual payment transactions</span>
+<a name="manage metric limits"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/metriclimitmanage.html'>metriclimitmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete claim and exposure metric limits</span>
+<a name="close matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrclose.html'>mttrclose</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to close matters on a claim</span>
+<a name="create matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrcreate.html'>mttrcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create new matters on a claim</span>
+<a name="edit matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttredit.html'>mttredit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a matter on a claim</span>
+<a name="edit closed matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttreditclsd.html'>mttreditclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a closed matter on a claim</span>
+<a name="own matter"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrown.html'>mttrown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own a matter and to see the Desktop Matters page</span>
+<a name="reassign owned matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrraown.html'>mttrraown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign your own matters</span>
+<a name="reassign unowned matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrraunown.html'>mttrraunown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reassign matters owned by other users</span>
+<a name="reopen matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrreopen.html'>mttrreopen</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to reopen matters on a claim</span>
+<a name="view matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrview.html'>mttrview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view matters</span>
+<a name="create negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ngtncreate.html'>ngtncreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a negotiation on a claim</span>
+<a name="edit negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ngtnedit.html'>ngtnedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a negotiation on a claim</span>
+<a name="edit negotiations on closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ngtneditclsd.html'>ngtneditclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit a negotiation on a closed claim</span>
+<a name="view negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ngtnview.html'>ngtnview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a negotiation on a claim</span>
+<a name="create notes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/notecreate.html'>notecreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add notes</span>
+<a name="create notes on closed claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/notecreateclsd.html'>notecreateclsd</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add a note to a closed claim</span>
+<a name="delete notes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/notedelete.html'>notedelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to remove notes</span>
+<a name="edit note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/noteedit.html'>noteedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the notes</span>
+<a name="edit note body"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/noteeditbody.html'>noteeditbody</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the body of notes</span>
+<a name="view notes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/noteview.html'>noteview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view notes</span>
+<a name="view confidential notes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/noteviewconf.html'>noteviewconf</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view confidential notes</span>
+<a name="create organization"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/orgcreate.html'>orgcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create an organization.</span>
+<a name="delete organization"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/orgdelete.html'>orgdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete an organization.</span>
+<a name="edit organization basic info"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/orgeditbasic.html'>orgeditbasic</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an organization's basic info.</span>
+<a name="search for organization"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/orgsearch.html'>orgsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to search for organizations.</span>
+<a name="view organization basic info"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/orgviewbasic.html'>orgviewbasic</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view an organization's basic info.</span>
+<a name="own sensitive claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ownsensclaim.html'>ownsensclaim</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own sensitive claims</span>
+<a name="own sensitive claim subobjects"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ownsensclaimsub.html'>ownsensclaimsub</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own subobjects on sensitive claims</span>
+<a name="create payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/paycreate.html'>paycreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create payment transactions</span>
+<a name="delete payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/paydelete.html'>paydelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete payment transactions</span>
+<a name="edit payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/payedit.html'>payedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit payment transactions</span>
+<a name="recode payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/payrecode.html'>payrecode</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to recode a payment</span>
+<a name="stop payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/paystop.html'>paystop</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to stop a check</span>
+<a name="void payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/payvoid.html'>payvoid</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to void a check</span>
+<a name="edit policies"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/plcyedit.html'>plcyedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an unverified policy</span>
+<a name="make policies editable"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/plcymakeeditable.html'>plcymakeeditable</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create an unverified policy</span>
+<a name="view policies"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/plcyview.html'>plcyview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view policy information</span>
+<a name="purge objects"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/purge.html'>purge</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to purge objects from the database</span>
+<a name="create recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reccreate.html'>reccreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create recovery transactions</span>
+<a name="delete recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recdelete.html'>recdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete recovery transactions</span>
+<a name="edit recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recedit.html'>recedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit recovery transactions</span>
+<a name="create recovery reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recrescreate.html'>recrescreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create recovery reserve transactions</span>
+<a name="delete recovery reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recresdelete.html'>recresdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete recovery reserve transactions</span>
+<a name="edit recovery reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recresedit.html'>recresedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit recovery reserve transactions</span>
+<a name="void recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/recvoid.html'>recvoid</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to void recovery transactions</span>
+<a name="manage regions"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/regionmanage.html'>regionmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete regions</span>
+<a name="view regions"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/regionview.html'>regionview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of regions and region details</span>
+<a name="edit reinsurance reportable thresholds"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reinsthresholdedit.html'>reinsthresholdedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the reinsurance reportable thresholds</span>
+<a name="view reinsurance reportable thresholds"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reinsthresholdview.html'>reinsthresholdview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the reinsurance reportable thresholds</span>
+<a name="edit reinsurance reportable"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reinsuranceedit.html'>reinsuranceedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the reinsurance reportable status on a claim</span>
+<a name="show reports and dashboard"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/report_manager.html'>report_manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view reports and dashboard in report server</span>
+<a name="show reports"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/report_user.html'>report_user</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view reports in report server</span>
+<a name="view report tab"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reporting_view.html'>reporting_view</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Report tab, if the add-on reporting module is installed</span>
+<a name="create reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/rescreate.html'>rescreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create reserve transactions</span>
+<a name="delete reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/resdelete.html'>resdelete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete reserve transactions</span>
+<a name="edit reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/resedit.html'>resedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit reserve transactions</span>
+<a name="resync message"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/resyncmessage.html'>resyncmessage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to resync message</span>
+<a name="retry message"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/retrymessage.html'>retrymessage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to try to resend the failed message</span>
+<a name="create review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewcreate.html'>reviewcreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new Review</span>
+<a name="delete completed review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewdeletecompleted.html'>reviewdeletecompleted</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a Review</span>
+<a name="delete incomplete review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewdeleteincomplete.html'>reviewdeleteincomplete</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to delete a Review</span>
+<a name="edit review"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewedit.html'>reviewedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the Review page where the scores are entered for each claim</span>
+<a name="view review details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewdetail.html'>reviewviewdetail</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission view the Review page to see the answers entered for each claim</span>
+<a name="view reviews list"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewlist.html'>reviewviewlist</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of Reviews and the reviews tab on a Contact</span>
+<a name="edit ri transactions & agreements"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/riedit.html'>riedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit RI transactions & agreements</span>
+<a name="view ri transactions & agreements"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/riview.html'>riview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view RI transactions & agreements </span>
+<a name="manage roles"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/rolemanage.html'>rolemanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete roles</span>
+<a name="view roles"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/roleview.html'>roleview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of roles and role details</span>
+<a name="administer rules"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ruleadmin.html'>ruleadmin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to run Guidewire Studio or import rules</span>
+<a name="manage script parameters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/scrprmmanage.html'>scrprmmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete script parameters</span>
+<a name="view script parameters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/scrprmview.html'>scrprmview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of script parameters or details of an individual script parameter</span>
+<a name="manage security zones"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/seczonemanage.html'>seczonemanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete security zones</span>
+<a name="send email"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/sendemail.html'>sendemail</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to send Email</span>
+<a name="skip message"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/skipmessage.html'>skipmessage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to skip the failed message</span>
+<a name="soap administration"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/soapadmin.html'>soapadmin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to use the SOAP APIs</span>
+<a name="edit claim storage information"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/StorageUpdate.html'>StorageUpdate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit claim storage information</span>
+<a name="own subrogation"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/subroown.html'>subroown</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to own a subrogation and to see the Desktop Subrogation page</span>
+<a name="edit batchprocess tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsBatchProcessedit.html'>toolsBatchProcessedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the BatchProcess Internal Tools page</span>
+<a name="view batchprocess tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsBatchProcessview.html'>toolsBatchProcessview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the BatchProcess Internal Tools page</span>
+<a name="view cache info page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsCacheinfoview.html'>toolsCacheinfoview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the CacheInfo Internal Tools page</span>
+<a name="edit cluster tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsClusteredit.html'>toolsClusteredit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the Cluster Internal Tools page</span>
+<a name="view cluster tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsClusterview.html'>toolsClusterview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the Cluster Internal Tools page</span>
+<a name="view info tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsInfoview.html'>toolsInfoview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the Info Internal Tools page</span>
+<a name="edit managementbeans tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsJMXBeansEdit.html'>toolsJMXBeansEdit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the ManagementBeans presented on Internal Tools page</span>
+<a name="view managementbeans tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsJMXBeansview.html'>toolsJMXBeansview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the ManagementBeans Internal Tools page</span>
+<a name="edit jprofiler tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsJProfileredit.html'>toolsJProfileredit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the JProfiler Internal Tools page</span>
+<a name="edit log tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsLogedit.html'>toolsLogedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the Log Internal Tools page</span>
+<a name="view log tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsLogview.html'>toolsLogview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the Log Internal Tools page</span>
+<a name="edit startableplugin tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsPluginedit.html'>toolsPluginedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the StartablePlugin Internal Tools page</span>
+<a name="view startableplugin tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsPluginview.html'>toolsPluginview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the StartablePlugin Internal Tools page</span>
+<a name="edit profiler tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsProfileredit.html'>toolsProfileredit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the Profiler Internal Tools page</span>
+<a name="view profiler tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsProfilerview.html'>toolsProfilerview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the Profiler Internal Tools page</span>
+<a name="edit workqueue tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsWorkQueueedit.html'>toolsWorkQueueedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the WorkQueue Internal Tools page</span>
+<a name="view workqueue tools page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/toolsWorkQueueview.html'>toolsWorkQueueview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to access the WorkQueue Internal Tools page</span>
+<a name="unset the coverage in question field"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/unsetcovinquestion.html'>unsetcovinquestion</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to allow user to set the coverage in question to no from yes</span>
+<a name="create users"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usercreate.html'>usercreate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new user</span>
+<a name="edit users"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/useredit.html'>useredit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an existing user, except for roles, authority limits, or attributes</span>
+<a name="edit user attributes"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usereditattrs.html'>usereditattrs</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit attributes for a user</span>
+<a name="edit user language"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usereditlang.html'>usereditlang</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit language</span>
+<a name="grant authority limits"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usergrantauth.html'>usergrantauth</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to grant or change an authority limit for a user</span>
+<a name="grant roles to users"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usergrantroles.html'>usergrantroles</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to grant or revoke roles</span>
+<a name="view user"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/userview.html'>userview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view details of a user</span>
+<a name="view all users"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/userviewall.html'>userviewall</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to see users in all visible groups</span>
+<a name="view activity calendar"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewactcal.html'>viewactcal</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view activity calendar of other users</span>
+<a name="view admin"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewadmin.html'>viewadmin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Admin tab</span>
+<a name="view claim associations subtab"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewassociations.html'>viewassociations</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Associations subtab</span>
+<a name="view claim loss details page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimbasics.html'>viewclaimbasics</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Loss Details page</span>
+<a name="view claim evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimevals.html'>viewclaimevals</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Evaluations page</span>
+<a name="view claim history page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimhistory.html'>viewclaimhistory</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view audit trail (history) for a claim</span>
+<a name="view claim negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimngtns.html'>viewclaimngtns</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Negotiations page</span>
+<a name="view claim notes page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimnotes.html'>viewclaimnotes</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Notes page</span>
+<a name="view claim parties involved page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimparties.html'>viewclaimparties</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Parties Involved page</span>
+<a name="view claim summary page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimsummary.html'>viewclaimsummary</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Summary page</span>
+<a name="view claim sync screens"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimsync.html'>viewclaimsync</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view claim sync screens</span>
+<a name="view desktop"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewdesktop.html'>viewdesktop</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Desktop</span>
+<a name="view claim documents page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewdocs.html'>viewdocs</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Documents page</span>
+<a name="view claim exposures page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewexposures.html'>viewexposures</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Exposures page</span>
+<a name="view claim financials"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewfinsum.html'>viewfinsum</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Financials Summary and Transaction subtabs on a claim</span>
+<a name="view claim matters page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewmatters.html'>viewmatters</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view matters</span>
+<a name="view medical note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewmednote.html'>viewmednote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a medical note</span>
+<a name="view claim policy page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewpolicy.html'>viewpolicy</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Policy page</span>
+<a name="view policy system"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewpolicysystem.html'>viewpolicysystem</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view policy in policy system</span>
+<a name="view private note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewprivnote.html'>viewprivnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a private note</span>
+<a name="view reference data"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewrefdata.html'>viewrefdata</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view administration reference data</span>
+<a name="view search"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsearch.html'>viewsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Search tab</span>
+<a name="view sensitive documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsensdoc.html'>viewsensdoc</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a sensitive document</span>
+<a name="view sensitive med case mgmt details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewSensMCMdetails.html'>viewSensMCMdetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view sensitive Medical Case Management details</span>
+<a name="view sensitive note"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsensnote.html'>viewsensnote</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a sensitive note</span>
+<a name="view sensitive siu details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewSensSIUdetails.html'>viewSensSIUdetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view sensitive SIU details</span>
+<a name="view claim snapshot"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsnapshot.html'>viewsnapshot</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the FNOL snapshot for a claim</span>
+<a name="view subrogation details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsubrodetails.html'>viewsubrodetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view Subrogation-related information</span>
+<a name="view supervisor calendar"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsupcalendar.html'>viewsupcalendar</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the supervisor calendar screen</span>
+<a name="view team"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewteam.html'>viewteam</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Team tab</span>
+<a name="view vacation"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewvacation.html'>viewvacation</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Vacation tab</span>
+<a name="view global workload"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewworkload.html'>viewworkload</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view global workload statistics of other users</span>
+<a name="view claim workplan"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewworkplan.html'>viewworkplan</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Workplan page</span>
+<a name="manage wc disability rates"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wcrefmanage.html'>wcrefmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, and delete values on WC disability rate tables</span>
+<a name="view wc disability rates"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wcrefview.html'>wcrefview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the values on WC disability rate tables</span>
+<a name="manage workflow"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/workflowmanage.html'>workflowmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the ManageWorkflow page</span>
+<a name="view workflow"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/workflowview.html'>workflowview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Workflow page</span>
+<a name="add data change"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wsdatachangeedit.html'>wsdatachangeedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to add a data change gosu program.</span>
+<a name="manage workload classifications"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wwlcmanage.html'>wwlcmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete weighted workload classifications</span>
+<a name="view workload classifications"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wwlcview.html'>wwlcview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view weighted workload classifications</span>
+<a name="manage supplemental workload weight"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wwlmanage.html'>wwlmanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit supplemental weight</span>
+<a name="view workload weight"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/wwlview.html'>wwlview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view classification and supplemental workload weight</span>
+<a name="manage admin zones"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/zonemanage.html'>zonemanage</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create, edit, or delete admin zones</span>
+<a name="view admin zones"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/zoneview.html'>zoneview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of admin zones</span>
+</body>
+</html>

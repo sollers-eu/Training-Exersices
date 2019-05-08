@@ -1,0 +1,396 @@
+<html>
+<head>
+<title>ClassificationCondition</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ClassificationCondition <span class="entityname">(cc_classificationcondition) (delegates to <A HREF="Editable.html" TARGET="tableFrame">Editable</A>)</span></div>
+<div class="desc">
+<span id="reflink_769" class="reftext" onclick='showAndHideRefBox("refbox_769", "reflink_769")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_769" class="refbox_inner" style="display:none;">
+Filtering condition for classifications
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ClassificationCondition</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Abstract<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Abstract</b><br>The entity is a supertype, but all instances of it must be one of its subtypes. That is, you cannot instantiate the supertype entity itself. An abstract entity is appropriate when the supertype serves only to collect logic or common fields, but does not make sense to exist on its own.')">?</span></sup>, Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_770" class="reftext" onclick='showAndHideRefBox("refbox_770", "reflink_770")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_770" class="refbox_inner" style="display:none;">
+<A HREF="../full/ConditionFilter.html" TARGET="tableFrame">ConditionFilter.Condition</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_771" class="reftext" onclick='showAndHideRefBox("refbox_771", "reflink_771")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_771" class="refbox_inner" style="display:none;">
+<A HREF="../full/WorkloadClassification.html" TARGET="tableFrame">WorkloadClassification.Conditions</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+CustomerServiceTierCondition</td>
+<td><A HREF="#CustomerServiceTierCondition" TARGET="tableFrame">CustomerServiceTierCondition</A></td>
+</tr>
+<tr>
+<td>
+ExposureCondition</td>
+<td><A HREF="#ExposureCondition" TARGET="tableFrame">ExposureCondition</A></td>
+</tr>
+<tr>
+<td>
+IncidentSeverityCondition</td>
+<td><A HREF="#IncidentSeverityCondition" TARGET="tableFrame">IncidentSeverityCondition</A></td>
+</tr>
+<tr>
+<td>
+JurisdictionCondition</td>
+<td><A HREF="#JurisdictionCondition" TARGET="tableFrame">JurisdictionCondition</A></td>
+</tr>
+<tr>
+<td>
+LossCauseCondition</td>
+<td><A HREF="#LossCauseCondition" TARGET="tableFrame">LossCauseCondition</A></td>
+</tr>
+<tr>
+<td>
+SegmentCondition</td>
+<td><A HREF="#SegmentCondition" TARGET="tableFrame">SegmentCondition</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="classificationcondition_includeall"></a>
+<p class="column">
+<span class="coltitle">IncludeAll</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: true)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">flag determining if all entities or only selected few are considered by weight filter</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ClaimWorkloadClassification.pcf:31</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllExposures</td>
+<td>classification.ExposureCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ClaimWorkloadClassification.pcf:54</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllClaimSegments</td>
+<td>classification.SegmentCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ClaimWorkloadClassification.pcf:76</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllClaimLossCauses</td>
+<td>classification.LossCauseCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ClaimWorkloadClassification.pcf:98</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllCustomerServiceTiers</td>
+<td>classification.CustomerServiceTierCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ExposureWorkloadClassification.pcf:31</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllExposures</td>
+<td>classification.ExposureCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ExposureWorkloadClassification.pcf:53</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllExposureSegments</td>
+<td>classification.SegmentCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ExposureWorkloadClassification.pcf:75</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllExposureIncidentSeverities</td>
+<td>classification.IncidentSeverityCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+<tr>
+<td>WorkloadClassificationDV.ExposureWorkloadClassification.pcf:96</td>
+<td>Web.Admin.Workload.WorkloadClassification.AllExposureJurisdictionStates</td>
+<td>classification.JurisdictionCondition.IncludeAll</td>
+<td>true</td>
+<td>
+WorkloadClassificationDetailPopup
+<br>
+NewWorkloadClassificationPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="classificationcondition_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="classificationcondition_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">ClassificationCondition</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="classificationcondition_workloadclassification"></a>
+<p class="column">
+<span class="coltitle">WorkloadClassification</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="WorkloadClassification.html" TARGET="tableFrame">WorkloadClassification</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: WorkloadClassificationID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Classification which this condition is related.</span>
+<a name="Unique Keys for ClassificationCondition"></a><div class="arraysbox">Unique Keys for ClassificationCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=CustomerServiceTierCondition></a>
+<div class="titlebox">
+<div class="filtertitle">CustomerServiceTierCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_772" class="reftext" onclick='showAndHideRefBox("refbox_772", "reflink_772")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_772" class="refbox_inner" style="display:none;">
+Service Tier Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for CustomerServiceTierCondition"></a><div class="arraysbox">Unique Keys for CustomerServiceTierCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ExposureCondition></a>
+<div class="titlebox">
+<div class="filtertitle">ExposureCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_773" class="reftext" onclick='showAndHideRefBox("refbox_773", "reflink_773")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_773" class="refbox_inner" style="display:none;">
+Exposure Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for ExposureCondition"></a><div class="arraysbox">Unique Keys for ExposureCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=IncidentSeverityCondition></a>
+<div class="titlebox">
+<div class="filtertitle">IncidentSeverityCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_774" class="reftext" onclick='showAndHideRefBox("refbox_774", "reflink_774")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_774" class="refbox_inner" style="display:none;">
+Incident Severity Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for IncidentSeverityCondition"></a><div class="arraysbox">Unique Keys for IncidentSeverityCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=JurisdictionCondition></a>
+<div class="titlebox">
+<div class="filtertitle">JurisdictionCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_775" class="reftext" onclick='showAndHideRefBox("refbox_775", "reflink_775")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_775" class="refbox_inner" style="display:none;">
+Jurisdiction Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for JurisdictionCondition"></a><div class="arraysbox">Unique Keys for JurisdictionCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=LossCauseCondition></a>
+<div class="titlebox">
+<div class="filtertitle">LossCauseCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_776" class="reftext" onclick='showAndHideRefBox("refbox_776", "reflink_776")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_776" class="refbox_inner" style="display:none;">
+Loss Cause Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for LossCauseCondition"></a><div class="arraysbox">Unique Keys for LossCauseCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=SegmentCondition></a>
+<div class="titlebox">
+<div class="filtertitle">SegmentCondition <span class='supername'>(subtype of <A HREF="ClassificationCondition.html" TARGET="tableFrame">ClassificationCondition</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_777" class="reftext" onclick='showAndHideRefBox("refbox_777", "reflink_777")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_777" class="refbox_inner" style="display:none;">
+Segment Classification Condition
+</div>
+</span>
+</div>
+</div>
+<a name="Unique Keys for SegmentCondition"></a><div class="arraysbox">Unique Keys for SegmentCondition</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>classificationco1a</td>
+<td>PublicID</td></tr>
+</table>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1251 @@
+<html>
+<head>
+<title>ClaimContact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ClaimContact <span class="entityname">(cc_claimcontact) (delegates to <A HREF="EventAware.html" TARGET="tableFrame">EventAware</A>, <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="Retireable.html" TARGET="tableFrame">Retireable</A>)</span></div>
+<div class="desc">
+<span id="reflink_581" class="reftext" onclick='showAndHideRefBox("refbox_581", "reflink_581")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_581" class="refbox_inner" style="display:none;">
+
+        Links a contact to a claim. This entity also contains an array to the roles played by the contact on the claim.
+        Changes to the related Contact or the Roles array triggers validation.
+     
+
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ClaimContact</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Editable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Editable</b><br>The related database table contains rows that are editable by application users based on roles and permissions. An Editable table manages additional fields that represent an audit trail of an entity in the table (for example, who created it and when, who last edited it and when).')">?</span></sup>, Exportable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>, Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup></span>
+</div>
+</div>
+<b>Messaging Events:</b> The application will generate these events for this entity:<ul><li>ClaimContactChanged</li><li>ClaimContactContactChanged</li><li>ClaimContactRemoved</li><li>ClaimContactAdded</li></ul><i>Integration programmers can write Event Fired rules to perform actions on these events. Refer
+ to the <b>Integration Guide</b> for the complete list of events for all entities. Remember to
+ configure a new or existing messaging destination in Studio to listen for desired events. </i><div class="refbox biglist odd">
+<span id="reflink_582" class="reftext" onclick='showAndHideRefBox("refbox_582", "reflink_582")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_582" class="refbox_inner" style="display:none;">
+<A HREF="../full/Activity.html" TARGET="tableFrame">Activity.ClaimContact</A><br><A HREF="../full/Activity.html" TARGET="tableFrame">Activity.ExternalOwnerCC</A><br><A HREF="../full/Check.html" TARGET="tableFrame">Check.ClaimContact</A><br><A HREF="../full/CheckPayee.html" TARGET="tableFrame">CheckPayee.ClaimContact</A><br><A HREF="../full/ClaimContactRole.html" TARGET="tableFrame">ClaimContactRole.ClaimContact</A><br><A HREF="../full/Document.html" TARGET="tableFrame">Document.ClaimContact</A><br><A HREF="../full/DocumentSearchCriteria.html" TARGET="tableFrame">DocumentSearchCriteria.ClaimContact</A><br><A HREF="../full/DrugPrescribed.html" TARGET="tableFrame">DrugPrescribed.ClaimContact</A><br><A HREF="../full/Evaluation.html" TARGET="tableFrame">Evaluation.ClaimContact</A><br><A HREF="../full/MedicalContactStatus.html" TARGET="tableFrame">MedicalContactStatus.ClaimContact</A><br><A HREF="../full/MedicalTreatment.html" TARGET="tableFrame">MedicalTreatment.ClaimContact</A><br><A HREF="../full/Negotiation.html" TARGET="tableFrame">Negotiation.ClaimContact</A><br><A HREF="../full/Note.html" TARGET="tableFrame">Note.ClaimContact</A><br><A HREF="../full/NoteSearchCriteria.html" TARGET="tableFrame">NoteSearchCriteria.ClaimContact</A><br><A HREF="../full/Transaction.html#Recovery" TARGET="tableFrame">Recovery.ClaimContact</A><br><A HREF="../full/Transaction.html#Recovery" TARGET="tableFrame">Recovery.OBOClaimContact</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_583" class="reftext" onclick='showAndHideRefBox("refbox_583", "reflink_583")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_583" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.Contacts</A><br><A HREF="../full/Policy.html" TARGET="tableFrame">Policy.Contacts</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="claimcontact_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="claimcontact_adjudicator"></a>
+<p class="column">
+<span class="coltitle">Adjudicator</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Adjudicator</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_archivepartition"></a>
+<p class="column">
+<span class="coltitle">ArchivePartition</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Unique number to partition the data so that the multiple workers can work independently</span>
+<a name="claimcontact_archivepartition_dynprop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_archivepartition_prop"></a>
+<p class="column">
+<span class="coltitle">ARCHIVEPARTITION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_attorney"></a>
+<p class="column">
+<span class="coltitle">Attorney</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Attorney</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_autorepairshop"></a>
+<p class="column">
+<span class="coltitle">AutoRepairShop</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning AutoRepairShop</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_autotowingagcy"></a>
+<p class="column">
+<span class="coltitle">AutoTowingAgcy</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning AutoTowingAgcy</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_beanversion_prop"></a>
+<p class="column">
+<span class="coltitle">BEANVERSION_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_benefitenddate"></a>
+<p class="column">
+<span class="exttitle">BenefitEndDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Benefit end date</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableClaimantDependentsLV.pcf:69</td>
+<td>LV.EditableClaimantDependents.BenefitEndDate</td>
+<td>ClaimContactRole.ClaimContact.BenefitEndDate</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_benefitenddate_prop"></a>
+<p class="column">
+<span class="coltitle">BENEFITENDDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_benefitendreason"></a>
+<p class="column">
+<span class="exttitle">BenefitEndReason</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Reason benefits ended (deprecated in favor of BenefitEndReasonType)</span>
+<a name="claimcontact_benefitendreason_prop"></a>
+<p class="column">
+<span class="coltitle">BENEFITENDREASON_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_benefitendreasontype"></a>
+<p class="column">
+<span class="exttitle">BenefitEndReasonType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/BenefitEndReasonType_tl.html" TARGET="tableFrame">BenefitEndReasonType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Reason benefits ended - typelist</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableClaimantDependentsLV.pcf:64</td>
+<td>LV.EditableClaimantDependents.BenefitEndReason</td>
+<td>ClaimContactRole.ClaimContact.BenefitEndReasonType</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_benefitendreasontype_prop"></a>
+<p class="column">
+<span class="coltitle">BENEFITENDREASONTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ClaimID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Claim with which the contact is associated.</span>
+<a name="claimcontact_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_claimant"></a>
+<p class="column">
+<span class="coltitle">Claimant</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_claimantflag"></a>
+<p class="column">
+<span class="coltitle">ClaimantFlag</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Denorm field indicating whether or not this ClaimContact has the role of claimant.</span>
+<a name="claimcontact_claimantflag_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMANTFLAG_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_company"></a>
+<p class="column">
+<span class="coltitle">Company</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Company</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_companyvendor"></a>
+<p class="column">
+<span class="coltitle">CompanyVendor</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning CompanyVendor</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_contact"></a>
+<p class="column">
+<span class="coltitle">Contact</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ContactID)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this foreign key trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Contact associated with the claim or exposure.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ClaimContactTransferRolesPopup.pcf:152</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.Name</td>
+<td>SourceClaimContact.Contact</td>
+<td>false</td>
+<td>
+ClaimContactTransferRolesPopup
+</td>
+</tr>
+<tr>
+<td>ClaimContactTransferRolesPopup.pcf:78</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.Name</td>
+<td>ChooseClaimContact.Contact</td>
+<td>false</td>
+<td>
+ClaimContactTransferRolesPopup
+</td>
+</tr>
+<tr>
+<td>EditableSecondaryAttorneyLV.pcf:12</td>
+<td>Web.EditableSecondaryAttorneyLV.Contact</td>
+<td>ClaimContactRole.ClaimContact.Contact</td>
+<td>true</td>
+<td>
+MatterDetailPage
+</td>
+</tr>
+<tr>
+<td>EditableServiceProviderLV.pcf:12</td>
+<td>LV.EditableServiceProviders.Exposure.RSBenProvider</td>
+<td>ClaimContactRole.ClaimContact.Contact</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+<tr>
+<td>NewClaimPeopleInvolvedDetailedLV.pcf:71</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.Name</td>
+<td>ClaimContact.Contact</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>NewClaimSummaryPeopleInvolvedLV.pcf:29</td>
+<td>LV.Claim.PeopleInvolved.Name</td>
+<td>ClaimContact.Contact</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PeopleInvolvedDetailedLV.pcf:67</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.Name</td>
+<td>ClaimContact.Contact</td>
+<td>false</td>
+<td>
+ClaimContacts
+</td>
+</tr>
+<tr>
+<td>PeopleInvolvedLV.pcf:27</td>
+<td>LV.Claim.PeopleInvolved.Name</td>
+<td>ClaimContact.Contact</td>
+<td>false</td>
+<td>
+ClaimSummaryPeopleInvolvedPrint
+<br>
+ClaimSummary
+<br>
+ClaimSummaryPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_contact_prop"></a>
+<p class="column">
+<span class="coltitle">CONTACT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_contactnamedenorm"></a>
+<p class="column">
+<span class="coltitle">ContactNameDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "companyname")'>companyname</span> (60)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup></span>
+<br>
+<span class="desc">denormalization of contact name, to speed up search for claim by contact name</span>
+<a name="claimcontact_contactnamedenorm_prop"></a>
+<p class="column">
+<span class="coltitle">CONTACTNAMEDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_contactprohibited"></a>
+<p class="column">
+<span class="coltitle">ContactProhibited</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Indicates whether contact is prohibited with this contact.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookPersonContactInfoInputSet.pcf:23</td>
+<td>Web.ContactDetail.ContactProhibited</td>
+<td>claimContact.ContactProhibited</td>
+<td>true</td>
+<td>
+AddressBookContactDetailPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+</td>
+</tr>
+<tr>
+<td>BusinessContactInfoInputSet.pcf:35</td>
+<td>Web.ContactDetail.ContactProhibited</td>
+<td>claimContact.ContactProhibited</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>ClaimContactTransferRolesPopup.pcf:162</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.ContactProhibited</td>
+<td>SourceClaimContact.ContactProhibited</td>
+<td>false</td>
+<td>
+ClaimContactTransferRolesPopup
+</td>
+</tr>
+<tr>
+<td>ClaimContactTransferRolesPopup.pcf:88</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.ContactProhibited</td>
+<td>ChooseClaimContact.ContactProhibited</td>
+<td>false</td>
+<td>
+ClaimContactTransferRolesPopup
+</td>
+</tr>
+<tr>
+<td>NewClaimPeopleInvolvedDetailedLV.pcf:82</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.ContactProhibited</td>
+<td>ClaimContact.ContactProhibited</td>
+<td>false</td>
+<td>
+FNOLWizard
+</td>
+</tr>
+<tr>
+<td>PeopleInvolvedDetailedLV.pcf:80</td>
+<td>LV.Claim.PeopleInvolvedDetailed.PeopleInvolved.ContactProhibited</td>
+<td>ClaimContact.ContactProhibited</td>
+<td>false</td>
+<td>
+ClaimContacts
+</td>
+</tr>
+<tr>
+<td>PersonContactInfoInputSet.pcf:32</td>
+<td>Web.ContactDetail.ContactProhibited</td>
+<td>claimContact.ContactProhibited</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_contactprohibited_prop"></a>
+<p class="column">
+<span class="coltitle">CONTACTPROHIBITED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_contactvalidfrom"></a>
+<p class="column">
+<span class="exttitle">ContactValidFrom</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Start Date when this Contact is valid on this claim </span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AdditionalInfoInputSet.Adjudicator.pcf:66</td>
+<td>Web.ContactBasicsDV.Person.Adjudicator.ValidFrom</td>
+<td>claimContact.ContactValidFrom</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>AdditionalInfoInputSet.PersonVendor.pcf:71</td>
+<td>Web.ContactBasicsDV.Person.PersonVendor.ValidFrom</td>
+<td>claimContact.ContactValidFrom</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>ContactBasicsDV.Company.pcf:59</td>
+<td>Web.ContactBasicsDV.Company.CompanyVendor.ValidFrom</td>
+<td>ClaimContact.ContactValidFrom</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>MedicalPersonnelLV.pcf:31</td>
+<td>MedicalPersonnel.ValidFrom</td>
+<td>ClaimContact.ContactValidFrom</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_contactvalidfrom_prop"></a>
+<p class="column">
+<span class="coltitle">CONTACTVALIDFROM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_contactvalidto"></a>
+<p class="column">
+<span class="exttitle">ContactValidTo</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Date when this Contact is no longer valid on this claim</span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AdditionalInfoInputSet.Adjudicator.pcf:72</td>
+<td>Web.ContactBasicsDV.Person.Adjudicator.ValidTo</td>
+<td>claimContact.ContactValidTo</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>AdditionalInfoInputSet.PersonVendor.pcf:77</td>
+<td>Web.ContactBasicsDV.Person.PersonVendor.ValidTo</td>
+<td>claimContact.ContactValidTo</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>ContactBasicsDV.Company.pcf:65</td>
+<td>Web.ContactBasicsDV.Company.CompanyVendor.ValidTo</td>
+<td>ClaimContact.ContactValidTo</td>
+<td>true</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimContacts
+<br>
+NewClaimWizard_PartyInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+NewContactPopup
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ClaimContactPrintDetails
+</td>
+</tr>
+<tr>
+<td>MedicalPersonnelLV.pcf:35</td>
+<td>MedicalPersonnel.ValidTo</td>
+<td>ClaimContact.ContactValidTo</td>
+<td>false</td>
+<td>
+TopLevelExposureDetail
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_contactvalidto_prop"></a>
+<p class="column">
+<span class="coltitle">CONTACTVALIDTO_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_createtime"></a>
+<p class="column">
+<span class="coltitle">CreateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was created</span>
+<a name="claimcontact_createtime_prop"></a>
+<p class="column">
+<span class="coltitle">CREATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_createuser"></a>
+<p class="column">
+<span class="coltitle">CreateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: CreateUserID)</span>
+<br>
+<span class="desc">User who created the object</span>
+<a name="claimcontact_createuser_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_dependenttype"></a>
+<p class="column">
+<span class="exttitle">DependentType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/DependentType_tl.html" TARGET="tableFrame">DependentType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type of dependent - spouse, child etc.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableClaimantDependentsLV.pcf:50</td>
+<td>LV.EditableClaimantDependents.DependentType</td>
+<td>ClaimContactRole.ClaimContact.DependentType</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_dependenttype_prop"></a>
+<p class="column">
+<span class="coltitle">DEPENDENTTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_doctor"></a>
+<p class="column">
+<span class="coltitle">Doctor</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Doctor</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_essentialservicetype"></a>
+<p class="column">
+<span class="exttitle">EssentialServiceType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/EssentialServiceType_tl.html" TARGET="tableFrame">EssentialServiceType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Type essential service provided by contact</span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableServiceProviderLV.pcf:42</td>
+<td>LV.Exposure.EditableServiceProvider.ServiceType</td>
+<td>ClaimContactRole.ClaimContact.EssentialServiceType</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_essentialservicetype_prop"></a>
+<p class="column">
+<span class="coltitle">ESSENTIALSERVICETYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_lawfirm"></a>
+<p class="column">
+<span class="coltitle">LawFirm</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning LawFirm</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_legalvenue"></a>
+<p class="column">
+<span class="coltitle">LegalVenue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning LegalVenue</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_loadcommandid"></a>
+<p class="column">
+<span class="coltitle">LoadCommandID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">LoadCommand for load where row was created. If not null this object was loaded via the loader.</span>
+<a name="claimcontact_loadcommandid_prop"></a>
+<p class="column">
+<span class="coltitle">LOADCOMMANDID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_medicalcareorg"></a>
+<p class="column">
+<span class="coltitle">MedicalCareOrg</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning MedicalCareOrg</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_person"></a>
+<p class="column">
+<span class="coltitle">Person</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Person</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_personfirstnamedenorm"></a>
+<p class="column">
+<span class="coltitle">PersonFirstNameDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "firstname")'>firstname</span> (30)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup></span>
+<br>
+<span class="desc">denormalization of person first name, to speed up search for claim by person name</span>
+<a name="claimcontact_personfirstnamedenorm_prop"></a>
+<p class="column">
+<span class="coltitle">PERSONFIRSTNAMEDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_personlastnamedenorm"></a>
+<p class="column">
+<span class="coltitle">PersonLastNameDenorm</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "lastname")'>lastname</span> (30)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(unique index)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>unique index</b><br>The column participates in one or more unique indexes.')">?</span></sup></span>
+<br>
+<span class="desc">denormalization of person last name, to speed up search for claim by person name</span>
+<a name="claimcontact_personlastnamedenorm_prop"></a>
+<p class="column">
+<span class="coltitle">PERSONLASTNAMEDENORM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_personvendor"></a>
+<p class="column">
+<span class="coltitle">PersonVendor</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning PersonVendor</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_place"></a>
+<p class="column">
+<span class="coltitle">Place</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning Place</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_policy"></a>
+<p class="column">
+<span class="coltitle">Policy</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Policy.html" TARGET="tableFrame">Policy</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: PolicyID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Policy with which the contact is associated.</span>
+<a name="claimcontact_policy_prop"></a>
+<p class="column">
+<span class="coltitle">POLICY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_providertype"></a>
+<p class="column">
+<span class="exttitle">ProviderType</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ProviderType_tl.html" TARGET="tableFrame">ProviderType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Provider type</span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableServiceProviderLV.pcf:48</td>
+<td>LV.Exposure.EditableServiceProvider.ProviderType</td>
+<td>ClaimContactRole.ClaimContact.ProviderType</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_providertype_prop"></a>
+<p class="column">
+<span class="coltitle">PROVIDERTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="claimcontact_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_retired"></a>
+<p class="column">
+<span class="coltitle">Retired</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_retired_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIRED_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_retiredvalue"></a>
+<p class="column">
+<span class="coltitle">RetiredValue</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "softentityreference")'>softentityreference</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: Retired)&nbsp;&nbsp;&nbsp;&nbsp;(default: 0)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Whether the entity is still in use. A value of 0 means that the entity is not retired. If the entity is retired from active use, this field has a non-zero value equal to the entity's ID. Once an entity is retired, it should not be unretired.</span>
+<a name="claimcontact_retiredvalue_dynprop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_retiredvalue_prop"></a>
+<p class="column">
+<span class="coltitle">RETIREDVALUE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_rolenames"></a>
+<p class="column">
+<span class="coltitle">RoleNames</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.util.SortedSet<java.lang.String></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc">Return an alphabetized list of the roles owned by this Claim</span>
+<a name="claimcontact_roles_prop"></a>
+<p class="column">
+<span class="coltitle">ROLES_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_rolesstring"></a>
+<p class="column">
+<span class="coltitle">RolesString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_service"></a>
+<p class="column">
+<span class="exttitle">Service</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The service provided by contact</span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>EditableServiceProviderLV.pcf:53</td>
+<td>LV.Exposure.EditableServiceProvider.Service</td>
+<td>ClaimContactRole.ClaimContact.Service</td>
+<td>true</td>
+<td>
+NewClaimWizard_ExposurePagePopup
+<br>
+NewExposure
+<br>
+TopLevelExposureDetail
+<br>
+NewClaimWizard_NewExposurePopup
+<br>
+LossDetailsExposureDetail
+<br>
+ExposureDetail
+</td>
+</tr>
+</table>
+</div></div>
+<a name="claimcontact_service_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ClaimContact></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Timestamp when the object was last updated</span>
+<a name="claimcontact_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_updateuser"></a>
+<p class="column">
+<span class="coltitle">UpdateUser</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="User.html" TARGET="tableFrame">User</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: UpdateUserID)</span>
+<br>
+<span class="desc">User who last updated the object</span>
+<a name="claimcontact_updateuser_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontact_usercontact"></a>
+<p class="column">
+<span class="coltitle">UserContact</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning UserContact</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="claimcontact_roles"></a>
+<p class="column">
+<span class="coltitle">Roles</span>&nbsp;&nbsp;<span class="titleDesc">array key for <A HREF="ClaimContactRole.html" TARGET="tableFrame">ClaimContactRole</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(exportable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>exportable</b><br>The entity is available to the SOAP APIs.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(triggers validation)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>triggers validation</b><br>Changes to the entity pointed to by this array trigger validation.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The roles that this claimcontact has.</span>
+<a name="Unique Keys for ClaimContact"></a><div class="arraysbox">Unique Keys for ClaimContact</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>CompanyName</td>
+<td>ContactNameDenorm, ClaimantFlag, Retired, ClaimID, ID</td></tr>
+<tr><td>claimcontact1a</td>
+<td>PublicID, Retired</td></tr>
+<tr><td>claimcontact2</td>
+<td>ContactID, Retired, ID</td></tr>
+<tr><td>ClmConLastFirstN</td>
+<td>PersonLastNameDenorm, PersonFirstNameDenorm, ClaimantFlag, Retired, ClaimID, ID</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

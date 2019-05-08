@@ -1,0 +1,873 @@
+<html>
+<head>
+<title>MedicalTreatmentType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">MedicalTreatmentType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_medicaltreatmenttype)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_6941" class="reftext" onclick='showAndHideRefBox("refbox_6941", "reflink_6941")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_6941" class="refbox_inner" style="display:none;">
+<A HREF="../full/Incident.html#InjuryIncident" TARGET="tableFrame">InjuryIncident.MedicalTreatmentType</A><br><A HREF="../full/TmpExpToIncidentCopy.html" TARGET="tableFrame">TmpExpToIncidentCopy.MedicaltrtmntTypeTmp</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#acup>acup</a></td>
+<td>Acupuncture</td>
+<td>Acupuncture</td>
+<td align=center>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#chir>chir</a></td>
+<td>Chiropractor</td>
+<td>Chiropractor</td>
+<td align=center>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#counsel>counsel</a></td>
+<td>Psych counseling</td>
+<td>Psych counseling</td>
+<td align=center>14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#emer_care>emer_care</a></td>
+<td>Emergency care</td>
+<td>Emergency care</td>
+<td align=center>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#er>er</a></td>
+<td>ER treated & released</td>
+<td>ER treated & released</td>
+<td align=center>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#hospital>hospital</a></td>
+<td>Hospitalized</td>
+<td>Hospitalized</td>
+<td align=center>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#inject>inject</a></td>
+<td>Injections</td>
+<td>Injections</td>
+<td align=center>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#major_surgery>major_surgery</a></td>
+<td>Major surgery</td>
+<td>Major surgery</td>
+<td align=center>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#minor_surgery>minor_surgery</a></td>
+<td>Minor surgery</td>
+<td>Minor surgery</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#mri>mri</a></td>
+<td>MRI</td>
+<td>MRI</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#mult_doctors>mult_doctors</a></td>
+<td>Multiple doctors</td>
+<td>Multiple doctors</td>
+<td align=center>19</td>
+<td>&nbsp;</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#mult_treatments>mult_treatments</a></td>
+<td>Multiple treatments</td>
+<td>Multiple treatments</td>
+<td align=center>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#neuro>neuro</a></td>
+<td>Neurologic</td>
+<td>Neurologic</td>
+<td align=center>10</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#none>none</a></td>
+<td>No treatment</td>
+<td>No treatment</td>
+<td align=center>17</td>
+<td>&nbsp;</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#one_doctor>one_doctor</a></td>
+<td>Only one doctor</td>
+<td>Only one doctor</td>
+<td align=center>18</td>
+<td>&nbsp;</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#ortho>ortho</a></td>
+<td>Orthopedic</td>
+<td>Orthopedic</td>
+<td align=center>11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#oth>oth</a></td>
+<td>Other</td>
+<td>Other</td>
+<td align=center>16</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pcp>pcp</a></td>
+<td>Primary care physician</td>
+<td>Primary care physician</td>
+<td align=center>13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pt>pt</a></td>
+<td>Physical therapy</td>
+<td>Physical therapy</td>
+<td align=center>12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#rehab>rehab</a></td>
+<td>Rehab</td>
+<td>Rehab</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#xray>xray</a></td>
+<td>X-ray</td>
+<td>X-ray</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=acup></a>
+<div class="titlebox">
+<div class="filtertitle">acup <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6942" class="reftext" onclick='showAndHideRefBox("refbox_6942", "reflink_6942")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6942" class="refbox_inner" style="display:none;">
+Acupuncture
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Acupuncture</td>
+<td>Acupuncture</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=chir></a>
+<div class="titlebox">
+<div class="filtertitle">chir <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6943" class="reftext" onclick='showAndHideRefBox("refbox_6943", "reflink_6943")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6943" class="refbox_inner" style="display:none;">
+Chiropractor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Chiropractor</td>
+<td>Chiropractor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=counsel></a>
+<div class="titlebox">
+<div class="filtertitle">counsel <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6944" class="reftext" onclick='showAndHideRefBox("refbox_6944", "reflink_6944")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6944" class="refbox_inner" style="display:none;">
+Psych counseling
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Psych counseling</td>
+<td>Psych counseling</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=emer_care></a>
+<div class="titlebox">
+<div class="filtertitle">emer_care <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6945" class="reftext" onclick='showAndHideRefBox("refbox_6945", "reflink_6945")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6945" class="refbox_inner" style="display:none;">
+Emergency care
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Emergency care</td>
+<td>Emergency care</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=er></a>
+<div class="titlebox">
+<div class="filtertitle">er <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6946" class="reftext" onclick='showAndHideRefBox("refbox_6946", "reflink_6946")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6946" class="refbox_inner" style="display:none;">
+ER treated & released
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ER treated & released</td>
+<td>ER treated & released</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=hospital></a>
+<div class="titlebox">
+<div class="filtertitle">hospital <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6947" class="reftext" onclick='showAndHideRefBox("refbox_6947", "reflink_6947")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6947" class="refbox_inner" style="display:none;">
+Hospitalized
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Hospitalized</td>
+<td>Hospitalized</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=inject></a>
+<div class="titlebox">
+<div class="filtertitle">inject <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6948" class="reftext" onclick='showAndHideRefBox("refbox_6948", "reflink_6948")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6948" class="refbox_inner" style="display:none;">
+Injections
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injections</td>
+<td>Injections</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=major_surgery></a>
+<div class="titlebox">
+<div class="filtertitle">major_surgery <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6949" class="reftext" onclick='showAndHideRefBox("refbox_6949", "reflink_6949")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6949" class="refbox_inner" style="display:none;">
+Major surgery
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Major surgery</td>
+<td>Major surgery</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=minor_surgery></a>
+<div class="titlebox">
+<div class="filtertitle">minor_surgery <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6950" class="reftext" onclick='showAndHideRefBox("refbox_6950", "reflink_6950")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6950" class="refbox_inner" style="display:none;">
+Minor surgery
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Minor surgery</td>
+<td>Minor surgery</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=mri></a>
+<div class="titlebox">
+<div class="filtertitle">mri <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6951" class="reftext" onclick='showAndHideRefBox("refbox_6951", "reflink_6951")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6951" class="refbox_inner" style="display:none;">
+MRI
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>MRI</td>
+<td>MRI</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=mult_doctors></a>
+<div class="titlebox">
+<div class="filtertitle">mult_doctors <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6952" class="reftext" onclick='showAndHideRefBox("refbox_6952", "reflink_6952")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6952" class="refbox_inner" style="display:none;">
+Multiple doctors
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Multiple doctors</td>
+<td>Multiple doctors</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=mult_treatments></a>
+<div class="titlebox">
+<div class="filtertitle">mult_treatments <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6953" class="reftext" onclick='showAndHideRefBox("refbox_6953", "reflink_6953")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6953" class="refbox_inner" style="display:none;">
+Multiple treatments
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Multiple treatments</td>
+<td>Multiple treatments</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=neuro></a>
+<div class="titlebox">
+<div class="filtertitle">neuro <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6954" class="reftext" onclick='showAndHideRefBox("refbox_6954", "reflink_6954")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6954" class="refbox_inner" style="display:none;">
+Neurologic
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Neurologic</td>
+<td>Neurologic</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=none></a>
+<div class="titlebox">
+<div class="filtertitle">none <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6955" class="reftext" onclick='showAndHideRefBox("refbox_6955", "reflink_6955")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6955" class="refbox_inner" style="display:none;">
+No treatment
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>No treatment</td>
+<td>No treatment</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=one_doctor></a>
+<div class="titlebox">
+<div class="filtertitle">one_doctor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6956" class="reftext" onclick='showAndHideRefBox("refbox_6956", "reflink_6956")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6956" class="refbox_inner" style="display:none;">
+Only one doctor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Only one doctor</td>
+<td>Only one doctor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ortho></a>
+<div class="titlebox">
+<div class="filtertitle">ortho <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6957" class="reftext" onclick='showAndHideRefBox("refbox_6957", "reflink_6957")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6957" class="refbox_inner" style="display:none;">
+Orthopedic
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Orthopedic</td>
+<td>Orthopedic</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=oth></a>
+<div class="titlebox">
+<div class="filtertitle">oth <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6958" class="reftext" onclick='showAndHideRefBox("refbox_6958", "reflink_6958")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6958" class="refbox_inner" style="display:none;">
+Other
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Other</td>
+<td>Other</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pcp></a>
+<div class="titlebox">
+<div class="filtertitle">pcp <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6959" class="reftext" onclick='showAndHideRefBox("refbox_6959", "reflink_6959")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6959" class="refbox_inner" style="display:none;">
+Primary care physician
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Primary care physician</td>
+<td>Primary care physician</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pt></a>
+<div class="titlebox">
+<div class="filtertitle">pt <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6960" class="reftext" onclick='showAndHideRefBox("refbox_6960", "reflink_6960")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6960" class="refbox_inner" style="display:none;">
+Physical therapy
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Physical therapy</td>
+<td>Physical therapy</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=rehab></a>
+<div class="titlebox">
+<div class="filtertitle">rehab <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6961" class="reftext" onclick='showAndHideRefBox("refbox_6961", "reflink_6961")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6961" class="refbox_inner" style="display:none;">
+Rehab
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Rehab</td>
+<td>Rehab</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=xray></a>
+<div class="titlebox">
+<div class="filtertitle">xray <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6962" class="reftext" onclick='showAndHideRefBox("refbox_6962", "reflink_6962")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6962" class="refbox_inner" style="display:none;">
+X-ray
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>X-ray</td>
+<td>X-ray</td>
+</tr>
+</table>
+</div>
+<a name="Typefilters"></a><div class="arraysbox">Typefilters</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">wc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6963" class="reftext" onclick='showAndHideRefBox("refbox_6963", "reflink_6963")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6963" class="refbox_inner" style="display:none;">
+Typecodes in deprecated WCMedicalTreatmentType.
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#none" TARGET="tableFrame">none</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#one_doctor" TARGET="tableFrame">one_doctor</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#mult_doctors" TARGET="tableFrame">mult_doctors</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#rehab" TARGET="tableFrame">rehab</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#hospital" TARGET="tableFrame">hospital</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#minor_surgery" TARGET="tableFrame">minor_surgery</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#major_surgery" TARGET="tableFrame">major_surgery</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#mult_treatments" TARGET="tableFrame">mult_treatments</A></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

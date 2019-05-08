@@ -1,0 +1,748 @@
+<html>
+<head>
+<title>ServiceRequestOperation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">ServiceRequestOperation</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_servicerequestoperation)</span>
+</div>
+<div class="desc">State transitions for all kinds of service requests.   An operation is executed by calling serviceRequest.performOperation(OPERATION, context, commitInNewBundle) or invoice.performOperation(OPERATION, context, commitInNewBundle).  Each operation (as defined in the StateHandler classes) holds information about when it should be available, the Progress and QuoteStatus states to move to after the operation, a display name, and an optional action to take.</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_8140" class="reftext" onclick='showAndHideRefBox("refbox_8140", "reflink_8140")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_8140" class="refbox_inner" style="display:none;">
+<A HREF="../full/ServiceRequestChange.html" TARGET="tableFrame">ServiceRequestChange.Operation</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#addinvoice>addinvoice</a></td>
+<td>Add Invoice</td>
+<td>Add Invoice</td>
+<td align=center>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#addquote>addquote</a></td>
+<td>Add Quote</td>
+<td>Add Quote</td>
+<td align=center>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#approveinvoice>approveinvoice</a></td>
+<td>Approve Invoice</td>
+<td>Approve Invoice</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#approvequote>approvequote</a></td>
+<td>Approve Quote</td>
+<td>Approve Quote</td>
+<td align=center>10</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cancelservicerequest>cancelservicerequest</a></td>
+<td>Cancel Service</td>
+<td>Cancel Service</td>
+<td align=center>14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#payinvoice>payinvoice</a></td>
+<td>Pay Invoice</td>
+<td>Pay Invoice</td>
+<td align=center>16</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#rejectinvoice>rejectinvoice</a></td>
+<td>Reject Invoice</td>
+<td>Reject Invoice</td>
+<td align=center>17</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#requestrequote>requestrequote</a></td>
+<td>Request Requote</td>
+<td>Request Requote</td>
+<td align=center>11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistacceptedwork>specialistacceptedwork</a></td>
+<td>Vendor Accepted Work</td>
+<td>Vendor Accepted Work</td>
+<td align=center>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistcanceled>specialistcanceled</a></td>
+<td>Vendor Canceled Service</td>
+<td>Vendor Canceled Service</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistcompletedwork>specialistcompletedwork</a></td>
+<td>Vendor Completed Work</td>
+<td>Vendor Completed Work</td>
+<td align=center>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistdeclined>specialistdeclined</a></td>
+<td>Vendor Declined</td>
+<td>Vendor Declined</td>
+<td align=center>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistresumedwork>specialistresumedwork</a></td>
+<td>Vendor Resumed Work</td>
+<td>Vendor Resumed Work</td>
+<td align=center>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#specialistwaiting>specialistwaiting</a></td>
+<td>Vendor Waiting</td>
+<td>Vendor Waiting</td>
+<td align=center>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#submitinstruction>submitinstruction</a></td>
+<td>Submit Instruction</td>
+<td>Submit Instruction</td>
+<td align=center>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#unpayinvoice>unpayinvoice</a></td>
+<td>Unpay Invoice</td>
+<td>Unpay Invoice</td>
+<td align=center>19</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#updatequoteecd>updatequoteecd</a></td>
+<td>Update Quote ECD</td>
+<td>Update Quote ECD</td>
+<td align=center>12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#updateserviceecd>updateserviceecd</a></td>
+<td>Update Service ECD</td>
+<td>Update Service ECD</td>
+<td align=center>13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#withdrawinvoice>withdrawinvoice</a></td>
+<td>Withdraw Invoice</td>
+<td>Withdraw Invoice</td>
+<td align=center>18</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=addinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">addinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8141" class="reftext" onclick='showAndHideRefBox("refbox_8141", "reflink_8141")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8141" class="refbox_inner" style="display:none;">
+Add Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Add Invoice</td>
+<td>Add Invoice</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=addquote></a>
+<div class="titlebox">
+<div class="filtertitle">addquote <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8142" class="reftext" onclick='showAndHideRefBox("refbox_8142", "reflink_8142")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8142" class="refbox_inner" style="display:none;">
+Add Quote
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Add Quote</td>
+<td>Add Quote</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=approveinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">approveinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8143" class="reftext" onclick='showAndHideRefBox("refbox_8143", "reflink_8143")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8143" class="refbox_inner" style="display:none;">
+Approve Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Approve Invoice</td>
+<td>Approve Invoice</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=approvequote></a>
+<div class="titlebox">
+<div class="filtertitle">approvequote <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8144" class="reftext" onclick='showAndHideRefBox("refbox_8144", "reflink_8144")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8144" class="refbox_inner" style="display:none;">
+Approve Quote
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Approve Quote</td>
+<td>Approve Quote</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cancelservicerequest></a>
+<div class="titlebox">
+<div class="filtertitle">cancelservicerequest <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8145" class="reftext" onclick='showAndHideRefBox("refbox_8145", "reflink_8145")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8145" class="refbox_inner" style="display:none;">
+Cancel Service
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Cancel Service</td>
+<td>Cancel Service</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=payinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">payinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8146" class="reftext" onclick='showAndHideRefBox("refbox_8146", "reflink_8146")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8146" class="refbox_inner" style="display:none;">
+Pay Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pay Invoice</td>
+<td>Pay Invoice</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=rejectinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">rejectinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8147" class="reftext" onclick='showAndHideRefBox("refbox_8147", "reflink_8147")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8147" class="refbox_inner" style="display:none;">
+Reject Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Reject Invoice</td>
+<td>Reject Invoice</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=requestrequote></a>
+<div class="titlebox">
+<div class="filtertitle">requestrequote <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8148" class="reftext" onclick='showAndHideRefBox("refbox_8148", "reflink_8148")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8148" class="refbox_inner" style="display:none;">
+Request Requote
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Request Requote</td>
+<td>Request Requote</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistacceptedwork></a>
+<div class="titlebox">
+<div class="filtertitle">specialistacceptedwork <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8149" class="reftext" onclick='showAndHideRefBox("refbox_8149", "reflink_8149")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8149" class="refbox_inner" style="display:none;">
+Vendor Accepted Work
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Accepted Work</td>
+<td>Vendor Accepted Work</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistcanceled></a>
+<div class="titlebox">
+<div class="filtertitle">specialistcanceled <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8150" class="reftext" onclick='showAndHideRefBox("refbox_8150", "reflink_8150")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8150" class="refbox_inner" style="display:none;">
+Vendor Canceled Service
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Canceled Service</td>
+<td>Vendor Canceled Service</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistcompletedwork></a>
+<div class="titlebox">
+<div class="filtertitle">specialistcompletedwork <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8151" class="reftext" onclick='showAndHideRefBox("refbox_8151", "reflink_8151")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8151" class="refbox_inner" style="display:none;">
+Vendor Completed Work
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Completed Work</td>
+<td>Vendor Completed Work</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistdeclined></a>
+<div class="titlebox">
+<div class="filtertitle">specialistdeclined <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8152" class="reftext" onclick='showAndHideRefBox("refbox_8152", "reflink_8152")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8152" class="refbox_inner" style="display:none;">
+Vendor Declined
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Declined</td>
+<td>Vendor Declined</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistresumedwork></a>
+<div class="titlebox">
+<div class="filtertitle">specialistresumedwork <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8153" class="reftext" onclick='showAndHideRefBox("refbox_8153", "reflink_8153")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8153" class="refbox_inner" style="display:none;">
+Vendor Resumed Work
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Resumed Work</td>
+<td>Vendor Resumed Work</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=specialistwaiting></a>
+<div class="titlebox">
+<div class="filtertitle">specialistwaiting <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8154" class="reftext" onclick='showAndHideRefBox("refbox_8154", "reflink_8154")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8154" class="refbox_inner" style="display:none;">
+Vendor Waiting
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Vendor Waiting</td>
+<td>Vendor Waiting</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=submitinstruction></a>
+<div class="titlebox">
+<div class="filtertitle">submitinstruction <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8155" class="reftext" onclick='showAndHideRefBox("refbox_8155", "reflink_8155")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8155" class="refbox_inner" style="display:none;">
+Submit Instruction
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Submit Instruction</td>
+<td>Submit Instruction</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=unpayinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">unpayinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8156" class="reftext" onclick='showAndHideRefBox("refbox_8156", "reflink_8156")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8156" class="refbox_inner" style="display:none;">
+Unpay Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Unpay Invoice</td>
+<td>Unpay Invoice</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=updatequoteecd></a>
+<div class="titlebox">
+<div class="filtertitle">updatequoteecd <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8157" class="reftext" onclick='showAndHideRefBox("refbox_8157", "reflink_8157")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8157" class="refbox_inner" style="display:none;">
+Update Quote ECD
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Update Quote ECD</td>
+<td>Update Quote ECD</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=updateserviceecd></a>
+<div class="titlebox">
+<div class="filtertitle">updateserviceecd <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8158" class="reftext" onclick='showAndHideRefBox("refbox_8158", "reflink_8158")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8158" class="refbox_inner" style="display:none;">
+Update Service ECD
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Update Service ECD</td>
+<td>Update Service ECD</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=withdrawinvoice></a>
+<div class="titlebox">
+<div class="filtertitle">withdrawinvoice <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8159" class="reftext" onclick='showAndHideRefBox("refbox_8159", "reflink_8159")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8159" class="refbox_inner" style="display:none;">
+Withdraw Invoice
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Withdraw Invoice</td>
+<td>Withdraw Invoice</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

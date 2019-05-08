@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!-- Generated WSDL for gw.solr.test1.weService.MyClaimAPI web service -->
+<wsdl:definitions targetNamespace="http://example.com/gw/solr/test1/MyClaimAPI" name="MyClaimAPI" xmlns:gwsoap="http://guidewire.com/ws/soapheaders" xmlns:gwwsdl="http://guidewire.com/pl/wsdl" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://example.com/gw/solr/test1/MyClaimAPI" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://example.com/gw/solr/test1/MyClaimAPI" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://guidewire.com/ws/soapheaders" schemaLocation="../../../../../gw/xsd/guidewire/soapheaders.xsd"/>
+      <!-- test(String) : String -->
+      <xs:element name="test">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CNumber" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="testResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WsiAuthenticationException">
+        <xs:complexType/>
+      </xs:element>
+      <!-- getClaimDescription(String) : String -->
+      <xs:element name="getClaimDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CNumber" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClaimDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:portType name="MyClaimAPIPortType">
+    <wsdl:operation name="test">
+      <wsdl:input name="test" message="tns:test"/>
+      <wsdl:output name="testResponse" message="tns:testResponse"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getClaimDescription">
+      <wsdl:input name="getClaimDescription" message="tns:getClaimDescription"/>
+      <wsdl:output name="getClaimDescriptionResponse" message="tns:getClaimDescriptionResponse"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyClaimAPISoap12Binding" type="tns:MyClaimAPIPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="test">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="test">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-language-only" part="gw-language-only" use="literal"/>
+        <soap12:header message="tns:gw-locale-only" part="gw-locale-only" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="testResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getClaimDescription">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="getClaimDescription">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-language-only" part="gw-language-only" use="literal"/>
+        <soap12:header message="tns:gw-locale-only" part="gw-locale-only" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getClaimDescriptionResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyClaimAPISoap11Binding" type="tns:MyClaimAPIPortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="test">
+      <soap11:operation style="document"/>
+      <wsdl:input name="test">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-language-only" part="gw-language-only" use="literal"/>
+        <soap11:header message="tns:gw-locale-only" part="gw-locale-only" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="testResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getClaimDescription">
+      <soap11:operation style="document"/>
+      <wsdl:input name="getClaimDescription">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-language-only" part="gw-language-only" use="literal"/>
+        <soap11:header message="tns:gw-locale-only" part="gw-locale-only" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getClaimDescriptionResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyClaimAPI">
+    <wsdl:port name="MyClaimAPISoap12Port" binding="tns:MyClaimAPISoap12Binding">
+      <soap12:address location="local:///gw/solr/test1/MyClaimAPI"/>
+    </wsdl:port>
+    <wsdl:port name="MyClaimAPISoap11Port" binding="tns:MyClaimAPISoap11Binding">
+      <soap11:address location="local:///gw/solr/test1/MyClaimAPI/soap11"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:message name="test">
+    <wsdl:part name="parameters" element="tns:test"/>
+  </wsdl:message>
+  <wsdl:message name="testResponse">
+    <wsdl:part name="parameters" element="tns:testResponse"/>
+  </wsdl:message>
+  <wsdl:message name="WsiAuthenticationException">
+    <wsdl:part name="WsiAuthenticationException" element="tns:WsiAuthenticationException"/>
+  </wsdl:message>
+  <wsdl:message name="getClaimDescription">
+    <wsdl:part name="parameters" element="tns:getClaimDescription"/>
+  </wsdl:message>
+  <wsdl:message name="getClaimDescriptionResponse">
+    <wsdl:part name="parameters" element="tns:getClaimDescriptionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="gw-authentication">
+    <wsdl:part name="gw-authentication" element="gwsoap:authentication"/>
+  </wsdl:message>
+  <wsdl:message name="gw-locale-only">
+    <wsdl:part name="gw-locale-only" element="gwsoap:gw_locale"/>
+  </wsdl:message>
+  <wsdl:message name="gw-language-only">
+    <wsdl:part name="gw-language-only" element="gwsoap:gw_language"/>
+  </wsdl:message>
+  <wsdl:message name="gw-transaction-id">
+    <wsdl:part name="gw-transaction-id" element="gwsoap:transaction_id"/>
+  </wsdl:message>
+</wsdl:definitions>

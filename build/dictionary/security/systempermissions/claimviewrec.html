@@ -1,0 +1,758 @@
+<html>
+<head>
+<title>claimviewrec</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">claimviewrec <span class="entityname">(object-based) - View recoveries</span></div>
+<div class="desc">
+<span id="reflink_76" class="reftext" onclick='showAndHideRefBox("refbox_76", "reflink_76")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_76" class="refbox_inner" style="display:none;">
+Permission to view recoveries (and derived information) on a claim
+</div>
+</span>
+</div>
+</div>
+<a name="Roles"></a><div class="arraysbox">Roles</div>
+<a name="adjuster"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/adjuster.html'>Adjuster</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for an adjuster</span>
+<a name="claims supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/claims_supervisor.html'>Claims Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="clerical"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/clerical.html'>Clerical</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a clerical user</span>
+<a name="customer service representative"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/customer_service_rep.html'>Customer Service Representative</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Limited view for a customer service representative</span>
+<a name="integration admin"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/integration_admin.html'>Integration Admin</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permissions for integration admin</span>
+<a name="manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/manager.html'>Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a manager</span>
+<a name="new loss processing supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/newloss_supervisor.html'>New Loss Processing Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="reinsurance manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/reinsurance_manager.html'>Reinsurance Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a reinsurance manager</span>
+<a name="superuser"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/superuser.html'>Superuser</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Superuser with full permissions</span>
+<a name="underwriter"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/underwriter.html'>Underwriter</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for an underwriter</span>
+<a name="viewer"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/viewer.html'>Viewer</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">User with view-only permissions</span>
+<a name="Related Application Permission Keys"></a><div class="arraysbox">Related Application Permission Keys</div>
+<a name="claim genericviewnettotalincurred"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_genericviewnettotalincurred.html'>Claim genericviewnettotalincurred</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view net total incurred information on a claim</span>
+<a name="claim genericviewrecoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_genericviewrecoveries.html'>Claim genericviewrecoveries</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recoveries (and derived information) on some claim</span>
+<a name="claim genericviewtransactions"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_genericviewtransactions.html'>Claim genericviewtransactions</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view transactions on some claim</span>
+<a name="claim viewnettotalincurred"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view net total incurred information on a claim</span>
+<a name="claim viewrecoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recoveries (and derived information) on a claim</span>
+<a name="claim viewtransactiondetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view transaction details on a claim</span>
+<a name="recovery view"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Recovery_view.html'>Recovery view</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view details of a recovery</span>
+<a name="recoveryset view"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/RecoverySet_view.html'>RecoverySet view</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a recovery set</span>
+<a name="transaction view"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Transaction_view.html'>Transaction view</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission handler used on generic transaction screens</span>
+<a name="transactionset view"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/TransactionSet_view.html'>TransactionSet view</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission handler used on generic transaction screens</span>
+<a name="Related Pages"></a><div class="arraysbox">Related Pages</div>
+<a name="claimfinancialschecks"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsChecks.html'>ClaimFinancialsChecks</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialsgroup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsGroup.html'>ClaimFinancialsGroup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialssummary"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsSummary.html'>ClaimFinancialsSummary</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialssummary"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsSummary.html'>ClaimFinancialsSummary</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialstransactions"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsTransactions.html'>ClaimFinancialsTransactions</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialstransactions"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsTransactions.html'>ClaimFinancialsTransactions</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialstransactionsdetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsTransactionsDetail.html'>ClaimFinancialsTransactionsDetail</a></span>  <span class="titleDesc">via <a href='../keys/Transaction_view.html'>Transaction view</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimfinancialstransactionsprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimFinancialsTransactionsPrint.html'>ClaimFinancialsTransactionsPrint</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="financialssummarytitleprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/FinancialsSummaryTitlePrint.html'>FinancialsSummaryTitlePrint</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="recoverysearch"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/RecoverySearch.html'>RecoverySearch</a></span>  <span class="titleDesc">via <a href='../keys/Claim_genericviewrecoveries.html'>Claim genericviewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="voidrecovery"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/VoidRecovery.html'>VoidRecovery</a></span>  <span class="titleDesc">via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Related Elements"></a><div class="arraysbox">Related Elements</div>
+<a name="all recoveries, excluding details (printoption)"></a>
+<p class="column">
+<span class="coltitle">All recoveries, excluding details (PrintOption)</span>  <span class="titleDesc">printable attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="all recoveries, including details (printoption)"></a>
+<p class="column">
+<span class="coltitle">All recoveries, including details (PrintOption)</span>  <span class="titleDesc">printable attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="financial transactions (printsection)"></a>
+<p class="column">
+<span class="coltitle">Financial Transactions (PrintSection)</span>  <span class="titleDesc">printable attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="financial transactions (printsection)"></a>
+<p class="column">
+<span class="coltitle">Financial Transactions (PrintSection)</span>  <span class="titleDesc">printable attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="financial transactions (printsection)"></a>
+<p class="column">
+<span class="coltitle">Financial Transactions (PrintSection)</span>  <span class="titleDesc">printable attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPrintout.html'>ClaimPrintout</a> (ClaimPrintout.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure300DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure300DV.BodilyInjuryDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-GeneralDamage.html'>ClaimSnapshotExposure300DV.GeneralDamage</a> (ClaimSnapshotExposure300DV.GeneralDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-LossOfUseDamage.html'>ClaimSnapshotExposure300DV.LossOfUseDamage</a> (ClaimSnapshotExposure300DV.LossOfUseDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure300DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure300DV.PersonalPropertyDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PropertyDamage.html'>ClaimSnapshotExposure300DV.PropertyDamage</a> (ClaimSnapshotExposure300DV.PropertyDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-VehicleDamage.html'>ClaimSnapshotExposure300DV.VehicleDamage</a> (ClaimSnapshotExposure300DV.VehicleDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure310DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure310DV.BodilyInjuryDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-GeneralDamage.html'>ClaimSnapshotExposure310DV.GeneralDamage</a> (ClaimSnapshotExposure310DV.GeneralDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-LossOfUseDamage.html'>ClaimSnapshotExposure310DV.LossOfUseDamage</a> (ClaimSnapshotExposure310DV.LossOfUseDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure310DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure310DV.PersonalPropertyDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PropertyDamage.html'>ClaimSnapshotExposure310DV.PropertyDamage</a> (ClaimSnapshotExposure310DV.PropertyDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-VehicleDamage.html'>ClaimSnapshotExposure310DV.VehicleDamage</a> (ClaimSnapshotExposure310DV.VehicleDamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureCodingFinancialsInputSet.html'>ExposureCodingFinancialsInputSet</a> (ExposureCodingFinancialsInputSet.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Employerliability.html'>ExposureDetailDV.Employerliability</a> (ExposureDetailDV.Employerliability.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Generaldamage.html'>ExposureDetailDV.Generaldamage</a> (ExposureDetailDV.Generaldamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Medpay.html'>ExposureDetailDV.Medpay</a> (ExposureDetailDV.Medpay.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Personalpropertydamage.html'>ExposureDetailDV.Personalpropertydamage</a> (ExposureDetailDV.Personalpropertydamage.pcf)</span>
+<a name="financials (label)"></a>
+<p class="column">
+<span class="coltitle">Financials (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewtransactiondetails.html'>Claim viewtransactiondetails</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/VehicleDamageDV.html'>VehicleDamageDV</a> (VehicleDamageDV.pcf)</span>
+<a name="net total incurred (currencycell)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_genericviewnettotalincurred.html'>Claim genericviewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/AddressBookContactExposuresLV.html'>AddressBookContactExposuresLV</a> (AddressBookContactExposuresLV.pcf)</span>
+<a name="net total incurred (currencycell)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_genericviewnettotalincurred.html'>Claim genericviewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/DesktopExposuresLV.html'>DesktopExposuresLV</a> (DesktopExposuresLV.pcf)</span>
+<a name="net total incurred (currencycell)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_genericviewnettotalincurred.html'>Claim genericviewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/MyVacationExposuresLV.html'>MyVacationExposuresLV</a> (MyVacationExposuresLV.pcf)</span>
+<a name="net total incurred (currencycell)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_genericviewnettotalincurred.html'>Claim genericviewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/TeamExposuresLV.html'>TeamExposuresLV</a> (TeamExposuresLV.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureCodingFinancialsInputSet.html'>ExposureCodingFinancialsInputSet</a> (ExposureCodingFinancialsInputSet.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Employerliability.html'>ExposureDetailDV.Employerliability</a> (ExposureDetailDV.Employerliability.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Generaldamage.html'>ExposureDetailDV.Generaldamage</a> (ExposureDetailDV.Generaldamage.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Medpay.html'>ExposureDetailDV.Medpay</a> (ExposureDetailDV.Medpay.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Personalpropertydamage.html'>ExposureDetailDV.Personalpropertydamage</a> (ExposureDetailDV.Personalpropertydamage.pcf)</span>
+<a name="net total incurred (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/VehicleDamageDV.html'>VehicleDamageDV</a> (VehicleDamageDV.pcf)</span>
+<a name="net total incurred (textcell)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryLV.html'>FinancialsSummaryLV</a> (FinancialsSummaryLV.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure300DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure300DV.BodilyInjuryDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-GeneralDamage.html'>ClaimSnapshotExposure300DV.GeneralDamage</a> (ClaimSnapshotExposure300DV.GeneralDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-LossOfUseDamage.html'>ClaimSnapshotExposure300DV.LossOfUseDamage</a> (ClaimSnapshotExposure300DV.LossOfUseDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure300DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure300DV.PersonalPropertyDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PropertyDamage.html'>ClaimSnapshotExposure300DV.PropertyDamage</a> (ClaimSnapshotExposure300DV.PropertyDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-VehicleDamage.html'>ClaimSnapshotExposure300DV.VehicleDamage</a> (ClaimSnapshotExposure300DV.VehicleDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure310DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure310DV.BodilyInjuryDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-GeneralDamage.html'>ClaimSnapshotExposure310DV.GeneralDamage</a> (ClaimSnapshotExposure310DV.GeneralDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-LossOfUseDamage.html'>ClaimSnapshotExposure310DV.LossOfUseDamage</a> (ClaimSnapshotExposure310DV.LossOfUseDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure310DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure310DV.PersonalPropertyDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PropertyDamage.html'>ClaimSnapshotExposure310DV.PropertyDamage</a> (ClaimSnapshotExposure310DV.PropertyDamage.pcf)</span>
+<a name="net total incurred (textinput)"></a>
+<p class="column">
+<span class="coltitle">Net Total Incurred (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewnettotalincurred.html'>Claim viewnettotalincurred</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-VehicleDamage.html'>ClaimSnapshotExposure310DV.VehicleDamage</a> (ClaimSnapshotExposure310DV.VehicleDamage.pcf)</span>
+<a name="open recovery reserves (textcell)"></a>
+<p class="column">
+<span class="coltitle">Open Recovery Reserves (TextCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryLV.html'>FinancialsSummaryLV</a> (FinancialsSummaryLV.pcf)</span>
+<a name="open recovery reserves (textcell)"></a>
+<p class="column">
+<span class="coltitle">Open Recovery Reserves (TextCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryRecoveriesLV.html'>FinancialsSummaryRecoveriesLV</a> (FinancialsSummaryRecoveriesLV.pcf)</span>
+<a name="past recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Past Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/RecoveryDetailDV.html'>RecoveryDetailDV</a> (RecoveryDetailDV.pcf)</span>
+<a name="recoveries (currencycell)"></a>
+<p class="column">
+<span class="coltitle">Recoveries (CurrencyCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSummaryExposuresLV.html'>ClaimSummaryExposuresLV</a> (ClaimSummaryExposuresLV.pcf)</span>
+<a name="recoveries (label)"></a>
+<p class="column">
+<span class="coltitle">Recoveries (Label)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/SubrogationPartyDetailDV.html'>SubrogationPartyDetailDV</a> (SubrogationPartyDetailDV.pcf)</span>
+<a name="recoveries (textcell)"></a>
+<p class="column">
+<span class="coltitle">Recoveries (TextCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryLV.html'>FinancialsSummaryLV</a> (FinancialsSummaryLV.pcf)</span>
+<a name="recoveries (textcell)"></a>
+<p class="column">
+<span class="coltitle">Recoveries (TextCell)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/FinancialsSummaryRecoveriesLV.html'>FinancialsSummaryRecoveriesLV</a> (FinancialsSummaryRecoveriesLV.pcf)</span>
+<a name="total amount recovered (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Amount Recovered (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/SubrogationPartyDetailDV.html'>SubrogationPartyDetailDV</a> (SubrogationPartyDetailDV.pcf)</span>
+<a name="total claim costs recovered via subrogation (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Claim Costs Recovered via Subrogation (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/SubrogationPartyDetailDV.html'>SubrogationPartyDetailDV</a> (SubrogationPartyDetailDV.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureCodingFinancialsInputSet.html'>ExposureCodingFinancialsInputSet</a> (ExposureCodingFinancialsInputSet.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Employerliability.html'>ExposureDetailDV.Employerliability</a> (ExposureDetailDV.Employerliability.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Generaldamage.html'>ExposureDetailDV.Generaldamage</a> (ExposureDetailDV.Generaldamage.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Medpay.html'>ExposureDetailDV.Medpay</a> (ExposureDetailDV.Medpay.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ExposureDetailDV-Personalpropertydamage.html'>ExposureDetailDV.Personalpropertydamage</a> (ExposureDetailDV.Personalpropertydamage.pcf)</span>
+<a name="total recoveries (currencyinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (CurrencyInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/VehicleDamageDV.html'>VehicleDamageDV</a> (VehicleDamageDV.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure300DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure300DV.BodilyInjuryDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-GeneralDamage.html'>ClaimSnapshotExposure300DV.GeneralDamage</a> (ClaimSnapshotExposure300DV.GeneralDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-LossOfUseDamage.html'>ClaimSnapshotExposure300DV.LossOfUseDamage</a> (ClaimSnapshotExposure300DV.LossOfUseDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure300DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure300DV.PersonalPropertyDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-PropertyDamage.html'>ClaimSnapshotExposure300DV.PropertyDamage</a> (ClaimSnapshotExposure300DV.PropertyDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure300DV-VehicleDamage.html'>ClaimSnapshotExposure300DV.VehicleDamage</a> (ClaimSnapshotExposure300DV.VehicleDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-BodilyInjuryDamage.html'>ClaimSnapshotExposure310DV.BodilyInjuryDamage</a> (ClaimSnapshotExposure310DV.BodilyInjuryDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-GeneralDamage.html'>ClaimSnapshotExposure310DV.GeneralDamage</a> (ClaimSnapshotExposure310DV.GeneralDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-LossOfUseDamage.html'>ClaimSnapshotExposure310DV.LossOfUseDamage</a> (ClaimSnapshotExposure310DV.LossOfUseDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PersonalPropertyDamage.html'>ClaimSnapshotExposure310DV.PersonalPropertyDamage</a> (ClaimSnapshotExposure310DV.PersonalPropertyDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-PropertyDamage.html'>ClaimSnapshotExposure310DV.PropertyDamage</a> (ClaimSnapshotExposure310DV.PropertyDamage.pcf)</span>
+<a name="total recoveries (textinput)"></a>
+<p class="column">
+<span class="coltitle">Total Recoveries (TextInput)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_viewrecoveries.html'>Claim viewrecoveries</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimSnapshotExposure310DV-VehicleDamage.html'>ClaimSnapshotExposure310DV.VehicleDamage</a> (ClaimSnapshotExposure310DV.VehicleDamage.pcf)</span>
+</body>
+</html>

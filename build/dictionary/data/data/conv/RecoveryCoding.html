@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>RecoveryCoding</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">RecoveryCoding <span class="entityname">(cc_recoverycoding) (delegates to <A HREF="Extractable.html" TARGET="tableFrame">Extractable</A>, <A HREF="TAccountOwnerDelegate.html" TARGET="tableFrame">TAccountOwnerDelegate</A>, <A HREF="Versionable.html" TARGET="tableFrame">Versionable</A>)</span></div>
+<div class="desc">
+<span id="reflink_2069" class="reftext" onclick='showAndHideRefBox("refbox_2069", "reflink_2069")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_2069" class="refbox_inner" style="display:none;">
+
+A RecoveryCoding is a combination of RecoveryCategory and ReserveLine (which itself is a combination of Claim, Exposure, CostType, CostCategory, and ReservingCurrency).
+Neither the RecoveryCategory nor ReserveLine on a RecoveryCoding can be null; the "Unspecified" RecoveryCategory value is sometimes used as a default.
+A RecoveryCoding is used to categorize Recoveries and RecoveryReserves.
+Every Recovery and RecoveryReserve is associated with a RecoveryCoding.
+A Recovery or RecoveryReserve's ReserveLine must match its RecoveryCoding's ReserveLine.
+<br><span class="warning">This entity is overwritten by the application during staging.</span>
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">RecoveryCoding</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Loadable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Loadable</b><br>Can be loaded via the staging tables.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Versionable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Versionable</b><br>Has a version number that increases every time the entity is changed. This allows the cache to identify when entities have been updated.')">?</span></sup>, overwritten on load<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>overwritten on load</b><br>If also loadable, this attribute indicates the corresponding staging table contains a mapping that maps to this entity. When the system loads new data from the staging tables, the loader will overwrite any data you have supplied. As a result, you should not populate data into this entity.')">?</span></sup></span>
+</div>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2070" class="reftext" onclick='showAndHideRefBox("refbox_2070", "reflink_2070")'><img src="../../res/blackup.gif" border="0"><b>Concrete FK references: </b></span>
+<div id="refbox_2070" class="refbox_inner" style="display:none;">
+<A HREF="../full/RecoveryTAccount.html" TARGET="tableFrame">RecoveryTAccount.RecoveryCoding</A><br><A HREF="../full/Transaction.html" TARGET="tableFrame">Transaction.RecoveryCoding</A>
+</div>
+</span>
+</div>
+<div class="refbox biglist odd">
+<span id="reflink_2071" class="reftext" onclick='showAndHideRefBox("refbox_2071", "reflink_2071")'><img src="../../res/blackup.gif" border="0"><b>Array references: </b></span>
+<div id="refbox_2071" class="refbox_inner" style="display:none;">
+<A HREF="../full/ReserveLine.html" TARGET="tableFrame">ReserveLine.RecoveryCodings</A>
+</div>
+</span>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="recoverycoding_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The column can be loaded via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="recoverycoding_recoverycategory"></a>
+<p class="column">
+<span class="coltitle">RecoveryCategory</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/RecoveryCategory_tl.html" TARGET="tableFrame">RecoveryCategory</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The typekey is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(overwritten on load)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>overwritten on load</b><br>If also loadable, this attribute indicates the corresponding staging table contains a mapping that maps to this key. When the system loads new data from the staging tables, the loader will overwrite any data you have supplied. As a result, you should not populate data into this key.')">?</span></sup></span>
+<br>
+<span class="desc">The RecoveryCategory to which all associated transactions should be coded.</span>
+<a name="recoverycoding_reserveline"></a>
+<p class="column">
+<span class="coltitle">ReserveLine</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="ReserveLine.html" TARGET="tableFrame">ReserveLine</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ReserveLineID)&nbsp;&nbsp;&nbsp;&nbsp;(loadable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>loadable</b><br>The foreign key is loadable via the staging tables.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(overwritten on load)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>overwritten on load</b><br>If also loadable, this attribute indicates the corresponding staging table contains a mapping that maps to this key. When the system loads new data from the staging tables, the loader will overwrite any data you have supplied. As a result, you should not populate data into this key.')">?</span></sup></span>
+<br>
+<span class="desc">The ReserveLine to which all associated transactions should be coded.</span>
+<a name="Arrays"></a><div class="arraysbox">Arrays</div>
+<a name="Unique Keys for RecoveryCoding"></a><div class="arraysbox">Unique Keys for RecoveryCoding</div>
+<span class="desc">A unique key is a combination of fields that must be unique, i.e. there can't be two rows in the table that have the same value for every field in the key.</span>
+<br/>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Index</td>
+<td>Included Columns</td>
+</tr>
+<tr><td>recoverycoding1a</td>
+<td>PublicID</td></tr>
+<tr><td>recoverycoding1</td>
+<td>ReserveLineID, RecoveryCategory</td></tr>
+</table>
+<script language="JavaScript">
+function showAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

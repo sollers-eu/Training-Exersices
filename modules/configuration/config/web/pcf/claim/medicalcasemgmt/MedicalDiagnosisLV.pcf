@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <ListViewPanel
+    id="MedicalDiagnosisLV"
+    validationExpression="(injury.InjuryDiagnoses.length &gt; 1 and injury.InjuryDiagnoses.countWhere( \ i -&gt; i.IsPrimary == true ) &lt; 1 ) and isEditable == true ? DisplayKey.get(&quot;Validation.ClaimFile.MedCaseMgmt.SelectPrimaryDiagnosisCode&quot;) : null">
+    <ExposeIterator
+      flags="reconfirmable,allowPrimary"
+      valueType="entity.InjuryDiagnosis"
+      widget="MedicalDiagnosisLV"/>
+    <Variable
+      initialValue="gw.api.util.DateUtil.currentDate()"
+      name="currDate"
+      type="java.util.Date"/>
+    <Require
+      name="injury"
+      type="InjuryIncident"/>
+    <Require
+      name="isEditable"
+      type="Boolean"/>
+    <!-- Toolbar flag defined here is used by toolbar buttons in the parent location -->
+    <RowIterator
+      editable="true"
+      elementName="aMedicalDiagnosis"
+      hideCheckBoxesIfReadOnly="true"
+      toAdd="injury.addToInjuryDiagnoses( aMedicalDiagnosis )"
+      toRemove="aMedicalDiagnosis.addNoteIfPrimaryDiagnosisIsRemoved(); injury.removeFromInjuryDiagnoses( aMedicalDiagnosis ) "
+      value="injury.InjuryDiagnoses"
+      valueType="entity.InjuryDiagnosis[]">
+      <ToolbarFlag
+        condition="aMedicalDiagnosis.Contact != null and aMedicalDiagnosis.New != true and aMedicalDiagnosis.ICDCode != null"
+        name="reconfirmable"/>
+      <ToolbarFlag
+        condition="aMedicalDiagnosis.ICDCode != null and aMedicalDiagnosis.IsPrimary != true and aMedicalDiagnosis.Contact != null"
+        name="allowPrimary"/>
+      <Row
+        highlighted="aMedicalDiagnosis.IsPrimary == true"
+        id="MedicalDiagnosisRow">
+        <PickerCell
+          action="ICD10Data.push( aMedicalDiagnosis.ICDCode.CodeTrimmed)"
+          editable="true"
+          id="ICDCode"
+          inputConversion="convertInputtedICDCode(VALUE)"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.ICDCode&quot;)"
+          numCols="6"
+          pickLocation="ICDCodePopup.push(aMedicalDiagnosis.ICDCode.Code)"
+          requestValidationExpression="VALUE == null ? DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.EnterAValidCodeValidationError&quot;) : null"
+          validationExpression="injury.InjuryDiagnoses.where( \ i -&gt; i.ICDCode.Code == aMedicalDiagnosis.ICDCode.Code ).Count &gt; 1 ? DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.ICDCode.DuplicateCodeValidation&quot;, aMedicalDiagnosis.ICDCode.Code) : null"
+          value="aMedicalDiagnosis.ICDCode"
+          valueType="entity.ICDCode">
+          <PostOnChange/>
+        </PickerCell>
+        <TextCell
+          id="ICDDesc"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.ICDCodeDescription&quot;)"
+          value="aMedicalDiagnosis.ICDCode.CodeDesc"/>
+        <!-- forceContactSubtype="Doctor" ensures that the picker menu only displays adding a new doctor besides searching and viewing details options. -->
+        <ClaimContactCell
+          claim="aMedicalDiagnosis.InjuryIncident.Claim"
+          editable="true"
+          forceContactSubtype="Doctor.Type"
+          id="Provider_name"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.Provider&quot;)"
+          onPick="aMedicalDiagnosis.InjuryIncident.Claim.createClaimContact( aMedicalDiagnosis.Contact ); aMedicalDiagnosis.InjuryIncident.Claim.addRole(   ContactRole.TC_DOCTOR, aMedicalDiagnosis.Contact  )"
+          required="true"
+          value="aMedicalDiagnosis.Contact"
+          valueRange="injury.Claim.RelatedDoctorArray"/>
+        <CheckBoxCell
+          editable="true"
+          id="Compensable"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.Compensable&quot;)"
+          value="aMedicalDiagnosis.Compensable"/>
+        <DateCell
+          dateFormat="short"
+          editable="true"
+          id="DateStarted"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.StartedOn&quot;)"
+          sortOrder="2"
+          validationExpression="aMedicalDiagnosis.DateStarted &gt; aMedicalDiagnosis.DateEnded ? DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.StartedOn.Validation&quot;) : null"
+          value="aMedicalDiagnosis.DateStarted"/>
+        <DateCell
+          dateFormat="short"
+          editable="true"
+          id="DateEnded"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.EndedOn&quot;)"
+          validationExpression="aMedicalDiagnosis.DateEnded &gt; currDate ? DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.EndedOn.Validation&quot;) : null"
+          value="aMedicalDiagnosis.DateEnded"/>
+        <TextAreaCell
+          editable="true"
+          id="Comments"
+          label="DisplayKey.get(&quot;NVV.Claim.MedCaseMgrDetails.MedicalDiagnosis.Comments&quot;)"
+          numRows="3"
+          value="aMedicalDiagnosis.Comments"/>
+      </Row>
+    </RowIterator>
+    <Code><![CDATA[uses gw.api.database.Query
+
+public function convertInputtedICDCode(valueToConvert : String) : ICDCode {
+  return Query.make(entity.ICDCode).compare("Code", Equals, valueToConvert)
+         .and(\ andRestriction -> andRestriction.or(\ orRestriction -> orRestriction.compare("AvailabilityDate", Equals, null)
+                                                                                    .compare("AvailabilityDate", LessThan, gw.api.util.DateUtil.currentDate()))
+                                                .or(\ orRestriction -> orRestriction.compare("ExpiryDate", Equals, null)
+                                                                                    .compare("ExpiryDate", GreaterThan, gw.api.util.DateUtil.currentDate())))
+       .select().AtMostOneRow
+}]]></Code>
+  </ListViewPanel>
+</PCF>

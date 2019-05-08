@@ -1,0 +1,1341 @@
+<html>
+<head>
+<title>PersonRelationType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">PersonRelationType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_personrelationtype)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_7230" class="reftext" onclick='showAndHideRefBox("refbox_7230", "reflink_7230")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_7230" class="refbox_inner" style="display:none;">
+<A HREF="../full/Claim.html" TARGET="tableFrame">Claim.MainContactType</A><br><A HREF="../full/Claim.html" TARGET="tableFrame">Claim.ReportedByType</A><br><A HREF="../full/Incident.html#VehicleIncident" TARGET="tableFrame">VehicleIncident.DriverRelation</A><br><A HREF="../full/Incident.html#VehicleIncident" TARGET="tableFrame">VehicleIncident.DriverRelToOwner</A><br><A HREF="../full/SubroAdverseParty.html" TARGET="tableFrame">SubroAdverseParty.MainContactType</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#agent>agent</a></td>
+<td>Agent</td>
+<td>Agent</td>
+<td align=center>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#attorney>attorney</a></td>
+<td>Attorney</td>
+<td>Attorney</td>
+<td align=center>10</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#child>child</a></td>
+<td>Child</td>
+<td>Child</td>
+<td align=center>13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#claimant>claimant</a></td>
+<td>Claimant</td>
+<td>Claimant</td>
+<td align=center>17</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#claimantatty>claimantatty</a></td>
+<td>Claimant's attorney</td>
+<td>Claimant's attorney</td>
+<td align=center>18</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#claimantinsco>claimantinsco</a></td>
+<td>Claimant's insurance co.</td>
+<td>Claimant's insurance co.</td>
+<td align=center>19</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#domesticpartner>domesticpartner</a></td>
+<td>Domestic partner</td>
+<td>Domestic partner</td>
+<td align=center>16</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#employee>employee</a></td>
+<td>Employee</td>
+<td>Employee</td>
+<td align=center>11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#friend>friend</a></td>
+<td>Friend</td>
+<td>Friend</td>
+<td align=center>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#grandparent>grandparent</a></td>
+<td>Grandparent</td>
+<td>Grandparent</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#hrrep>hrrep</a></td>
+<td>HR Representative</td>
+<td>HR Representative</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#injuredworker>injuredworker</a></td>
+<td>Injured Worker</td>
+<td>Injured Worker</td>
+<td align=center>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#insco>insco</a></td>
+<td>Insurance company</td>
+<td>Insurance co (typically would be third-party insurer)</td>
+<td align=center>22</td>
+<td>&nbsp;</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#medicalprovider>medicalprovider</a></td>
+<td>Medical Provider</td>
+<td>Medical Provider</td>
+<td align=center>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#other>other</a></td>
+<td>Other</td>
+<td>Other</td>
+<td align=center>23</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#parent>parent</a></td>
+<td>Parent</td>
+<td>Parent</td>
+<td align=center>14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#relative>relative</a></td>
+<td>Relative</td>
+<td>Relative</td>
+<td align=center>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#rentalrep>rentalrep</a></td>
+<td>Rental representative</td>
+<td>Rental representative</td>
+<td align=center>20</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#repairshop>repairshop</a></td>
+<td>Repair shop</td>
+<td>Repair shop</td>
+<td align=center>21</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#riskmanager>riskmanager</a></td>
+<td>Risk Manager</td>
+<td>Risk Manager</td>
+<td align=center>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#self>self</a></td>
+<td>Self/Insured</td>
+<td>Self</td>
+<td align=center>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#spouse>spouse</a></td>
+<td>Spouse</td>
+<td>Spouse</td>
+<td align=center>12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#supervisor>supervisor</a></td>
+<td>Supervisor</td>
+<td>Supervisor</td>
+<td align=center>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=agent></a>
+<div class="titlebox">
+<div class="filtertitle">agent <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7231" class="reftext" onclick='showAndHideRefBox("refbox_7231", "reflink_7231")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7231" class="refbox_inner" style="display:none;">
+Agent
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Agent</td>
+<td>Agent</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=attorney></a>
+<div class="titlebox">
+<div class="filtertitle">attorney <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7232" class="reftext" onclick='showAndHideRefBox("refbox_7232", "reflink_7232")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7232" class="refbox_inner" style="display:none;">
+Attorney
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Attorney</td>
+<td>Attorney</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=child></a>
+<div class="titlebox">
+<div class="filtertitle">child <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7233" class="reftext" onclick='showAndHideRefBox("refbox_7233", "reflink_7233")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7233" class="refbox_inner" style="display:none;">
+Child
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Child</td>
+<td>Child</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=claimant></a>
+<div class="titlebox">
+<div class="filtertitle">claimant <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7234" class="reftext" onclick='showAndHideRefBox("refbox_7234", "reflink_7234")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7234" class="refbox_inner" style="display:none;">
+Claimant
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claimant</td>
+<td>Claimant</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=claimantatty></a>
+<div class="titlebox">
+<div class="filtertitle">claimantatty <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7235" class="reftext" onclick='showAndHideRefBox("refbox_7235", "reflink_7235")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7235" class="refbox_inner" style="display:none;">
+Claimant's attorney
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claimant's attorney</td>
+<td>Claimant's attorney</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=claimantinsco></a>
+<div class="titlebox">
+<div class="filtertitle">claimantinsco <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7236" class="reftext" onclick='showAndHideRefBox("refbox_7236", "reflink_7236")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7236" class="refbox_inner" style="display:none;">
+Claimant's insurance co.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claimant's insurance co.</td>
+<td>Claimant's insurance co.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=domesticpartner></a>
+<div class="titlebox">
+<div class="filtertitle">domesticpartner <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7237" class="reftext" onclick='showAndHideRefBox("refbox_7237", "reflink_7237")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7237" class="refbox_inner" style="display:none;">
+Domestic partner
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Domestic partner</td>
+<td>Domestic partner</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=employee></a>
+<div class="titlebox">
+<div class="filtertitle">employee <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7238" class="reftext" onclick='showAndHideRefBox("refbox_7238", "reflink_7238")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7238" class="refbox_inner" style="display:none;">
+Employee
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Employee</td>
+<td>Employee</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=friend></a>
+<div class="titlebox">
+<div class="filtertitle">friend <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7239" class="reftext" onclick='showAndHideRefBox("refbox_7239", "reflink_7239")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7239" class="refbox_inner" style="display:none;">
+Friend
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Friend</td>
+<td>Friend</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=grandparent></a>
+<div class="titlebox">
+<div class="filtertitle">grandparent <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7240" class="reftext" onclick='showAndHideRefBox("refbox_7240", "reflink_7240")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7240" class="refbox_inner" style="display:none;">
+Grandparent
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Grandparent</td>
+<td>Grandparent</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=hrrep></a>
+<div class="titlebox">
+<div class="filtertitle">hrrep <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7241" class="reftext" onclick='showAndHideRefBox("refbox_7241", "reflink_7241")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7241" class="refbox_inner" style="display:none;">
+HR Representative
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>HR Representative</td>
+<td>HR Representative</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=injuredworker></a>
+<div class="titlebox">
+<div class="filtertitle">injuredworker <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7242" class="reftext" onclick='showAndHideRefBox("refbox_7242", "reflink_7242")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7242" class="refbox_inner" style="display:none;">
+Injured Worker
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Injured Worker</td>
+<td>Injured Worker</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=insco></a>
+<div class="titlebox">
+<div class="filtertitle">insco <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7243" class="reftext" onclick='showAndHideRefBox("refbox_7243", "reflink_7243")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7243" class="refbox_inner" style="display:none;">
+Insurance co (typically would be third-party insurer)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Insurance company</td>
+<td>Insurance co (typically would be third-party insurer)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=medicalprovider></a>
+<div class="titlebox">
+<div class="filtertitle">medicalprovider <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7244" class="reftext" onclick='showAndHideRefBox("refbox_7244", "reflink_7244")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7244" class="refbox_inner" style="display:none;">
+Medical Provider
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Medical Provider</td>
+<td>Medical Provider</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=other></a>
+<div class="titlebox">
+<div class="filtertitle">other <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7245" class="reftext" onclick='showAndHideRefBox("refbox_7245", "reflink_7245")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7245" class="refbox_inner" style="display:none;">
+Other
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Other</td>
+<td>Other</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=parent></a>
+<div class="titlebox">
+<div class="filtertitle">parent <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7246" class="reftext" onclick='showAndHideRefBox("refbox_7246", "reflink_7246")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7246" class="refbox_inner" style="display:none;">
+Parent
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Parent</td>
+<td>Parent</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=relative></a>
+<div class="titlebox">
+<div class="filtertitle">relative <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7247" class="reftext" onclick='showAndHideRefBox("refbox_7247", "reflink_7247")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7247" class="refbox_inner" style="display:none;">
+Relative
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Relative</td>
+<td>Relative</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=rentalrep></a>
+<div class="titlebox">
+<div class="filtertitle">rentalrep <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7248" class="reftext" onclick='showAndHideRefBox("refbox_7248", "reflink_7248")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7248" class="refbox_inner" style="display:none;">
+Rental representative
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Rental representative</td>
+<td>Rental representative</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=repairshop></a>
+<div class="titlebox">
+<div class="filtertitle">repairshop <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7249" class="reftext" onclick='showAndHideRefBox("refbox_7249", "reflink_7249")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7249" class="refbox_inner" style="display:none;">
+Repair shop
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Repair shop</td>
+<td>Repair shop</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=riskmanager></a>
+<div class="titlebox">
+<div class="filtertitle">riskmanager <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7250" class="reftext" onclick='showAndHideRefBox("refbox_7250", "reflink_7250")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7250" class="refbox_inner" style="display:none;">
+Risk Manager
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Risk Manager</td>
+<td>Risk Manager</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=self></a>
+<div class="titlebox">
+<div class="filtertitle">self <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7251" class="reftext" onclick='showAndHideRefBox("refbox_7251", "reflink_7251")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7251" class="refbox_inner" style="display:none;">
+Self
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#BusinessAuto" TARGET="tableFrame">PolicyType.BusinessAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#BusinessOwners" TARGET="tableFrame">PolicyType.BusinessOwners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialPackage" TARGET="tableFrame">PolicyType.CommercialPackage</A></li>
+<li>
+<A HREF="PolicyType_tl.html#CommercialProperty" TARGET="tableFrame">PolicyType.CommercialProperty</A></li>
+<li>
+<A HREF="PolicyType_tl.html#D_and_O" TARGET="tableFrame">PolicyType.D_and_O</A></li>
+<li>
+<A HREF="PolicyType_tl.html#GeneralLiability" TARGET="tableFrame">PolicyType.GeneralLiability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#InlandMarine" TARGET="tableFrame">PolicyType.InlandMarine</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalUmbrella" TARGET="tableFrame">PolicyType.PersonalUmbrella</A></li>
+<li>
+<A HREF="PolicyType_tl.html#farmowners" TARGET="tableFrame">PolicyType.farmowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#prof_liability" TARGET="tableFrame">PolicyType.prof_liability</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Self/Insured</td>
+<td>Self</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=spouse></a>
+<div class="titlebox">
+<div class="filtertitle">spouse <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7252" class="reftext" onclick='showAndHideRefBox("refbox_7252", "reflink_7252")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7252" class="refbox_inner" style="display:none;">
+Spouse
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#Homeowners" TARGET="tableFrame">PolicyType.Homeowners</A></li>
+<li>
+<A HREF="PolicyType_tl.html#PersonalAuto" TARGET="tableFrame">PolicyType.PersonalAuto</A></li>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+<li>
+<A HREF="PolicyType_tl.html#travel_per" TARGET="tableFrame">PolicyType.travel_per</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Spouse</td>
+<td>Spouse</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=supervisor></a>
+<div class="titlebox">
+<div class="filtertitle">supervisor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7253" class="reftext" onclick='showAndHideRefBox("refbox_7253", "reflink_7253")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7253" class="refbox_inner" style="display:none;">
+Supervisor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="PolicyType_tl.html#WorkersComp" TARGET="tableFrame">PolicyType.WorkersComp</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Supervisor</td>
+<td>Supervisor</td>
+</tr>
+</table>
+</div>
+<a name="Typefilters"></a><div class="arraysbox">Typefilters</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">adversemain <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7254" class="reftext" onclick='showAndHideRefBox("refbox_7254", "reflink_7254")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7254" class="refbox_inner" style="display:none;">
+Typecodes relevant to main contact for an adverse party
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#self" TARGET="tableFrame">self</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#relative" TARGET="tableFrame">relative</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#friend" TARGET="tableFrame">friend</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#employee" TARGET="tableFrame">employee</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#spouse" TARGET="tableFrame">spouse</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#child" TARGET="tableFrame">child</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#parent" TARGET="tableFrame">parent</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#grandparent" TARGET="tableFrame">grandparent</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#domesticpartner" TARGET="tableFrame">domesticpartner</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#other" TARGET="tableFrame">other</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#attorney" TARGET="tableFrame">attorney</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#insco" TARGET="tableFrame">insco</A></td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<div class="titlebox">
+<div class="filtertitle">driver <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_7255" class="reftext" onclick='showAndHideRefBox("refbox_7255", "reflink_7255")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_7255" class="refbox_inner" style="display:none;">
+Typecodes relevant to a driver
+</div>
+</span>
+</div>
+</div>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Type</td>
+<td>Code</td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#self" TARGET="tableFrame">self</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#relative" TARGET="tableFrame">relative</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#friend" TARGET="tableFrame">friend</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#employee" TARGET="tableFrame">employee</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#spouse" TARGET="tableFrame">spouse</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#child" TARGET="tableFrame">child</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#parent" TARGET="tableFrame">parent</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#grandparent" TARGET="tableFrame">grandparent</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#domesticpartner" TARGET="tableFrame">domesticpartner</A></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><A HREF="#other" TARGET="tableFrame">other</A></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

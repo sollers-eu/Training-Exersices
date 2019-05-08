@@ -1,0 +1,1229 @@
+<html>
+<head>
+<title>TAccountType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">TAccountType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_taccounttype)</span>
+</div>
+<div class="desc">The type of a specific TAccount for a ReserveLine</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_8937" class="reftext" onclick='showAndHideRefBox("refbox_8937", "reflink_8937")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_8937" class="refbox_inner" style="display:none;">
+<A HREF="../full/TAccountDelegate.html" TARGET="tableFrame">TAccountDelegate.TAccountType</A><br><A HREF="../full/RITAccount.html" TARGET="tableFrame">RITAccount.TAccountType</A><br><A HREF="../full/RecoveryTAccount.html" TARGET="tableFrame">RecoveryTAccount.TAccountType</A><br><A HREF="../full/TAccount.html" TARGET="tableFrame">TAccount.TAccountType</A><br><A HREF="../full/TmpNewTAcctJoinTbl.html" TARGET="tableFrame">TmpNewTAcctJoinTbl.TAccountType</A><br><A HREF="../full/TmpTAccountBalanceCopy.html" TARGET="tableFrame">TmpTAccountBalanceCopy.SourceTAccountType</A><br><A HREF="../full/TmpTAccountJoin.html" TARGET="tableFrame">TmpTAccountJoin.OldTAccountType</A><br><A HREF="../full/TmpTAccountReserveLine.html" TARGET="tableFrame">TmpTAccountReserveLine.TAccountType</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#awserodingpmts>awserodingpmts</a></td>
+<td>Awaiting submission eroding payments</td>
+<td>Awaiting submission eroding payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#awsnonerodingpmts>awsnonerodingpmts</a></td>
+<td>Awaiting submission non-eroding payments</td>
+<td>Non-eroding awaiting submission payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cashin>cashin</a></td>
+<td>Cash In</td>
+<td>Cash in T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cashout>cashout</a></td>
+<td>Cash Out</td>
+<td>Cash out T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cededreservesout>cededreservesout</a></td>
+<td>Committed RI Ceded Reserves</td>
+<td>Total RICededReserve transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#claimexpenses>claimexpenses</a></td>
+<td>Claim expenses</td>
+<td>Claim expenses T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cmtdadjcededres>cmtdadjcededres</a></td>
+<td>Committed adjustment RI Ceded Reserves</td>
+<td>Adjustment RICededReserve transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cmtdadjrecoverable>cmtdadjrecoverable</a></td>
+<td>Committed adjustment RI Recoverable</td>
+<td>Adjustment RIRecoverable transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cmtdnonadjcededres>cmtdnonadjcededres</a></td>
+<td>Committed non-adjustment RI Ceded Reserves</td>
+<td>Non-adjustment RICededReserve transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#cmtdnonadjrecoverable>cmtdnonadjrecoverable</a></td>
+<td>Committed non-adjustment RI Recoverables</td>
+<td>Non-adjustment RIRecoverable transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#committederodepmts>committederodepmts</a></td>
+<td>Committed eroding payments</td>
+<td>Committed eroding payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#committednonerodepmts>committednonerodepmts</a></td>
+<td>Committed non-eroding payments</td>
+<td>Committed non-eroding payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#draftpayments>draftpayments</a></td>
+<td>Draft payments</td>
+<td>Draft payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#erodingforexchange>erodingforexchange</a></td>
+<td>Eroding Payments Foreign Exchange</td>
+<td>T-account to hold foreign exchange adjustments for eroding payments</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#futureerodingpmts>futureerodingpmts</a></td>
+<td>Future eroding payments</td>
+<td>Future eroding payment T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#futurenonerodingpmts>futurenonerodingpmts</a></td>
+<td>Future non-eroding payments</td>
+<td>Reserves auto-created to offset future non-eroding payments</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#nonerodingforexchange>nonerodingforexchange</a></td>
+<td>Non-Eroding Payments Foreign Exchange</td>
+<td>T-account to hold foreign exchange adjustments for non-eroding payments</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendapperodingpmts>pendapperodingpmts</a></td>
+<td>Pending approval eroding payments</td>
+<td>Pending approval eroding payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendappnonerodingpmts>pendappnonerodingpmts</a></td>
+<td>Pending approval non-eroding payments</td>
+<td>Pending approval non-eroding payments T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingapprecoveries>pendingapprecoveries</a></td>
+<td>Pending approval recoveries</td>
+<td>Pending approval recoveries T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingapprecreserves>pendingapprecreserves</a></td>
+<td>Pending approval recovery reserves</td>
+<td>Pending approval recovery reserves T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingappreserves>pendingappreserves</a></td>
+<td>Pending approval reserves</td>
+<td>Pending approval reserves T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingcashout>pendingcashout</a></td>
+<td>Pending cash out</td>
+<td>Pending cash out T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingexpense>pendingexpense</a></td>
+<td>Pending expense</td>
+<td>Pending expense T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#pendingreserves>pendingreserves</a></td>
+<td>Pending reserves</td>
+<td>Pending reserves T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#recoverablesout>recoverablesout</a></td>
+<td>Committed RI Recoverable</td>
+<td>Total RIRecoverable transactions sent downstream.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#recoveries>recoveries</a></td>
+<td>Recoveries</td>
+<td>Submitted recoveries T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#recoveryreserves>recoveryreserves</a></td>
+<td>Recovery reserves</td>
+<td>Submitted recovery reserves T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#reserves>reserves</a></td>
+<td>Reserves</td>
+<td>Submitted reserves T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stagingcashin>stagingcashin</a></td>
+<td>Staging cash in</td>
+<td>Staging cash in T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stagingcashout>stagingcashout</a></td>
+<td>Staging cash out</td>
+<td>Staging cash out T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#stagingexpenses>stagingexpenses</a></td>
+<td>Staging expenses</td>
+<td>Staging expenses T-account</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=awserodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">awserodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8938" class="reftext" onclick='showAndHideRefBox("refbox_8938", "reflink_8938")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8938" class="refbox_inner" style="display:none;">
+Awaiting submission eroding payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Awaiting submission eroding payments</td>
+<td>Awaiting submission eroding payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=awsnonerodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">awsnonerodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8939" class="reftext" onclick='showAndHideRefBox("refbox_8939", "reflink_8939")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8939" class="refbox_inner" style="display:none;">
+Non-eroding awaiting submission payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Awaiting submission non-eroding payments</td>
+<td>Non-eroding awaiting submission payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cashin></a>
+<div class="titlebox">
+<div class="filtertitle">cashin <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8940" class="reftext" onclick='showAndHideRefBox("refbox_8940", "reflink_8940")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8940" class="refbox_inner" style="display:none;">
+Cash in T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Cash In</td>
+<td>Cash in T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cashout></a>
+<div class="titlebox">
+<div class="filtertitle">cashout <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8941" class="reftext" onclick='showAndHideRefBox("refbox_8941", "reflink_8941")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8941" class="refbox_inner" style="display:none;">
+Cash out T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Cash Out</td>
+<td>Cash out T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cededreservesout></a>
+<div class="titlebox">
+<div class="filtertitle">cededreservesout <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8942" class="reftext" onclick='showAndHideRefBox("refbox_8942", "reflink_8942")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8942" class="refbox_inner" style="display:none;">
+Total RICededReserve transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed RI Ceded Reserves</td>
+<td>Total RICededReserve transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=claimexpenses></a>
+<div class="titlebox">
+<div class="filtertitle">claimexpenses <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8943" class="reftext" onclick='showAndHideRefBox("refbox_8943", "reflink_8943")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8943" class="refbox_inner" style="display:none;">
+Claim expenses T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claim expenses</td>
+<td>Claim expenses T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cmtdadjcededres></a>
+<div class="titlebox">
+<div class="filtertitle">cmtdadjcededres <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8944" class="reftext" onclick='showAndHideRefBox("refbox_8944", "reflink_8944")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8944" class="refbox_inner" style="display:none;">
+Adjustment RICededReserve transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed adjustment RI Ceded Reserves</td>
+<td>Adjustment RICededReserve transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cmtdadjrecoverable></a>
+<div class="titlebox">
+<div class="filtertitle">cmtdadjrecoverable <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8945" class="reftext" onclick='showAndHideRefBox("refbox_8945", "reflink_8945")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8945" class="refbox_inner" style="display:none;">
+Adjustment RIRecoverable transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed adjustment RI Recoverable</td>
+<td>Adjustment RIRecoverable transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cmtdnonadjcededres></a>
+<div class="titlebox">
+<div class="filtertitle">cmtdnonadjcededres <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8946" class="reftext" onclick='showAndHideRefBox("refbox_8946", "reflink_8946")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8946" class="refbox_inner" style="display:none;">
+Non-adjustment RICededReserve transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed non-adjustment RI Ceded Reserves</td>
+<td>Non-adjustment RICededReserve transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=cmtdnonadjrecoverable></a>
+<div class="titlebox">
+<div class="filtertitle">cmtdnonadjrecoverable <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8947" class="reftext" onclick='showAndHideRefBox("refbox_8947", "reflink_8947")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8947" class="refbox_inner" style="display:none;">
+Non-adjustment RIRecoverable transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed non-adjustment RI Recoverables</td>
+<td>Non-adjustment RIRecoverable transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=committederodepmts></a>
+<div class="titlebox">
+<div class="filtertitle">committederodepmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8948" class="reftext" onclick='showAndHideRefBox("refbox_8948", "reflink_8948")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8948" class="refbox_inner" style="display:none;">
+Committed eroding payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed eroding payments</td>
+<td>Committed eroding payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=committednonerodepmts></a>
+<div class="titlebox">
+<div class="filtertitle">committednonerodepmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8949" class="reftext" onclick='showAndHideRefBox("refbox_8949", "reflink_8949")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8949" class="refbox_inner" style="display:none;">
+Committed non-eroding payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed non-eroding payments</td>
+<td>Committed non-eroding payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=draftpayments></a>
+<div class="titlebox">
+<div class="filtertitle">draftpayments <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8950" class="reftext" onclick='showAndHideRefBox("refbox_8950", "reflink_8950")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8950" class="refbox_inner" style="display:none;">
+Draft payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Draft payments</td>
+<td>Draft payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=erodingforexchange></a>
+<div class="titlebox">
+<div class="filtertitle">erodingforexchange <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8951" class="reftext" onclick='showAndHideRefBox("refbox_8951", "reflink_8951")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8951" class="refbox_inner" style="display:none;">
+T-account to hold foreign exchange adjustments for eroding payments
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Eroding Payments Foreign Exchange</td>
+<td>T-account to hold foreign exchange adjustments for eroding payments</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=futureerodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">futureerodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8952" class="reftext" onclick='showAndHideRefBox("refbox_8952", "reflink_8952")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8952" class="refbox_inner" style="display:none;">
+Future eroding payment T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Future eroding payments</td>
+<td>Future eroding payment T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=futurenonerodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">futurenonerodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8953" class="reftext" onclick='showAndHideRefBox("refbox_8953", "reflink_8953")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8953" class="refbox_inner" style="display:none;">
+Reserves auto-created to offset future non-eroding payments
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Future non-eroding payments</td>
+<td>Reserves auto-created to offset future non-eroding payments</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=nonerodingforexchange></a>
+<div class="titlebox">
+<div class="filtertitle">nonerodingforexchange <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8954" class="reftext" onclick='showAndHideRefBox("refbox_8954", "reflink_8954")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8954" class="refbox_inner" style="display:none;">
+T-account to hold foreign exchange adjustments for non-eroding payments
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Non-Eroding Payments Foreign Exchange</td>
+<td>T-account to hold foreign exchange adjustments for non-eroding payments</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendapperodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">pendapperodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8955" class="reftext" onclick='showAndHideRefBox("refbox_8955", "reflink_8955")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8955" class="refbox_inner" style="display:none;">
+Pending approval eroding payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval eroding payments</td>
+<td>Pending approval eroding payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendappnonerodingpmts></a>
+<div class="titlebox">
+<div class="filtertitle">pendappnonerodingpmts <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8956" class="reftext" onclick='showAndHideRefBox("refbox_8956", "reflink_8956")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8956" class="refbox_inner" style="display:none;">
+Pending approval non-eroding payments T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval non-eroding payments</td>
+<td>Pending approval non-eroding payments T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingapprecoveries></a>
+<div class="titlebox">
+<div class="filtertitle">pendingapprecoveries <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8957" class="reftext" onclick='showAndHideRefBox("refbox_8957", "reflink_8957")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8957" class="refbox_inner" style="display:none;">
+Pending approval recoveries T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval recoveries</td>
+<td>Pending approval recoveries T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingapprecreserves></a>
+<div class="titlebox">
+<div class="filtertitle">pendingapprecreserves <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8958" class="reftext" onclick='showAndHideRefBox("refbox_8958", "reflink_8958")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8958" class="refbox_inner" style="display:none;">
+Pending approval recovery reserves T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval recovery reserves</td>
+<td>Pending approval recovery reserves T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingappreserves></a>
+<div class="titlebox">
+<div class="filtertitle">pendingappreserves <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8959" class="reftext" onclick='showAndHideRefBox("refbox_8959", "reflink_8959")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8959" class="refbox_inner" style="display:none;">
+Pending approval reserves T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending approval reserves</td>
+<td>Pending approval reserves T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingcashout></a>
+<div class="titlebox">
+<div class="filtertitle">pendingcashout <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8960" class="reftext" onclick='showAndHideRefBox("refbox_8960", "reflink_8960")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8960" class="refbox_inner" style="display:none;">
+Pending cash out T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending cash out</td>
+<td>Pending cash out T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingexpense></a>
+<div class="titlebox">
+<div class="filtertitle">pendingexpense <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8961" class="reftext" onclick='showAndHideRefBox("refbox_8961", "reflink_8961")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8961" class="refbox_inner" style="display:none;">
+Pending expense T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending expense</td>
+<td>Pending expense T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=pendingreserves></a>
+<div class="titlebox">
+<div class="filtertitle">pendingreserves <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8962" class="reftext" onclick='showAndHideRefBox("refbox_8962", "reflink_8962")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8962" class="refbox_inner" style="display:none;">
+Pending reserves T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Pending reserves</td>
+<td>Pending reserves T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=recoverablesout></a>
+<div class="titlebox">
+<div class="filtertitle">recoverablesout <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8963" class="reftext" onclick='showAndHideRefBox("refbox_8963", "reflink_8963")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8963" class="refbox_inner" style="display:none;">
+Total RIRecoverable transactions sent downstream.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Committed RI Recoverable</td>
+<td>Total RIRecoverable transactions sent downstream.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=recoveries></a>
+<div class="titlebox">
+<div class="filtertitle">recoveries <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8964" class="reftext" onclick='showAndHideRefBox("refbox_8964", "reflink_8964")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8964" class="refbox_inner" style="display:none;">
+Submitted recoveries T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Recoveries</td>
+<td>Submitted recoveries T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=recoveryreserves></a>
+<div class="titlebox">
+<div class="filtertitle">recoveryreserves <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8965" class="reftext" onclick='showAndHideRefBox("refbox_8965", "reflink_8965")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8965" class="refbox_inner" style="display:none;">
+Submitted recovery reserves T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Recovery reserves</td>
+<td>Submitted recovery reserves T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=reserves></a>
+<div class="titlebox">
+<div class="filtertitle">reserves <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8966" class="reftext" onclick='showAndHideRefBox("refbox_8966", "reflink_8966")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8966" class="refbox_inner" style="display:none;">
+Submitted reserves T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Reserves</td>
+<td>Submitted reserves T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stagingcashin></a>
+<div class="titlebox">
+<div class="filtertitle">stagingcashin <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8967" class="reftext" onclick='showAndHideRefBox("refbox_8967", "reflink_8967")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8967" class="refbox_inner" style="display:none;">
+Staging cash in T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Staging cash in</td>
+<td>Staging cash in T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stagingcashout></a>
+<div class="titlebox">
+<div class="filtertitle">stagingcashout <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8968" class="reftext" onclick='showAndHideRefBox("refbox_8968", "reflink_8968")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8968" class="refbox_inner" style="display:none;">
+Staging cash out T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Staging cash out</td>
+<td>Staging cash out T-account</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=stagingexpenses></a>
+<div class="titlebox">
+<div class="filtertitle">stagingexpenses <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_8969" class="reftext" onclick='showAndHideRefBox("refbox_8969", "reflink_8969")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_8969" class="refbox_inner" style="display:none;">
+Staging expenses T-account
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Staging expenses</td>
+<td>Staging expenses T-account</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

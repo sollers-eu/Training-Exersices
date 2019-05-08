@@ -1,0 +1,2244 @@
+<html>
+<head>
+<title>ActivityView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">ActivityView <span class="entityname">(Virtual) (delegates to <A HREF="KeyableBean.html" TARGET="tableFrame">KeyableBean</A>)</span></div>
+<div class="desc">
+<span id="reflink_122" class="reftext" onclick='showAndHideRefBox("refbox_122", "reflink_122")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_122" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row (base entity for all other activity views).</p>
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">ActivityView</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Extendable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Extendable</b><br>Can be extended with additional custom fields added to it.')">?</span></sup>, Keyed<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Keyed</b><br>Has a related database table that has a primary key. Each row in a Keyed table has an integer primary key named ID. IDs are managed internally by the application, and the system ensures that no two rows in a keyed table have the same ID. In addition to the internal key, an external primary key can be associated with each row in a table.')">?</span></sup>, Sourceable<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Sourceable</b><br>Contains entities that are linked to an external source. Each row in a Sourceable entity\'s table has additional fields to identify the external system and store the ID of the Sourceable entity in the external system.')">?</span></sup>, Supertype<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Supertype</b><br>A single table that represents multiple types of entities, called subtypes. Each subtype shares application logic and a majority of their fields. Each subtype may also define fields that are particular to it.')">?</span></sup></span>
+</div>
+</div>
+<span class="showhidelink"><a id="showAllElements" href="#" onClick="return showAllUIDetails()">Show user interface details on all fields</a></span>
+
+<br>
+<a name=subtypes></a>
+<br/>
+<span class="filtertitle">Subtypes</span>
+<table class="typelistbody" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>
+ActivityDesktopView</td>
+<td><A HREF="#ActivityDesktopView" TARGET="tableFrame">ActivityDesktopView</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ActivityUnassignedView</td>
+<td><A HREF="#ActivityUnassignedView" TARGET="tableFrame">ActivityUnassignedView</A></td>
+</tr>
+<tr>
+<td>
+ActivitySearchView</td>
+<td><A HREF="#ActivitySearchView" TARGET="tableFrame">ActivitySearchView</A></td>
+</tr>
+<tr>
+<td>
+&nbsp;
+&nbsp;
+ActivityWorkplanView</td>
+<td><A HREF="#ActivityWorkplanView" TARGET="tableFrame">ActivityWorkplanView</A></td>
+</tr>
+<tr>
+<td>
+ActivityTeamView</td>
+<td><A HREF="#ActivityTeamView" TARGET="tableFrame">ActivityTeamView</A></td>
+</tr>
+<tr>
+<td>
+ActivityVacationView</td>
+<td><A HREF="#ActivityVacationView" TARGET="tableFrame">ActivityVacationView</A></td>
+</tr>
+</table>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="activityview_id"></a>
+<p class="column">
+<span class="coltitle">ID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Internally managed primary key</span>
+<a name="activityview_activity"></a>
+<p class="column">
+<span class="coltitle">Activity</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Activity.html" TARGET="tableFrame">Activity</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_activity_prop"></a>
+<p class="column">
+<span class="coltitle">ACTIVITY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_activityassigneduser"></a>
+<p class="column">
+<span class="coltitle">ActivityAssignedUser</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assignedqueueid"></a>
+<p class="column">
+<span class="coltitle">AssignedQueueID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assignedqueueid_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUEID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assigneduserid"></a>
+<p class="column">
+<span class="coltitle">AssignedUserID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assigneduserid_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assignmentstatus"></a>
+<p class="column">
+<span class="coltitle">AssignmentStatus</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/AssignmentStatus_tl.html" TARGET="tableFrame">AssignmentStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: unassigned)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_assignmentstatus_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTSTATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_claim"></a>
+<p class="column">
+<span class="coltitle">Claim</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Claim.html" TARGET="tableFrame">Claim</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_claim_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIM_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_claiminsuredname"></a>
+<p class="column">
+<span class="coltitle">ClaimInsuredName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:46</td>
+<td>LV.Activity.ActivitySearchResults.Activities.Insured</td>
+<td>ActivitySearchView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:82</td>
+<td>LV.Activity.Activities.Insured</td>
+<td>ActivityDesktopView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:112</td>
+<td>LV.Activity.Activities.Insured</td>
+<td>ActivityDesktopView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopAwaitingAssignmentLV.pcf:69</td>
+<td>LV.Activity.UnassignedItems.Activities.Insured</td>
+<td>ActivityUnassignedView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+DesktopAwaitingAssignment
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:79</td>
+<td>LV.Activity.QueuedActivities.Insured</td>
+<td>ActivityDesktopView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:103</td>
+<td>LV.Activity.TeamGroupActivities.Activities.Insured</td>
+<td>ActivityTeamView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:103</td>
+<td>LV.Activity.TeamUserActivities.Activities.Insured</td>
+<td>ActivityTeamView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:113</td>
+<td>LV.Activity.Activities.Insured</td>
+<td>ActivityVacationView.ClaimInsuredName</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_claiminsuredname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINSUREDNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_claimnumber"></a>
+<p class="column">
+<span class="coltitle">ClaimNumber</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "claimnumber")'>claimnumber</span> (40)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:41</td>
+<td>LV.Activity.ActivitySearchResults.Activities.CaseID</td>
+<td>ActivitySearchView.ClaimNumber</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:77</td>
+<td>LV.Activity.Activities.CaseID</td>
+<td>ActivityDesktopView.ClaimNumber</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:106</td>
+<td>LV.Activity.Activities.CaseID</td>
+<td>ActivityDesktopView.ClaimNumber</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopAwaitingAssignmentLV.pcf:64</td>
+<td>LV.Activity.UnassignedItems.Activities.CaseID</td>
+<td>ActivityUnassignedView.ClaimNumber</td>
+<td>false</td>
+<td>
+DesktopAwaitingAssignment
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:73</td>
+<td>LV.Activity.QueuedActivities.CaseID</td>
+<td>ActivityDesktopView.ClaimNumber</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:97</td>
+<td>LV.Activity.TeamGroupActivities.Activities.CaseID</td>
+<td>ActivityTeamView.ClaimNumber</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:97</td>
+<td>LV.Activity.TeamUserActivities.Activities.CaseID</td>
+<td>ActivityTeamView.ClaimNumber</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:107</td>
+<td>LV.Activity.Activities.CaseID</td>
+<td>ActivityVacationView.ClaimNumber</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_claimnumber_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMNUMBER_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_closedate"></a>
+<p class="column">
+<span class="coltitle">CloseDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:57</td>
+<td>LV.Activity.ActivitySearchResults.Activities.Closed</td>
+<td>ActivitySearchView.CloseDate</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_closedate_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSEDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_createuserid"></a>
+<p class="column">
+<span class="coltitle">CreateUserID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_createuserid_prop"></a>
+<p class="column">
+<span class="coltitle">CREATEUSERID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_escalated"></a>
+<p class="column">
+<span class="coltitle">Escalated</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:29</td>
+<td></td>
+<td>ActivitySearchView.Escalated</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:50</td>
+<td></td>
+<td>ActivityDesktopView.Escalated</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:79</td>
+<td></td>
+<td>ActivityDesktopView.Escalated</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopAwaitingAssignmentLV.pcf:52</td>
+<td></td>
+<td>ActivityUnassignedView.Escalated</td>
+<td>false</td>
+<td>
+DesktopAwaitingAssignment
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:41</td>
+<td></td>
+<td>ActivityDesktopView.Escalated</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:70</td>
+<td></td>
+<td>ActivityTeamView.Escalated</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:70</td>
+<td></td>
+<td>ActivityTeamView.Escalated</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:75</td>
+<td></td>
+<td>ActivityVacationView.Escalated</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_escalated_prop"></a>
+<p class="column">
+<span class="coltitle">ESCALATED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_externallyowned"></a>
+<p class="column">
+<span class="coltitle">ExternallyOwned</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:74</td>
+<td>LV.Activity.ActivitySearchResults.Activities.ExternallyOwned</td>
+<td>ActivitySearchView.ExternallyOwned</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:94</td>
+<td>LV.Activity.Activities.ExternallyOwned</td>
+<td>ActivityDesktopView.ExternallyOwned</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:124</td>
+<td>LV.Activity.Activities.ExternallyOwned</td>
+<td>ActivityDesktopView.ExternallyOwned</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:91</td>
+<td>LV.Activity.QueuedActivities.ExternallyOwned</td>
+<td>ActivityDesktopView.ExternallyOwned</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:114</td>
+<td>LV.Activity.TeamGroupActivities.Activities.ExternallyOwned</td>
+<td>ActivityTeamView.ExternallyOwned</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:108</td>
+<td>LV.Activity.TeamUserActivities.Activities.ExternallyOwned</td>
+<td>ActivityTeamView.ExternallyOwned</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:125</td>
+<td>LV.Activity.Activities.ExternallyOwned</td>
+<td>ActivityVacationView.ExternallyOwned</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_externallyowned_prop"></a>
+<p class="column">
+<span class="coltitle">EXTERNALLYOWNED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_id_dynprop"></a>
+<p class="column">
+<span class="coltitle">ID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_id_prop"></a>
+<p class="column">
+<span class="coltitle">ID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_jurisdictionstate"></a>
+<p class="column">
+<span class="coltitle">JurisdictionState</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Jurisdiction_tl.html" TARGET="tableFrame">Jurisdiction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_5 onclick='showAndHideUIDetails("UITable_5", "showhideUI_5")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_5' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:106</td>
+<td>LV.Activity.Activities.State</td>
+<td>ActivityDesktopView.JurisdictionState</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:136</td>
+<td>LV.Activity.Activities.State</td>
+<td>ActivityDesktopView.JurisdictionState</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:126</td>
+<td>LV.Activity.TeamGroupActivities.Activities.State</td>
+<td>ActivityTeamView.JurisdictionState</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:120</td>
+<td>LV.Activity.TeamUserActivities.Activities.State</td>
+<td>ActivityTeamView.JurisdictionState</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:137</td>
+<td>LV.Activity.Activities.State</td>
+<td>ActivityVacationView.JurisdictionState</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_jurisdictionstate_prop"></a>
+<p class="column">
+<span class="coltitle">JURISDICTIONSTATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_lastvieweddate"></a>
+<p class="column">
+<span class="coltitle">LastViewedDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_lastvieweddate_prop"></a>
+<p class="column">
+<span class="coltitle">LASTVIEWEDDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_lobcode"></a>
+<p class="column">
+<span class="coltitle">LOBCode</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/LOBCode_tl.html" TARGET="tableFrame">LOBCode</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_6 onclick='showAndHideUIDetails("UITable_6", "showhideUI_6")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_6' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:100</td>
+<td>LV.Activity.Activities.LOB</td>
+<td>ActivityDesktopView.LOBCode</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:130</td>
+<td>LV.Activity.Activities.LOB</td>
+<td>ActivityDesktopView.LOBCode</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:120</td>
+<td>LV.Activity.TeamGroupActivities.Activities.LOB</td>
+<td>ActivityTeamView.LOBCode</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:114</td>
+<td>LV.Activity.TeamUserActivities.Activities.LOB</td>
+<td>ActivityTeamView.LOBCode</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:131</td>
+<td>LV.Activity.Activities.LOB</td>
+<td>ActivityVacationView.LOBCode</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_lobcode_prop"></a>
+<p class="column">
+<span class="coltitle">LOBCODE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_new"></a>
+<p class="column">
+<span class="coltitle">New</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_newlyimported"></a>
+<p class="column">
+<span class="coltitle">NewlyImported</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_overdue"></a>
+<p class="column">
+<span class="coltitle">Overdue</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_priority"></a>
+<p class="column">
+<span class="coltitle">Priority</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/Priority_tl.html" TARGET="tableFrame">Priority</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_7 onclick='showAndHideUIDetails("UITable_7", "showhideUI_7")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_7' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:63</td>
+<td>LV.Activity.ActivitySearchResults.Activities.Priority</td>
+<td>ActivitySearchView.Priority</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:64</td>
+<td>LV.Activity.Activities.Priority</td>
+<td>ActivityDesktopView.Priority</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:93</td>
+<td>LV.Activity.Activities.Priority</td>
+<td>ActivityDesktopView.Priority</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:60</td>
+<td>LV.Activity.QueuedActivities.Priority</td>
+<td>ActivityDesktopView.Priority</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:84</td>
+<td>LV.Activity.TeamGroupActivities.Activities.Priority</td>
+<td>ActivityTeamView.Priority</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:84</td>
+<td>LV.Activity.TeamUserActivities.Activities.Priority</td>
+<td>ActivityTeamView.Priority</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:94</td>
+<td>LV.Activity.Activities.Priority</td>
+<td>ActivityVacationView.Priority</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_priority_prop"></a>
+<p class="column">
+<span class="coltitle">PRIORITY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_publicid"></a>
+<p class="column">
+<span class="coltitle">PublicID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "publicid")'>publicid</span> (64)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The column cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">ID or primary key of the row in the external system to which this row is mapped</span>
+<a name="activityview_publicid_dynprop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_publicid_prop"></a>
+<p class="column">
+<span class="coltitle">PUBLICID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_status"></a>
+<p class="column">
+<span class="coltitle">Status</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ActivityStatus_tl.html" TARGET="tableFrame">ActivityStatus</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: open)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_8 onclick='showAndHideUIDetails("UITable_8", "showhideUI_8")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_8' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:69</td>
+<td>LV.Activity.ActivitySearchResults.Activities.Status</td>
+<td>ActivitySearchView.Status</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_status_prop"></a>
+<p class="column">
+<span class="coltitle">STATUS_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_subject"></a>
+<p class="column">
+<span class="coltitle">Subject</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "shorttext")'>shorttext</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_9 onclick='showAndHideUIDetails("UITable_9", "showhideUI_9")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_9' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:35</td>
+<td>LV.Activity.ActivitySearchResults.Activities.Subject</td>
+<td>ActivitySearchView.Subject</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:70</td>
+<td>LV.Activity.Activities.Subject</td>
+<td>ActivityDesktopView.Subject</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:99</td>
+<td>LV.Activity.Activities.Subject</td>
+<td>ActivityDesktopView.Subject</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopAwaitingAssignmentLV.pcf:74</td>
+<td>LV.Activity.UnassignedItems.Activities.Info</td>
+<td>ActivityUnassignedView.Subject</td>
+<td>false</td>
+<td>
+DesktopAwaitingAssignment
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:66</td>
+<td>LV.Activity.QueuedActivities.Subject</td>
+<td>ActivityDesktopView.Subject</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:90</td>
+<td>LV.Activity.TeamGroupActivities.Activities.Subject</td>
+<td>ActivityTeamView.Subject</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:90</td>
+<td>LV.Activity.TeamUserActivities.Activities.Subject</td>
+<td>ActivityTeamView.Subject</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:100</td>
+<td>LV.Activity.Activities.Subject</td>
+<td>ActivityVacationView.Subject</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_subject_prop"></a>
+<p class="column">
+<span class="coltitle">SUBJECT_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_subtype"></a>
+<p class="column">
+<span class="coltitle">Subtype</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="#subtypes" TARGET="tableFrame">ActivityView</A> subtypes</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup></span>
+<br>
+<span class="desc">Identifies a particular subtype within a supertype table; each subtype of a supertype has its own unique subtype value</span>
+<a name="activityview_subtype_prop"></a>
+<p class="column">
+<span class="coltitle">SUBTYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_targetdate"></a>
+<p class="column">
+<span class="coltitle">TargetDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_10 onclick='showAndHideUIDetails("UITable_10", "showhideUI_10")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_10' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:52</td>
+<td>LV.Activity.ActivitySearchResults.Activities.DueDate</td>
+<td>ActivitySearchView.TargetDate</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+<tr>
+<td>AddressBookContactActivitiesLV.pcf:57</td>
+<td>LV.Activity.Activities.DueDate</td>
+<td>ActivityDesktopView.TargetDate</td>
+<td>false</td>
+<td>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+AddressBookSearchNewContactPopup
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+<br>
+AddExistingPartyInvolvedPopup
+</td>
+</tr>
+<tr>
+<td>DesktopActivitiesLV.pcf:86</td>
+<td>LV.Activity.Activities.DueDate</td>
+<td>ActivityDesktopView.TargetDate</td>
+<td>false</td>
+<td>
+UserDetailPage
+<br>
+UserActivitiesPage
+<br>
+DesktopActivities
+</td>
+</tr>
+<tr>
+<td>DesktopAwaitingAssignmentLV.pcf:58</td>
+<td>LV.Activity.UnassignedItems.Activities.DueDate</td>
+<td>ActivityUnassignedView.TargetDate</td>
+<td>false</td>
+<td>
+DesktopAwaitingAssignment
+</td>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:54</td>
+<td>LV.Activity.QueuedActivities.DueDate</td>
+<td>ActivityDesktopView.TargetDate</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+<tr>
+<td>TeamGroupActivitiesLV.pcf:77</td>
+<td>LV.Activity.TeamGroupActivities.Activities.DueDate</td>
+<td>ActivityTeamView.TargetDate</td>
+<td>false</td>
+<td>
+TeamGroupPendingActivities
+<br>
+TeamGroupActivities
+<br>
+TeamGroupQueuedActivities
+<br>
+TeamGroupOtherActivities
+</td>
+</tr>
+<tr>
+<td>TeamUserActivitiesLV.pcf:77</td>
+<td>LV.Activity.TeamUserActivities.Activities.DueDate</td>
+<td>ActivityTeamView.TargetDate</td>
+<td>false</td>
+<td>
+TeamUserActivities
+</td>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:87</td>
+<td>LV.Activity.Activities.DueDate</td>
+<td>ActivityVacationView.TargetDate</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityview_targetdate_prop"></a>
+<p class="column">
+<span class="coltitle">TARGETDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/ActivityType_tl.html" TARGET="tableFrame">ActivityType</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: general)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_type_prop"></a>
+<p class="column">
+<span class="coltitle">TYPE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_updatetime"></a>
+<p class="column">
+<span class="coltitle">UpdateTime</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_updatetime_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATETIME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_updateuserid"></a>
+<p class="column">
+<span class="coltitle">UpdateUserID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityview_updateuserid_prop"></a>
+<p class="column">
+<span class="coltitle">UPDATEUSERID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="Subtypes"></a><div class="arraysbox">Subtypes</div>
+<div class='subtypebox'>
+<a name=ActivityDesktopView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityDesktopView <span class='supername'>(subtype of <A HREF="ActivityView.html" TARGET="tableFrame">ActivityView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_123" class="reftext" onclick='showAndHideRefBox("refbox_123", "reflink_123")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_123" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the activity desktop page (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+</div>
+<a name="activitydesktopview_assignmentdate"></a>
+<p class="column">
+<span class="coltitle">AssignmentDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_11 onclick='showAndHideUIDetails("UITable_11", "showhideUI_11")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_11' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>DesktopQueuedActivitiesLV.pcf:47</td>
+<td>LV.Activity.QueuedActivities.AssignmentDate</td>
+<td>ActivityDesktopView.AssignmentDate</td>
+<td>false</td>
+<td>
+DesktopQueuedActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activitydesktopview_assignmentdate_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimant"></a>
+<p class="column">
+<span class="coltitle">Claimant</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimclaimantname"></a>
+<p class="column">
+<span class="coltitle">ClaimClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimcontactid"></a>
+<p class="column">
+<span class="coltitle">ClaimContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimcontactid_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimcontactname"></a>
+<p class="column">
+<span class="coltitle">ClaimContactName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claimcontactname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCONTACTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claiminsured"></a>
+<p class="column">
+<span class="coltitle">ClaimInsured</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_claiminsured_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINSURED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposure"></a>
+<p class="column">
+<span class="coltitle">Exposure</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposureid"></a>
+<p class="column">
+<span class="coltitle">ExposureID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposureclaimantname"></a>
+<p class="column">
+<span class="coltitle">ExposureClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposureclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURECLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposureid_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSUREID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposurename"></a>
+<p class="column">
+<span class="coltitle">ExposureName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_exposurename_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURENAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.activity.PublicActivityDesktopViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_mandatory"></a>
+<p class="column">
+<span class="coltitle">Mandatory</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_mandatory_prop"></a>
+<p class="column">
+<span class="coltitle">MANDATORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityDesktopView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitydesktopview_updatedsincelastviewed"></a>
+<p class="column">
+<span class="coltitle">UpdatedSinceLastViewed</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ActivitySearchView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivitySearchView <span class='supername'>(subtype of <A HREF="ActivityView.html" TARGET="tableFrame">ActivityView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_124" class="reftext" onclick='showAndHideRefBox("refbox_124", "reflink_124")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_124" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the search and claim summary pages (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+</div>
+<a name="activitysearchview_assignedqueuename"></a>
+<p class="column">
+<span class="coltitle">AssignedQueueName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_assignedqueuename_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDQUEUENAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_assignedusername"></a>
+<p class="column">
+<span class="coltitle">AssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_assignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_assigneedisplaystring"></a>
+<p class="column">
+<span class="coltitle">AssigneeDisplayString</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_externalownerccname"></a>
+<p class="column">
+<span class="coltitle">ExternalOwnerCCName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_12 onclick='showAndHideUIDetails("UITable_12", "showhideUI_12")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_12' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>ActivitySearchResultsLV.pcf:79</td>
+<td>LV.Activity.ActivitySearchResults.Activities.ExternalOwner</td>
+<td>ActivitySearchView.ExternalOwnerCCName</td>
+<td>false</td>
+<td>
+ActivitySearch
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activitysearchview_externalownerccname_prop"></a>
+<p class="column">
+<span class="coltitle">EXTERNALOWNERCCNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activitysearchview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivitySearchView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ActivityTeamView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityTeamView <span class='supername'>(subtype of <A HREF="ActivityView.html" TARGET="tableFrame">ActivityView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_125" class="reftext" onclick='showAndHideRefBox("refbox_125", "reflink_125")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_125" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the activity team page (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="activityteamview_assignedusername"></a>
+<p class="column">
+<span class="coltitle">AssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityteamview_assignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityteamview_claiminsured"></a>
+<p class="column">
+<span class="coltitle">ClaimInsured</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityteamview_claiminsured_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINSURED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityteamview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.api.activity.PublicActivityTeamViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityteamview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityTeamView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ActivityUnassignedView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityUnassignedView <span class='supername'>(subtype of <A HREF="ActivityView.html#ActivityDesktopView" TARGET="tableFrame">ActivityDesktopView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_126" class="reftext" onclick='showAndHideRefBox("refbox_126", "reflink_126")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_126" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the awaiting assignment page (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="activityunassignedview_assignedusername"></a>
+<p class="column">
+<span class="coltitle">AssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_assignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_claimassignedusercontactid"></a>
+<p class="column">
+<span class="coltitle">ClaimAssignedUserContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_claimassignedusercontactid_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMASSIGNEDUSERCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_claimassignedusername"></a>
+<p class="column">
+<span class="coltitle">ClaimAssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_claimassignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_exposureassignedusercontactid"></a>
+<p class="column">
+<span class="coltitle">ExposureAssignedUserContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_exposureassignedusercontactid_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSUREASSIGNEDUSERCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_exposureassignedusername"></a>
+<p class="column">
+<span class="coltitle">ExposureAssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_exposureassignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSUREASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_matterassignedusercontactid"></a>
+<p class="column">
+<span class="coltitle">MatterAssignedUserContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_matterassignedusercontactid_prop"></a>
+<p class="column">
+<span class="coltitle">MATTERASSIGNEDUSERCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_matterassignedusername"></a>
+<p class="column">
+<span class="coltitle">MatterAssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_matterassignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">MATTERASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_relactassignedusercontactid"></a>
+<p class="column">
+<span class="coltitle">RelActAssignedUserContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_relactassignedusercontactid_prop"></a>
+<p class="column">
+<span class="coltitle">RELACTASSIGNEDUSERCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_relactassignedusername"></a>
+<p class="column">
+<span class="coltitle">RelActAssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_relactassignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">RELACTASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_servicerequestassignedusercontactid"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestAssignedUserContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_servicerequestassignedusercontactid_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTASSIGNEDUSERCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_servicerequestassignedusername"></a>
+<p class="column">
+<span class="coltitle">ServiceRequestAssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_servicerequestassignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">SERVICEREQUESTASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityUnassignedView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityunassignedview_unassignedactivityuserreview"></a>
+<p class="column">
+<span class="coltitle">UnassignedActivityUserReview</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ActivityVacationView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityVacationView <span class='supername'>(subtype of <A HREF="ActivityView.html" TARGET="tableFrame">ActivityView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_127" class="reftext" onclick='showAndHideRefBox("refbox_127", "reflink_127")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_127" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the activity vaction page (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+</div>
+<a name="activityvacationview_assignedusername"></a>
+<p class="column">
+<span class="coltitle">AssignedUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<div class='screenrefbody'>
+<span id=showhideUI_13 onclick='showAndHideUIDetails("UITable_13", "showhideUI_13")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_13' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>VacationActivitiesLV.pcf:81</td>
+<td>LV.Activity.Activities.AssignedUser</td>
+<td>ActivityVacationView.AssignedUserName</td>
+<td>false</td>
+<td>
+VacationActivities
+</td>
+</tr>
+</table>
+</div></div>
+<a name="activityvacationview_assignedusername_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_assignmentdate"></a>
+<p class="column">
+<span class="coltitle">AssignmentDate</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_assignmentdate_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNMENTDATE_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimant"></a>
+<p class="column">
+<span class="coltitle">Claimant</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimclaimantname"></a>
+<p class="column">
+<span class="coltitle">ClaimClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimcontactid"></a>
+<p class="column">
+<span class="coltitle">ClaimContactID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimcontactid_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCONTACTID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimcontactname"></a>
+<p class="column">
+<span class="coltitle">ClaimContactName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claimcontactname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCONTACTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claiminsured"></a>
+<p class="column">
+<span class="coltitle">ClaimInsured</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Contact.html" TARGET="tableFrame">Contact</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_claiminsured_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMINSURED_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposure"></a>
+<p class="column">
+<span class="coltitle">Exposure</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.String</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposureid"></a>
+<p class="column">
+<span class="coltitle">ExposureID</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "key")'>key</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposureclaimantname"></a>
+<p class="column">
+<span class="coltitle">ExposureClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposureclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURECLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposureid_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSUREID_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposurename"></a>
+<p class="column">
+<span class="coltitle">ExposureName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_exposurename_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURENAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_finder"></a>
+<p class="column">
+<span class="coltitle">finder</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning com.guidewire.cc.domain.activity.PublicActivityVacationViewFinder</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_mandatory"></a>
+<p class="column">
+<span class="coltitle">Mandatory</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(default: false)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_mandatory_prop"></a>
+<p class="column">
+<span class="coltitle">MANDATORY_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityVacationView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityvacationview_updatedsincelastviewed"></a>
+<p class="column">
+<span class="coltitle">UpdatedSinceLastViewed</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<div class='subtypebox'>
+<a name=ActivityWorkplanView></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityWorkplanView <span class='supername'>(subtype of <A HREF="ActivityView.html#ActivitySearchView" TARGET="tableFrame">ActivitySearchView</A>)</span> <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_128" class="reftext" onclick='showAndHideRefBox("refbox_128", "reflink_128")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_128" class="refbox_inner" style="display:none;">
+<p>Aggregates the information needed to display one activity row in the activity workplan page (subtype of ActivityView).</p>
+    
+</div>
+</span>
+</div>
+<div class="desc">Attributes: Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>This entity cannot be subtyped.')">?</span></sup></div>
+</div>
+<a name="activityworkplanview_assignedbyusername"></a>
+<p class="column">
+<span class="coltitle">AssignedByUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_assignedbyusername_prop"></a>
+<p class="column">
+<span class="coltitle">ASSIGNEDBYUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_claimclaimantname"></a>
+<p class="column">
+<span class="coltitle">ClaimClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_claimclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_claimcontactname"></a>
+<p class="column">
+<span class="coltitle">ClaimContactName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_claimcontactname_prop"></a>
+<p class="column">
+<span class="coltitle">CLAIMCONTACTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_closeusername"></a>
+<p class="column">
+<span class="coltitle">CloseUserName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_closeusername_prop"></a>
+<p class="column">
+<span class="coltitle">CLOSEUSERNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_exposureclaimantname"></a>
+<p class="column">
+<span class="coltitle">ExposureClaimantName</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "varchar")'>varchar</span> (255)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_exposureclaimantname_prop"></a>
+<p class="column">
+<span class="coltitle">EXPOSURECLAIMANTNAME_PROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="activityworkplanview_type"></a>
+<p class="column">
+<span class="coltitle">Type</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.ActivityWorkplanView></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<p class="desc"></p>
+</div>
+<script language="JavaScript">
+function showAllUIDetails() {
+showUIDetails('UITable_0', 'showhideUI_0');
+showUIDetails('UITable_1', 'showhideUI_1');
+showUIDetails('UITable_2', 'showhideUI_2');
+showUIDetails('UITable_3', 'showhideUI_3');
+showUIDetails('UITable_4', 'showhideUI_4');
+showUIDetails('UITable_5', 'showhideUI_5');
+showUIDetails('UITable_6', 'showhideUI_6');
+showUIDetails('UITable_7', 'showhideUI_7');
+showUIDetails('UITable_8', 'showhideUI_8');
+showUIDetails('UITable_9', 'showhideUI_9');
+showUIDetails('UITable_10', 'showhideUI_10');
+showUIDetails('UITable_11', 'showhideUI_11');
+showUIDetails('UITable_12', 'showhideUI_12');
+showUIDetails('UITable_13', 'showhideUI_13');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Hide user interface details on all fields';
+  link.onclick = hideAllUIDetails;
+  return false;
+}
+function hideAllUIDetails() {
+hideUIDetails('UITable_0', 'showhideUI_0');
+hideUIDetails('UITable_1', 'showhideUI_1');
+hideUIDetails('UITable_2', 'showhideUI_2');
+hideUIDetails('UITable_3', 'showhideUI_3');
+hideUIDetails('UITable_4', 'showhideUI_4');
+hideUIDetails('UITable_5', 'showhideUI_5');
+hideUIDetails('UITable_6', 'showhideUI_6');
+hideUIDetails('UITable_7', 'showhideUI_7');
+hideUIDetails('UITable_8', 'showhideUI_8');
+hideUIDetails('UITable_9', 'showhideUI_9');
+hideUIDetails('UITable_10', 'showhideUI_10');
+hideUIDetails('UITable_11', 'showhideUI_11');
+hideUIDetails('UITable_12', 'showhideUI_12');
+hideUIDetails('UITable_13', 'showhideUI_13');
+var link = document.getElementById('showAllElements');
+  link.innerHTML = 'Show user interface details on all fields';
+  link.onclick = showAllUIDetails;
+  return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <!-- permission can be any ClaimAccessType code securitylevel can be any ClaimSecurityType
+       code or the string "any" -->
+  <xsd:element name="AccessLevel">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="level" type="AccessLevelType" use="required"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:simpleType name="AccessLevelType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="anyone"/>
+      <xsd:enumeration value="group"/>
+      <xsd:enumeration value="securityzone"/>
+      <xsd:enumeration value="user"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="AccessMapping">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="claimAccessType" type="xsd:NMTOKEN" use="required"/>
+      <xsd:attribute name="systemPermission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="AccessProfile">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ActivityAccessLevels" minOccurs="1" maxOccurs="1"/>
+        <xsd:element ref="ClaimAccessLevels" minOccurs="1" maxOccurs="1"/>
+        <xsd:element ref="ClaimOwnPermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="ExposureAccessLevels" minOccurs="1" maxOccurs="1"/>
+        <xsd:element ref="SubObjectOwnPermission" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <xsd:attribute name="securitylevel" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ActivityAccessLevels">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="AccessLevel" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ClaimAccessLevels">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="AccessLevel" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ClaimUserAccessLevel" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="DraftClaimAccessLevel" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ClaimOwnPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- role can be any ClaimUserRole permission can be any ClaimAccessType code securitylevel
+       can be any ClaimSecurityType code or the string "any" -->
+  <xsd:element name="ClaimUserAccessLevel">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="level" type="AccessLevelType" use="required"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+      <xsd:attribute name="role" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ContactCreatePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ContactDeletePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ContactEditPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- Contact-related permissions -->
+  <xsd:element name="ContactPermissions">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ContactSubtypeAccessProfile" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactTagAccessProfile" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ContactSubtypeAccessProfile">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ContactCreatePermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactDeletePermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactEditPermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactViewPermission" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="entity" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:simpleType name="ContactTag">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Claim Party"/>
+      <!-- Client -->
+      <xsd:enumeration value="Client"/>
+      <!-- Vendor -->
+      <xsd:enumeration value="Vendor"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="ContactTagAccessProfile">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ContactCreatePermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactDeletePermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactEditPermission" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactViewPermission" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="tag" type="ContactTag" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ContactViewPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="DocumentAccessProfile">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="DocumentCreatePermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="DocumentDeletePermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="DocumentEditPermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="DocumentViewPermission" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <xsd:attribute name="securitylevel" type="DocumentSecurityLevel" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="DocumentCreatePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="DocumentDeletePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="DocumentEditPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- Encapsulates the permission mappings for a given DocumentSecurityType value -->
+  <xsd:element name="DocumentPermissions">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="DocumentAccessProfile" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:simpleType name="DocumentSecurityLevel">
+    <xsd:restriction base="xsd:string">
+      <!-- Document that is sensitive in nature -->
+      <xsd:enumeration value="sensitive"/>
+      <!-- Document that does not require access restriction -->
+      <xsd:enumeration value="unrestricted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="DocumentViewPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="DraftClaimAccessLevel">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="level" type="AccessLevelType" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ExposureAccessLevels">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="AccessLevel" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ExposurePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+      <xsd:attribute name="securitylevel" type="xsd:NMTOKEN"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="ExposurePermissions">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ExposurePermission" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="Handler">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="code" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- Encapsulates the permission mappings for a given NoteSecurityType value -->
+  <xsd:element name="NoteAccessProfile">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="NoteCreatePermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="NoteDeletePermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="NoteEditBodyPermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="NoteEditPermission" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="NoteViewPermission" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <xsd:attribute name="securitylevel" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="NoteCreatePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="NoteDeletePermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="NoteEditBodyPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="NoteEditPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- Note-related permissions, allowing a mapping between actions such as view, edit, etc.
+       and a required system permission based on the Note's SecurityType property -->
+  <xsd:element name="NotePermissions">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="NoteAccessProfile" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:simpleType name="NoteSecurityLevel">
+    <xsd:restriction base="xsd:string">
+      <!-- Medical note, viewable by internal users with medical note view/edit permissions -->
+      <xsd:enumeration value="medical"/>
+      <!-- Note viewable by internal users only -->
+      <xsd:enumeration value="private"/>
+      <!-- Note viewable by any user in the system -->
+      <xsd:enumeration value="public"/>
+      <!-- Confidential note, viewable by select internal users only -->
+      <xsd:enumeration value="sensitive"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="NoteViewPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- This will create an object handler for the given permission -->
+  <xsd:element name="ObjectHandler">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Handler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="SystemPermType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="desc" type="xsd:string"/>
+      <!-- The entity for the permission key and permission check -->
+      <xsd:attribute name="entity" type="xsd:string" use="required"/>
+      <!-- Requires redeclaring this permission in content or configuration -->
+      <xsd:attribute name="external" type="xsd:boolean"/>
+      <!-- Prevents redeclaring this permission in content or configuration -->
+      <xsd:attribute name="internal" type="xsd:boolean"/>
+      <xsd:attribute name="noPermissionDisplayKey" type="xsd:string"/>
+      <!-- The permission key -->
+      <xsd:attribute name="permKey" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- This will create an optional object handler for the given permission -->
+  <xsd:element name="OptionalObjectHandler">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Handler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="SystemPermType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="desc" type="xsd:string"/>
+      <!-- The entity for the permission key and permission check -->
+      <xsd:attribute name="entity" type="xsd:string" use="required"/>
+      <!-- Requires redeclaring this permission in content or configuration -->
+      <xsd:attribute name="external" type="xsd:boolean"/>
+      <!-- Prevents redeclaring this permission in content or configuration -->
+      <xsd:attribute name="internal" type="xsd:boolean"/>
+      <xsd:attribute name="noPermissionDisplayKey" type="xsd:string"/>
+      <!-- The permission key -->
+      <xsd:attribute name="permKey" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="SecurityConfig">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="AccessMapping" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="AccessProfile" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ContactPermissions" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="DocumentPermissions" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ExposurePermissions" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="NotePermissions" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="ObjectHandler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="OptionalObjectHandler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="StaticHandler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="WrapHandler" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- This will create a static handler for the given permission -->
+  <xsd:element name="StaticHandler">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Handler" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="SystemPermType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="desc" type="xsd:string"/>
+      <!-- The entity for the permission key and permission check -->
+      <xsd:attribute name="entity" type="xsd:string" use="required"/>
+      <!-- Requires redeclaring this permission in content or configuration -->
+      <xsd:attribute name="external" type="xsd:boolean"/>
+      <!-- Prevents redeclaring this permission in content or configuration -->
+      <xsd:attribute name="internal" type="xsd:boolean"/>
+      <xsd:attribute name="noPermissionDisplayKey" type="xsd:string"/>
+      <!-- The permission key -->
+      <xsd:attribute name="permKey" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="SubObjectOwnPermission">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:attribute name="permission" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="SystemPermType">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded"/>
+      <!-- see SystemPermissionType typelist -->
+      <xsd:attribute name="code" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <!-- This will create a wrap handler that first checked the wrapPermKey but also requires
+       one of the given permissions to be true as well. -->
+  <xsd:element name="WrapHandler">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="SystemPermType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:choice>
+      <xsd:attribute name="desc" type="xsd:string"/>
+      <!-- The entity for the permission key and permission check -->
+      <xsd:attribute name="entity" type="xsd:string" use="required"/>
+      <!-- Requires redeclaring this permission in content or configuration -->
+      <xsd:attribute name="external" type="xsd:boolean"/>
+      <!-- Prevents redeclaring this permission in content or configuration -->
+      <xsd:attribute name="internal" type="xsd:boolean"/>
+      <xsd:attribute name="noPermissionDisplayKey" type="xsd:string"/>
+      <!-- The permission key -->
+      <xsd:attribute name="permKey" type="xsd:NMTOKEN" use="required"/>
+      <!-- The permission key to wrap and for this permission key and additional permission check -->
+      <xsd:attribute name="wrapPermKey" type="xsd:NMTOKEN" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

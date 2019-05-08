@@ -1,0 +1,822 @@
+<html>
+<head>
+<title>ClaimMetric</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">ClaimMetric</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_claimmetric)</span>
+</div>
+<div class="desc"></div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+Final
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3585" class="reftext" onclick='showAndHideRefBox("refbox_3585", "reflink_3585")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3585" class="refbox_inner" style="display:none;">
+<A HREF="../full/ClaimMetric.html" TARGET="tableFrame">ClaimMetric.Subtype</A><br><A HREF="../full/ClaimMetricLimit.html" TARGET="tableFrame">ClaimMetricLimit.ClaimMetricType</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#AllEscalatedActivitiesClaimMetric>AllEscalatedActivitiesClaimMetric</a></td>
+<td>Number of Escalated Activities</td>
+<td>Number of Escalated Activities Claim Metric</td>
+<td align=center>7</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ClaimMetric>ClaimMetric</a></td>
+<td>ClaimMetric</td>
+<td>ClaimMetric</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DaysInitialContactWithInsuredClaimMetric>DaysInitialContactWithInsuredClaimMetric</a></td>
+<td>Initial Contact with Insured (Days)</td>
+<td>Days Insured was Contacted</td>
+<td align=center>2</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DaysLastViewedByAdjusterClaimMetric>DaysLastViewedByAdjusterClaimMetric</a></td>
+<td>Days Since Last View - Adjuster</td>
+<td>Days since Adjuster last viewed the claim</td>
+<td align=center>3</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DaysLastViewedBySupervisorClaimMetric>DaysLastViewedBySupervisorClaimMetric</a></td>
+<td>Days Since Last View - Supervisor</td>
+<td>Days since Supervisor last viewed the claim</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DaysOpenClaimMetric>DaysOpenClaimMetric</a></td>
+<td>Days Open</td>
+<td>Days Open Claim Metric</td>
+<td align=center>1</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DecimalClaimMetric>DecimalClaimMetric</a></td>
+<td>DecimalClaimMetric</td>
+<td>DecimalClaimMetric</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IntegerClaimMetric>IntegerClaimMetric</a></td>
+<td>IntegerClaimMetric</td>
+<td>IntegerClaimMetric</td>
+<td align=center>3</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#MoneyClaimMetric>MoneyClaimMetric</a></td>
+<td>MoneyClaimMetric</td>
+<td>MoneyClaimMetric</td>
+<td align=center>2</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#NetTotalIncurredClaimMetric>NetTotalIncurredClaimMetric</a></td>
+<td>Net Total Incurred</td>
+<td>Net Total Incurred Claim Metric</td>
+<td align=center>9</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#OpenEscalatedActivitiesClaimMetric>OpenEscalatedActivitiesClaimMetric</a></td>
+<td>Open Escalated Activities</td>
+<td>Number of Open Escalated Activities Claim Metric</td>
+<td align=center>6</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#OverdueActivitiesClaimMetric>OverdueActivitiesClaimMetric</a></td>
+<td>Activities Past Due Date</td>
+<td>Activities Past Due Date Claim Metric</td>
+<td align=center>5</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PercentClaimMetric>PercentClaimMetric</a></td>
+<td>PercentClaimMetric</td>
+<td>PercentClaimMetric</td>
+<td align=center>4</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PercentEscalatedActivitiesClaimMetric>PercentEscalatedActivitiesClaimMetric</a></td>
+<td>% of Escalated Activities</td>
+<td>Percentage of Escalated Activities Claim Metric</td>
+<td align=center>8</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PercentIncurredLossCostsClaimMetric>PercentIncurredLossCostsClaimMetric</a></td>
+<td>Incurred Loss Costs as % of Net Total Incurred</td>
+<td>Incurred Loss Costs as % of Net Total Incurred Claim Metric</td>
+<td align=center>11</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PercentPaidLossCostsClaimMetric>PercentPaidLossCostsClaimMetric</a></td>
+<td>Paid Loss Costs as % of Total Paid</td>
+<td>Paid Loss Costs as % of Total Paid Claim Metric</td>
+<td align=center>12</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PercentReserveChangeClaimMetric>PercentReserveChangeClaimMetric</a></td>
+<td>% Reserve Change from Initial Reserve</td>
+<td>Percent Reserve Change from Initial Reserve Claim Metric</td>
+<td align=center>15</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ReserveChangeCountClaimMetric>ReserveChangeCountClaimMetric</a></td>
+<td>Number of Reserve Changes</td>
+<td>Number of Reserve Changes Claim Metric</td>
+<td align=center>14</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#TimeBasedClaimMetric>TimeBasedClaimMetric</a></td>
+<td>TimeBasedClaimMetric</td>
+<td>TimeBasedClaimMetric</td>
+<td align=center>1</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#TimeToFirstPaymentClaimMetric>TimeToFirstPaymentClaimMetric</a></td>
+<td>Time to First Loss Payment (Days)</td>
+<td>Time to First Loss Payment Claim Metric</td>
+<td align=center>13</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#TotalPaidClaimMetric>TotalPaidClaimMetric</a></td>
+<td>Total Paid</td>
+<td>Total Paid Claim Metric</td>
+<td align=center>10</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=AllEscalatedActivitiesClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">AllEscalatedActivitiesClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3586" class="reftext" onclick='showAndHideRefBox("refbox_3586", "reflink_3586")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3586" class="refbox_inner" style="display:none;">
+Number of Escalated Activities Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Number of Escalated Activities</td>
+<td>Number of Escalated Activities Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3587" class="reftext" onclick='showAndHideRefBox("refbox_3587", "reflink_3587")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3587" class="refbox_inner" style="display:none;">
+ClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ClaimMetric</td>
+<td>ClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DaysInitialContactWithInsuredClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">DaysInitialContactWithInsuredClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3588" class="reftext" onclick='showAndHideRefBox("refbox_3588", "reflink_3588")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3588" class="refbox_inner" style="display:none;">
+Days Insured was Contacted
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Initial Contact with Insured (Days)</td>
+<td>Days Insured was Contacted</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DaysLastViewedByAdjusterClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">DaysLastViewedByAdjusterClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3589" class="reftext" onclick='showAndHideRefBox("refbox_3589", "reflink_3589")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3589" class="refbox_inner" style="display:none;">
+Days since Adjuster last viewed the claim
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Days Since Last View - Adjuster</td>
+<td>Days since Adjuster last viewed the claim</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DaysLastViewedBySupervisorClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">DaysLastViewedBySupervisorClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3590" class="reftext" onclick='showAndHideRefBox("refbox_3590", "reflink_3590")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3590" class="refbox_inner" style="display:none;">
+Days since Supervisor last viewed the claim
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Days Since Last View - Supervisor</td>
+<td>Days since Supervisor last viewed the claim</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DaysOpenClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">DaysOpenClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3591" class="reftext" onclick='showAndHideRefBox("refbox_3591", "reflink_3591")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3591" class="refbox_inner" style="display:none;">
+Days Open Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Days Open</td>
+<td>Days Open Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DecimalClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">DecimalClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3592" class="reftext" onclick='showAndHideRefBox("refbox_3592", "reflink_3592")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3592" class="refbox_inner" style="display:none;">
+DecimalClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>DecimalClaimMetric</td>
+<td>DecimalClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IntegerClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">IntegerClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3593" class="reftext" onclick='showAndHideRefBox("refbox_3593", "reflink_3593")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3593" class="refbox_inner" style="display:none;">
+IntegerClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>IntegerClaimMetric</td>
+<td>IntegerClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=MoneyClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">MoneyClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3594" class="reftext" onclick='showAndHideRefBox("refbox_3594", "reflink_3594")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3594" class="refbox_inner" style="display:none;">
+MoneyClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>MoneyClaimMetric</td>
+<td>MoneyClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=NetTotalIncurredClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">NetTotalIncurredClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3595" class="reftext" onclick='showAndHideRefBox("refbox_3595", "reflink_3595")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3595" class="refbox_inner" style="display:none;">
+Net Total Incurred Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Net Total Incurred</td>
+<td>Net Total Incurred Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=OpenEscalatedActivitiesClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">OpenEscalatedActivitiesClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3596" class="reftext" onclick='showAndHideRefBox("refbox_3596", "reflink_3596")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3596" class="refbox_inner" style="display:none;">
+Number of Open Escalated Activities Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Open Escalated Activities</td>
+<td>Number of Open Escalated Activities Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=OverdueActivitiesClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">OverdueActivitiesClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3597" class="reftext" onclick='showAndHideRefBox("refbox_3597", "reflink_3597")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3597" class="refbox_inner" style="display:none;">
+Activities Past Due Date Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Activities Past Due Date</td>
+<td>Activities Past Due Date Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PercentClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">PercentClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3598" class="reftext" onclick='showAndHideRefBox("refbox_3598", "reflink_3598")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3598" class="refbox_inner" style="display:none;">
+PercentClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>PercentClaimMetric</td>
+<td>PercentClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PercentEscalatedActivitiesClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">PercentEscalatedActivitiesClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3599" class="reftext" onclick='showAndHideRefBox("refbox_3599", "reflink_3599")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3599" class="refbox_inner" style="display:none;">
+Percentage of Escalated Activities Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>% of Escalated Activities</td>
+<td>Percentage of Escalated Activities Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PercentIncurredLossCostsClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">PercentIncurredLossCostsClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3600" class="reftext" onclick='showAndHideRefBox("refbox_3600", "reflink_3600")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3600" class="refbox_inner" style="display:none;">
+Incurred Loss Costs as % of Net Total Incurred Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Incurred Loss Costs as % of Net Total Incurred</td>
+<td>Incurred Loss Costs as % of Net Total Incurred Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PercentPaidLossCostsClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">PercentPaidLossCostsClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3601" class="reftext" onclick='showAndHideRefBox("refbox_3601", "reflink_3601")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3601" class="refbox_inner" style="display:none;">
+Paid Loss Costs as % of Total Paid Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Paid Loss Costs as % of Total Paid</td>
+<td>Paid Loss Costs as % of Total Paid Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PercentReserveChangeClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">PercentReserveChangeClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3602" class="reftext" onclick='showAndHideRefBox("refbox_3602", "reflink_3602")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3602" class="refbox_inner" style="display:none;">
+Percent Reserve Change from Initial Reserve Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>% Reserve Change from Initial Reserve</td>
+<td>Percent Reserve Change from Initial Reserve Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ReserveChangeCountClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">ReserveChangeCountClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3603" class="reftext" onclick='showAndHideRefBox("refbox_3603", "reflink_3603")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3603" class="refbox_inner" style="display:none;">
+Number of Reserve Changes Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Number of Reserve Changes</td>
+<td>Number of Reserve Changes Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=TimeBasedClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">TimeBasedClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3604" class="reftext" onclick='showAndHideRefBox("refbox_3604", "reflink_3604")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3604" class="refbox_inner" style="display:none;">
+TimeBasedClaimMetric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>TimeBasedClaimMetric</td>
+<td>TimeBasedClaimMetric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=TimeToFirstPaymentClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">TimeToFirstPaymentClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3605" class="reftext" onclick='showAndHideRefBox("refbox_3605", "reflink_3605")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3605" class="refbox_inner" style="display:none;">
+Time to First Loss Payment Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Time to First Loss Payment (Days)</td>
+<td>Time to First Loss Payment Claim Metric</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=TotalPaidClaimMetric></a>
+<div class="titlebox">
+<div class="filtertitle">TotalPaidClaimMetric <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3606" class="reftext" onclick='showAndHideRefBox("refbox_3606", "reflink_3606")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3606" class="refbox_inner" style="display:none;">
+Total Paid Claim Metric
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Total Paid</td>
+<td>Total Paid Claim Metric</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

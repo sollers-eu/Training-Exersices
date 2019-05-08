@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>TransactionTAccountOperationsDelegate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">TransactionTAccountOperationsDelegate <span class="entityname">(Virtual)</span></div>
+<div class="desc">
+<span id="reflink_60" class="reftext" onclick='showAndHideRefBox("refbox_60", "reflink_60")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_60" class="refbox_inner" style="display:none;">
+
+    Delegate used by Transactions for operations on its TAccounts.
+  
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">TransactionTAccountOperationsDelegate</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup></span>
+</div>
+</div>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="transactiontaccountoperationsdelegate_lifecyclestate"></a>
+<p class="column">
+<span class="coltitle">LifeCycleState</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/TransactionLifeCycleState_tl.html" TARGET="tableFrame">TransactionLifeCycleState</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(overwritten on load)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>overwritten on load</b><br>If also loadable, this attribute indicates the corresponding staging table contains a mapping that maps to this key. When the system loads new data from the staging tables, the loader will overwrite any data you have supplied. As a result, you should not populate data into this key.')">?</span></sup></span>
+<br>
+<span class="desc">Current internal lifecycle state of the transaction. Changing state affects T-accounts.</span>
+<a name="transactiontaccountoperationsdelegate_lifecyclestate_dynprop"></a>
+<p class="column">
+<span class="coltitle">LIFECYCLESTATE_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactiontaccountoperationsdelegate_status"></a>
+<p class="column">
+<span class="coltitle">Status</span>&nbsp;&nbsp;<span class="titleDesc">type key to <A HREF="../typelist/TransactionStatus_tl.html" TARGET="tableFrame">TransactionStatus</A> using filter <A HREF="../typelist/TransactionStatus_tl.html#transaction" TARGET="tableFrame">transaction</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The typekey cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Status of the transaction. Further refines the LifeCycleState. Can only change status directly to another status in the same LifeCycleState, which does not affect Taccounts.</span>
+<a name="transactiontaccountoperationsdelegate_status_dynprop"></a>
+<p class="column">
+<span class="coltitle">STATUS_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="transactiontaccountoperationsdelegate_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.TransactionTAccountOperationsDelegate></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+</body>
+</html>

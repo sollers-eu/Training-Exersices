@@ -1,0 +1,524 @@
+<html>
+<head>
+<title>claimedit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">claimedit <span class="entityname">(object-based) - Edit claim</span></div>
+<div class="desc">
+<span id="reflink_58" class="reftext" onclick='showAndHideRefBox("refbox_58", "reflink_58")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_58" class="refbox_inner" style="display:none;">
+Permission to edit a claim
+</div>
+</span>
+</div>
+</div>
+<a name="Roles"></a><div class="arraysbox">Roles</div>
+<a name="adjuster"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/adjuster.html'>Adjuster</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for an adjuster</span>
+<a name="claims supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/claims_supervisor.html'>Claims Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="clerical"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/clerical.html'>Clerical</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a clerical user</span>
+<a name="manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/manager.html'>Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a manager</span>
+<a name="new loss processing supervisor"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/newloss_supervisor.html'>New Loss Processing Supervisor</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a claims supervisor</span>
+<a name="reinsurance manager"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/reinsurance_manager.html'>Reinsurance Manager</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Base permissions for a reinsurance manager</span>
+<a name="superuser"></a>
+<p class="column">
+<span class="coltitle"><a href='../roles/superuser.html'>Superuser</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Superuser with full permissions</span>
+<a name="Related Application Permission Keys"></a><div class="arraysbox">Related Application Permission Keys</div>
+<a name="claim createincident"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_createincident.html'>Claim createincident</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to create a new incident on the claim. Checks edit claim or edit claim closed depending on the state of the claim</span>
+<a name="claim edit"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_edit.html'>Claim edit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the claim. Checks edit claim or edit claim closed depending on the state of the claim</span>
+<a name="claim genericedit"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Claim_genericedit.html'>Claim genericedit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to perform some sort of edit on some claim</span>
+<a name="claiminfo edit"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/ClaimInfo_edit.html'>ClaimInfo edit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit an archived claim</span>
+<a name="incident edit"></a>
+<p class="column">
+<span class="coltitle"><a href='../keys/Incident_edit.html'>Incident edit</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit the incident. Checks edit claim or edit claim closed depending on the state of the claim</span>
+<a name="Related Pages"></a><div class="arraysbox">Related Pages</div>
+<a name="archivedclaim"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ArchivedClaim.html'>ArchivedClaim</a></span>  <span class="titleDesc">via <a href='../keys/ClaimInfo_edit.html'>ClaimInfo edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimcontactdetailpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimContactDetailPopup.html'>ClaimContactDetailPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimlossdetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimLossDetails.html'>ClaimLossDetails</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicyendorsementdetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyEndorsementDetail.html'>ClaimPolicyEndorsementDetail</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicyendorsements"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyEndorsements.html'>ClaimPolicyEndorsements</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicylocations"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyLocations.html'>ClaimPolicyLocations</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicystatcodes"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyStatCodes.html'>ClaimPolicyStatCodes</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicystatcodesprint"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyStatCodesPrint.html'>ClaimPolicyStatCodesPrint</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicytrips"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyTrips.html'>ClaimPolicyTrips</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicyvehicledetail"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyVehicleDetail.html'>ClaimPolicyVehicleDetail</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimpolicyvehicles"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimPolicyVehicles.html'>ClaimPolicyVehicles</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="claimstatus"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/ClaimStatus.html'>ClaimStatus</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editdwellingincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditDwellingIncidentPopup.html'>EditDwellingIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editfixedpropertyincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditFixedPropertyIncidentPopup.html'>EditFixedPropertyIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editinjuryincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditInjuryIncidentPopup.html'>EditInjuryIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editlivingexpensesincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditLivingExpensesIncidentPopup.html'>EditLivingExpensesIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editotherstructureincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditOtherStructureIncidentPopup.html'>EditOtherStructureIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editpropertycontentsincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditPropertyContentsIncidentPopup.html'>EditPropertyContentsIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="editvehicleincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/EditVehicleIncidentPopup.html'>EditVehicleIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newdwellingincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewDwellingIncidentPopup.html'>NewDwellingIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newfixedpropertyincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewFixedPropertyIncidentPopup.html'>NewFixedPropertyIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newinjuryincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewInjuryIncidentPopup.html'>NewInjuryIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newlivingexpensesincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewLivingExpensesIncidentPopup.html'>NewLivingExpensesIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newotherstructureincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewOtherStructureIncidentPopup.html'>NewOtherStructureIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newpropertycontentsincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewPropertyContentsIncidentPopup.html'>NewPropertyContentsIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="newvehicleincidentpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/NewVehicleIncidentPopup.html'>NewVehicleIncidentPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_createincident.html'>Claim createincident</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="policylocationpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/PolicyLocationPopup.html'>PolicyLocationPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="policylocationpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/PolicyLocationPopup.html'>PolicyLocationPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="policylocationpopup"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/PolicyLocationPopup.html'>PolicyLocationPopup</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="sidetails"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SIDetails.html'>SIDetails</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="subrogationgeneral"></a>
+<p class="column">
+<span class="coltitle"><a href='../pages/SubrogationGeneral.html'>SubrogationGeneral</a></span>  <span class="titleDesc">via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"></span>
+<a name="Related Elements"></a><div class="arraysbox">Related Elements</div>
+<a name="add vehicles (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Add Vehicles (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyVehicles.html'>ClaimPolicyVehicles</a> (ClaimPolicyVehicles.pcf)</span>
+<a name="add/delete locations (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Add/Delete Locations (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyLocations.html'>ClaimPolicyLocations</a> (ClaimPolicyLocations.pcf)</span>
+<a name="add/delete stat codes (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Add/Delete Stat Codes (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyStatCodes.html'>ClaimPolicyStatCodes</a> (ClaimPolicyStatCodes.pcf)</span>
+<a name="addlocation (iteratorbuttons)"></a>
+<p class="column">
+<span class="coltitle">AddLocation (IteratorButtons)</span>  <span class="titleDesc">addVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyLocations.html'>ClaimPolicyLocations</a> (ClaimPolicyLocations.pcf)</span>
+<a name="addlocation (iteratorbuttons)"></a>
+<p class="column">
+<span class="coltitle">AddLocation (IteratorButtons)</span>  <span class="titleDesc">removeVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyLocations.html'>ClaimPolicyLocations</a> (ClaimPolicyLocations.pcf)</span>
+<a name="edit (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Edit (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyEndorsements.html'>ClaimPolicyEndorsements</a> (ClaimPolicyEndorsements.pcf)</span>
+<a name="edit (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Edit (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyStatCodes.html'>ClaimPolicyStatCodes</a> (ClaimPolicyStatCodes.pcf)</span>
+<a name="edit (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Edit (ToolbarButton)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyVehicles.html'>ClaimPolicyVehicles</a> (ClaimPolicyVehicles.pcf)</span>
+<a name="editbuttons"></a>
+<p class="column">
+<span class="coltitle">EditButtons</span>  <span class="titleDesc">cancelVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/PolicyLocationScreen.html'>PolicyLocationScreen</a> (PolicyLocationScreen.pcf)</span>
+<a name="editbuttons"></a>
+<p class="column">
+<span class="coltitle">EditButtons</span>  <span class="titleDesc">editVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyLocations.html'>ClaimPolicyLocations</a> (ClaimPolicyLocations.pcf)</span>
+<a name="editbuttons"></a>
+<p class="column">
+<span class="coltitle">EditButtons</span>  <span class="titleDesc">editVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/PolicyLocationScreen.html'>PolicyLocationScreen</a> (PolicyLocationScreen.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">addVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyEndorsements.html'>ClaimPolicyEndorsements</a> (ClaimPolicyEndorsements.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">addVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyStatCodes.html'>ClaimPolicyStatCodes</a> (ClaimPolicyStatCodes.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">addVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyVehicles.html'>ClaimPolicyVehicles</a> (ClaimPolicyVehicles.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">addVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewClaimWizard_PolicyDetailsScreen.html'>NewClaimWizard_PolicyDetailsScreen</a> (NewClaimWizard_PolicyDetailsScreen.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">removeVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyEndorsements.html'>ClaimPolicyEndorsements</a> (ClaimPolicyEndorsements.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">removeVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyStatCodes.html'>ClaimPolicyStatCodes</a> (ClaimPolicyStatCodes.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">removeVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyVehicles.html'>ClaimPolicyVehicles</a> (ClaimPolicyVehicles.pcf)</span>
+<a name="iteratorbuttons"></a>
+<p class="column">
+<span class="coltitle">IteratorButtons</span>  <span class="titleDesc">removeVisible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/NewClaimWizard_PolicyDetailsScreen.html'>NewClaimWizard_PolicyDetailsScreen</a> (NewClaimWizard_PolicyDetailsScreen.pcf)</span>
+<a name="retrieve from archive (toolbarbutton)"></a>
+<p class="column">
+<span class="coltitle">Retrieve from Archive (ToolbarButton)</span>  <span class="titleDesc">available attribute via <a href='../keys/ClaimInfo_edit.html'>ClaimInfo edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ArchivedClaimDetailScreen.html'>ArchivedClaimDetailScreen</a> (ArchivedClaimDetailScreen.pcf)</span>
+<a name="toolbar"></a>
+<p class="column">
+<span class="coltitle">Toolbar</span>  <span class="titleDesc">visible attribute via <a href='../keys/Claim_edit.html'>Claim edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/ClaimPolicyGeneral.html'>ClaimPolicyGeneral</a> (ClaimPolicyGeneral.pcf)</span>
+<a name="incidentuihelper.editlabel (menuitem)"></a>
+<p class="column">
+<span class="coltitle">incidentUIHelper.EditLabel (MenuItem)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/LossDetailsPanelSet-Homeowners.html'>LossDetailsPanelSet.Homeowners</a> (LossDetailsPanelSet.Homeowners.pcf)</span>
+<a name="incidentuihelper.removelabel (menuitem)"></a>
+<p class="column">
+<span class="coltitle">incidentUIHelper.RemoveLabel (MenuItem)</span>  <span class="titleDesc">visible attribute via <a href='../keys/Incident_edit.html'>Incident edit</a></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc"><a href='../pages/LossDetailsPanelSet-Homeowners.html'>LossDetailsPanelSet.Homeowners</a> (LossDetailsPanelSet.Homeowners.pcf)</span>
+</body>
+</html>

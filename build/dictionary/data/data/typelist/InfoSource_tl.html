@@ -1,0 +1,859 @@
+<html>
+<head>
+<title>InfoSource</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">InfoSource</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_infosource)</span>
+</div>
+<div class="desc">Medical info source - for use on MedCaseMgr Screen</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_6290" class="reftext" onclick='showAndHideRefBox("refbox_6290", "reflink_6290")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_6290" class="refbox_inner" style="display:none;">
+<A HREF="../full/MedicalContactStatus.html" TARGET="tableFrame">MedicalContactStatus.InfoSource</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromAttorney>CallFromAttorney</a></td>
+<td>Call from attorney</td>
+<td>Call from attorney</td>
+<td align=center>12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromCaseWrkr>CallFromCaseWrkr</a></td>
+<td>Call from case worker</td>
+<td>Call from case worker</td>
+<td align=center>9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromClaimant>CallFromClaimant</a></td>
+<td>Call from claimant</td>
+<td>Call from claimant</td>
+<td align=center>5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromDoctor>CallFromDoctor</a></td>
+<td>Call from doctor</td>
+<td>Call from doctor</td>
+<td align=center>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromEmployer>CallFromEmployer</a></td>
+<td>Call from employer</td>
+<td>Call from Employer</td>
+<td align=center>4</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromGuardian>CallFromGuardian</a></td>
+<td>Call from parent or guardian</td>
+<td>Call from parent or guardian</td>
+<td align=center>10</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromHospital>CallFromHospital</a></td>
+<td>Call from hospital</td>
+<td>Call from hospital</td>
+<td align=center>11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromOccTherapist>CallFromOccTherapist</a></td>
+<td>Call from occupational therapist</td>
+<td>Call from occupational Therapist</td>
+<td align=center>7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallFromPhysTherapist>CallFromPhysTherapist</a></td>
+<td>Call from physical therapist</td>
+<td>Call from physical therapist</td>
+<td align=center>8</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToAttorney>CallToAttorney</a></td>
+<td>Call to attorney</td>
+<td>Call to attorney</td>
+<td align=center>21</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToCaseWrkr>CallToCaseWrkr</a></td>
+<td>Call to case worker</td>
+<td>Call to case worker</td>
+<td align=center>18</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToClaimant>CallToClaimant</a></td>
+<td>Call to claimant</td>
+<td>Call to claimant</td>
+<td align=center>14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToDoctor>CallToDoctor</a></td>
+<td>Call to doctor</td>
+<td>Call to doctor</td>
+<td align=center>15</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToEmployer>CallToEmployer</a></td>
+<td>Call to employer</td>
+<td>Call to employer</td>
+<td align=center>13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToGuardian>CallToGuardian</a></td>
+<td>Call to parent or guardian</td>
+<td>Call to parent or guardian</td>
+<td align=center>19</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToHospital>CallToHospital</a></td>
+<td>Call to hospital</td>
+<td>Call to hospital</td>
+<td align=center>20</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToOccTherapist>CallToOccTherapist</a></td>
+<td>Call to occupational therapist</td>
+<td>Call to occupational therapist</td>
+<td align=center>16</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CallToPhysTherapist>CallToPhysTherapist</a></td>
+<td>Call to physical therapist</td>
+<td>Call to physical therapist</td>
+<td align=center>17</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#HospitalReport>HospitalReport</a></td>
+<td>Hospital report</td>
+<td>Hospital report</td>
+<td align=center>3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#MedCertificate>MedCertificate</a></td>
+<td>Medical certificate</td>
+<td>Medical certificate</td>
+<td align=center>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#MedReport>MedReport</a></td>
+<td>Medical report</td>
+<td>Medical report</td>
+<td align=center>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Other>Other</a></td>
+<td>Other</td>
+<td>Contact with party not listed</td>
+<td align=center>22</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=CallFromAttorney></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromAttorney <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6291" class="reftext" onclick='showAndHideRefBox("refbox_6291", "reflink_6291")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6291" class="refbox_inner" style="display:none;">
+Call from attorney
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from attorney</td>
+<td>Call from attorney</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromCaseWrkr></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromCaseWrkr <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6292" class="reftext" onclick='showAndHideRefBox("refbox_6292", "reflink_6292")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6292" class="refbox_inner" style="display:none;">
+Call from case worker
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from case worker</td>
+<td>Call from case worker</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromClaimant></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromClaimant <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6293" class="reftext" onclick='showAndHideRefBox("refbox_6293", "reflink_6293")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6293" class="refbox_inner" style="display:none;">
+Call from claimant
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from claimant</td>
+<td>Call from claimant</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromDoctor></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromDoctor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6294" class="reftext" onclick='showAndHideRefBox("refbox_6294", "reflink_6294")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6294" class="refbox_inner" style="display:none;">
+Call from doctor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from doctor</td>
+<td>Call from doctor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromEmployer></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromEmployer <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6295" class="reftext" onclick='showAndHideRefBox("refbox_6295", "reflink_6295")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6295" class="refbox_inner" style="display:none;">
+Call from Employer
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from employer</td>
+<td>Call from Employer</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromGuardian></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromGuardian <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6296" class="reftext" onclick='showAndHideRefBox("refbox_6296", "reflink_6296")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6296" class="refbox_inner" style="display:none;">
+Call from parent or guardian
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from parent or guardian</td>
+<td>Call from parent or guardian</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromHospital></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromHospital <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6297" class="reftext" onclick='showAndHideRefBox("refbox_6297", "reflink_6297")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6297" class="refbox_inner" style="display:none;">
+Call from hospital
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from hospital</td>
+<td>Call from hospital</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromOccTherapist></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromOccTherapist <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6298" class="reftext" onclick='showAndHideRefBox("refbox_6298", "reflink_6298")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6298" class="refbox_inner" style="display:none;">
+Call from occupational Therapist
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from occupational therapist</td>
+<td>Call from occupational Therapist</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallFromPhysTherapist></a>
+<div class="titlebox">
+<div class="filtertitle">CallFromPhysTherapist <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6299" class="reftext" onclick='showAndHideRefBox("refbox_6299", "reflink_6299")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6299" class="refbox_inner" style="display:none;">
+Call from physical therapist
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call from physical therapist</td>
+<td>Call from physical therapist</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToAttorney></a>
+<div class="titlebox">
+<div class="filtertitle">CallToAttorney <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6300" class="reftext" onclick='showAndHideRefBox("refbox_6300", "reflink_6300")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6300" class="refbox_inner" style="display:none;">
+Call to attorney
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to attorney</td>
+<td>Call to attorney</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToCaseWrkr></a>
+<div class="titlebox">
+<div class="filtertitle">CallToCaseWrkr <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6301" class="reftext" onclick='showAndHideRefBox("refbox_6301", "reflink_6301")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6301" class="refbox_inner" style="display:none;">
+Call to case worker
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to case worker</td>
+<td>Call to case worker</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToClaimant></a>
+<div class="titlebox">
+<div class="filtertitle">CallToClaimant <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6302" class="reftext" onclick='showAndHideRefBox("refbox_6302", "reflink_6302")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6302" class="refbox_inner" style="display:none;">
+Call to claimant
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to claimant</td>
+<td>Call to claimant</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToDoctor></a>
+<div class="titlebox">
+<div class="filtertitle">CallToDoctor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6303" class="reftext" onclick='showAndHideRefBox("refbox_6303", "reflink_6303")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6303" class="refbox_inner" style="display:none;">
+Call to doctor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to doctor</td>
+<td>Call to doctor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToEmployer></a>
+<div class="titlebox">
+<div class="filtertitle">CallToEmployer <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6304" class="reftext" onclick='showAndHideRefBox("refbox_6304", "reflink_6304")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6304" class="refbox_inner" style="display:none;">
+Call to employer
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to employer</td>
+<td>Call to employer</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToGuardian></a>
+<div class="titlebox">
+<div class="filtertitle">CallToGuardian <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6305" class="reftext" onclick='showAndHideRefBox("refbox_6305", "reflink_6305")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6305" class="refbox_inner" style="display:none;">
+Call to parent or guardian
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to parent or guardian</td>
+<td>Call to parent or guardian</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToHospital></a>
+<div class="titlebox">
+<div class="filtertitle">CallToHospital <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6306" class="reftext" onclick='showAndHideRefBox("refbox_6306", "reflink_6306")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6306" class="refbox_inner" style="display:none;">
+Call to hospital
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to hospital</td>
+<td>Call to hospital</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToOccTherapist></a>
+<div class="titlebox">
+<div class="filtertitle">CallToOccTherapist <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6307" class="reftext" onclick='showAndHideRefBox("refbox_6307", "reflink_6307")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6307" class="refbox_inner" style="display:none;">
+Call to occupational therapist
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to occupational therapist</td>
+<td>Call to occupational therapist</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CallToPhysTherapist></a>
+<div class="titlebox">
+<div class="filtertitle">CallToPhysTherapist <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6308" class="reftext" onclick='showAndHideRefBox("refbox_6308", "reflink_6308")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6308" class="refbox_inner" style="display:none;">
+Call to physical therapist
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Call to physical therapist</td>
+<td>Call to physical therapist</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=HospitalReport></a>
+<div class="titlebox">
+<div class="filtertitle">HospitalReport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6309" class="reftext" onclick='showAndHideRefBox("refbox_6309", "reflink_6309")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6309" class="refbox_inner" style="display:none;">
+Hospital report
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Hospital report</td>
+<td>Hospital report</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=MedCertificate></a>
+<div class="titlebox">
+<div class="filtertitle">MedCertificate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6310" class="reftext" onclick='showAndHideRefBox("refbox_6310", "reflink_6310")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6310" class="refbox_inner" style="display:none;">
+Medical certificate
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Medical certificate</td>
+<td>Medical certificate</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=MedReport></a>
+<div class="titlebox">
+<div class="filtertitle">MedReport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6311" class="reftext" onclick='showAndHideRefBox("refbox_6311", "reflink_6311")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6311" class="refbox_inner" style="display:none;">
+Medical report
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Medical report</td>
+<td>Medical report</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Other></a>
+<div class="titlebox">
+<div class="filtertitle">Other <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_6312" class="reftext" onclick='showAndHideRefBox("refbox_6312", "reflink_6312")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_6312" class="refbox_inner" style="display:none;">
+Contact with party not listed
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Other</td>
+<td>Contact with party not listed</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

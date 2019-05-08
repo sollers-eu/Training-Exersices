@@ -1,0 +1,509 @@
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <title>Application Permission Keys Summary</title>
+</head>
+<body>
+<h3>Activity</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Activity_approve.html' target='detailFrame'>approve</a></td><td>true</td><td>Permission to approve an activity.  A user has permission to approve an activity if they have been assigned the activity or if they have approveany permission</td></tr>
+<tr><td><a href='Activity_approveany.html' target='detailFrame'>approveany</a></td><td>false</td><td>Permission to approve any approval activity</td></tr>
+<tr><td><a href='Activity_assign.html' target='detailFrame'>assign</a></td><td>true</td><td>Permission to assign an object of type Activity.  Does nothing if the object is new, checks actraown if reassigning an object the user owns, and checks actraunown if reassigning an object that the user doesn't own.</td></tr>
+<tr><td><a href='Activity_assignfromqueue.html' target='detailFrame'>assignfromqueue</a></td><td>false</td><td>Permission to assign activity from a queue</td></tr>
+<tr><td><a href='Activity_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an activity.  A user has permission to edit an activity if they own the activity or if they have the edit unowned activities permission</td></tr>
+<tr><td><a href='Activity_genericassign.html' target='detailFrame'>genericassign</a></td><td>false</td><td>Permission to re-assign some activity</td></tr>
+<tr><td><a href='Activity_genericassignowned.html' target='detailFrame'>genericassignowned</a></td><td>false</td><td>Permission to re-assign some owned activity</td></tr>
+<tr><td><a href='Activity_genericassignunowned.html' target='detailFrame'>genericassignunowned</a></td><td>false</td><td>Permission to re-assign some unowned activity</td></tr>
+<tr><td><a href='Activity_makemandatory.html' target='detailFrame'>makemandatory</a></td><td>true</td><td>Permission to make activities mandatory</td></tr>
+<tr><td><a href='Activity_nextfromqueue.html' target='detailFrame'>nextfromqueue</a></td><td>false</td><td>Permission to get the next activity off of a queue</td></tr>
+<tr><td><a href='Activity_own.html' target='detailFrame'>own</a></td><td>true</td><td>Permission to own activities</td></tr>
+<tr><td><a href='Activity_pickfromqueue.html' target='detailFrame'>pickfromqueue</a></td><td>false</td><td>Permission to pick an activity from a queue</td></tr>
+<tr><td><a href='Activity_reviewassignment.html' target='detailFrame'>reviewassignment</a></td><td>false</td><td>Permission to complete assignment review activities</td></tr>
+<tr><td><a href='Activity_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view an activity on a claim</td></tr>
+<tr><td><a href='Activity_viewallqueues.html' target='detailFrame'>viewallqueues</a></td><td>false</td><td>Permission to see all queues, regardless of security zone</td></tr>
+<tr><td><a href='Activity_viewqueue.html' target='detailFrame'>viewqueue</a></td><td>false</td><td>Permission to view the activity queues page. Requires either next from queue or pick from queue permission</td></tr>
+</table>
+<h3>ActivityPattern</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ActivityPattern_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create activity patterns</td></tr>
+<tr><td><a href='ActivityPattern_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete activity patterns</td></tr>
+<tr><td><a href='ActivityPattern_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit activity patterns</td></tr>
+<tr><td><a href='ActivityPattern_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view activity patterns</td></tr>
+</table>
+<h3>ActivityRule</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ActivityRule_approve.html' target='detailFrame'>approve</a></td><td>false</td><td>Permission to approve Rule</td></tr>
+<tr><td><a href='ActivityRule_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to edit Rule</td></tr>
+<tr><td><a href='ActivityRule_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to edit Rule</td></tr>
+<tr><td><a href='ActivityRule_deploy.html' target='detailFrame'>deploy</a></td><td>false</td><td>Permission to deploy Rule</td></tr>
+<tr><td><a href='ActivityRule_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit Rule</td></tr>
+<tr><td><a href='ActivityRule_import.html' target='detailFrame'>import</a></td><td>false</td><td>Permission to import Rule</td></tr>
+<tr><td><a href='ActivityRule_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view Rule</td></tr>
+</table>
+<h3>Attribute</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Attribute_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create, edit, or delete user attributes</td></tr>
+<tr><td><a href='Attribute_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to create, edit, or delete user attributes</td></tr>
+<tr><td><a href='Attribute_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to create, edit, or delete user attributes</td></tr>
+<tr><td><a href='Attribute_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view a list of attributes or an attribute's details</td></tr>
+</table>
+<h3>AttributeUser</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='AttributeUser_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new attribute-user relationship</td></tr>
+<tr><td><a href='AttributeUser_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to edit attributes for a user</td></tr>
+<tr><td><a href='AttributeUser_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit attributes for a user</td></tr>
+</table>
+<h3>AuthorityLimit</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='AuthorityLimit_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new authority limit</td></tr>
+<tr><td><a href='AuthorityLimit_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete an authority limit</td></tr>
+<tr><td><a href='AuthorityLimit_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing authority limit</td></tr>
+</table>
+<h3>AuthorityLimitProfile</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='AuthorityLimitProfile_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new authority limit profile</td></tr>
+<tr><td><a href='AuthorityLimitProfile_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete an authority limit profile</td></tr>
+<tr><td><a href='AuthorityLimitProfile_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing authority limit profile</td></tr>
+<tr><td><a href='AuthorityLimitProfile_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view authority limit profiles</td></tr>
+</table>
+<h3>BulkInvoice</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='BulkInvoice_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a bulk invoice</td></tr>
+<tr><td><a href='BulkInvoice_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a bulk invoice</td></tr>
+<tr><td><a href='BulkInvoice_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit a bulk invoice</td></tr>
+<tr><td><a href='BulkInvoice_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view a bulk invoice</td></tr>
+</table>
+<h3>BusinessWeek</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='BusinessWeek_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a BusinessWeek</td></tr>
+<tr><td><a href='BusinessWeek_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to create, edit, or delete business week</td></tr>
+<tr><td><a href='BusinessWeek_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to create, edit, or delete business week</td></tr>
+<tr><td><a href='BusinessWeek_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view a list of BusinessWeeks or BusinessWeek details</td></tr>
+</table>
+<h3>Catastrophe</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Catastrophe_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create new catastrophes</td></tr>
+<tr><td><a href='Catastrophe_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete catastrophes</td></tr>
+<tr><td><a href='Catastrophe_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit existing catastrophes</td></tr>
+<tr><td><a href='Catastrophe_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view the catastrophe list and catastrophe details</td></tr>
+</table>
+<h3>Check</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Check_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a check on a claim. Checks delete payment or delete manual payment depending on the type of check</td></tr>
+<tr><td><a href='Check_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit a check on a claim. Checks edit payment or edit manual payment depending on the type of check</td></tr>
+<tr><td><a href='Check_transfer.html' target='detailFrame'>transfer</a></td><td>true</td><td>Permission to transfer a check on a claim</td></tr>
+<tr><td><a href='Check_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a check on a claim</td></tr>
+</table>
+<h3>Claim</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Claim_archive.html' target='detailFrame'>archive</a></td><td>false</td><td>Permission to archive a claim</td></tr>
+<tr><td><a href='Claim_assign.html' target='detailFrame'>assign</a></td><td>true</td><td>Permission to assign an object of type Claim.  Does nothing if the object is new, checks claimraown if reassigning an object the user owns, and checks claimraunown if reassigning an object that the user doesn't own.</td></tr>
+<tr><td><a href='Claim_close.html' target='detailFrame'>close</a></td><td>true</td><td>Permission to close a claim</td></tr>
+<tr><td><a href='Claim_closeexposure.html' target='detailFrame'>closeexposure</a></td><td>true</td><td>Permission to close an exposure on a claim</td></tr>
+<tr><td><a href='Claim_closematter.html' target='detailFrame'>closematter</a></td><td>true</td><td>Permission to close a matter on a claim</td></tr>
+<tr><td><a href='Claim_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new claim</td></tr>
+<tr><td><a href='Claim_createactivity.html' target='detailFrame'>createactivity</a></td><td>true</td><td>Permission to create a new activity on the claim. Checks create activity or create activity closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_createanytransaction.html' target='detailFrame'>createanytransaction</a></td><td>true</td><td>Permission to create any sort of transaction on a claim. Used to determine whether or not to display the new transaction menu at all</td></tr>
+<tr><td><a href='Claim_createassociation.html' target='detailFrame'>createassociation</a></td><td>false</td><td>Permission to create a new association between claims</td></tr>
+<tr><td><a href='Claim_createdocument.html' target='detailFrame'>createdocument</a></td><td>true</td><td>Permission to add a document to the claim. Checks add docs or add docs closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_createevaluation.html' target='detailFrame'>createevaluation</a></td><td>true</td><td>Permission to create a new evaluation on a claim</td></tr>
+<tr><td><a href='Claim_createexposure.html' target='detailFrame'>createexposure</a></td><td>true</td><td>Permission to create new exposures</td></tr>
+<tr><td><a href='Claim_createincident.html' target='detailFrame'>createincident</a></td><td>true</td><td>Permission to create a new incident on the claim. Checks edit claim or edit claim closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_createmanualpayment.html' target='detailFrame'>createmanualpayment</a></td><td>true</td><td>Permission to create a manual payment on a claim</td></tr>
+<tr><td><a href='Claim_creatematter.html' target='detailFrame'>creatematter</a></td><td>true</td><td>Permission to create a new matter on a claim</td></tr>
+<tr><td><a href='Claim_createnegotiation.html' target='detailFrame'>createnegotiation</a></td><td>true</td><td>Permission to create a new negotiation on a claim</td></tr>
+<tr><td><a href='Claim_createnote.html' target='detailFrame'>createnote</a></td><td>true</td><td>Permission to add a note to the claim. Checks add notes or add notes closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_createpayment.html' target='detailFrame'>createpayment</a></td><td>true</td><td>Permission to create a payment on a claim</td></tr>
+<tr><td><a href='Claim_createrecovery.html' target='detailFrame'>createrecovery</a></td><td>true</td><td>Permission to create a reserve on a claim</td></tr>
+<tr><td><a href='Claim_createrecoveryreserve.html' target='detailFrame'>createrecoveryreserve</a></td><td>true</td><td>Permission to create a recovery reserve on a claim</td></tr>
+<tr><td><a href='Claim_createreserve.html' target='detailFrame'>createreserve</a></td><td>true</td><td>Permission to create a reserve on a claim</td></tr>
+<tr><td><a href='Claim_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit the claim. Checks edit claim or edit claim closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_genericassign.html' target='detailFrame'>genericassign</a></td><td>false</td><td>Permission to re-assign some claim</td></tr>
+<tr><td><a href='Claim_genericassignowned.html' target='detailFrame'>genericassignowned</a></td><td>false</td><td>Permission to re-assign some owned claim</td></tr>
+<tr><td><a href='Claim_genericassignunowned.html' target='detailFrame'>genericassignunowned</a></td><td>false</td><td>Permission to re-assign some unowned claim</td></tr>
+<tr><td><a href='Claim_genericedit.html' target='detailFrame'>genericedit</a></td><td>false</td><td>Permission to perform some sort of edit on some claim</td></tr>
+<tr><td><a href='Claim_genericremoveflag.html' target='detailFrame'>genericremoveflag</a></td><td>false</td><td>Permission to remove the flag on some claim</td></tr>
+<tr><td><a href='Claim_genericviewactivity.html' target='detailFrame'>genericviewactivity</a></td><td>false</td><td>Permission to view activities on some claim</td></tr>
+<tr><td><a href='Claim_genericviewclaim.html' target='detailFrame'>genericviewclaim</a></td><td>false</td><td>Permission to view some claim</td></tr>
+<tr><td><a href='Claim_genericviewexposure.html' target='detailFrame'>genericviewexposure</a></td><td>false</td><td>Permission to view exposures on some claim</td></tr>
+<tr><td><a href='Claim_genericviewmatter.html' target='detailFrame'>genericviewmatter</a></td><td>false</td><td>Permission to view matters on some claim</td></tr>
+<tr><td><a href='Claim_genericviewnettotalincurred.html' target='detailFrame'>genericviewnettotalincurred</a></td><td>false</td><td>Permission to view net total incurred information on a claim</td></tr>
+<tr><td><a href='Claim_genericviewpayments.html' target='detailFrame'>genericviewpayments</a></td><td>false</td><td>Permission to view payments (and derived information) on some claim</td></tr>
+<tr><td><a href='Claim_genericviewrecoveries.html' target='detailFrame'>genericviewrecoveries</a></td><td>false</td><td>Permission to view recoveries (and derived information) on some claim</td></tr>
+<tr><td><a href='Claim_genericviewrecoveryreserves.html' target='detailFrame'>genericviewrecoveryreserves</a></td><td>false</td><td>Permission to view recovery reserves (and derived information) on some claim</td></tr>
+<tr><td><a href='Claim_genericviewreserves.html' target='detailFrame'>genericviewreserves</a></td><td>false</td><td>Permission to view reserves (and derived information) on some claim</td></tr>
+<tr><td><a href='Claim_genericviewtransactions.html' target='detailFrame'>genericviewtransactions</a></td><td>false</td><td>Permission to view transactions on some claim</td></tr>
+<tr><td><a href='Claim_manageclaimusers.html' target='detailFrame'>manageclaimusers</a></td><td>true</td><td>Permission to manage the parties involved on a claim. Checks claim users manage or claim users manage closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_managepartiesinvolved.html' target='detailFrame'>managepartiesinvolved</a></td><td>true</td><td>Permission to manage the parties involved on a claim. Checks claim parties manage or claim parties manage closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_own.html' target='detailFrame'>own</a></td><td>false</td><td>Permission to own claims</td></tr>
+<tr><td><a href='Claim_print.html' target='detailFrame'>print</a></td><td>true</td><td>Permission to print a claim.  The user must have both Print and View for a Claim.</td></tr>
+<tr><td><a href='Claim_purge.html' target='detailFrame'>purge</a></td><td>false</td><td>Permission to purge a claim</td></tr>
+<tr><td><a href='Claim_removeflag.html' target='detailFrame'>removeflag</a></td><td>true</td><td>Permission to remove the flag on a claim</td></tr>
+<tr><td><a href='Claim_reopen.html' target='detailFrame'>reopen</a></td><td>true</td><td>Permission to reopen a claim</td></tr>
+<tr><td><a href='Claim_reopenmatter.html' target='detailFrame'>reopenmatter</a></td><td>true</td><td>Permission to reopen a matter on a claim</td></tr>
+<tr><td><a href='Claim_retrymessage.html' target='detailFrame'>retrymessage</a></td><td>true</td><td>Permission to retry a message on a claim</td></tr>
+<tr><td><a href='Claim_selectpolicy.html' target='detailFrame'>selectpolicy</a></td><td>true</td><td>Permission to select a new policy for an existing claim. Checks select policy or select policy closed depending on the state of the claim</td></tr>
+<tr><td><a href='Claim_validate.html' target='detailFrame'>validate</a></td><td>true</td><td>Permission to run validation rules on a claim</td></tr>
+<tr><td><a href='Claim_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a claim</td></tr>
+<tr><td><a href='Claim_viewconfidentialnotes.html' target='detailFrame'>viewconfidentialnotes</a></td><td>true</td><td>Permission to view confidential notes on a claim. This is true if a user has permission to view confidential notes or if the user is the author's supervisor</td></tr>
+<tr><td><a href='Claim_viewnettotalincurred.html' target='detailFrame'>viewnettotalincurred</a></td><td>true</td><td>Permission to view net total incurred information on a claim</td></tr>
+<tr><td><a href='Claim_viewpayments.html' target='detailFrame'>viewpayments</a></td><td>true</td><td>Permission to view checks and payments (and derived information) on a claim</td></tr>
+<tr><td><a href='Claim_viewrecoveries.html' target='detailFrame'>viewrecoveries</a></td><td>true</td><td>Permission to view recoveries (and derived information) on a claim</td></tr>
+<tr><td><a href='Claim_viewrecoveryreserves.html' target='detailFrame'>viewrecoveryreserves</a></td><td>true</td><td>Permission to view recovery reserves (and derived information) on a claim</td></tr>
+<tr><td><a href='Claim_viewreserves.html' target='detailFrame'>viewreserves</a></td><td>true</td><td>Permission to view reserves (and derived information) on a claim</td></tr>
+<tr><td><a href='Claim_viewsyncstatus.html' target='detailFrame'>viewsyncstatus</a></td><td>true</td><td>Permission to view the sync status of a claim</td></tr>
+<tr><td><a href='Claim_viewtransactiondetails.html' target='detailFrame'>viewtransactiondetails</a></td><td>true</td><td>Permission to view transaction details on a claim</td></tr>
+</table>
+<h3>ClaimAssociation</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ClaimAssociation_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete an association from a claim</td></tr>
+<tr><td><a href='ClaimAssociation_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing association on a claim</td></tr>
+<tr><td><a href='ClaimAssociation_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view the associations on a claim or details on one association</td></tr>
+</table>
+<h3>ClaimInfo</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ClaimInfo_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an archived claim</td></tr>
+<tr><td><a href='ClaimInfo_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view an archived claim</td></tr>
+</table>
+<h3>ClaimMetricLimit</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ClaimMetricLimit_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create, edit, and delete claim and exposure metric limits</td></tr>
+<tr><td><a href='ClaimMetricLimit_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to create, edit, and delete claim and exposure metric limits</td></tr>
+<tr><td><a href='ClaimMetricLimit_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to create, edit, and delete claim and exposure metric limits</td></tr>
+<tr><td><a href='ClaimMetricLimit_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to create, edit, and delete claim and exposure metric limits</td></tr>
+</table>
+<h3>Contact</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Contact_createab.html' target='detailFrame'>createab</a></td><td>true</td><td>Permission to create a new AB Contact</td></tr>
+<tr><td><a href='Contact_createlocal.html' target='detailFrame'>createlocal</a></td><td>false</td><td>Permission to create a new contact</td></tr>
+<tr><td><a href='Contact_createpreferredab.html' target='detailFrame'>createpreferredab</a></td><td>false</td><td>Permission to create new preferred vendor AB Contact or change an existing contact to be a preferred vendor</td></tr>
+<tr><td><a href='Contact_deleteab.html' target='detailFrame'>deleteab</a></td><td>true</td><td>Permission to delete an AB Contact entry.  Users can delete a normal AB contact entry if they have delete abcontact permission. If the contact is a preferred vendor, then users also need delete preferred permission.</td></tr>
+<tr><td><a href='Contact_deletepreferredab.html' target='detailFrame'>deletepreferredab</a></td><td>false</td><td>Permission to delete a preferred vendor AB Contact</td></tr>
+<tr><td><a href='Contact_editab.html' target='detailFrame'>editab</a></td><td>true</td><td>Permission to edit an AB Contact entry.  A user can edit an AB contact entry if they have edit abcontact permission and it's a normal contact or if they have edit preferred permission if it's a preferred vendor.</td></tr>
+<tr><td><a href='Contact_editlocal.html' target='detailFrame'>editlocal</a></td><td>true</td><td>Permission to edit a Contact entry.  A user can edit an contact entry if they have edit contact permission and it's a normal contact.  If it's a user contact, they must also have edit user permission.</td></tr>
+<tr><td><a href='Contact_editpreferredab.html' target='detailFrame'>editpreferredab</a></td><td>false</td><td>Permission to modify a preferred vendor AB Contact</td></tr>
+<tr><td><a href='Contact_viewab.html' target='detailFrame'>viewab</a></td><td>true</td><td>Permission to view an AB Contact</td></tr>
+<tr><td><a href='Contact_viewlocal.html' target='detailFrame'>viewlocal</a></td><td>false</td><td>Permission to view a contact</td></tr>
+<tr><td><a href='Contact_viewsearchab.html' target='detailFrame'>viewsearchab</a></td><td>false</td><td>Permission to view the AB search page</td></tr>
+</table>
+<h3>Credential</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Credential_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new credential</td></tr>
+<tr><td><a href='Credential_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a credential</td></tr>
+<tr><td><a href='Credential_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing credential.  Note that a user can always edit their own password</td></tr>
+</table>
+<h3>Document</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Document_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create documents</td></tr>
+<tr><td><a href='Document_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to remove a document from a claim. Checks docdelete or docdeleteclsd as appropriate</td></tr>
+<tr><td><a href='Document_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to view a list of documents on a claim or an individual document</td></tr>
+<tr><td><a href='Document_genericdelete.html' target='detailFrame'>genericdelete</a></td><td>false</td><td>Permission to delete some documents</td></tr>
+<tr><td><a href='Document_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a list of documents on a claim or an individual document</td></tr>
+</table>
+<h3>Evaluation</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Evaluation_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an evaluation on a claim. Checks Edit Evaluation or Edit Evaluation Claim Closed depending on the state of the claim</td></tr>
+<tr><td><a href='Evaluation_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view an evaluation on a claim</td></tr>
+</table>
+<h3>ExchangeRate</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ExchangeRate_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to override exchange rate with a custom exchange rate.</td></tr>
+</table>
+<h3>Exposure</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Exposure_assign.html' target='detailFrame'>assign</a></td><td>true</td><td>Permission to assign an object of type Exposure.  Does nothing if the object is new, checks expraown if reassigning an object the user owns, and checks expraunown if reassigning an object that the user doesn't own.</td></tr>
+<tr><td><a href='Exposure_close.html' target='detailFrame'>close</a></td><td>true</td><td>Permission to close an exposure on a claim</td></tr>
+<tr><td><a href='Exposure_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an exposure on a claim.  Checks edit exposure closed or edit exposure permission, depending on whether the exposure is open or closed</td></tr>
+<tr><td><a href='Exposure_genericassign.html' target='detailFrame'>genericassign</a></td><td>false</td><td>Permission to re-assign some exposure</td></tr>
+<tr><td><a href='Exposure_genericassignowned.html' target='detailFrame'>genericassignowned</a></td><td>false</td><td>Permission to re-assign some owned exposure</td></tr>
+<tr><td><a href='Exposure_genericassignunowned.html' target='detailFrame'>genericassignunowned</a></td><td>false</td><td>Permission to re-assign some unowned exposure</td></tr>
+<tr><td><a href='Exposure_own.html' target='detailFrame'>own</a></td><td>false</td><td>Permission to own exposures</td></tr>
+<tr><td><a href='Exposure_reopen.html' target='detailFrame'>reopen</a></td><td>true</td><td>Permission to reopen an exposure on a claim</td></tr>
+<tr><td><a href='Exposure_validate.html' target='detailFrame'>validate</a></td><td>true</td><td>Permission to run validation rules on an exposure</td></tr>
+<tr><td><a href='Exposure_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view an exposure on a claim</td></tr>
+</table>
+<h3>Group</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Group_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new group</td></tr>
+<tr><td><a href='Group_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a group</td></tr>
+<tr><td><a href='Group_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing group</td></tr>
+<tr><td><a href='Group_manageloadfactors.html' target='detailFrame'>manageloadfactors</a></td><td>true</td><td>Permission to manage load factors for a group</td></tr>
+<tr><td><a href='Group_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a group's details</td></tr>
+<tr><td><a href='Group_viewloadfactors.html' target='detailFrame'>viewloadfactors</a></td><td>false</td><td>Permission to view the load factors info screen.  Only true if the user has load factor privileges on at least one group</td></tr>
+<tr><td><a href='Group_viewtree.html' target='detailFrame'>viewtree</a></td><td>false</td><td>Permission to view the user/group tree</td></tr>
+</table>
+<h3>GroupRegion</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='GroupRegion_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a group region</td></tr>
+<tr><td><a href='GroupRegion_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a group region</td></tr>
+<tr><td><a href='GroupRegion_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to modify a group region</td></tr>
+</table>
+<h3>GroupUser</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='GroupUser_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new user-group mapping</td></tr>
+<tr><td><a href='GroupUser_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a user-group mapping</td></tr>
+<tr><td><a href='GroupUser_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing user-group mapping</td></tr>
+</table>
+<h3>Holiday</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Holiday_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a holiday</td></tr>
+<tr><td><a href='Holiday_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to create, edit, or delete business week</td></tr>
+<tr><td><a href='Holiday_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to create, edit, or delete business week</td></tr>
+<tr><td><a href='Holiday_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view a list of holidays or holiday details</td></tr>
+</table>
+<h3>Incident</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Incident_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit the incident. Checks edit claim or edit claim closed depending on the state of the claim</td></tr>
+<tr><td><a href='Incident_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view an incident</td></tr>
+</table>
+<h3>Matter</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Matter_assign.html' target='detailFrame'>assign</a></td><td>true</td><td>Permission to assign an object of type Matter.  Does nothing if the object is new, checks mttrraown if reassigning an object the user owns, and checks mttrraunown if reassigning an object that the user doesn't own.</td></tr>
+<tr><td><a href='Matter_close.html' target='detailFrame'>close</a></td><td>true</td><td>Permission to close a matter</td></tr>
+<tr><td><a href='Matter_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit a matter on a claim. Checks edit matter closed or edit matter permission, depending on whether the matter is open or closed</td></tr>
+<tr><td><a href='Matter_genericassign.html' target='detailFrame'>genericassign</a></td><td>false</td><td>Permission to re-assign some matter</td></tr>
+<tr><td><a href='Matter_genericassignowned.html' target='detailFrame'>genericassignowned</a></td><td>false</td><td>Permission to re-assign some owned matter</td></tr>
+<tr><td><a href='Matter_genericassignunowned.html' target='detailFrame'>genericassignunowned</a></td><td>false</td><td>Permission to re-assign some unowned matter</td></tr>
+<tr><td><a href='Matter_own.html' target='detailFrame'>own</a></td><td>false</td><td>Permission to own matters on a claim</td></tr>
+<tr><td><a href='Matter_reopen.html' target='detailFrame'>reopen</a></td><td>true</td><td>Permission to reopen a matter on a claim</td></tr>
+<tr><td><a href='Matter_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view the list of matters on a claim or an individual matter</td></tr>
+</table>
+<h3>Negotiation</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Negotiation_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit a negotiation on a claim. Checks Edit Negotiation or Edit Negotiation Claim Closed depending on the state of the claim</td></tr>
+<tr><td><a href='Negotiation_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a negotiation on a claim</td></tr>
+</table>
+<h3>Note</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Note_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a Note</td></tr>
+<tr><td><a href='Note_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a note.  A note can only be deleted by a user who has the notedelete permission.</td></tr>
+<tr><td><a href='Note_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit header information on a note.</td></tr>
+<tr><td><a href='Note_editbody.html' target='detailFrame'>editbody</a></td><td>true</td><td>Permission to edit the body of a note. A note body can only be edited by a user who has both the noteedit and noteeditbody permission</td></tr>
+<tr><td><a href='Note_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a note.  A note can only be viewd by a user who has the noteview permission.</td></tr>
+</table>
+<h3>Payment</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Payment_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a payment on a claim. Checks delete payment or delete manual payment depending on the type of check the payment is on</td></tr>
+<tr><td><a href='Payment_deletemanual.html' target='detailFrame'>deletemanual</a></td><td>true</td><td>Permission to delete a manual payment on a claim</td></tr>
+<tr><td><a href='Payment_deletenormal.html' target='detailFrame'>deletenormal</a></td><td>true</td><td>Permission to delete a normal payment on a claim</td></tr>
+<tr><td><a href='Payment_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit a payment on a claim. Checks edit payment or edit manual payment depending on the type of check the payment is on</td></tr>
+<tr><td><a href='Payment_editmanual.html' target='detailFrame'>editmanual</a></td><td>true</td><td>Permission to edit a manual payment on a claim</td></tr>
+<tr><td><a href='Payment_editnormal.html' target='detailFrame'>editnormal</a></td><td>true</td><td>Permission to edit a nromal payment on a claim</td></tr>
+<tr><td><a href='Payment_genericview.html' target='detailFrame'>genericview</a></td><td>false</td><td>Permission to view some payments</td></tr>
+<tr><td><a href='Payment_recode.html' target='detailFrame'>recode</a></td><td>true</td><td>Permission to recode a payment on a claim</td></tr>
+<tr><td><a href='Payment_stop.html' target='detailFrame'>stop</a></td><td>true</td><td>Permission to stop a payment on a claim</td></tr>
+<tr><td><a href='Payment_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view payments on a claim</td></tr>
+<tr><td><a href='Payment_voidclearedpmt.html' target='detailFrame'>voidclearedpmt</a></td><td>true</td><td>Permission to void a cleared payment</td></tr>
+<tr><td><a href='Payment_voidorstop.html' target='detailFrame'>voidorstop</a></td><td>true</td><td>Permission either to void or stop a check. Used in the UI to decide whether to display the void/stop option</td></tr>
+<tr><td><a href='Payment_voidpmt.html' target='detailFrame'>voidpmt</a></td><td>true</td><td>Permission to void a payment on a claim</td></tr>
+</table>
+<h3>Policy</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Policy_createunverifiedpolicy.html' target='detailFrame'>createunverifiedpolicy</a></td><td>false</td><td>Permission to create an unverified policy in the new claim wizard</td></tr>
+<tr><td><a href='Policy_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit a policy</td></tr>
+<tr><td><a href='Policy_makeeditable.html' target='detailFrame'>makeeditable</a></td><td>true</td><td>Permission to make a verified policy non-verified</td></tr>
+<tr><td><a href='Policy_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a policy</td></tr>
+</table>
+<h3>Recovery</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Recovery_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a recovery</td></tr>
+<tr><td><a href='Recovery_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing recovery</td></tr>
+<tr><td><a href='Recovery_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view details of a recovery</td></tr>
+<tr><td><a href='Recovery_voidrec.html' target='detailFrame'>voidrec</a></td><td>true</td><td>Permission to void a recovery</td></tr>
+</table>
+<h3>RecoveryReserve</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='RecoveryReserve_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a recovery reserve</td></tr>
+<tr><td><a href='RecoveryReserve_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing recovery reserve</td></tr>
+<tr><td><a href='RecoveryReserve_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view details of a recovery reserve</td></tr>
+</table>
+<h3>RecoveryReserveSet</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='RecoveryReserveSet_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a recovery reserve set</td></tr>
+<tr><td><a href='RecoveryReserveSet_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing recovery reserve set</td></tr>
+<tr><td><a href='RecoveryReserveSet_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a recovery reserve set</td></tr>
+</table>
+<h3>RecoverySet</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='RecoverySet_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a recovery set</td></tr>
+<tr><td><a href='RecoverySet_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing recovery set</td></tr>
+<tr><td><a href='RecoverySet_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a recovery set</td></tr>
+</table>
+<h3>Region</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Region_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new region</td></tr>
+<tr><td><a href='Region_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a region</td></tr>
+<tr><td><a href='Region_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing region</td></tr>
+<tr><td><a href='Region_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a list of regions or a regions details</td></tr>
+</table>
+<h3>Reserve</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Reserve_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a reserve</td></tr>
+<tr><td><a href='Reserve_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing reserve</td></tr>
+<tr><td><a href='Reserve_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view reserve details</td></tr>
+</table>
+<h3>ReserveSet</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ReserveSet_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a reserve set</td></tr>
+<tr><td><a href='ReserveSet_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing reserve set</td></tr>
+<tr><td><a href='ReserveSet_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a reserve set</td></tr>
+</table>
+<h3>Review</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Review_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create new Reviews</td></tr>
+<tr><td><a href='Review_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete review. Checks whether to use the Delete Completed or Delete Incomplete permission depending on the status of the Review</td></tr>
+<tr><td><a href='Review_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit existing Reviews</td></tr>
+<tr><td><a href='Review_list.html' target='detailFrame'>list</a></td><td>false</td><td>Permission to see the Reviews tab and see the list of Reviews for a given Contact</td></tr>
+<tr><td><a href='Review_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view the details page of existing Reviews</td></tr>
+</table>
+<h3>Role</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Role_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new role</td></tr>
+<tr><td><a href='Role_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a role</td></tr>
+<tr><td><a href='Role_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing role</td></tr>
+<tr><td><a href='Role_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view the list of roles or a role's details</td></tr>
+</table>
+<h3>RolePrivilege</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='RolePrivilege_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new role-privilege mapping</td></tr>
+<tr><td><a href='RolePrivilege_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a role-privilege mapping</td></tr>
+<tr><td><a href='RolePrivilege_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing role-privilege mapping</td></tr>
+</table>
+<h3>ScriptParameter</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='ScriptParameter_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create new script parameters</td></tr>
+<tr><td><a href='ScriptParameter_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete script parameters</td></tr>
+<tr><td><a href='ScriptParameter_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit existing script parameters</td></tr>
+<tr><td><a href='ScriptParameter_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view the script parameter list and script parameter details</td></tr>
+</table>
+<h3>SecurityZone</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='SecurityZone_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new security zone</td></tr>
+<tr><td><a href='SecurityZone_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a security zone</td></tr>
+<tr><td><a href='SecurityZone_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing security zone</td></tr>
+<tr><td><a href='SecurityZone_view.html' target='detailFrame'>view</a></td><td>false</td><td>Permission to view a security zone</td></tr>
+</table>
+<h3>Subrogation</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Subrogation_own.html' target='detailFrame'>own</a></td><td>false</td><td>Permission to own subrogations on a claim</td></tr>
+</table>
+<h3>Transaction</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='Transaction_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission handler used on generic transaction screens</td></tr>
+</table>
+<h3>TransactionSet</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='TransactionSet_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission handler used on generic transaction screens</td></tr>
+</table>
+<h3>User</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='User_DevAllAccess.html' target='detailFrame'>DevAllAccess</a></td><td>false</td><td></td></tr>
+<tr><td><a href='User_EditBatchProcess.html' target='detailFrame'>EditBatchProcess</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditCluster.html' target='detailFrame'>EditCluster</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditJProfiler.html' target='detailFrame'>EditJProfiler</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditLog.html' target='detailFrame'>EditLog</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditMBeans.html' target='detailFrame'>EditMBeans</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditPlugin.html' target='detailFrame'>EditPlugin</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditProfiler.html' target='detailFrame'>EditProfiler</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_EditWorkQueue.html' target='detailFrame'>EditWorkQueue</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ExecuteDataChange.html' target='detailFrame'>ExecuteDataChange</a></td><td>false</td><td>Permission to execute the data change.</td></tr>
+<tr><td><a href='User_ServerTools.html' target='detailFrame'>ServerTools</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewBatchProcess.html' target='detailFrame'>ViewBatchProcess</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewCacheInfo.html' target='detailFrame'>ViewCacheInfo</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewCluster.html' target='detailFrame'>ViewCluster</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewDataChange.html' target='detailFrame'>ViewDataChange</a></td><td>false</td><td>Permission to view the data change page.</td></tr>
+<tr><td><a href='User_ViewInfo.html' target='detailFrame'>ViewInfo</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewLog.html' target='detailFrame'>ViewLog</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewMBeans.html' target='detailFrame'>ViewMBeans</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewPlugin.html' target='detailFrame'>ViewPlugin</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewProfiler.html' target='detailFrame'>ViewProfiler</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_ViewWorkQueue.html' target='detailFrame'>ViewWorkQueue</a></td><td>false</td><td>Permission to access all Internal Tools</td></tr>
+<tr><td><a href='User_alwaysaccessdebugtools.html' target='detailFrame'>alwaysaccessdebugtools</a></td><td>false</td><td>Permission to always access the debug tools</td></tr>
+<tr><td><a href='User_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new user</td></tr>
+<tr><td><a href='User_delete.html' target='detailFrame'>delete</a></td><td>true</td><td>Permission to delete a user</td></tr>
+<tr><td><a href='User_edit.html' target='detailFrame'>edit</a></td><td>true</td><td>Permission to edit an existing user</td></tr>
+<tr><td><a href='User_editvacation.html' target='detailFrame'>editvacation</a></td><td>true</td><td></td></tr>
+<tr><td><a href='User_exportadmindata.html' target='detailFrame'>exportadmindata</a></td><td>false</td><td>Permission to export admin data</td></tr>
+<tr><td><a href='User_grantauthoritylimits.html' target='detailFrame'>grantauthoritylimits</a></td><td>false</td><td>Permission to give a user authority limits</td></tr>
+<tr><td><a href='User_grantroles.html' target='detailFrame'>grantroles</a></td><td>false</td><td>Permission to assign a user roles</td></tr>
+<tr><td><a href='User_ignoreacl.html' target='detailFrame'>ignoreacl</a></td><td>false</td><td>Permission that ignores claim ACLs (i.e. the user is always considered to be on the ACL)</td></tr>
+<tr><td><a href='User_importadmindata.html' target='detailFrame'>importadmindata</a></td><td>false</td><td>Permission to import admin data</td></tr>
+<tr><td><a href='User_integrationadmin.html' target='detailFrame'>integrationadmin</a></td><td>false</td><td>Permission to perform integration tasks</td></tr>
+<tr><td><a href='User_jmxadmin.html' target='detailFrame'>jmxadmin</a></td><td>false</td><td>Permission to use the JMX monitoring interface</td></tr>
+<tr><td><a href='User_manageattributes.html' target='detailFrame'>manageattributes</a></td><td>false</td><td>Permission to add and remove attributes from a user</td></tr>
+<tr><td><a href='User_printlistviews.html' target='detailFrame'>printlistviews</a></td><td>false</td><td>Permission to print list views</td></tr>
+<tr><td><a href='User_resumedestination.html' target='detailFrame'>resumedestination</a></td><td>false</td><td>Permission to resume a message destination</td></tr>
+<tr><td><a href='User_ruleadmin.html' target='detailFrame'>ruleadmin</a></td><td>false</td><td>Permission to use the rule composer</td></tr>
+<tr><td><a href='User_soapadmin.html' target='detailFrame'>soapadmin</a></td><td>false</td><td>Permission to use the SOAP tools</td></tr>
+<tr><td><a href='User_suspenddestination.html' target='detailFrame'>suspenddestination</a></td><td>false</td><td>Permission to suspend a message destination</td></tr>
+<tr><td><a href='User_usereditlang.html' target='detailFrame'>usereditlang</a></td><td>false</td><td>Permission to change the language for a user</td></tr>
+<tr><td><a href='User_view.html' target='detailFrame'>view</a></td><td>true</td><td>Permission to view a user's details</td></tr>
+<tr><td><a href='User_viewactcal.html' target='detailFrame'>viewactcal</a></td><td>false</td><td>Permission to view activity calendar of other users</td></tr>
+<tr><td><a href='User_viewallusers.html' target='detailFrame'>viewallusers</a></td><td>false</td><td>Permission to view all users in the system</td></tr>
+<tr><td><a href='User_viewanyadmin.html' target='detailFrame'>viewanyadmin</a></td><td>false</td><td>Permission to view at least one of the admin screens. Used to determine if the admin tab should show up at all</td></tr>
+<tr><td><a href='User_viewanyedb.html' target='detailFrame'>viewanyedb</a></td><td>false</td><td>Permission to view at least one of the executive dashboard screens</td></tr>
+<tr><td><a href='User_viewdestination.html' target='detailFrame'>viewdestination</a></td><td>false</td><td>Permission to view a message destination</td></tr>
+<tr><td><a href='User_viewedbclaimact.html' target='detailFrame'>viewedbclaimact</a></td><td>false</td><td>Permission to view the executive dashboard claim activity page</td></tr>
+<tr><td><a href='User_viewedbclaimcounts.html' target='detailFrame'>viewedbclaimcounts</a></td><td>false</td><td>Permission to view the executive dashboard claim counts page</td></tr>
+<tr><td><a href='User_viewedbcurrfin.html' target='detailFrame'>viewedbcurrfin</a></td><td>false</td><td>Permission to view the executive dashboard current financials page</td></tr>
+<tr><td><a href='User_viewedbpdfin.html' target='detailFrame'>viewedbpdfin</a></td><td>false</td><td>Permission to view the executive dashboard period financials page</td></tr>
+<tr><td><a href='User_viewsearch.html' target='detailFrame'>viewsearch</a></td><td>false</td><td>Permission to view the search pages</td></tr>
+<tr><td><a href='User_viewteam.html' target='detailFrame'>viewteam</a></td><td>false</td><td>Permission to view the team pages</td></tr>
+<tr><td><a href='User_viewworkload.html' target='detailFrame'>viewworkload</a></td><td>false</td><td>Permission to view global workload information of other users</td></tr>
+</table>
+<h3>UserRole</h3>
+<table>
+<tr><th>Name</th><th>Object Based</th><th>Description</th></tr>
+<tr><td><a href='UserRole_create.html' target='detailFrame'>create</a></td><td>false</td><td>Permission to create a new user-role mapping</td></tr>
+<tr><td><a href='UserRole_delete.html' target='detailFrame'>delete</a></td><td>false</td><td>Permission to delete a user-role mapping</td></tr>
+<tr><td><a href='UserRole_edit.html' target='detailFrame'>edit</a></td><td>false</td><td>Permission to edit an existing user-role mapping</td></tr>
+</table>
+</body>
+</html>

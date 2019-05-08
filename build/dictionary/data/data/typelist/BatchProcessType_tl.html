@@ -1,0 +1,2638 @@
+<html>
+<head>
+<title>BatchProcessType</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox"
+<div><span class="pagetitle">BatchProcessType</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="entityname">(cctl_batchprocesstype)</span>
+</div>
+<div class="desc">Types of batch processes</div>
+</div>
+<table cellpadding="3" cellspacing="0" border="0" height="20" width="100%">
+<tr>
+<td nowrap="true" class="attrbox" height="20">
+<span class="attrtitle">Attributes: 
+
+</span>
+</td>
+</tr>
+</table>
+<br/>
+<div class="refbox biglist odd">
+<span id="reflink_3361" class="reftext" onclick='showAndHideRefBox("refbox_3361", "reflink_3361")'><img src="../../res/blackup.gif" border="0"><b>Referenced by: </b></span>
+<div id="refbox_3361" class="refbox_inner" style="display:none;">
+<A HREF="../full/ActiveScheduledJob.html" TARGET="tableFrame">ActiveScheduledJob.ProcessType</A><br><A HREF="../full/InstrumentedWorkExecutor.html" TARGET="tableFrame">InstrumentedWorkExecutor.WorkQueueID</A><br><A HREF="../full/PhoneNormalizerWorkItem.html" TARGET="tableFrame">PhoneNormalizerWorkItem.QueueType</A><br><A HREF="../full/ProcessHistory.html" TARGET="tableFrame">ProcessHistory.ProcessType</A><br><A HREF="../full/ScheduledJob.html" TARGET="tableFrame">ScheduledJob.ProcessType</A><br><A HREF="../full/StandardWorkItem.html" TARGET="tableFrame">StandardWorkItem.QueueType</A><br><A HREF="../full/WorkItemSet.html" TARGET="tableFrame">WorkItemSet.WorkItemSetType</A><br><A HREF="../full/WorkQueueState.html" TARGET="tableFrame">WorkQueueState.WorkQueueID</A>
+</div>
+</span>
+</div>
+<a id='TOC'></a>
+<a name="Typecodes"></a><div class="arraysbox">Typecodes</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Code</td>
+<td>Name</td>
+<td>Description</td>
+<td>Priority</td>
+<td>Internal</td>
+<td>Retired</td>
+</tr>
+<tr valign="top">
+<td><a href=#ActivityEsc>ActivityEsc</a></td>
+<td>Activity Escalation</td>
+<td>Activity escalation monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#AddressDelete>AddressDelete</a></td>
+<td>Address Delete</td>
+<td>Attempt to retire a Address marked as possibly deletable.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#AggLimitCalc>AggLimitCalc</a></td>
+<td>Aggregate Limit Calculations</td>
+<td>Aggregate limit calculations</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#AggLimitLoaderCalc>AggLimitLoaderCalc</a></td>
+<td>Aggregate Limit Loader Calculations</td>
+<td>Aggregate limit loader calculations</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr valign="top">
+<td><a href=#Archive>Archive</a></td>
+<td>Archiving Item Writer</td>
+<td>Archiving item writer</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BackOutRollingUpgrade>BackOutRollingUpgrade</a></td>
+<td>BackOutRollingUpgrade</td>
+<td>Back out a rolling upgrade</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BizRulesExportImport>BizRulesExportImport</a></td>
+<td>Business Rules Export/Import</td>
+<td>Exports and imports business rules</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BizRulesValidator>BizRulesValidator</a></td>
+<td>Business Rules Validator</td>
+<td>Validates business rules</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BulkInvoiceEsc>BulkInvoiceEsc</a></td>
+<td>Bulk Invoice Escalation</td>
+<td>Escalate Bulk Invoices from Awaiting-submission status to Requesting status</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BulkInvoiceSubmission>BulkInvoiceSubmission</a></td>
+<td>Bulk Invoice Submission</td>
+<td>Processes bulk invoice items for bulk invoice submission.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BulkInvoiceWF>BulkInvoiceWF</a></td>
+<td>Bulk Invoice Workflow Monitor</td>
+<td>Transitions invoices from PendingInvoiceItemValidation status to 'AwaitingSubmission' or 'InvalidInvoiceItems' status once the invoice is ready</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#BulkPurge>BulkPurge</a></td>
+<td>BulkPurge</td>
+<td>Purge records through table updates</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CatastropheClaimFinder>CatastropheClaimFinder</a></td>
+<td>Catastrophe Claim Finder</td>
+<td>Finds possible claims related to a catastrophe and creates a 'Review for Catastrophe' activity on the claim.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CatastrophePolicyLocationDownload>CatastrophePolicyLocationDownload</a></td>
+<td>Catastrophe Policy Location Download</td>
+<td>Downloads PolicyLocationSummary data for catastrophes from the policy system</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ClaimContactsCalc>ClaimContactsCalc</a></td>
+<td>Claim Contacts Calculations</td>
+<td>Claim contacts calculations</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ClaimException>ClaimException</a></td>
+<td>Claim Exception</td>
+<td>Claim exception monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ClaimHealthCalc>ClaimHealthCalc</a></td>
+<td>Claim Health Calculations</td>
+<td>Calculates health indictators and metrics for all claims that do not have any metrics calculated</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ClaimValidation>ClaimValidation</a></td>
+<td>Bulk claim validation</td>
+<td>Bulk claim validation work queue writer.  Creates workitems to schedule loaded claims for validation. See ClaimAPI.bulkValidate()</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ContactAutoSync>ContactAutoSync</a></td>
+<td>ContactAutoSync</td>
+<td>Automatically synchronize the local contacts that are out of sync and marked 'allow' auto-sync.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ContactRetire>ContactRetire</a></td>
+<td>Contact Retire</td>
+<td>Attempt to retire a Contacts marked as possibly retireable.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#CreatePerfOnlyIndexes>CreatePerfOnlyIndexes</a></td>
+<td>Loader Create Indexes</td>
+<td>Recreate perf-only indexes when the loader finishes the big insert/select from staging to operational tables</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DBConsistencyCheck>DBConsistencyCheck</a></td>
+<td>Database Consistency Check</td>
+<td>Database consistency checks</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DBStats>DBStats</a></td>
+<td>Database statistics</td>
+<td>Database statistics</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DashboardStatistics>DashboardStatistics</a></td>
+<td>Dashboard Statistics</td>
+<td>Statistics for the executive dashboard</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DataDistribution>DataDistribution</a></td>
+<td>Data Distribution</td>
+<td>Data distribution for the database</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#DeferredUpgradeTasks>DeferredUpgradeTasks</a></td>
+<td>DeferredUpgradeTasks</td>
+<td>Execute database upgrade tasks that were deferred</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#EncryptionUpgrade>EncryptionUpgrade</a></td>
+<td>Encryption Upgrade</td>
+<td>Upgrades encryption for entity fields</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ExchangeRate>ExchangeRate</a></td>
+<td>Exchange Rate</td>
+<td>Creates a new ExchangeRateSet using ExchangeRateSetPlugin</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#FinancialsCalc>FinancialsCalc</a></td>
+<td>Financials Calculations</td>
+<td>Financials calculations</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#FinancialsEsc>FinancialsEsc</a></td>
+<td>Financials Escalation</td>
+<td>Financials escalation monitor - escalates checks from Awaiting-submission status to Requesting status so that the downstream system will be alerted</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#FindUsagesOfUpgradedTypecodes>FindUsagesOfUpgradedTypecodes</a></td>
+<td>FindUsagesOfUpgradedTypecodes</td>
+<td>During the back out of a rolling upgrade, looks for typecodes that were inserted during the rolling upgrade. These usages need to be fixed before we can back out.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Geocode>Geocode</a></td>
+<td>Geocode Writer</td>
+<td>Geocoding Addresses queue writer.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#GroupException>GroupException</a></td>
+<td>Group Exception</td>
+<td>Group exception monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IdleClaim>IdleClaim</a></td>
+<td>Idle Claim Exception</td>
+<td>Idle claim exception monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#IdleClosedClaim>IdleClosedClaim</a></td>
+<td>Idle Closed Claim Exception</td>
+<td>Idle closed claim exception monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#MSDMVReport>MSDMVReport</a></td>
+<td>Microsoft DMV Report</td>
+<td>Microsoft database DMV performance report generation</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#OraAWRReport>OraAWRReport</a></td>
+<td>Oracle AWR Report</td>
+<td>Oracle database AWR performance report generation</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PhoneNumberNormalizer>PhoneNumberNormalizer</a></td>
+<td>Phone number normalizer</td>
+<td>Performs a normalization of phone numbers contact</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PopulateSearchColumns>PopulateSearchColumns</a></td>
+<td>Populate searchColumn columns</td>
+<td>Populate searchColumn columns from their original sources.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PopulateUserDenormSearchColumn>PopulateUserDenormSearchColumn</a></td>
+<td>Populate Denormalized User Search Column SpatialPointDenorm</td>
+<td>Populates the denormalized search column User.SpatialPointDenorm from Address.SpatialPoint</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ProcessCompletionMonitor>ProcessCompletionMonitor</a></td>
+<td>Process Completion Monitor</td>
+<td>Invoke plugin on completion of monitored worker queue</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ProcessHistoryPurge>ProcessHistoryPurge</a></td>
+<td>ProcessHistoryPurge</td>
+<td>Purge batch process history data</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeClusterMembers>PurgeClusterMembers</a></td>
+<td>Purge Cluster Members</td>
+<td>Purge old ClusterMember entities</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeFailedWorkItems>PurgeFailedWorkItems</a></td>
+<td>Purge Failed Work Items</td>
+<td>Purge failed work items from all queues.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeMessageHistory>PurgeMessageHistory</a></td>
+<td>Purge Message History</td>
+<td>Purges old messages from the message history table</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeProfilerData>PurgeProfilerData</a></td>
+<td>Purge Profiler Data</td>
+<td>Purge profiler data at regular intervals</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeTransactionIds>PurgeTransactionIds</a></td>
+<td>Purge old transaction ids</td>
+<td>Purge external transaction id that no longer need to be tracked, by age.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeWorkflowLogs>PurgeWorkflowLogs</a></td>
+<td>Purge Workflow Logs</td>
+<td>Purge completed workflows logs, this executes gw.processes.PurgeWorkflowLogs.gs</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#PurgeWorkflows>PurgeWorkflows</a></td>
+<td>Purge Workflow</td>
+<td>Purge completed workflows after resetting any referenced workflows, this executes gw.processes.PurgeWorkflow.gs</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#RecalculateMetrics>RecalculateMetrics</a></td>
+<td>Recalculate Claim Metrics</td>
+<td>Recalculates claim metrics for claims whose metric update time has passed.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#RetiredPolicyGraphDisconnector>RetiredPolicyGraphDisconnector</a></td>
+<td>Retired Policy Graph Disconnector</td>
+<td>Disconnects claim graph objects from retired policy objects so that those claims can be archived</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ReviewSync>ReviewSync</a></td>
+<td>ClaimCenter (SPM) Completed Review Sync</td>
+<td>Transmits completed reviews to ContactManager.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#ServiceRequestMetricEscalation>ServiceRequestMetricEscalation</a></td>
+<td>Service Metric Escalation</td>
+<td>Escalates service metrics when they have exceeded an upper limit</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#SolrDataImport>SolrDataImport</a></td>
+<td>Solr Data Import</td>
+<td>Performs a full data import of the app database into the Solr/Lucene index</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#StagingTableImport>StagingTableImport</a></td>
+<td>Staging Table Import</td>
+<td>Asynchronous operation on staging tables (encrypt, statistics, integrity check, load, delete excluded, populate excluded)</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#StatReport>StatReport</a></td>
+<td>Stat Report Writer</td>
+<td>Stat Report work queue writer</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Statistics>Statistics</a></td>
+<td>Statistics</td>
+<td>Statistics calculator</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#TAccountEsc>TAccountEsc</a></td>
+<td>TAccounts Escalation</td>
+<td>TAccounts escalation monitor to transition payments and reserves from FutureDated state to Awaiting-submission state</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#UserException>UserException</a></td>
+<td>User Exception</td>
+<td>User exception monitor</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#UserWorkloadUpdate>UserWorkloadUpdate</a></td>
+<td>User Workload Update</td>
+<td>Updates user weighted workload</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#WorkItemSetPurge>WorkItemSetPurge</a></td>
+<td>WorkItemSetPurge</td>
+<td>Purge WorkItemSet data</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#WorkQueueInstrumentationPurge>WorkQueueInstrumentationPurge</a></td>
+<td>WorkQueueInstrumentationPurge</td>
+<td>Purge instrumentation data for work queues</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#Workflow>Workflow</a></td>
+<td>Workflow</td>
+<td>Workflows work queue writer.</td>
+<td align=center>&nbsp;</td>
+<td>true</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td><a href=#changeinClaimInfo>changeinClaimInfo</a></td>
+<td>change in Claim info</td>
+<td>null</td>
+<td align=center>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div class='subtypebox'>
+<a name=ActivityEsc></a>
+<div class="titlebox">
+<div class="filtertitle">ActivityEsc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3362" class="reftext" onclick='showAndHideRefBox("refbox_3362", "reflink_3362")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3362" class="refbox_inner" style="display:none;">
+Activity escalation monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Activity Escalation</td>
+<td>Activity escalation monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=AddressDelete></a>
+<div class="titlebox">
+<div class="filtertitle">AddressDelete <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3363" class="reftext" onclick='showAndHideRefBox("refbox_3363", "reflink_3363")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3363" class="refbox_inner" style="display:none;">
+Attempt to retire a Address marked as possibly deletable.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Address Delete</td>
+<td>Attempt to retire a Address marked as possibly deletable.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=AggLimitCalc></a>
+<div class="titlebox">
+<div class="filtertitle">AggLimitCalc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3364" class="reftext" onclick='showAndHideRefBox("refbox_3364", "reflink_3364")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3364" class="refbox_inner" style="display:none;">
+Aggregate limit calculations
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Aggregate Limit Calculations</td>
+<td>Aggregate limit calculations</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=AggLimitLoaderCalc></a>
+<div class="titlebox">
+<div class="filtertitle">AggLimitLoaderCalc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3365" class="reftext" onclick='showAndHideRefBox("refbox_3365", "reflink_3365")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3365" class="refbox_inner" style="display:none;">
+Aggregate limit loader calculations
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Aggregate Limit Loader Calculations</td>
+<td>Aggregate limit loader calculations</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Archive></a>
+<div class="titlebox">
+<div class="filtertitle">Archive <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3366" class="reftext" onclick='showAndHideRefBox("refbox_3366", "reflink_3366")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3366" class="refbox_inner" style="display:none;">
+Archiving item writer
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Archiving Item Writer</td>
+<td>Archiving item writer</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BackOutRollingUpgrade></a>
+<div class="titlebox">
+<div class="filtertitle">BackOutRollingUpgrade <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3367" class="reftext" onclick='showAndHideRefBox("refbox_3367", "reflink_3367")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3367" class="refbox_inner" style="display:none;">
+Back out a rolling upgrade
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>BackOutRollingUpgrade</td>
+<td>Back out a rolling upgrade</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BizRulesExportImport></a>
+<div class="titlebox">
+<div class="filtertitle">BizRulesExportImport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3368" class="reftext" onclick='showAndHideRefBox("refbox_3368", "reflink_3368")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3368" class="refbox_inner" style="display:none;">
+Exports and imports business rules
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Business Rules Export/Import</td>
+<td>Exports and imports business rules</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BizRulesValidator></a>
+<div class="titlebox">
+<div class="filtertitle">BizRulesValidator <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3369" class="reftext" onclick='showAndHideRefBox("refbox_3369", "reflink_3369")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3369" class="refbox_inner" style="display:none;">
+Validates business rules
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Business Rules Validator</td>
+<td>Validates business rules</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BulkInvoiceEsc></a>
+<div class="titlebox">
+<div class="filtertitle">BulkInvoiceEsc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3370" class="reftext" onclick='showAndHideRefBox("refbox_3370", "reflink_3370")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3370" class="refbox_inner" style="display:none;">
+Escalate Bulk Invoices from Awaiting-submission status to Requesting status
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bulk Invoice Escalation</td>
+<td>Escalate Bulk Invoices from Awaiting-submission status to Requesting status</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BulkInvoiceSubmission></a>
+<div class="titlebox">
+<div class="filtertitle">BulkInvoiceSubmission <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3371" class="reftext" onclick='showAndHideRefBox("refbox_3371", "reflink_3371")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3371" class="refbox_inner" style="display:none;">
+Processes bulk invoice items for bulk invoice submission.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bulk Invoice Submission</td>
+<td>Processes bulk invoice items for bulk invoice submission.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BulkInvoiceWF></a>
+<div class="titlebox">
+<div class="filtertitle">BulkInvoiceWF <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3372" class="reftext" onclick='showAndHideRefBox("refbox_3372", "reflink_3372")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3372" class="refbox_inner" style="display:none;">
+Transitions invoices from PendingInvoiceItemValidation status to 'AwaitingSubmission' or 'InvalidInvoiceItems' status once the invoice is ready
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bulk Invoice Workflow Monitor</td>
+<td>Transitions invoices from PendingInvoiceItemValidation status to 'AwaitingSubmission' or 'InvalidInvoiceItems' status once the invoice is ready</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=BulkPurge></a>
+<div class="titlebox">
+<div class="filtertitle">BulkPurge <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3373" class="reftext" onclick='showAndHideRefBox("refbox_3373", "reflink_3373")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3373" class="refbox_inner" style="display:none;">
+Purge records through table updates
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>BulkPurge</td>
+<td>Purge records through table updates</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CatastropheClaimFinder></a>
+<div class="titlebox">
+<div class="filtertitle">CatastropheClaimFinder <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3374" class="reftext" onclick='showAndHideRefBox("refbox_3374", "reflink_3374")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3374" class="refbox_inner" style="display:none;">
+Finds possible claims related to a catastrophe and creates a 'Review for Catastrophe' activity on the claim.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Catastrophe Claim Finder</td>
+<td>Finds possible claims related to a catastrophe and creates a 'Review for Catastrophe' activity on the claim.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CatastrophePolicyLocationDownload></a>
+<div class="titlebox">
+<div class="filtertitle">CatastrophePolicyLocationDownload <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3375" class="reftext" onclick='showAndHideRefBox("refbox_3375", "reflink_3375")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3375" class="refbox_inner" style="display:none;">
+Downloads PolicyLocationSummary data for catastrophes from the policy system
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Catastrophe Policy Location Download</td>
+<td>Downloads PolicyLocationSummary data for catastrophes from the policy system</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ClaimContactsCalc></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimContactsCalc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3376" class="reftext" onclick='showAndHideRefBox("refbox_3376", "reflink_3376")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3376" class="refbox_inner" style="display:none;">
+Claim contacts calculations
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#MaintenanceOnly" TARGET="tableFrame">BatchProcessTypeUsage.MaintenanceOnly</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claim Contacts Calculations</td>
+<td>Claim contacts calculations</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ClaimException></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimException <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3377" class="reftext" onclick='showAndHideRefBox("refbox_3377", "reflink_3377")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3377" class="refbox_inner" style="display:none;">
+Claim exception monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claim Exception</td>
+<td>Claim exception monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ClaimHealthCalc></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimHealthCalc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3378" class="reftext" onclick='showAndHideRefBox("refbox_3378", "reflink_3378")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3378" class="refbox_inner" style="display:none;">
+Calculates health indictators and metrics for all claims that do not have any metrics calculated
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Claim Health Calculations</td>
+<td>Calculates health indictators and metrics for all claims that do not have any metrics calculated</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ClaimValidation></a>
+<div class="titlebox">
+<div class="filtertitle">ClaimValidation <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3379" class="reftext" onclick='showAndHideRefBox("refbox_3379", "reflink_3379")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3379" class="refbox_inner" style="display:none;">
+Bulk claim validation work queue writer.  Creates workitems to schedule loaded claims for validation. See ClaimAPI.bulkValidate()
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Bulk claim validation</td>
+<td>Bulk claim validation work queue writer.  Creates workitems to schedule loaded claims for validation. See ClaimAPI.bulkValidate()</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ContactAutoSync></a>
+<div class="titlebox">
+<div class="filtertitle">ContactAutoSync <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3380" class="reftext" onclick='showAndHideRefBox("refbox_3380", "reflink_3380")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3380" class="refbox_inner" style="display:none;">
+Automatically synchronize the local contacts that are out of sync and marked 'allow' auto-sync.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ContactAutoSync</td>
+<td>Automatically synchronize the local contacts that are out of sync and marked 'allow' auto-sync.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ContactRetire></a>
+<div class="titlebox">
+<div class="filtertitle">ContactRetire <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3381" class="reftext" onclick='showAndHideRefBox("refbox_3381", "reflink_3381")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3381" class="refbox_inner" style="display:none;">
+Attempt to retire a Contacts marked as possibly retireable.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Contact Retire</td>
+<td>Attempt to retire a Contacts marked as possibly retireable.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=CreatePerfOnlyIndexes></a>
+<div class="titlebox">
+<div class="filtertitle">CreatePerfOnlyIndexes <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3382" class="reftext" onclick='showAndHideRefBox("refbox_3382", "reflink_3382")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3382" class="refbox_inner" style="display:none;">
+Recreate perf-only indexes when the loader finishes the big insert/select from staging to operational tables
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Loader Create Indexes</td>
+<td>Recreate perf-only indexes when the loader finishes the big insert/select from staging to operational tables</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DBConsistencyCheck></a>
+<div class="titlebox">
+<div class="filtertitle">DBConsistencyCheck <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3383" class="reftext" onclick='showAndHideRefBox("refbox_3383", "reflink_3383")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3383" class="refbox_inner" style="display:none;">
+Database consistency checks
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Database Consistency Check</td>
+<td>Database consistency checks</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DBStats></a>
+<div class="titlebox">
+<div class="filtertitle">DBStats <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3384" class="reftext" onclick='showAndHideRefBox("refbox_3384", "reflink_3384")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3384" class="refbox_inner" style="display:none;">
+Database statistics
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Database statistics</td>
+<td>Database statistics</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DashboardStatistics></a>
+<div class="titlebox">
+<div class="filtertitle">DashboardStatistics <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3385" class="reftext" onclick='showAndHideRefBox("refbox_3385", "reflink_3385")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3385" class="refbox_inner" style="display:none;">
+Statistics for the executive dashboard
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Dashboard Statistics</td>
+<td>Statistics for the executive dashboard</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DataDistribution></a>
+<div class="titlebox">
+<div class="filtertitle">DataDistribution <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3386" class="reftext" onclick='showAndHideRefBox("refbox_3386", "reflink_3386")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3386" class="refbox_inner" style="display:none;">
+Data distribution for the database
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Data Distribution</td>
+<td>Data distribution for the database</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=DeferredUpgradeTasks></a>
+<div class="titlebox">
+<div class="filtertitle">DeferredUpgradeTasks <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3387" class="reftext" onclick='showAndHideRefBox("refbox_3387", "reflink_3387")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3387" class="refbox_inner" style="display:none;">
+Execute database upgrade tasks that were deferred
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>DeferredUpgradeTasks</td>
+<td>Execute database upgrade tasks that were deferred</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=EncryptionUpgrade></a>
+<div class="titlebox">
+<div class="filtertitle">EncryptionUpgrade <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3388" class="reftext" onclick='showAndHideRefBox("refbox_3388", "reflink_3388")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3388" class="refbox_inner" style="display:none;">
+Upgrades encryption for entity fields
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Encryption Upgrade</td>
+<td>Upgrades encryption for entity fields</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ExchangeRate></a>
+<div class="titlebox">
+<div class="filtertitle">ExchangeRate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3389" class="reftext" onclick='showAndHideRefBox("refbox_3389", "reflink_3389")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3389" class="refbox_inner" style="display:none;">
+Creates a new ExchangeRateSet using ExchangeRateSetPlugin
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Exchange Rate</td>
+<td>Creates a new ExchangeRateSet using ExchangeRateSetPlugin</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=FinancialsCalc></a>
+<div class="titlebox">
+<div class="filtertitle">FinancialsCalc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3390" class="reftext" onclick='showAndHideRefBox("refbox_3390", "reflink_3390")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3390" class="refbox_inner" style="display:none;">
+Financials calculations
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#MaintenanceOnly" TARGET="tableFrame">BatchProcessTypeUsage.MaintenanceOnly</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Financials Calculations</td>
+<td>Financials calculations</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=FinancialsEsc></a>
+<div class="titlebox">
+<div class="filtertitle">FinancialsEsc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3391" class="reftext" onclick='showAndHideRefBox("refbox_3391", "reflink_3391")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3391" class="refbox_inner" style="display:none;">
+Financials escalation monitor - escalates checks from Awaiting-submission status to Requesting status so that the downstream system will be alerted
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Financials Escalation</td>
+<td>Financials escalation monitor - escalates checks from Awaiting-submission status to Requesting status so that the downstream system will be alerted</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=FindUsagesOfUpgradedTypecodes></a>
+<div class="titlebox">
+<div class="filtertitle">FindUsagesOfUpgradedTypecodes <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3392" class="reftext" onclick='showAndHideRefBox("refbox_3392", "reflink_3392")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3392" class="refbox_inner" style="display:none;">
+During the back out of a rolling upgrade, looks for typecodes that were inserted during the rolling upgrade. These usages need to be fixed before we can back out.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>FindUsagesOfUpgradedTypecodes</td>
+<td>During the back out of a rolling upgrade, looks for typecodes that were inserted during the rolling upgrade. These usages need to be fixed before we can back out.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Geocode></a>
+<div class="titlebox">
+<div class="filtertitle">Geocode <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3393" class="reftext" onclick='showAndHideRefBox("refbox_3393", "reflink_3393")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3393" class="refbox_inner" style="display:none;">
+Geocoding Addresses queue writer.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Geocode Writer</td>
+<td>Geocoding Addresses queue writer.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=GroupException></a>
+<div class="titlebox">
+<div class="filtertitle">GroupException <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3394" class="reftext" onclick='showAndHideRefBox("refbox_3394", "reflink_3394")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3394" class="refbox_inner" style="display:none;">
+Group exception monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Group Exception</td>
+<td>Group exception monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IdleClaim></a>
+<div class="titlebox">
+<div class="filtertitle">IdleClaim <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3395" class="reftext" onclick='showAndHideRefBox("refbox_3395", "reflink_3395")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3395" class="refbox_inner" style="display:none;">
+Idle claim exception monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Idle Claim Exception</td>
+<td>Idle claim exception monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=IdleClosedClaim></a>
+<div class="titlebox">
+<div class="filtertitle">IdleClosedClaim <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3396" class="reftext" onclick='showAndHideRefBox("refbox_3396", "reflink_3396")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3396" class="refbox_inner" style="display:none;">
+Idle closed claim exception monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Idle Closed Claim Exception</td>
+<td>Idle closed claim exception monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=MSDMVReport></a>
+<div class="titlebox">
+<div class="filtertitle">MSDMVReport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3397" class="reftext" onclick='showAndHideRefBox("refbox_3397", "reflink_3397")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3397" class="refbox_inner" style="display:none;">
+Microsoft database DMV performance report generation
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Microsoft DMV Report</td>
+<td>Microsoft database DMV performance report generation</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=OraAWRReport></a>
+<div class="titlebox">
+<div class="filtertitle">OraAWRReport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3398" class="reftext" onclick='showAndHideRefBox("refbox_3398", "reflink_3398")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3398" class="refbox_inner" style="display:none;">
+Oracle database AWR performance report generation
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Oracle AWR Report</td>
+<td>Oracle database AWR performance report generation</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PhoneNumberNormalizer></a>
+<div class="titlebox">
+<div class="filtertitle">PhoneNumberNormalizer <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3399" class="reftext" onclick='showAndHideRefBox("refbox_3399", "reflink_3399")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3399" class="refbox_inner" style="display:none;">
+Performs a normalization of phone numbers contact
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Phone number normalizer</td>
+<td>Performs a normalization of phone numbers contact</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PopulateSearchColumns></a>
+<div class="titlebox">
+<div class="filtertitle">PopulateSearchColumns <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3400" class="reftext" onclick='showAndHideRefBox("refbox_3400", "reflink_3400")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3400" class="refbox_inner" style="display:none;">
+Populate searchColumn columns from their original sources.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Populate searchColumn columns</td>
+<td>Populate searchColumn columns from their original sources.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PopulateUserDenormSearchColumn></a>
+<div class="titlebox">
+<div class="filtertitle">PopulateUserDenormSearchColumn <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3401" class="reftext" onclick='showAndHideRefBox("refbox_3401", "reflink_3401")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3401" class="refbox_inner" style="display:none;">
+Populates the denormalized search column User.SpatialPointDenorm from Address.SpatialPoint
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Populate Denormalized User Search Column SpatialPointDenorm</td>
+<td>Populates the denormalized search column User.SpatialPointDenorm from Address.SpatialPoint</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ProcessCompletionMonitor></a>
+<div class="titlebox">
+<div class="filtertitle">ProcessCompletionMonitor <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3402" class="reftext" onclick='showAndHideRefBox("refbox_3402", "reflink_3402")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3402" class="refbox_inner" style="display:none;">
+Invoke plugin on completion of monitored worker queue
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Process Completion Monitor</td>
+<td>Invoke plugin on completion of monitored worker queue</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ProcessHistoryPurge></a>
+<div class="titlebox">
+<div class="filtertitle">ProcessHistoryPurge <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3403" class="reftext" onclick='showAndHideRefBox("refbox_3403", "reflink_3403")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3403" class="refbox_inner" style="display:none;">
+Purge batch process history data
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ProcessHistoryPurge</td>
+<td>Purge batch process history data</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeClusterMembers></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeClusterMembers <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3404" class="reftext" onclick='showAndHideRefBox("refbox_3404", "reflink_3404")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3404" class="refbox_inner" style="display:none;">
+Purge old ClusterMember entities
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Cluster Members</td>
+<td>Purge old ClusterMember entities</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeFailedWorkItems></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeFailedWorkItems <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3405" class="reftext" onclick='showAndHideRefBox("refbox_3405", "reflink_3405")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3405" class="refbox_inner" style="display:none;">
+Purge failed work items from all queues.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Failed Work Items</td>
+<td>Purge failed work items from all queues.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeMessageHistory></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeMessageHistory <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3406" class="reftext" onclick='showAndHideRefBox("refbox_3406", "reflink_3406")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3406" class="refbox_inner" style="display:none;">
+Purges old messages from the message history table
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Message History</td>
+<td>Purges old messages from the message history table</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeProfilerData></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeProfilerData <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3407" class="reftext" onclick='showAndHideRefBox("refbox_3407", "reflink_3407")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3407" class="refbox_inner" style="display:none;">
+Purge profiler data at regular intervals
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Profiler Data</td>
+<td>Purge profiler data at regular intervals</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeTransactionIds></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeTransactionIds <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3408" class="reftext" onclick='showAndHideRefBox("refbox_3408", "reflink_3408")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3408" class="refbox_inner" style="display:none;">
+Purge external transaction id that no longer need to be tracked, by age.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge old transaction ids</td>
+<td>Purge external transaction id that no longer need to be tracked, by age.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeWorkflowLogs></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeWorkflowLogs <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3409" class="reftext" onclick='showAndHideRefBox("refbox_3409", "reflink_3409")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3409" class="refbox_inner" style="display:none;">
+Purge completed workflows logs, this executes gw.processes.PurgeWorkflowLogs.gs
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Workflow Logs</td>
+<td>Purge completed workflows logs, this executes gw.processes.PurgeWorkflowLogs.gs</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=PurgeWorkflows></a>
+<div class="titlebox">
+<div class="filtertitle">PurgeWorkflows <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3410" class="reftext" onclick='showAndHideRefBox("refbox_3410", "reflink_3410")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3410" class="refbox_inner" style="display:none;">
+Purge completed workflows after resetting any referenced workflows, this executes gw.processes.PurgeWorkflow.gs
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Purge Workflow</td>
+<td>Purge completed workflows after resetting any referenced workflows, this executes gw.processes.PurgeWorkflow.gs</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=RecalculateMetrics></a>
+<div class="titlebox">
+<div class="filtertitle">RecalculateMetrics <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3411" class="reftext" onclick='showAndHideRefBox("refbox_3411", "reflink_3411")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3411" class="refbox_inner" style="display:none;">
+Recalculates claim metrics for claims whose metric update time has passed.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Recalculate Claim Metrics</td>
+<td>Recalculates claim metrics for claims whose metric update time has passed.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=RetiredPolicyGraphDisconnector></a>
+<div class="titlebox">
+<div class="filtertitle">RetiredPolicyGraphDisconnector <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3412" class="reftext" onclick='showAndHideRefBox("refbox_3412", "reflink_3412")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3412" class="refbox_inner" style="display:none;">
+Disconnects claim graph objects from retired policy objects so that those claims can be archived
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Retired Policy Graph Disconnector</td>
+<td>Disconnects claim graph objects from retired policy objects so that those claims can be archived</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ReviewSync></a>
+<div class="titlebox">
+<div class="filtertitle">ReviewSync <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3413" class="reftext" onclick='showAndHideRefBox("refbox_3413", "reflink_3413")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3413" class="refbox_inner" style="display:none;">
+Transmits completed reviews to ContactManager.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>ClaimCenter (SPM) Completed Review Sync</td>
+<td>Transmits completed reviews to ContactManager.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=ServiceRequestMetricEscalation></a>
+<div class="titlebox">
+<div class="filtertitle">ServiceRequestMetricEscalation <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3414" class="reftext" onclick='showAndHideRefBox("refbox_3414", "reflink_3414")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3414" class="refbox_inner" style="display:none;">
+Escalates service metrics when they have exceeded an upper limit
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Service Metric Escalation</td>
+<td>Escalates service metrics when they have exceeded an upper limit</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=SolrDataImport></a>
+<div class="titlebox">
+<div class="filtertitle">SolrDataImport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3415" class="reftext" onclick='showAndHideRefBox("refbox_3415", "reflink_3415")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3415" class="refbox_inner" style="display:none;">
+Performs a full data import of the app database into the Solr/Lucene index
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Solr Data Import</td>
+<td>Performs a full data import of the app database into the Solr/Lucene index</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=StagingTableImport></a>
+<div class="titlebox">
+<div class="filtertitle">StagingTableImport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3416" class="reftext" onclick='showAndHideRefBox("refbox_3416", "reflink_3416")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3416" class="refbox_inner" style="display:none;">
+Asynchronous operation on staging tables (encrypt, statistics, integrity check, load, delete excluded, populate excluded)
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#MaintenanceOnly" TARGET="tableFrame">BatchProcessTypeUsage.MaintenanceOnly</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Staging Table Import</td>
+<td>Asynchronous operation on staging tables (encrypt, statistics, integrity check, load, delete excluded, populate excluded)</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=StatReport></a>
+<div class="titlebox">
+<div class="filtertitle">StatReport <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3417" class="reftext" onclick='showAndHideRefBox("refbox_3417", "reflink_3417")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3417" class="refbox_inner" style="display:none;">
+Stat Report work queue writer
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Stat Report Writer</td>
+<td>Stat Report work queue writer</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Statistics></a>
+<div class="titlebox">
+<div class="filtertitle">Statistics <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3418" class="reftext" onclick='showAndHideRefBox("refbox_3418", "reflink_3418")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3418" class="refbox_inner" style="display:none;">
+Statistics calculator
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Statistics</td>
+<td>Statistics calculator</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=TAccountEsc></a>
+<div class="titlebox">
+<div class="filtertitle">TAccountEsc <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3419" class="reftext" onclick='showAndHideRefBox("refbox_3419", "reflink_3419")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3419" class="refbox_inner" style="display:none;">
+TAccounts escalation monitor to transition payments and reserves from FutureDated state to Awaiting-submission state
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>TAccounts Escalation</td>
+<td>TAccounts escalation monitor to transition payments and reserves from FutureDated state to Awaiting-submission state</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=UserException></a>
+<div class="titlebox">
+<div class="filtertitle">UserException <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3420" class="reftext" onclick='showAndHideRefBox("refbox_3420", "reflink_3420")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3420" class="refbox_inner" style="display:none;">
+User exception monitor
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>User Exception</td>
+<td>User exception monitor</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=UserWorkloadUpdate></a>
+<div class="titlebox">
+<div class="filtertitle">UserWorkloadUpdate <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3421" class="reftext" onclick='showAndHideRefBox("refbox_3421", "reflink_3421")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3421" class="refbox_inner" style="display:none;">
+Updates user weighted workload
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#APIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.APIRunnable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>User Workload Update</td>
+<td>Updates user weighted workload</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=WorkItemSetPurge></a>
+<div class="titlebox">
+<div class="filtertitle">WorkItemSetPurge <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3422" class="reftext" onclick='showAndHideRefBox("refbox_3422", "reflink_3422")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3422" class="refbox_inner" style="display:none;">
+Purge WorkItemSet data
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>WorkItemSetPurge</td>
+<td>Purge WorkItemSet data</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=WorkQueueInstrumentationPurge></a>
+<div class="titlebox">
+<div class="filtertitle">WorkQueueInstrumentationPurge <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3423" class="reftext" onclick='showAndHideRefBox("refbox_3423", "reflink_3423")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3423" class="refbox_inner" style="display:none;">
+Purge instrumentation data for work queues
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>WorkQueueInstrumentationPurge</td>
+<td>Purge instrumentation data for work queues</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=Workflow></a>
+<div class="titlebox">
+<div class="filtertitle">Workflow <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3424" class="reftext" onclick='showAndHideRefBox("refbox_3424", "reflink_3424")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3424" class="refbox_inner" style="display:none;">
+Workflows work queue writer.
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+<a name="Localizations"></a><div class="arraysbox">Localizations</div>
+<table class="typelistbody" border="1" CELLPADDING="3" CELLSPACING="0">
+<tr class="typelistheader">
+<td>Locale</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr valign="top">
+<td>en_US</td>
+<td>Workflow</td>
+<td>Workflows work queue writer.</td>
+</tr>
+</table>
+</div>
+<div class='subtypebox'>
+<a name=changeinClaimInfo></a>
+<div class="titlebox">
+<div class="filtertitle">changeinClaimInfo <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_3425" class="reftext" onclick='showAndHideRefBox("refbox_3425", "reflink_3425")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_3425" class="refbox_inner" style="display:none;">
+
+</div>
+</span>
+</div>
+</div>
+<a name="Categories"></a><div class="arraysbox">Categories</div>
+<ul>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#Schedulable" TARGET="tableFrame">BatchProcessTypeUsage.Schedulable</A></li>
+<li>
+<A HREF="BatchProcessTypeUsage_tl.html#UIRunnable" TARGET="tableFrame">BatchProcessTypeUsage.UIRunnable</A></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<html>
+<head>
+<title>Viewer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../securitydictionary.css" TYPE="text/css"/>
+<script language="JavaScript"> 
+function showAndHideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showUIDetails(theId, theLink);
+   }
+   else {
+      hideUIDetails(theId, theLink);
+   }
+   return false;
+}
+
+function showAndHideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   if (el.style.display=="none") {
+      showRefBox(theId, theLink);
+   }
+   else {
+      hideRefBox(theId, theLink);
+   }
+   return false;
+}
+
+function hideUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.innerHTML = '<img src="../blackup.gif" border="0">Show user interface details...';
+   return false;
+}
+
+function showUIDetails(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.innerHTML = '<img src="../blackdown.gif" border="0">Hide user interface details...';
+   return false;
+}function hideRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="none"; //hide element
+   link.firstChild.src = '../blackup.gif';
+   return false;
+}
+
+function showRefBox(theId, theLink) {
+   var el = document.getElementById(theId);
+   var link = document.getElementById(theLink);
+
+   el.style.display="block"; //show element
+   link.firstChild.src='../blackdown.gif';
+   return false;
+}
+function popupDefinition(event, def) {
+   if(!event) var event = window.event;
+   var popup = document.createElement('div');
+   popup.style.position = 'absolute';
+   var posx = 0;
+   var posy = 0;
+   if (event.pageX || event.pageY){
+     posx = event.pageX;
+     posy = event.pageY;
+   }
+   else if (event.clientX || event.clientY){
+     posx = event.clientX + document.body.scrollLeft;
+     posy = event.clientY + document.body.scrollTop;
+   }
+   popup.style.left = posx + 10;
+   popup.style.top = posy + 7;
+   popup.className = 'defPopup';
+   popup.id = 'popup';
+   popup.innerHTML = def;
+   document.body.appendChild(popup);
+   document.body.onmousemove = function() {document.body.removeChild(document.getElementById('popup')); document.body.onmousemove = null};
+}
+function generateTOC() {
+   var tocdiv = document.createElement('div');
+   tocdiv.className = 'TOC';
+   var divs = document.body.getElementsByTagName('DIV');
+   for(var i=0; i<divs.length; i++){
+     if(divs[i].className == 'arraysbox'){
+       var sectionName = divs[i].firstChild.nodeValue;
+       var link = document.createElement('a');
+       link.href = '#' + sectionName;
+       link.appendChild(document.createTextNode(sectionName));
+       tocdiv.appendChild(link);
+       tocdiv.appendChild(document.createTextNode(' | '))
+     }
+   }
+   if(tocdiv.childNodes.length > 0){
+     tocdiv.removeChild(tocdiv.lastChild);
+   }
+   if(tocdiv.childNodes.length > 1){
+     var placeholder = document.getElementById('TOC');
+     placeholder.parentNode.insertBefore(tocdiv, placeholder);
+   }
+}
+</script> 
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">Viewer <span class="entityname"></span></div>
+<div class="desc">
+<span id="reflink_624" class="reftext" onclick='showAndHideRefBox("refbox_624", "reflink_624")'><img src="../blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_624" class="refbox_inner" style="display:none;">
+User with view-only permissions
+</div>
+</span>
+</div>
+</div>
+<a name="Permissions"></a><div class="arraysbox">Permissions</div>
+<a name="view address book contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abview.html'>abview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of contact entries in the address book</span>
+<a name="view address book contact search pages"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/abviewsearch.html'>abviewsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to search contact entries in the address book</span>
+<a name="view activities"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/actview.html'>actview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view activities</span>
+<a name="view contact with any tag"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/anytagview.html'>anytagview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the details of a contact regardless of which tag(s) it has</span>
+<a name="view claim associations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/assocview.html'>assocview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view claim associations on a claim</span>
+<a name="view claims"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimview.html'>claimview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">General permission to view a claim</span>
+<a name="view payments"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewpay.html'>claimviewpay</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view checks and payments (and derived information) on a claim</span>
+<a name="view recoveries"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewrec.html'>claimviewrec</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recoveries (and derived information) on a claim</span>
+<a name="view recovery reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewrecres.html'>claimviewrecres</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view recovery reserves (and derived information) on a claim</span>
+<a name="view reserves"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/claimviewres.html'>claimviewres</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view reserves (and derived information) on a claim</span>
+<a name="view local contacts"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ctcview.html'>ctcview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view and search local contact entries</span>
+<a name="view documents"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/docview.html'>docview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view documents</span>
+<a name="view evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/evalview.html'>evalview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view an evaluation on a claim</span>
+<a name="validate exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expvalidate.html'>expvalidate</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to run validation rules on exposures</span>
+<a name="view exposures"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/expview.html'>expview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view exposures on a claim</span>
+<a name="view matters"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/mttrview.html'>mttrview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view matters</span>
+<a name="view negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/ngtnview.html'>ngtnview</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view a negotiation on a claim</span>
+<a name="view review details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewdetail.html'>reviewviewdetail</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission view the Review page to see the answers entered for each claim</span>
+<a name="view reviews list"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/reviewviewlist.html'>reviewviewlist</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the list of Reviews and the reviews tab on a Contact</span>
+<a name="edit user language"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/usereditlang.html'>usereditlang</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to edit language</span>
+<a name="view claim associations subtab"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewassociations.html'>viewassociations</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Associations subtab</span>
+<a name="view claim loss details page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimbasics.html'>viewclaimbasics</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Loss Details page</span>
+<a name="view claim evaluations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimevals.html'>viewclaimevals</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Evaluations page</span>
+<a name="view claim negotiations"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimngtns.html'>viewclaimngtns</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Negotiations page</span>
+<a name="view claim notes page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimnotes.html'>viewclaimnotes</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Notes page</span>
+<a name="view claim parties involved page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimparties.html'>viewclaimparties</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Parties Involved page</span>
+<a name="view claim summary page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewclaimsummary.html'>viewclaimsummary</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Summary page</span>
+<a name="view claim exposures page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewexposures.html'>viewexposures</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the claim Exposures page</span>
+<a name="view claim financials"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewfinsum.html'>viewfinsum</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Financials Summary and Transaction subtabs on a claim</span>
+<a name="view claim matters page"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewmatters.html'>viewmatters</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view matters</span>
+<a name="view search"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsearch.html'>viewsearch</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the Search tab</span>
+<a name="view claim snapshot"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsnapshot.html'>viewsnapshot</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view the FNOL snapshot for a claim</span>
+<a name="view subrogation details"></a>
+<p class="column">
+<span class="coltitle"><a href='../systempermissions/viewsubrodetails.html'>viewsubrodetails</a></span>  <span class="titleDesc"></span>    
+<span class = "spaceandsize"></span>
+<br>
+<span class="desc">Permission to view Subrogation-related information</span>
+</body>
+</html>

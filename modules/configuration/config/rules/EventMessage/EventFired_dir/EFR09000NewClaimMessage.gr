@@ -1,0 +1,20 @@
+package rules.EventMessage.EventFired_dir
+
+@gw.rules.RuleName("EFR09000 - NewClaimMessage")
+internal class EFR09000NewClaimMessage {
+  static function doCondition(messageContext : entity.MessageContext) : boolean {
+/*start00rule*/
+return (messageContext.DestID)==25
+/*end00rule*/
+}
+
+  static function doAction(messageContext : entity.MessageContext, actions : gw.rules.Action) {
+/*start00rule*/
+
+    print("****** Event Triggered ********")
+    var payload = "new Claim has just been created with Number : "
+    var messge = messageContext.createMessage(payload)
+
+/*end00rule*/
+  }
+}

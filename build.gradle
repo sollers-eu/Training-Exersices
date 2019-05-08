@@ -1,0 +1,63 @@
+buildscript {
+  repositories {
+    maven { url project.file('repository') }
+  }
+  if ((!file('repository').exists())) {
+    configurations.create('xCenter')
+
+    repositories {
+      maven {
+        url 'http://artifactory:8082/artifactory/guidewire-releases'
+      }
+    }
+
+    dependencies {
+      xCenter 'com.guidewire:claimcenter:9.0.2:@zip'
+    }
+
+    copy {
+      from {
+        configurations.xCenter.collect { zipTree(it) }
+      }
+      if (file('build.gradle').exists()) {
+        exclude "build.gradle"
+      }
+      if (file('gwb').exists()) {
+        exclude "gwb"
+      }
+      if (file('gwb.bat').exists()) {
+        exclude "gwb.bat"
+      }
+      if (file('project-version.properties').exists()) {
+        exclude "project-version.properties"
+      }
+      if (file('settings.gradle').exists()) {
+        exclude "settings.gradle"
+      }
+      exclude "modules/**"
+      exclude "gradle/**"
+
+      into getProjectDir()
+      println " Unzipping "
+    }
+
+
+  }
+
+  dependencies {
+    classpath 'com.guidewire.globalwire:lp-installer:1.1.0'
+    classpath 'com.guidewire.btr.build:gradle-plugins:3.8.12'
+    classpath 'com.guidewire.btr.build:ci-gradle-plugins:1.0.10'
+    classpath 'com.guidewire.studio:ij-studio-gradle-plugins:0.0.17'
+    classpath 'com.guidewire.web:plweb-gradle-plugin:0.1.2'
+    classpath 'com.guidewire.btr.build:solr-gradle-plugins:1.0.7'
+    classpath 'org.gosu-lang.gosu:gradle-gosu-plugin:0.2.0'
+  }
+}
+
+apply from: 'modules/script/gw-build.gradle'
+
+// Remove this plugin application to disable deprecated tasks
+apply plugin: 'com.guidewire.cust-dist-deprecated-tasks'
+
+// Additional tasks can be added here if required

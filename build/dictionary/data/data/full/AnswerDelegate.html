@@ -1,0 +1,481 @@
+<html>
+<head>
+<title>AnswerDelegate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<LINK REL="StyleSheet" HREF="../../res/dictionary.css" TYPE="text/css"/>
+<script language="JavaScript" src="../../res/dictionaryui.js"></script>
+
+</head>
+<body onload='generateTOC()'>
+<div class="titlebox">
+<div class="pagetitle">AnswerDelegate <span class="entityname">(Virtual)</span></div>
+<div class="desc">
+<span id="reflink_4" class="reftext" onclick='showAndHideRefBox("refbox_4", "reflink_4")'><img src="../../res/blackup.gif" border="0"><b>Description</b></span>
+<div id="refbox_4" class="refbox_inner" style="display:none;">
+
+      Text, Logical and Numeric Answers supplied in a specific Question Set.
+      Question Sets are groupings of questions utilized in the risk qualification process
+      or to develop supplemental underwriting information. Specific to PolicyCenter
+    
+</div>
+</span>
+</div>
+</div>
+<div class="attrbox">
+<div class="entitybox"
+<span class="attrtitle">Entity: </span>
+<span class="attrtext">AnswerDelegate</span>
+</div>
+<div class="attributesbox"
+<span class="attrtitle">Attributes: </span>
+<span class="attrtext">Final<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>Final</b><br>The entity cannot be subtyped.')">?</span></sup></span>
+</div>
+</div>
+<a id='TOC'></a>
+<a name="Fields"></a><div class="arraysbox">Fields</div>
+<a name="answerdelegate_booleananswer"></a>
+<p class="column">
+<span class="coltitle">BooleanAnswer</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "bit")'>bit</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Yes / no component of answer.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_0 onclick='showAndHideUIDetails("UITable_0", "showhideUI_0")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_0' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>QuestionRowSet.BooleanCheckbox.pcf:27</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).BooleanAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+<tr>
+<td>QuestionRowSet.BooleanSelect.pcf:27</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).BooleanAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="answerdelegate_booleananswer_dynprop"></a>
+<p class="column">
+<span class="coltitle">BOOLEANANSWER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_choiceanswer"></a>
+<p class="column">
+<span class="coltitle">ChoiceAnswer</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="QuestionChoice.html" TARGET="tableFrame">QuestionChoice</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: ChoiceAnswerID)&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Choice of the answer.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_1 onclick='showAndHideUIDetails("UITable_1", "showhideUI_1")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_1' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>QuestionRowSet.ChoiceRadio.pcf:29</td>
+<td></td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).ChoiceAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+<tr>
+<td>QuestionRowSet.ChoiceSelect.pcf:30</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).ChoiceAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="answerdelegate_choiceanswer_dynprop"></a>
+<p class="column">
+<span class="coltitle">CHOICEANSWER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_dateanswer"></a>
+<p class="column">
+<span class="coltitle">DateAnswer</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "datetime")'>datetime</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">The answer in date form.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_2 onclick='showAndHideUIDetails("UITable_2", "showhideUI_2")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_2' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>QuestionRowSet.DateField.pcf:27</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).DateAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="answerdelegate_dateanswer_dynprop"></a>
+<p class="column">
+<span class="coltitle">DATEANSWER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_integeranswer"></a>
+<p class="column">
+<span class="coltitle">IntegerAnswer</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "integer")'>integer</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Numeric component of answer.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_3 onclick='showAndHideUIDetails("UITable_3", "showhideUI_3")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_3' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>QuestionRowSet.IntegerField.pcf:28</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).IntegerAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="answerdelegate_integeranswer_dynprop"></a>
+<p class="column">
+<span class="coltitle">INTEGERANSWER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_question"></a>
+<p class="column">
+<span class="coltitle">Question</span>&nbsp;&nbsp;<span class="titleDesc">foreign key to <A HREF="Question.html" TARGET="tableFrame">Question</A></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(database column: QuestionID)&nbsp;&nbsp;&nbsp;&nbsp;(non-null)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>non-null</b><br>The foreign key cannot contain null values.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Question that this answer answers</span>
+<a name="answerdelegate_question_dynprop"></a>
+<p class="column">
+<span class="coltitle">QUESTION_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.ILinkPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_textanswer"></a>
+<p class="column">
+<span class="coltitle">TextAnswer</span>&nbsp;&nbsp;<span class="titleDesc"><span class='defPopupLink' onClick='popupDefinition(event, "mediumtext")'>mediumtext</span> (1333)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc">Either the answer's text.</span>
+<div class='screenrefbody'>
+<span id=showhideUI_4 onclick='showAndHideUIDetails("UITable_4", "showhideUI_4")' style='cursor:pointer'>
+<img src="../../res/blackup.gif" border="0">Show user interface details...
+</span>
+<div id='UITable_4' style='display:none'>
+Used in:<br>
+<table class='screenreftable' border='1'>
+<tr>
+<th>PCF file</th>
+<th>Label</th>
+<th>Value</th>
+<th>Editable</th>
+<th>Pages</th>
+</tr>
+<tr>
+<td>QuestionRowSet.StringField.pcf:27</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).TextAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+<tr>
+<td>QuestionRowSet.StringTextArea.pcf:29</td>
+<td>Question.Text</td>
+<td>AnswerSetContainer.getOrCreateAnswer(Question).TextAnswer</td>
+<td>!Question.isRetired()</td>
+<td>
+ClaimContacts
+<br>
+CreateReviewPopup
+<br>
+AddressBookContactDetailPopup
+<br>
+NewContactPopup
+<br>
+AddExistingPartyInvolvedPopup
+<br>
+ContactReviewPopup
+<br>
+AddSelectedDuplicatePartiesInvolvedPopup
+<br>
+ClaimPartiesInvolvedDetail
+<br>
+AddressBookContactDetail
+<br>
+AddressBookContactDetailPrint
+<br>
+SIDetails
+<br>
+NewPartyInvolvedPopup
+<br>
+ClaimContactDetailPopup
+<br>
+UserContactDetailPopup
+</td>
+</tr>
+</table>
+</div></div>
+<a name="answerdelegate_textanswer_dynprop"></a>
+<p class="column">
+<span class="coltitle">TEXTANSWER_DYNPROP</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.DynamicEntityPropertyInfoReference<gw.entity.IColumnPropertyInfo></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_type"></a>
+<p class="column">
+<span class="coltitle">TYPE</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning gw.pl.persistence.type.EntityTypeReference<entity.AnswerDelegate></span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+<a name="answerdelegate_value"></a>
+<p class="column">
+<span class="coltitle">Value</span>&nbsp;&nbsp;<span class="titleDesc">Derived property returning java.lang.Object</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span class = "spaceandsize">(virtual property)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>virtual property</b><br>The system creates no physical database column for this key.')">?</span></sup>&nbsp;&nbsp;&nbsp;&nbsp;(writable)<sup><span class='glossaryLink' onclick="popupDefinition(event, '<b>writable</b><br>The property can be written to via Gosu or the IDataObjectAPI.')">?</span></sup></span>
+<br>
+<span class="desc"></span>
+</body>
+</html>
